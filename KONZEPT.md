@@ -280,7 +280,7 @@ Eine neue Route `/` (oder `/landing`) im bestehenden Flask, neues Template `temp
 7. Status: aktiv → bekommt nächsten Montag das Briefing
 ```
 
-**Bestehende Bausteine in flychat:**
+**Bestehende Bausteine in flychat:**§
 - `subscriber.py` — Subscriber-CRUD
 - `email_service.py` — Resend-Integration
 - `templates/email/confirm.html` — Bestätigungs-Mail existiert bereits
