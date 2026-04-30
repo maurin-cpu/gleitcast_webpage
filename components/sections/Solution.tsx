@@ -1,23 +1,29 @@
-import { MapPin, Mail, Paraglider } from "../ui/Icons";
+import { Layers, Sparkles, MapPin, Mail } from "../ui/Icons";
 
 const steps = [
   {
     n: "01",
-    icon: MapPin,
-    title: "Wähle deine Regionen",
-    body: "Berner Oberland, Wallis, Tessin — wir kennen alle 488 Schweizer Startplätze.",
+    icon: Layers,
+    title: "Wetterdaten werden eingelesen",
+    body: "Modell-Aggregation via Open-Meteo (inkl. ICON-CH1 von MeteoSchweiz, ECMWF, ICON-D2) — die ganze Schweiz, mehrmals täglich aktualisiert und auf den Startplatz heruntergerechnet.",
   },
   {
     n: "02",
-    icon: Mail,
-    title: "Bekomm Montag 06:00 dein Briefing",
-    body: "5 Tage Vorschau. Pro Tag eine Ampelfarbe. Beste Spots automatisch sortiert.",
+    icon: Sparkles,
+    title: "Sortierung nach Eignung",
+    body: "Wind, Thermik, Sicherheit, Niederschlag — nach denselben Kriterien, die du selbst prüfen würdest. Sicherheit zuerst, dann Fliegbarkeit. Die KI macht die Vorauswahl, du entscheidest.",
   },
   {
     n: "03",
-    icon: Paraglider,
-    title: "Entscheide und flieg",
-    body: "Eine Frage — eine Antwort. Für volle Details springst du direkt in die App.",
+    icon: MapPin,
+    title: "In der App aufgelistet",
+    body: "Karte und Liste mit allen Spots der Woche — pro Tag sortiert, mit Score und Begründung in Klartext.",
+  },
+  {
+    n: "04",
+    icon: Mail,
+    title: "Briefing per E-Mail",
+    body: "Du wählst in der App, welche Regionen und welche Wochentage du willst — und bekommst die Einschätzungen zu deinen Spots morgens um 06:00 ins Postfach.",
   },
 ];
 
@@ -25,60 +31,84 @@ export function Solution() {
   return (
     <section
       id="solution"
-      className="bg-background py-24 sm:py-32"
+      className="border-b border-slate-200 bg-slate-50 py-16 sm:py-24"
       aria-labelledby="solution-headline"
     >
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-primary">
+        <div className="mx-auto max-w-reading text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-sky-700">
             So funktioniert's
           </p>
           <h2
             id="solution-headline"
-            className="text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
+            className="text-balance text-3xl font-bold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl"
           >
-            In drei Schritten zu deinem Flugwetter.
+            Von Wetterdaten zur Spot-Empfehlung.
           </h2>
+          <p className="mt-4 text-pretty text-lg leading-[1.6] text-slate-700">
+            488 Schweizer Startplätze, jeden Tag automatisch sortiert nach
+            Fliegbarkeit. Du siehst auf einen Blick, wo's heute geht.
+          </p>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
-          {steps.map((s, i) => {
+        <figure className="mx-auto mt-12 max-w-4xl">
+          <div className="overflow-hidden rounded-card border border-slate-200 bg-white">
+            <img
+              src="/screenshot_startplaetze.png"
+              alt="Spots-Karte in der Gleitcast App: 488 Schweizer Startplätze, eingefärbt nach Fliegbarkeit für den gewählten Tag"
+              className="block h-auto w-full"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <figcaption className="mt-4 text-center text-sm text-slate-700">
+            Spots-Karte live in der App — pro Tag automatisch eingefärbt nach
+            Fliegbarkeit.
+          </figcaption>
+        </figure>
+
+        <ol className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {steps.map((s) => {
             const Icon = s.icon;
             return (
-              <div
+              <li
                 key={s.n}
-                className="group relative overflow-hidden rounded-3xl border border-border bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10"
+                className="rounded-card border border-slate-200 bg-white p-6"
               >
-                <div
-                  className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br from-primary/8 to-accent/8 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  aria-hidden="true"
-                />
-                <div className="relative">
-                  <div className="flex items-center justify-between">
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
-                      <Icon className="h-6 w-6" />
-                    </div>
-                    <span className="text-sm font-semibold tabular-nums text-muted-foreground/60">
-                      {s.n}
-                    </span>
+                <div className="flex items-center justify-between">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg border border-slate-200 bg-sky-50 text-sky-700">
+                    <Icon className="h-6 w-6" />
                   </div>
-                  <h3 className="mt-6 text-xl font-semibold tracking-tight">
-                    {s.title}
-                  </h3>
-                  <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
-                    {s.body}
-                  </p>
+                  <span className="text-base font-bold tabular-nums text-slate-500">
+                    {s.n}
+                  </span>
                 </div>
-                {i < steps.length - 1 && (
-                  <div
-                    className="pointer-events-none absolute right-3 top-1/2 hidden h-px w-6 -translate-y-1/2 bg-border md:block"
-                    aria-hidden="true"
-                  />
-                )}
-              </div>
+                <h3 className="mt-5 text-xl font-semibold tracking-tight text-slate-900">
+                  {s.title}
+                </h3>
+                <p className="mt-2 text-base leading-[1.6] text-slate-700">
+                  {s.body}
+                </p>
+              </li>
             );
           })}
-        </div>
+        </ol>
+
+        <aside className="mx-auto mt-10 max-w-3xl rounded-card border-l-4 border-sky-700 bg-white p-6">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700">
+            Beispiel — so liest sich eine Begründung
+          </p>
+          <p className="mt-3 text-base leading-[1.65] text-slate-700">
+            <strong className="font-semibold text-slate-900">Niesen, heute gelb.</strong>{" "}
+            Wind 18 km/h Süd passt zur Erfahrung — aber Lee-Risiko nach 14 Uhr
+            wegen Südföhn-Tendenz. Sicherer Slot: 11–13:30 Uhr. Danach lieber
+            abbauen.
+          </p>
+          <p className="mt-2 text-sm leading-[1.6] text-slate-500">
+            Klartext statt CAPE und Lapse Rate — dieselbe Logik, die du selbst
+            anwenden würdest, nur in 30 Sekunden statt 30 Minuten.
+          </p>
+        </aside>
       </div>
     </section>
   );

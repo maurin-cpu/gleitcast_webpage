@@ -1,0 +1,97 @@
+---
+# EXAMPLE QUOTE - Beginner segment pain point
+
+quote_id: example_002
+
+source:
+  platform: Reddit
+  subreddit: r/paragliding
+  thread_title: "New pilot - terrified of making bad weather calls"
+  url: "https://reddit.com/r/paragliding/comments/example2"
+  date: 2026-02-08
+  author: NewPilot2026
+  upvotes: 28
+
+verbatim_quote: |
+  "I got my license 3 months ago and I'm absolutely terrified of making a
+  bad weather decision. My instructor makes it look so easy - he glances at
+  his phone for 2 minutes and knows if it's flyable. But when I look at all
+  the data I have NO IDEA what's important. What's CAPE? What's a good thermal
+  index? How windy is too windy for my skill level? Is 15 km/h dangerous or
+  fine? I end up calling my instructor before every flight and I feel like
+  I'm annoying him. I want to be independent but I'm scared. I don't want to
+  be the guy who crashes because he didn't understand the forecast. Anyone
+  else feel this way or am I just overthinking?"
+
+context:
+  what_prompted: "New pilot asking for advice on building weather decision confidence"
+  thread_summary: "Many experienced pilots shared their learning experiences, most said it takes 1-2 years to feel confident. Several recommended conservative rules of thumb for beginners."
+  replies: "23 replies, all supportive. Common advice: 'Fly with experienced pilots', 'Start conservative', 'Weather knowledge takes years', 'Your instructor won't mind calls - safety first'"
+
+sentiment:
+  primary: anxious
+  intensity: high
+  notes: "Uses 'terrified' twice, 'scared', fear of crashing. This is about safety anxiety, not just inconvenience."
+
+theme_tags:
+  - beginner_struggle
+  - safety_concern
+  - pain_point
+  - desired_outcome
+  - learning_struggle
+  - trigger_moment
+  - language_style
+  - job_to_be_done
+
+customer_profile:
+  experience_level: beginner
+  location_hints: "Unknown (no location mentioned)"
+  flying_style: "Recreational beginner, safety-focused"
+  tech_savviness: "Low-medium (knows terms like CAPE but doesn't understand them)"
+  flying_frequency: "Multiple times per month (based on 3 months post-license)"
+
+key_insights:
+  pain_intensity: "5/5 - Fear-based pain, safety critical. Uses 'terrified' and 'scared'"
+  workarounds: "Calls instructor before every flight - dependency on expert, feels like burden"
+  willingness_to_pay: "Very high (implied) - safety is priceless, would pay for confidence"
+  decision_criteria: "Wants: Independence, safety, simplicity. Fears: Crashing, looking incompetent"
+  quote_quality: "Yes - Excellent beginner persona quote, emotional, specific technical confusions"
+  marketing_use: "Landing page: 'From terrified to confident in one season' - Beginner testimonial section"
+
+related_quotes:
+  - example_003  # Another beginner quote
+
+analyst_notes: |
+  CRITICAL INSIGHT: Beginners see weather decisions as safety-critical life/death
+  choices, not just optimization problems. The emotional weight is HUGE.
+
+  Specific confusions mentioned:
+  - CAPE (technical jargon they've seen but don't understand)
+  - Thermal index (same)
+  - Wind speed thresholds (15 km/h - is that safe for me?)
+  - Skill-level appropriate conditions (what's safe for beginners vs. experts?)
+
+  Comparison to expert (instructor): Expert glances for 2 min and knows. Beginner
+  stares at data and has no idea. This is the knowledge gap we need to bridge.
+
+  Dependency issue: "I end up calling my instructor" - wants independence but
+  doesn't trust themselves. Feels like a burden ("annoying him").
+
+  Social anxiety: "I don't want to be the guy who crashes" - peer pressure,
+  reputation concerns, fear of being judged as incompetent.
+
+  Product implications:
+  - Beginner mode is ESSENTIAL, not optional
+  - Plain language (explain what CAPE is, don't just show the number)
+  - Skill-level appropriate recommendations ("Safe for beginners today" vs "Only for experienced pilots")
+  - Educational tooltips on every technical term
+  - Confidence-building features (show them they're making good decisions)
+  - "Ask your instructor" feature (share the recommendation, get validation)
+  - Progress tracking (show improvement over time)
+
+  Pricing: This segment would pay a premium for safety/confidence. Not price-sensitive
+  when life is at stake.
+
+  Marketing angle: "Fly with confidence, not fear" / "From dependent to independent in one season"
+
+---

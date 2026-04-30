@@ -1,0 +1,73 @@
+# =============================================================================
+# KONKURRENT: SeeYou Navigator — Professionelles Cross-Platform Tool
+# =============================================================================
+# Letzte Aktualisierung: 2026-04-17
+# Naechste Ueberpruefung: 2026-07-17
+
+name: SeeYou Navigator
+website: https://naviter.com/seeyou-navigator
+cloud: https://seeyou.cloud
+tagline: "Professional flight navigation"
+founded: ~2010
+headquarters: Slowenien (Naviter d.o.o.)
+type: adjacent_competitor
+priority: low
+
+# Positioning
+primary_use_case: "Professionelle Flugnavigation und Task-Planung"
+target_audience: "Wettbewerbs-Piloten, Segelflieger, ernsthafte XC-Piloten"
+market_position: "Professionelles/Wettbewerbs-Tool"
+
+# Pricing
+pricing_model: subscription
+free_tier: false
+starter_price: "EUR 49/Jahr (EUR 25 erstes Jahr mit Naviter-Instrument)"
+pricing_notes: "Teuer, aber professionelle Qualitaet"
+
+# Platforms
+platforms:
+  web: true            # SeeYou Cloud
+  android: true
+  ios: true
+  windows: true
+  mac: true
+  linux: true          # Einziges Tool mit voller Desktop-Abdeckung
+
+# Features (rate 1-5)
+features:
+  task_support: 5                 # Wettbewerbsaufgaben
+  hochaufloesende_karten: 4
+  task_planung: 5
+  thermal_assistant: 4
+  airspace_warnings: 4
+  topmeteo_integration: 4
+  skysight_integration: 4
+  ogn_live_traffic: 3
+  skyways_thermals: 3
+  regenradar: 3
+  olc_wegglide_xcontest: 4       # Upload zu allen Plattformen
+  ki_wetter_analyse: 0
+  flyability_score: 0
+
+# Strengths
+strengths:
+  - "Einziges echtes Cross-Platform Tool (inkl. Linux)"
+  - "Professionelle Qualitaet"
+  - "Wetter-Integration (TopMeteo, SkySight)"
+  - "Task-Planung fuer Wettbewerbe"
+  - "Naviter-Hardware-Integration"
+
+# Weaknesses
+weaknesses:
+  - "EUR 49/Jahr — teuer"
+  - "Komplex (nicht fuer Anfaenger)"
+  - "Primaer Wettbewerbs-fokussiert"
+  - "Wetter via Dritt-Anbieter"
+
+# Competitive comparison to Gleitcast
+vs_gleitcast:
+  relationship: "Komplementaer — verschiedene Zielgruppen"
+  note: >
+    SeeYou = Wettbewerbs-Tool, Gleitcast = Planungs-Tool.
+    Wenig direkte Ueberschneidung. SeeYou-Nutzer koennten
+    Gleitcast ergaenzend fuer Pre-Flight-Planung nutzen.

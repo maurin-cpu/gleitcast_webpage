@@ -2,59 +2,57 @@ export function Problem() {
   return (
     <section
       id="problem"
-      className="relative bg-foreground py-24 text-background sm:py-32"
+      className="border-b border-slate-200 bg-slate-900 py-16 text-white sm:py-24"
       aria-labelledby="problem-headline"
     >
-      <div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(2,132,199,0.18),transparent_50%)]"
-        aria-hidden="true"
-      />
-      <div className="relative mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-sky-300">
             Kennst du das?
           </p>
           <h2
             id="problem-headline"
-            className="text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl"
+            className="text-balance text-3xl font-bold leading-[1.15] tracking-tight sm:text-4xl lg:text-5xl"
           >
             Samstag, 6:30 Uhr.
             <br />
-            45 Minuten später bist du{" "}
-            <span className="text-accent">unsicherer als vorher</span>.
+            <span className="text-sky-300">
+              Wo soll's heute hingehen?
+            </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-background/70">
-            Du checkst Windy. Dann MeteoBlue. Dann Burnair. Dann zwei Webcams.
-            Die Modelle widersprechen sich. Du fährst trotzdem zum Startplatz —
-            und der Wind ist zu stark.
+          <p className="mx-auto mt-6 max-w-reading text-lg leading-[1.6] text-white/85">
+            Du checkst Windgramme, schaust dir Wetter-Modelle an, vergleichst
+            Webcams. 45 Minuten später hast du viele Daten — aber noch keine
+            klare Antwort, welcher Spot diese Woche der richtige ist.
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { app: "Windy", note: "Wind & Modelle" },
-            { app: "MeteoBlue", note: "Thermik-Index" },
-            { app: "Burnair", note: "Startplätze" },
-            { app: "Webcams", note: "Sicht vor Ort" },
-          ].map((tool) => (
+            { topic: "Wind", note: "Hangwind, Talwind, Höhenwind" },
+            { topic: "Thermik", note: "Auslöse, Stärke, Basis" },
+            { topic: "Sicherheit", note: "Föhn, Front, Lee" },
+            { topic: "Spot-Wahl", note: "488 Startplätze, ein Tag" },
+          ].map((p) => (
             <div
-              key={tool.app}
-              className="rounded-2xl border border-background/10 bg-background/5 p-4 backdrop-blur"
+              key={p.topic}
+              className="rounded-card border border-white/15 bg-white/5 p-4"
             >
-              <div className="text-xs font-medium uppercase tracking-wider text-accent/80">
-                Tool
+              <div className="text-sm font-semibold uppercase tracking-wider text-sky-300">
+                Zu prüfen
               </div>
-              <div className="mt-1 text-base font-semibold">{tool.app}</div>
-              <div className="text-xs text-background/60">{tool.note}</div>
+              <div className="mt-1 text-base font-semibold">{p.topic}</div>
+              <div className="text-sm text-white/90">{p.note}</div>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 flex items-center justify-center gap-3 text-sm text-background/60">
-          <span className="h-px w-12 bg-background/20" aria-hidden="true" />
-          <span>Aus 5 Apps wird eine E-Mail.</span>
-          <span className="h-px w-12 bg-background/20" aria-hidden="true" />
+        <div className="mx-auto mt-10 max-w-2xl text-center text-base leading-[1.6] text-white/85">
+          Gleitcast filtert die Spots, die diese Woche überhaupt fliegbar sind
+          — bewertet pro Tag und Startplatz, mit Begründung. Du nimmst die
+          Empfehlung als Startpunkt, gleichst sie mit deinen Quellen ab und
+          entscheidest selbst.
         </div>
       </div>
     </section>

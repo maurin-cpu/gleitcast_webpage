@@ -1,0 +1,68 @@
+# =============================================================================
+# KONKURRENT: Meteo-Parapente — Gratis-Wetter (verliert an Boden)
+# =============================================================================
+# Letzte Aktualisierung: 2026-04-17
+# Naechste Ueberpruefung: 2026-07-17
+
+name: Meteo-Parapente
+website: https://meteo-parapente.com
+tagline: "Soaring weather forecasts"
+founded: ~2015
+headquarters: Frankreich
+developer: BPZ Labs
+type: direct_competitor
+priority: low
+
+# Positioning
+primary_use_case: "Gratis Gleitschirm-Wettervorhersage"
+target_audience: "Europaeische Piloten (Budget-bewusst)"
+market_position: "Einstiegs-Tool — verliert Marktanteile an bessere Alternativen"
+
+# Pricing
+pricing_model: freemium
+free_tier: true
+free_tier_limits: "Basis-Vorhersage gratis"
+starter_price: "Premium verfuegbar"
+business_price: null
+
+# Platforms
+platforms:
+  web: true
+  android: true
+  ios: true
+
+# Features (rate 1-5)
+features:
+  soaring_forecast: 3             # 2.5km Aufloesung
+  europaeische_abdeckung: 3       # 24+ Laender
+  karteninterface: 3
+  ki_wetter_analyse: 0
+  flyability_score: 0
+  startplatz_datenbank: 1
+
+# Rating
+ratings:
+  google_play: 4.0
+  notes: "Gemischte Reviews — viele Beschwerden"
+
+# Strengths
+strengths:
+  - "Gratis"
+  - "2.5km Aufloesung"
+  - "Europa-weite Abdeckung"
+
+# Weaknesses
+weaknesses:
+  - "Schlechter Developer-Support (Nutzer-Beschwerden)"
+  - "UI 'Jahre hinter der Konkurrenz' (User-Review)"
+  - "Nur Europa"
+  - "Limitierte Features vs. Premium-Konkurrenz"
+  - "Verliert aktiv Nutzer"
+
+# Competitive comparison to Gleitcast
+vs_gleitcast:
+  relationship: "Schwacher Konkurrent — eher Nutzer zum Wechseln bereit"
+  opportunity: >
+    Meteo-Parapente-Nutzer sind frustriert (schlechter Support, veraltete UI).
+    Ideale Zielgruppe fuer Gleitcast-Akquise: bereits gewohnt eine
+    Gleitschirm-Wetter-App zu nutzen, aber unzufrieden.

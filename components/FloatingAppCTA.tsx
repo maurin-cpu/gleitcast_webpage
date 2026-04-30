@@ -3,16 +3,49 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight } from "./ui/Icons";
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://app.gleitcast.ch";
+const APP_URL = "https://app.gleitcast.ch";
 
 export function FloatingAppCTA() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 600);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const hero = document.getElementById("hero");
+    const blockingIds = ["subscribe", "faq"];
+    const blocking = blockingIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    if (!hero) return;
+
+    const state = { heroIn: true, blocked: new Set<HTMLElement>() };
+    const update = () =>
+      setVisible(!state.heroIn && state.blocked.size === 0);
+
+    const heroObserver = new IntersectionObserver(
+      ([entry]) => {
+        state.heroIn = entry.isIntersecting;
+        update();
+      },
+      { threshold: 0 }
+    );
+    heroObserver.observe(hero);
+
+    const blockObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) state.blocked.add(e.target as HTMLElement);
+          else state.blocked.delete(e.target as HTMLElement);
+        });
+        update();
+      },
+      { threshold: 0 }
+    );
+    blocking.forEach((el) => blockObserver.observe(el));
+
+    return () => {
+      heroObserver.disconnect();
+      blockObserver.disconnect();
+    };
   }, []);
 
   return (
@@ -20,14 +53,14 @@ export function FloatingAppCTA() {
       href={APP_URL}
       target="_blank"
       rel="noopener"
-      aria-label="Gleitcast App öffnen"
-      className={`focus-ring fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground shadow-2xl shadow-primary/40 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-primary/50 active:scale-95 md:hidden ${
+      aria-label="Spots in der Gleitcast App ansehen"
+      className={`focus-ring fixed bottom-5 right-5 z-50 inline-flex h-12 items-center gap-2 rounded-lg border-2 border-slate-900 bg-slate-900 px-5 text-base font-semibold text-white transition-[transform,opacity] duration-200 ease-out active:scale-[0.97] md:hidden ${
         visible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-4 opacity-0"
       }`}
     >
-      App öffnen
+      Spots ansehen
       <ArrowUpRight className="h-4 w-4" />
     </a>
   );

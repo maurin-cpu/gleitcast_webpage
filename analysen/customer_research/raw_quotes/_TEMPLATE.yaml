@@ -1,0 +1,83 @@
+---
+# Copy this template for each quote you extract
+# Save as: quote_[number].yaml (e.g., quote_001.yaml, quote_002.yaml)
+
+quote_id: quote_XXX  # Unique ID: quote_001, quote_002, etc.
+
+source:
+  platform: [Reddit / ParaglidingForum / Facebook / Other]
+  subreddit: [e.g., r/paragliding]  # If Reddit
+  thread_title: "[Full thread title]"
+  url: "[Full URL to comment/post]"
+  date: [YYYY-MM-DD or approximate: "2025-11" if exact date unknown]
+  author: [username or "Anonymous"]
+  upvotes: [Number if visible]  # Indicates community agreement
+
+verbatim_quote: |
+  [EXACT words from the post/comment - copy/paste]
+  [Keep original language - English or German]
+  [Include enough context to understand the point]
+  [Use multiple lines if needed]
+
+translation: |
+  # ONLY if quote is in German/other language
+  [English translation]
+
+context:
+  what_prompted: "[What was the original question or topic of discussion?]"
+  thread_summary: "[1-2 sentence summary of the broader conversation]"
+  replies: "[Did anyone agree/disagree? What did they say?]"
+
+sentiment:
+  primary: [frustrated / positive / neutral / anxious / angry / hopeful / excited / disappointed]
+  intensity: [low / medium / high]
+  notes: "[Any emotional nuances worth capturing]"
+
+theme_tags:
+  # Select ALL that apply - be generous with tags
+  - pain_point          # Current frustration/problem
+  - trigger_moment      # When they realize they need a solution
+  - desired_outcome     # What success looks like
+  - current_alternative # What they use now (and why it fails)
+  - language_style      # How they describe the problem (their words)
+  - objection           # Why they don't trust/use existing solutions
+  - job_to_be_done      # Underlying need/goal
+  - beginner_struggle   # Specific to new pilots
+  - safety_concern      # Related to risk/accidents
+  - swiss_alpine_specific # Unique to Swiss/Alpine context
+  - pricing_sensitivity # Mentions cost/value
+  - app_recommendation  # Recommends or criticizes specific app
+  - feature_request     # Wants specific functionality
+  - workflow_description # Describes their process
+  - community_behavior  # How pilots interact/coordinate
+  - weather_mistake     # Story of wrong forecast
+  - time_waste          # Mentions wasted time
+  - decision_paralysis  # Can't decide / uncertainty
+  - learning_struggle   # Difficulty understanding weather
+  - trust_issue         # Skepticism about forecasts/apps
+
+customer_profile:
+  experience_level: [beginner / intermediate / advanced / expert / unclear]
+  location_hints: "[Any geographic clues - Switzerland, Alps, specific sites, countries]"
+  flying_style: "[XC pilot / recreational / thermalling / hike&fly / tandem / competition / unclear]"
+  tech_savviness: "[mentions multiple apps / simple tools / technical jargon / unclear]"
+  flying_frequency: "[daily / weekly / monthly / seasonal / unclear]"
+
+key_insights:
+  pain_intensity: "[How severe is this problem for them? Rate 1-5 or describe]"
+  workarounds: "[What do they do now to solve/cope with this problem?]"
+  willingness_to_pay: "[Any mention of pricing? What they'd pay or won't pay?]"
+  decision_criteria: "[What matters most to them? Safety/time/accuracy/simplicity?]"
+  quote_quality: "[Is this a strong quote for marketing? Yes/No/Maybe]"
+  marketing_use: "[Could this be used in landing page / ads / social proof?]"
+
+related_quotes:
+  # Link to other quotes in the same thread or related themes
+  - quote_XXX
+  - quote_XXX
+
+analyst_notes: |
+  [Any additional observations, connections to other findings, or context
+  that would be useful when synthesizing the research later]
+
+---

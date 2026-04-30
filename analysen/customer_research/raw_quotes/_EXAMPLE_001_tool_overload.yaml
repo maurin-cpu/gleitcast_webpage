@@ -1,0 +1,83 @@
+---
+# EXAMPLE QUOTE - This demonstrates the format
+# Replace with actual quotes from Reddit/forums during research
+
+quote_id: example_001
+
+source:
+  platform: Reddit
+  subreddit: r/paragliding
+  thread_title: "What's your morning weather check routine?"
+  url: "https://reddit.com/r/paragliding/comments/example"
+  date: 2025-11-15
+  author: AlpinePilot_CH
+  upvotes: 42
+
+verbatim_quote: |
+  "My morning routine is absolutely exhausting. I wake up at 6am to start
+  checking weather because it takes almost an hour. First Windy for the
+  overall picture, then MeteoBlue for thermals, then I cross-reference with
+  RASP, check XC Therm, look at burnair for valley winds, check 4-5 webcams
+  at my target sites, call my buddy who lives near Interlaken, and THEN I
+  try to make a decision. By that point I've spent 45-60 minutes and I'm
+  still only 80% confident. There HAS to be a better way. I love flying but
+  I'm burning out on the weather analysis grind."
+
+context:
+  what_prompted: "Thread asking pilots to share their pre-flight weather checking process"
+  thread_summary: "Most pilots described using 3-7 different sources, with planning time ranging 20-90 minutes. Many expressed frustration with the complexity."
+  replies: "15+ pilots replied agreeing, sharing similar multi-app workflows. One replied 'This is why I only fly on weekends now - can't do this daily'"
+
+sentiment:
+  primary: frustrated
+  intensity: high
+  notes: "Uses word 'exhausting' and 'burning out' - suggests this is wearing them down over time, not just an inconvenience"
+
+theme_tags:
+  - pain_point
+  - current_alternative
+  - language_style
+  - workflow_description
+  - time_waste
+  - decision_paralysis
+  - swiss_alpine_specific
+
+customer_profile:
+  experience_level: intermediate
+  location_hints: "Switzerland - mentions Interlaken, Alpine sites"
+  flying_style: "Likely XC or serious recreational (checks thermals, valley winds, multiple sites)"
+  tech_savviness: "High - uses 5+ specialized apps"
+  flying_frequency: "Multiple times per week (attempts daily checks)"
+
+key_insights:
+  pain_intensity: "5/5 - Using words like 'exhausting' and 'burning out' indicates this is a severe, ongoing pain"
+  workarounds: "Uses 5+ apps + webcams + personal network. Time cost: 45-60 min/day"
+  willingness_to_pay: "High (implied) - if someone could save them 40 min/day, likely willing to pay"
+  decision_criteria: "Wants: Time-saving, single source, confidence. Values: Completeness (checks many sources)"
+  quote_quality: "Yes - Excellent for marketing. Specific numbers, emotional language, relatable"
+  marketing_use: "Landing page hero section: 'You're checking 5 apps and still not sure?' Testimonial: Before/After story"
+
+related_quotes:
+  - example_002  # Another quote from same thread
+
+analyst_notes: |
+  This is a GOLD quote. Specific workflow, time quantified (45-60 min), emotional
+  language (exhausting, burning out), and ends with explicit desire for solution
+  ("there HAS to be a better way").
+
+  Key insight: Even checking MANY sources doesn't give 100% confidence (only 80%).
+  This suggests the problem isn't just about aggregation, but about intelligent
+  synthesis and decision support.
+
+  Swiss context: Mentions Interlaken specifically, valley winds (Alpine-specific
+  concern), and uses burnair (premium Swiss app). This pilot represents our
+  target market perfectly.
+
+  Product implications:
+  - MUST reduce planning time from 45 min to <10 min
+  - MUST increase confidence from 80% to 90%+
+  - MUST aggregate the sources they already use (Windy, MeteoBlue, RASP, XC Therm, burnair)
+  - SHOULD integrate webcams
+  - SHOULD have Swiss/Interlaken-specific features
+
+---

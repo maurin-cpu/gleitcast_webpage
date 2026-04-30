@@ -12,7 +12,7 @@ export function Logo({ className = "" }: { className?: string }) {
           <defs>
             <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
               <stop offset="0%" stopColor="#0284C7" />
-              <stop offset="100%" stopColor="#F59E0B" />
+              <stop offset="100%" stopColor="#0F172A" />
             </linearGradient>
           </defs>
           <path

@@ -1,0 +1,115 @@
+# =============================================================================
+# KONKURRENT: Windy.com — Industrie-Standard Wetter
+# =============================================================================
+# Letzte Aktualisierung: 2026-04-17
+# Naechste Ueberpruefung: 2026-07-17
+
+name: Windy.com
+website: https://www.windy.com
+tagline: "Weather forecast visualization"
+founded: 2014
+headquarters: Prag, Tschechien
+type: indirect_competitor
+priority: medium
+
+# Positioning
+primary_use_case: "Professionelle Wettervisualisierung fuer alle Outdoor-Aktivitaeten"
+target_audience: "Piloten, Segler, Surfer, Outdoor-Sportler, Meteorologen"
+market_position: "Industrie-Standard fuer Wetter-Visualisierung — fast jeder Pilot nutzt es"
+
+# Pricing
+pricing_model: freemium
+free_tier: true
+free_tier_limits: "Voller Zugang zu Basis-Features. Premium fuer erweiterte Modelle/Alerts."
+starter_price: "Premium-Abo verfuegbar (Preis variiert)"
+business_price: null
+enterprise: "Windy API fuer Entwickler"
+pricing_notes: "Grosszuegiges Free-Tier — die meisten Piloten zahlen nichts"
+
+# Platforms
+platforms:
+  web: true
+  android: true
+  ios: true
+  desktop: true
+
+# Features (rate 1-5)
+features:
+  wettermodelle: 5                # ECMWF, GFS, ICON, NEMS, AROME, UKV, ICON-EU, ICON-D2
+  wind_visualisierung: 5          # Branchenfuehrend
+  webcams: 5                      # 55'000+
+  paragliding_preset: 4           # "Air profile" Preset
+  hoehenlevels: 5                 # 16 Hoehenstufen
+  meteogramm: 5                   # Detaillierte Zeitverlaeufe
+  airgram: 4                      # Atmosphaerisches Profil
+  modell_vergleich: 4             # Mehrere Modelle vergleichbar
+  startplatz_datenbank: 2         # 1'500 Paragliding-Spots
+  ki_wetter_analyse: 0            # KEINE KI
+  flyability_score: 0             # Kein Score
+  erklaerbare_empfehlungen: 0
+  live_tracking: 0
+  flight_logging: 0
+  offline_modus: 2
+
+# Strengths
+strengths:
+  - "Industrie-Standard — fast jeder Pilot nutzt es"
+  - "Beste Wetter-Visualisierung auf dem Markt"
+  - "8+ professionelle Wettermodelle"
+  - "Paragliding-spezifisches Preset ('Air Profile')"
+  - "55'000 Webcams"
+  - "Grosszuegiges Free-Tier"
+  - "Cross-Platform"
+  - "ICON-D2 fuer Alpine Regionen (hohe Aufloesung)"
+  - "16 Hoehenstufen"
+
+# Weaknesses
+weaknesses:
+  - "Generisches Wetter-Tool — nicht paragliding-spezifisch"
+  - "Kein Flyability-Score oder Empfehlung"
+  - "Pilot muss alle Daten selbst interpretieren"
+  - "Keine Startplatz-spezifischen Analysen"
+  - "Keine KI"
+  - "Keine Alpine Spezialfunktionen (Talwind, Foehn)"
+
+# Best for
+best_for:
+  - "Alle Piloten als Basis-Wetter-Tool"
+  - "Erfahrene Piloten die Rohdaten lesen koennen"
+  - "Multi-Modell-Vergleiche"
+  - "Schneller visueller Ueberblick"
+
+# Not ideal for
+not_ideal_for:
+  - "Anfaenger die Interpretation brauchen"
+  - "Piloten die eine Fliegbarkeits-Empfehlung wollen"
+  - "Wer paragliding-spezifische Analyse braucht"
+
+# Common complaints (Paragliding-Kontext)
+common_complaints:
+  - "Sagt mir nicht ob ich fliegen kann — nur wie das Wetter ist"
+  - "Muss trotzdem andere Apps fuer Thermik-Vorhersage nutzen"
+  - "Kein Startplatz-Bezug"
+
+# Competitive comparison to Gleitcast
+vs_gleitcast:
+  gleitcast_advantages:
+    - "Paragliding-spezifische KI-Analyse"
+    - "Flyability-Score"
+    - "Aggregiert Windy-Daten PLUS weitere Quellen"
+    - "Erklaerbare Empfehlungen"
+    - "Startplatz-bezogene Analyse"
+    - "Alpine Spezialisierung"
+  windy_advantages:
+    - "Branchenfuehrende Visualisierung"
+    - "8+ Wettermodelle im Original"
+    - "55'000 Webcams"
+    - "Etablierter Standard"
+    - "Grosszuegiges Free-Tier"
+    - "Globale Abdeckung"
+  coexistence_note: >
+    Windy und Gleitcast sind KEINE Entweder-Oder-Entscheidung.
+    Die meisten Piloten werden Windy weiterhin als visuelles Tool nutzen.
+    Gleitcast positioniert sich als KI-Schicht OBERHALB von Windy
+    und anderen Quellen — "Windy zeigt das Wetter, Gleitcast sagt dir
+    was es fuer deinen Flug bedeutet."

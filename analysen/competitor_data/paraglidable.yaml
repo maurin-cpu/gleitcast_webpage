@@ -1,0 +1,128 @@
+# =============================================================================
+# KONKURRENT: Paraglidable — Primaerer KI-Konkurrent
+# =============================================================================
+# Letzte Aktualisierung: 2026-04-17
+# Naechste Ueberpruefung: 2026-07-17
+
+name: Paraglidable
+website: https://paraglidable.com
+tagline: "AI-powered paragliding weather forecast"
+founded: ~2020
+headquarters: Frankreich (vermutet)
+type: direct_ai_competitor
+priority: critical
+github: https://github.com/AntoineMeler/Paraglidable
+
+# Positioning
+primary_use_case: "KI-gestuetzte Fliegbarkeits-Vorhersage fuer Gleitschirm"
+target_audience: "Europaeische Gleitschirmpiloten, XC-Flieger"
+market_position: "Einzige umfassende KI-Loesung in Europa"
+
+# Pricing
+pricing_model: freemium
+free_tier: true
+free_tier_limits: "Basis-Funktionen verfuegbar, Details unklar"
+starter_price: "Nicht oeffentlich kommuniziert"
+business_price: null
+enterprise: null
+pricing_notes: "Wenig transparentes Pricing — moeglicher Pain Point fuer Nutzer"
+
+# Platforms
+platforms:
+  web: true
+  android: true
+  ios: false           # Angekuendigt aber noch nicht verfuegbar
+  desktop: false
+
+# Features (rate 1-5)
+features:
+  ki_wetter_analyse: 5          # Kernkompetenz — Neural Network
+  flyability_score: 5           # Flyability + Crossability Score
+  crossability_score: 4         # XC-Potenzial-Bewertung
+  startplatz_datenbank: 3       # Europaeische Abdeckung
+  wetterparameter: 5            # ~200 Parameter pro Tag
+  vorhersagezeitraum: 4         # 10-Tage-Forecast
+  alpine_spezialisierung: 2     # Generell europaeisch, nicht alpin-spezialisiert
+  erklaerbare_ki: 2             # Score ja, aber wenig Erklaerung WARUM
+  skill_level_anpassung: 1      # Keine Anpassung nach Piloten-Level
+  mobile_app_android: 3
+  mobile_app_ios: 0             # Nicht verfuegbar
+  offline_modus: 1
+  push_notifications: 2
+  community_features: 1
+  live_tracking: 0
+  flight_logging: 0
+
+# Technology
+technology:
+  ai_model: "Neural Network (Deep Learning)"
+  training_data: "10 Jahre Wetterarchive + 2 Millionen Fluege"
+  parameters_analyzed: ~200
+  ground_truth: "Online-Flugdatenbanken (XContest, etc.)"
+  weather_sources: "Nicht oeffentlich dokumentiert"
+  update_frequency: "Taeglich"
+
+# Strengths
+strengths:
+  - "Fortschrittlichste KI-Implementierung im Markt"
+  - "Starke Datenbasis (2M Fluege, 10 Jahre Wetter)"
+  - "~200 Wetterparameter werden analysiert"
+  - "Kostenlose Basisversion zieht Nutzer an"
+  - "Open-Source-Projekt (GitHub) — Transparenz"
+  - "Flyability UND Crossability Scores"
+
+# Weaknesses
+weaknesses:
+  - "Android-only — kein iOS (grosse Luecke im Schweizer Markt)"
+  - "Wenig Transparenz bei Pricing"
+  - "Keine Schweiz/Alpin-Spezialisierung"
+  - "KI-Empfehlungen wenig erklaert (Score ohne Begruendung)"
+  - "Keine Skill-Level-Anpassung"
+  - "Interface kann fuer Anfaenger komplex sein"
+  - "Community/Support unklar"
+
+# Best for
+best_for:
+  - "Android-Nutzer die KI-gestuetzte Vorhersagen wollen"
+  - "XC-Piloten die Crossability-Scores schaetzen"
+  - "Tech-affine Piloten die KI vertrauen"
+  - "Europaeische Piloten (breite Abdeckung)"
+
+# Not ideal for
+not_ideal_for:
+  - "iPhone-Nutzer (kein iOS)"
+  - "Anfaenger die Erklaerungen brauchen"
+  - "Piloten die wissen wollen WARUM eine Empfehlung gemacht wird"
+  - "Piloten die Alpine Spezialitaeten benoetigen (Talwinde, Foehn)"
+
+# Common complaints (aus Reviews/Foren)
+common_complaints:
+  - "Kein iOS — kann es auf meinem iPhone nicht nutzen"
+  - "Score sagt mir nicht warum ein Tag gut oder schlecht ist"
+  - "Fuer mein Fluggebiet in den Alpen nicht genau genug"
+
+# Competitive comparison to Gleitcast
+vs_gleitcast:
+  gleitcast_advantages:
+    - "iOS + Android von Tag 1"
+    - "Schweiz/Alpin-Spezialisierung (Talwinde, Foehn, Lee)"
+    - "Erklaerbare KI — zeigt WARUM"
+    - "Skill-Level-Anpassung"
+    - "Aggregiert mehrere Wetter-Quellen transparent"
+  paraglidable_advantages:
+    - "10 Jahre Trainingsdaten vs. Gleitcast = neu"
+    - "2M Fluege als Datengrundlage"
+    - "Etablierter im Markt"
+    - "Breitere europaeische Abdeckung"
+    - "Open Source (Vertrauen durch Transparenz)"
+  switching_triggers:
+    - "iPhone-Nutzer die endlich eine KI-Loesung wollen"
+    - "Schweizer Piloten die Alpine Spezialisierung brauchen"
+    - "Anfaenger die Erklaerungen statt nur Scores wollen"
+
+# Review ratings
+ratings:
+  google_play: "Nicht genug Daten"
+  app_store: null      # Kein iOS
+  g2: null
+  capterra: null

@@ -1,26 +1,26 @@
 import { Logo } from "../ui/Logo";
 import { ArrowUpRight } from "../ui/Icons";
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://app.gleitcast.ch";
+const APP_URL = "https://app.gleitcast.ch";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-foreground text-background">
+    <footer className="bg-slate-900 text-white">
       <div className="mx-auto max-w-content px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <div className="text-background">
+            <div className="text-white">
               <Logo />
             </div>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-background/60">
-              KI-Flugwetter-Briefing für Schweizer Gleitschirmpiloten. Aus 5
-              Apps wird eine E-Mail.
+            <p className="mt-4 max-w-sm text-base leading-[1.6] text-white/85">
+              KI-Flugwetter-Briefing für Schweizer Gleitschirmpiloten — damit
+              du schneller weisst, wo's diese Woche geht.
             </p>
             <a
               href={APP_URL}
               target="_blank"
               rel="noopener"
-              className="focus-ring mt-6 inline-flex items-center gap-2 rounded-full bg-background/10 px-4 py-2 text-sm font-medium text-background transition-all hover:bg-background hover:text-foreground"
+              className="focus-ring mt-6 inline-flex h-11 items-center gap-2 rounded-lg border-2 border-white/30 px-4 text-base font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
             >
               Zur Live-App
               <ArrowUpRight className="h-4 w-4" />
@@ -30,9 +30,9 @@ export function Footer() {
           <FooterCol
             title="Produkt"
             links={[
-              { label: "Briefing-Beispiel", href: "#preview" },
+              { label: "Briefing", href: "#preview" },
+              { label: "So funktioniert's", href: "#solution" },
               { label: "Features", href: "#features" },
-              { label: "Anmeldung", href: "#subscribe" },
               { label: "FAQ", href: "#faq" },
             ]}
           />
@@ -41,6 +41,7 @@ export function Footer() {
             title="App"
             links={[
               { label: "Live-Dashboard", href: APP_URL, external: true },
+              { label: "Briefing", href: `${APP_URL}/briefing`, external: true },
               { label: "Spots-Karte", href: `${APP_URL}/map`, external: true },
               { label: "Chat", href: APP_URL, external: true },
             ]}
@@ -52,15 +53,17 @@ export function Footer() {
               { label: "Impressum", href: "/impressum" },
               { label: "Datenschutz", href: "/datenschutz" },
               { label: "Kontakt", href: "mailto:hi@gleitcast.ch" },
+              {
+                label: "Beta-Feedback",
+                href: "mailto:info@gleitcast.ch?subject=Gleitcast%20Beta%20%E2%80%94%20Feedback",
+              },
             ]}
           />
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-background/10 pt-6 text-xs text-background/50 sm:flex-row sm:items-center">
+        <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-white/15 pt-6 text-sm text-white/85 sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} Gleitcast · Made in Switzerland.</p>
-          <p>
-            Wetterdaten: MeteoSchweiz · ICON-CH1 · ECMWF · Open-Meteo
-          </p>
+          <p>Wetterdaten via Open-Meteo · inkl. ICON-CH1, ICON-D2, ECMWF</p>
         </div>
       </div>
     </footer>
@@ -76,19 +79,19 @@ function FooterCol({
 }) {
   return (
     <div>
-      <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-background/50">
+      <h4 className="text-sm font-bold uppercase tracking-[0.16em] text-white/85">
         {title}
       </h4>
-      <ul className="mt-4 space-y-2.5 text-sm">
+      <ul className="mt-4 space-y-2.5 text-base">
         {links.map((l) => (
           <li key={l.label}>
             <a
               href={l.href}
               {...(l.external && { target: "_blank", rel: "noopener" })}
-              className="focus-ring inline-flex items-center gap-1.5 rounded text-background/70 transition-colors hover:text-background"
+              className="focus-ring inline-flex items-center gap-1.5 rounded text-white/80 transition-colors hover:text-white"
             >
               {l.label}
-              {l.external && <ArrowUpRight className="h-3 w-3" />}
+              {l.external && <ArrowUpRight className="h-3.5 w-3.5" />}
             </a>
           </li>
         ))}

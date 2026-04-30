@@ -1,0 +1,62 @@
+# =============================================================================
+# KONKURRENT: XC Therm — Gratis Europaeische Thermik-Vorhersage
+# =============================================================================
+# Letzte Aktualisierung: 2026-04-17
+# Naechste Ueberpruefung: 2026-07-17
+
+name: XC Therm
+website: https://xctherm.com
+tagline: "Free thermal forecasts for hang gliders and paragliders"
+founded: ~2020
+headquarters: Unbekannt
+type: indirect_competitor
+priority: low
+
+# Positioning
+primary_use_case: "Gratis hochaufloesende Thermik-Vorhersagen"
+target_audience: "Europaeische Gleitschirm- und Drachenpiloten"
+market_position: "Populaere kostenlose Ressource fuer Thermik-Forecasts"
+
+# Pricing
+pricing_model: free
+free_tier: true
+free_tier_limits: "Komplett gratis — kein Abo noetig"
+
+# Platforms
+platforms:
+  web: true
+  android: false
+  ios: false
+  desktop: true        # Web-only
+
+# Features (rate 1-5)
+features:
+  thermik_vorhersage: 4           # ICON-EU, ICON-D2 Modelle
+  regionale_abdeckung: 4          # 1'354 Regionen in Europa
+  pilot_spezifisch: 3             # Speziell aufbereitet fuer PG/HG
+  hochaufloesung: 4               # Besser als globale Modelle
+  ki_wetter_analyse: 0
+  flyability_score: 0
+  startplatz_datenbank: 0
+  mobile_app: 0                   # Kein Mobile
+
+# Strengths
+strengths:
+  - "Komplett gratis"
+  - "Gute europaeische Abdeckung (1'354 Regionen)"
+  - "Pilot-spezifische Aufbereitung"
+  - "ICON-D2 fuer hohe Aufloesung"
+
+# Weaknesses
+weaknesses:
+  - "Web-only — kein Mobile"
+  - "Nur Vorhersage-Anzeige, keine Interpretation"
+  - "Keine Startplatz-Datenbank"
+  - "Keine KI"
+
+# Competitive comparison to Gleitcast
+vs_gleitcast:
+  relationship: "Potenzielle DATENQUELLE"
+  note: >
+    XC Therm-Daten (ICON-EU/ICON-D2) koennten als Input
+    fuer Gleitcasts KI dienen. Eher komplementaer als konkurrierend.

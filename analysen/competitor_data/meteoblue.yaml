@@ -1,0 +1,78 @@
+# =============================================================================
+# KONKURRENT: MeteoBlue — Schweizer Wetter-Expertise
+# =============================================================================
+# Letzte Aktualisierung: 2026-04-17
+# Naechste Ueberpruefung: 2026-07-17
+
+name: MeteoBlue
+website: https://meteoblue.com
+tagline: "Weather close to you"
+founded: 2006
+headquarters: Basel, Schweiz
+type: indirect_competitor
+priority: medium
+
+# Positioning
+primary_use_case: "Professionelle Wettervorhersage mit Thermik-Spezialitaet"
+target_audience: "Professionelle Nutzer, Landwirtschaft, Aviation, Outdoor-Sport"
+market_position: "Schweizer Wetter-Spezialist — von vielen CH-Piloten als Referenz genutzt"
+
+# Pricing
+pricing_model: freemium
+free_tier: true
+free_tier_limits: "Basis-Vorhersagen gratis, professionelle Features kostenpflichtig"
+starter_price: "Variiert nach Produkt"
+business_price: "API-Zugang fuer Entwickler (eigene Preisliste)"
+enterprise: "Individuelle Loesungen"
+pricing_notes: "Interessant als DATENQUELLE fuer Gleitcast — API verfuegbar"
+
+# Platforms
+platforms:
+  web: true
+  android: true
+  ios: true
+  desktop: true
+
+# Features relevant fuer Paragliding (rate 1-5)
+features:
+  thermal_forecast: 5             # Spezialisierte Thermik-Vorhersage
+  thermal_index: 5                # TI fuer 700/800/850/900 hPa
+  atmosphaerische_profile: 5      # Lapse Rate, Stabilitaetsindizes
+  taupunkt: 4                     # Thermik-Startbedingungen
+  wind_scherung: 4
+  wolkenanalyse: 4                # Multi-Level
+  swiss_locations: 5              # Zermatt, Andermatt, Interlaken etc.
+  api_zugang: 5                   # Fuer Entwickler verfuegbar
+  ki_wetter_analyse: 0
+  flyability_score: 0
+  startplatz_datenbank: 0
+  paragliding_spezifisch: 2      # Aviation-Sektion, aber nicht PG-fokussiert
+
+# Strengths
+strengths:
+  - "Schweizer Unternehmen — lokale Expertise"
+  - "Beste Thermik-Indexe (TI auf mehreren Druckniveaus)"
+  - "Professionelle atmosphaerische Daten"
+  - "API verfuegbar fuer Integration"
+  - "Detaillierte Schweizer Standortdaten"
+  - "Von vielen Schweizer Piloten als Referenz genutzt"
+
+# Weaknesses
+weaknesses:
+  - "Genereller Wetterdienst — nicht paragliding-spezifisch"
+  - "Komplexe Daten erfordern Fachwissen"
+  - "Kein Flyability-Score"
+  - "Keine Startplatz-Datenbank"
+  - "Keine Community-Features"
+
+# Competitive comparison to Gleitcast
+vs_gleitcast:
+  relationship: "Potenzielle DATENQUELLE statt Konkurrent"
+  gleitcast_opportunity: >
+    MeteoBlue ist ideal als eine der Wetter-APIs die Gleitcast
+    aggregiert. Schweizer Herkunft, exzellente Thermik-Daten,
+    API verfuegbar. Eher Partner als Konkurrent.
+  api_notes: >
+    MeteoBlue API pruefen: Kosten, Rate-Limits, verfuegbare
+    Parameter (insbesondere Thermal Index, Lapse Rate,
+    Stabilitaetsindizes).

@@ -1,0 +1,110 @@
+# =============================================================================
+# KONKURRENT: Flybubble Weather — Ampelsystem-Pionier (nur UK)
+# =============================================================================
+# NEUE ENTDECKUNG waehrend Customer Research
+# Letzte Aktualisierung: 2026-04-17
+# Naechste Ueberpruefung: 2026-07-17
+
+name: Flybubble Weather
+website: https://weather.flybubble.com
+blog: https://flybubble.com/blog/flybubble-weather
+tagline: "Fly more, with less!"
+founded: ~2023
+headquarters: UK (Flybubble = britischer Gleitschirm-Haendler)
+type: concept_competitor
+priority: high
+note: "WICHTIG: Macht etwas sehr Aehnliches wie Gleitcast — aber nur UK/Ireland, kein KI"
+
+# Positioning
+primary_use_case: "Ampelsystem pro Startplatz — zeigt ob Site fliegbar ist"
+target_audience: "UK/Ireland Gleitschirm- und Drachenpiloten"
+market_position: "Pionier des Site-spezifischen Flyability-Ampelsystems"
+
+# Pricing
+pricing_model: free
+free_tier: true
+free_tier_limits: "Komplett gratis"
+pricing_notes: "Von Flybubble (Haendler) betrieben als Community-Tool / Marketing"
+
+# Platforms
+platforms:
+  web: true
+  android: false       # Nur Web
+  ios: false           # Nur Web
+  desktop: true        # Web
+
+# Features (rate 1-5)
+features:
+  ampelsystem: 5                  # KERN: Gruen/Orange/Rot pro Site
+  site_spezifisch: 5              # Kennt fliegbare Bedingungen PRO Startplatz
+  5_tage_vorhersage: 4            # Stunden-Aufloesung
+  wind_overlay: 4
+  thermal_stars: 4                # Thermik-Staerke als Sterne (1-5)
+  cloudbase: 4
+  anybody_flying: 4               # Community: "Fliegt jemand?"
+  email_alerts: 4                 # Benachrichtigung pro gebuchmarkter Site
+  xc_planner: 3                   # Route-Planung
+  airspace_notams: 3
+  embed_fuer_clubs: 3             # Clubs koennen es einbetten
+  ki_wetter_analyse: 0            # KEINE KI — basiert auf RASP
+  alpine_spezialisierung: 0       # Nur UK/Ireland
+  multi_source_aggregation: 1     # Nur RASP
+  mobile_app: 0                   # Kein Mobile
+  offline_modus: 0
+
+# Technology
+technology:
+  basis: "RASP (Regional Atmospheric Soaring Prediction)"
+  ki: false
+  site_knowledge: "Manuelle Definition der fliegbaren Bedingungen pro Site"
+  update_note: "Site-Kriterien werden ueber Zeit verfeinert"
+
+# Coverage
+coverage:
+  countries: ["UK", "Ireland"]
+  note: "KEINE Abdeckung von Schweiz/Alpen/Europa"
+
+# Strengths
+strengths:
+  - "Genau das was Piloten wollen: Ampel pro Startplatz"
+  - "5-Tage-Vorhersage mit Stunden-Aufloesung"
+  - "'Anybody flying?' Community-Feature"
+  - "Email-Alerts pro gebookmarkter Site"
+  - "Wing-Type-Anpassung (verschiedene Fluegel = verschiedene Windlimits)"
+  - "Komplett gratis"
+  - "Von einem vertrauenswuerdigen Haendler (Flybubble/Greg Hamerton)"
+  - "Club-Embedding-Feature (Verbreitung)"
+
+# Weaknesses
+weaknesses:
+  - "NUR UK/Ireland — keine Alpine Abdeckung"
+  - "Keine KI — basiert nur auf RASP-Modell"
+  - "Keine Multi-Source-Aggregation"
+  - "Web-only — keine Mobile App"
+  - "Manuelle Site-Kriterien (nicht lernend)"
+  - "Keine Alpine Phaenomene (kein Foehn, keine Talwinde)"
+  - "Kein Offline-Modus"
+
+# Competitive comparison to Gleitcast
+vs_gleitcast:
+  was_gleitcast_lernen_kann:
+    - "Ampelsystem (gruen/orange/rot) = genau richtig, Piloten lieben es"
+    - "'Anybody flying?' Feature = brillant, schafft Community"
+    - "Email-Alerts pro Site = das was Piloten wollen (JTBD 4)"
+    - "Wing-Type-Anpassung = gute Idee fuer Skill-Level"
+    - "Club-Embedding = Verbreitungs-Strategie"
+    - "UX-Referenz: einfach, klar, fokussiert"
+  wo_gleitcast_besser_sein_wird:
+    - "KI-Aggregation (nicht nur ein Modell)"
+    - "Schweiz/Alpen-Abdeckung (Flybubble = nur UK)"
+    - "Lernende KI statt manueller Site-Kriterien"
+    - "Mobile App (iOS + Android)"
+    - "Alpine Spezialisierung (Foehn, Talwind, Lee)"
+    - "Erklaerbare Empfehlungen"
+    - "Multi-Source statt Single-Model (RASP)"
+  strategische_bedeutung: >
+    Flybubble Weather VALIDIERT den gesamten Gleitcast-Ansatz.
+    Es beweist: Piloten wollen ein Ampelsystem pro Site.
+    Gleitcast geht weiter: KI statt manueller Regeln,
+    Alpen statt UK, Mobile statt Web-only.
+    Flybubble = UX-Vorbild, Gleitcast = technologischer Nachfolger.

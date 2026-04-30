@@ -1,0 +1,65 @@
+# =============================================================================
+# KONKURRENT/PARTNER: KK7 Thermal Maps — Thermik-Datengrundlage
+# =============================================================================
+# Letzte Aktualisierung: 2026-04-17
+# Naechste Ueberpruefung: 2026-07-17
+
+name: KK7 Thermal Maps
+website: https://thermal.kk7.ch
+tagline: "Thermal probability maps"
+founded: ~2018
+headquarters: Schweiz
+type: data_provider
+priority: high
+creator: "Michael Von Kaenel (basierend auf Master-Thesis 'Ikarus')"
+
+# Positioning
+primary_use_case: "Thermik-Wahrscheinlichkeitskarten basierend auf realen Flugdaten"
+target_audience: "Andere Apps (B2B-Lizenzierung), Piloten (Web-Tool)"
+market_position: "De-facto Standard fuer Thermik-Daten im Alpenraum"
+
+# Pricing
+pricing_model: licensing
+free_tier: true        # Web-Tool gratis nutzbar
+free_tier_limits: "Web-Interface gratis, Daten-Lizenzierung fuer andere Apps"
+licensing_notes: "burnair lizenziert KK7-Daten — Gleitcast sollte das auch pruefen"
+
+# Features (rate 1-5)
+features:
+  thermal_probability: 5          # Kernkompetenz
+  thermal_hotspots: 5             # Zentren hoher Aktivitaet
+  skyways: 4                      # Typische Flugrouten
+  zeitfilter: 4                   # Saison + Tageszeit
+  datengrundlage: 5               # Reale Fluege, nicht Modell-basiert
+  vorhersage: 1                   # Historisch, nicht praediktiv
+  ki: 0                           # Keine KI
+
+# Strengths
+strengths:
+  - "Datenbasiert — reale Fluege statt Modell-Vorhersagen"
+  - "Saison- und Tageszeit-Filter"
+  - "Forschungsfundament (Master-Thesis)"
+  - "In andere Apps integriert (burnair)"
+  - "Hohe Qualitaet im Alpenraum"
+
+# Weaknesses
+weaknesses:
+  - "Kein Standalone-Produkt (Web-Tool)"
+  - "Historisch — sagt nichts ueber MORGEN"
+  - "Abhaengig von Flugdichte (duenne Daten in wenig beflogenen Gebieten)"
+  - "Keine KI-Interpretation"
+
+# Competitive comparison to Gleitcast
+vs_gleitcast:
+  relationship: "Potenzieller DATEN-PARTNER"
+  opportunity: >
+    KK7 + Gleitcast = ideale Kombination:
+    KK7 liefert historische Thermik-Wahrscheinlichkeiten,
+    Gleitcast-KI kombiniert diese mit aktuellen Wetter-Vorhersagen
+    fuer praediktive Thermik-Bewertung.
+    UNBEDINGT Lizenzierung pruefen.
+  action_items:
+    - "Michael Von Kaenel kontaktieren"
+    - "Lizenzbedingungen klaeren"
+    - "API-Zugang pruefen"
+    - "Datenformat und Integration evaluieren"

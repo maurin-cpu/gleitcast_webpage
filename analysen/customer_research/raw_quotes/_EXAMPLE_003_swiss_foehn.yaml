@@ -1,0 +1,126 @@
+---
+# EXAMPLE QUOTE - Swiss/Alpine specific pain point
+
+quote_id: example_003
+
+source:
+  platform: ParaglidingForum.com
+  thread_title: "Föhn prediction - any reliable tools?"
+  url: "https://paraglidingforum.com/viewtopic.php?t=example3"
+  date: 2025-09-20
+  author: BernerPilot
+  upvotes: null  # Forum doesn't show upvotes
+
+verbatim_quote: |
+  "Interlaken ist ein Alptraum für Wettervorhersagen. Letzte Woche zeigte
+  MeteoBlue 'gute Bedingungen' und Windy sah auch ok aus. Ich fahre 90
+  Minuten zum Startplatz, komme an und plötzlich Föhn! Die Webcams zeigten
+  schon komische Wolkenformationen aber ich habe es ignoriert weil die Apps
+  'grün' waren. Hätte fast einen Unfall gehabt beim Start - die Böen waren
+  brutal. MeteoSchweiz ist besser als internationale Apps aber auch die
+  verstehen die lokalen Effekte nicht richtig. Das Problem ist dass Föhn
+  sehr lokal sein kann - in Interlaken schlimm, aber 20km weiter ok. Man
+  braucht wirklich lokale Expertise, nicht nur Modelle."
+
+translation: |
+  "Interlaken is a nightmare for weather forecasts. Last week MeteoBlue showed
+  'good conditions' and Windy also looked ok. I drive 90 minutes to the launch,
+  arrive and suddenly föhn! The webcams already showed weird cloud formations
+  but I ignored it because the apps were 'green'. Almost had an accident on
+  launch - the gusts were brutal. MeteoSwiss is better than international apps
+  but even they don't understand the local effects properly. The problem is
+  that föhn can be very local - bad in Interlaken but ok 20km away. You really
+  need local expertise, not just models."
+
+context:
+  what_prompted: "Discussion about föhn prediction reliability, asking if any tools can predict it accurately"
+  thread_summary: "Multiple Swiss/Alpine pilots shared similar experiences of föhn 'surprises'. General consensus: No app reliably predicts föhn, must combine webcams + local knowledge + cautious interpretation"
+  replies: "8 replies from Swiss pilots, all agreeing. One mentioned 'I only trust locals now, not apps.' Another: 'Föhn alarm on MeteoSwiss helps but not always accurate'"
+
+sentiment:
+  primary: frustrated
+  intensity: high
+  notes: "Near-miss accident creates strong emotional memory. Uses 'Alptraum' (nightmare), 'brutal'. Mix of frustration and residual fear."
+
+theme_tags:
+  - swiss_alpine_specific
+  - pain_point
+  - safety_concern
+  - weather_mistake
+  - objection
+  - current_alternative
+  - trigger_moment
+  - language_style
+  - trust_issue
+
+customer_profile:
+  experience_level: intermediate
+  location_hints: "Switzerland - Interlaken area, Bernese Oberland (username BernerPilot)"
+  flying_style: "Recreational or XC (drives 90 min to sites)"
+  tech_savviness: "High (uses MeteoBlue, Windy, MeteoSwiss, webcams)"
+  flying_frequency: "Regular (weekly or bi-weekly, based on driving to sites)"
+
+key_insights:
+  pain_intensity: "5/5 - Near-accident, safety critical, 90 min wasted drive time"
+  workarounds: "Uses MeteoBlue + Windy + MeteoSwiss + webcams + increasingly relies on local pilot network. Still gets it wrong."
+  willingness_to_pay: "Very high - safety incident = wake-up call. Would pay premium for föhn detection."
+  decision_criteria: "Wants: Föhn prediction accuracy, local site-specific forecasts, safety above all"
+  quote_quality: "Yes - Dramatic story, specific location (Interlaken = major Swiss site), emotional"
+  marketing_use: "Case study: 'How we solved the Interlaken föhn problem' - Swiss pilot testimonials"
+
+related_quotes:
+  - example_004  # Another föhn/valley wind quote
+
+analyst_notes: |
+  CRITICAL SWISS MARKET INSIGHT: This quote demonstrates why international apps
+  fail in the Swiss market and why Swiss pilots are willing to pay premium
+  (burnair €119) for local expertise.
+
+  The föhn problem:
+  - Global models (ECMWF on Windy, etc.) don't predict föhn well
+  - Even Swiss MeteoSwiss "doesn't understand local effects properly"
+  - Extremely localized ("bad in Interlaken, ok 20km away")
+  - Life-threatening if missed ("almost had accident", "gusts brutal")
+
+  Failure cascade:
+  1. Checks MeteoBlue: Green ✓
+  2. Checks Windy: OK ✓
+  3. Drives 90 minutes (major time/fuel investment)
+  4. Arrives: Föhn conditions (apps were wrong)
+  5. Tries to launch: Nearly has accident
+  6. Returns home: Wasted 3+ hours, rattled, no longer trusts apps
+
+  Trust erosion: "I ignored webcams because apps were green" - he had the right
+  instinct (weird clouds) but trusted the apps over his gut. Now has learned
+  not to trust apps. This is the trust problem we must solve.
+
+  Local knowledge requirement: "You really need local expertise, not just models"
+  - This is the GAP. Models alone aren't enough for Alpine flying.
+  - Need to integrate: models + historical patterns + real-time webcams + pilot reports
+  - AI could learn: "When webcams show X cloud formation at Interlaken, ignore
+    models saying 'good' - it's föhn"
+
+  Product implications:
+  - MUST have föhn-specific detection algorithm
+  - MUST integrate webcam analysis (computer vision? or links with alerts?)
+  - MUST use Swiss models (ICON-D2, MeteoSwiss) not just global
+  - MUST train on local föhn patterns (historical data)
+  - SHOULD show local variance ("Interlaken: Not flyable due to föhn. Grindelwald
+    (20km away): Flyable")
+  - MUST be conservative on föhn (better false alarm than miss)
+  - Feature: "Föhn alarm" with push notifications
+
+  Competitive moat: If we solve föhn prediction better than anyone, we OWN the
+  Swiss market. This is the #1 safety concern for Alpine pilots.
+
+  Marketing angle:
+  - "Finally, föhn prediction you can trust"
+  - "Built by pilots who know Interlaken isn't just another site"
+  - Testimonials from Interlaken/Berner Oberland pilots
+  - Case study: "How our AI detected föhn when MeteoBlue said 'good'"
+
+  Willingness to pay: After a near-accident, pilots will pay almost anything
+  for better safety. This segment is NOT price sensitive. Premium positioning
+  (€49-79/year) is appropriate for Swiss market if we deliver on föhn accuracy.
+
+---

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost:3001/_next/static/css/app/layout.css)",
+      "Read(//c/Users/user/agency-agents/**)",
+      "Bash(bash ./scripts/install.sh --tool claude-code --no-interactive)"
+    ]
+  }
+}

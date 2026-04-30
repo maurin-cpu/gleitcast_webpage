@@ -3,31 +3,27 @@ import { Languages, Shield, Layers, Wind } from "../ui/Icons";
 const features = [
   {
     icon: Languages,
-    title: "Klartext statt Wetter-Jargon",
-    body: '„Föhn aus Süd, 50 km/h auf 3000 m" — verständlich, auch ohne Meteo-Studium.',
+    title: "Spots sortiert, in Klartext",
+    body: 'Pro Tag drei Empfehlungen mit „Warum" — Klartext statt CAPE und Lapse Rate.',
     color: "text-flyViolet",
-    bg: "bg-flyViolet/10",
   },
   {
     icon: Shield,
     title: "Sicherheit zuerst, dann Fliegbarkeit",
-    body: "Wir trennen klar: erst Gefahrenlage prüfen, dann Thermik-Qualität bewerten.",
+    body: "Erst Gefahrenlage (Föhn, Lee, Front), dann Fliegbarkeit insgesamt — Thermik, Wind und Basis als ein Bild.",
     color: "text-flyGreen",
-    bg: "bg-flyGreen/10",
   },
   {
     icon: Wind,
-    title: "Föhn & Talwinde automatisch",
-    body: "Alpine Phänomene, die Standard-Wetter-Apps nicht abdecken — speziell für die Schweiz.",
-    color: "text-accent",
-    bg: "bg-accent/10",
+    title: "Schweizer Alpen-Phänomene",
+    body: "Föhndurchbruch, Talwinde, Inversionen — eingepreist in die Bewertung jedes der 488 Startplätze.",
+    color: "text-slate-900",
   },
   {
     icon: Layers,
-    title: "Confidence + Datenquellen",
-    body: "Pro Empfehlung siehst du, wie sicher die KI ist und auf welchen Modellen sie basiert.",
-    color: "text-primary",
-    bg: "bg-primary/10",
+    title: "Modell-Transparenz",
+    body: "Du siehst pro Empfehlung, auf welchen Modellen sie basiert. Keine Black Box.",
+    color: "text-sky-700",
   },
 ];
 
@@ -35,39 +31,39 @@ export function Features() {
   return (
     <section
       id="features"
-      className="bg-background py-24 sm:py-32"
+      className="border-b border-slate-200 bg-slate-50 py-16 sm:py-24"
       aria-labelledby="features-headline"
     >
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-primary">
+        <div className="mx-auto max-w-reading text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-sky-700">
             Für dich gemacht
           </p>
           <h2
             id="features-headline"
-            className="text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
+            className="text-balance text-3xl font-bold leading-[1.15] tracking-tight text-slate-900 sm:text-4xl"
           >
-            Vier Dinge, die wir anders machen.
+            Vier Dinge, die dir den Spot-Check abnehmen.
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-5 sm:grid-cols-2">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {features.map((f) => {
             const Icon = f.icon;
             return (
               <article
                 key={f.title}
-                className="group relative overflow-hidden rounded-3xl border border-border bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5"
+                className="rounded-card border border-slate-200 bg-white p-6"
               >
                 <div
-                  className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl ${f.bg} ${f.color} transition-transform duration-300 group-hover:scale-110`}
+                  className={`inline-flex h-12 w-12 items-center justify-center rounded-lg border border-slate-200 bg-sky-50 ${f.color}`}
                 >
                   <Icon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-5 text-xl font-semibold tracking-tight">
+                <h3 className="mt-5 text-xl font-semibold tracking-tight text-slate-900">
                   {f.title}
                 </h3>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
+                <p className="mt-2 text-base leading-[1.6] text-slate-700">
                   {f.body}
                 </p>
               </article>

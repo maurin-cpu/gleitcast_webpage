@@ -1,0 +1,121 @@
+# =============================================================================
+# KONKURRENT: where2fly — Beste Gratis-Option Schweiz
+# =============================================================================
+# Letzte Aktualisierung: 2026-04-17
+# Naechste Ueberpruefung: 2026-07-17
+
+name: where2fly
+website: https://where2fly.info
+tagline: "where2fly paragliding"
+founded: ~2020
+headquarters: Schweiz (vermutet)
+type: direct_competitor
+priority: high
+
+# Positioning
+primary_use_case: "Gratis Startplatz-Finder mit Schweiz-Fokus"
+target_audience: "Schweizer Piloten, besonders Anfaenger und Gelegenheitsflieger"
+market_position: "Beste kostenlose Option fuer Schweizer Piloten"
+
+# Pricing
+pricing_model: free
+free_tier: true
+free_tier_limits: "Komplett gratis und werbefrei. Flugbuch-Modul als Einmalkauf."
+starter_price: "Einmalkauf fuer Flugbuch (Betrag unbekannt)"
+business_price: null
+enterprise: null
+pricing_notes: "Einzigartiges Modell — gratis + werbefrei. Schwer zu unterbieten."
+
+# Platforms
+platforms:
+  web: false
+  android: false
+  ios: true            # NUR iOS
+  desktop: false
+
+# Features (rate 1-5)
+features:
+  startplatz_datenbank: 4         # 15'000+ in 100+ Laendern
+  landeplatz_datenbank: 3         # 4'000+
+  swisstopo_karten: 5            # Offline-faehig — einzigartig
+  oev_stationen: 5               # 28'000+ Schweizer OeV-Stationen
+  paraglidable_integration: 4    # Flyability-Forecast eingebunden
+  thermal_hotspots: 4            # Europa-weit
+  webcams: 4                     # 50'000 (windy.com, camscollection.ch)
+  sos_funktion: 4                # GPS-Notfallposition
+  wind_richtungssuche: 3         # Von aktuellem Standort
+  offline_karten: 4              # OpenTopoMap, OSM
+  flugbuch: 3                    # Kostenpflichtiges Modul
+  ki_wetter_analyse: 0           # Keine eigene KI
+  flyability_score: 3            # Via Paraglidable-Integration
+  erklaerbare_empfehlungen: 0
+  skill_level_anpassung: 0
+  live_tracking: 0
+  push_notifications: 0
+
+# Strengths
+strengths:
+  - "Komplett gratis UND werbefrei — einzigartig"
+  - "Exzellente Schweiz-Integration (Swisstopo, OeV)"
+  - "28'000 Schweizer OeV-Stationen (Anreise-Planung)"
+  - "Paraglidable-Flyability-Integration"
+  - "Thermal Hotspots Europa-weit"
+  - "50'000 Webcams"
+  - "SOS-Notfallfunktion"
+  - "Besonders gelobt von Anfaenger-Piloten"
+  - "Offline-Karten"
+
+# Weaknesses
+weaknesses:
+  - "NUR iOS — Android-Nutzer ausgeschlossen"
+  - "Keine eigene Wetter-Analyse (abhaengig von Paraglidable)"
+  - "Kein eigener Flyability-Score"
+  - "Weniger umfassende Wetter-Daten als Premium-Apps"
+  - "Flugbuch kostenpflichtig"
+  - "Keine Community-Features"
+  - "Kein Live-Tracking"
+
+# Best for
+best_for:
+  - "iPhone-Nutzer in der Schweiz"
+  - "Anfaenger-Piloten"
+  - "Budget-bewusste Flieger"
+  - "Piloten die mit OeV zum Startplatz reisen"
+  - "Gelegenheitsflieger"
+
+# Not ideal for
+not_ideal_for:
+  - "Android-Nutzer"
+  - "Piloten die detaillierte Wetter-Analyse brauchen"
+  - "XC-Flieger"
+  - "Wer Live-Tracking oder Community will"
+
+# Common complaints
+common_complaints:
+  - "Nur iOS — mein Android wird nicht unterstuetzt"
+  - "Wetter-Vorhersage koennte detaillierter sein"
+  - "Flugbuch sollte auch gratis sein"
+
+# Competitive comparison to Gleitcast
+vs_gleitcast:
+  gleitcast_advantages:
+    - "Eigene KI statt Paraglidable-Abhaengigkeit"
+    - "Android + iOS (Cross-Platform)"
+    - "Tiefere Wetter-Analyse und Aggregation"
+    - "Erklaerbare Empfehlungen"
+    - "Skill-Level-Anpassung"
+  where2fly_advantages:
+    - "Komplett gratis und werbefrei"
+    - "Swisstopo-Integration (Offline)"
+    - "28'000 OeV-Stationen"
+    - "15'000+ Sites (vs. 50 im MVP)"
+    - "SOS-Notfallfunktion"
+    - "Bewaehrte Anfaenger-Freundlichkeit"
+  switching_triggers:
+    - "Android-Nutzer die eine Alternative brauchen"
+    - "Will eigene KI statt abhaengig von Paraglidable"
+    - "Braucht tiefere Wetter-Analyse"
+  coexistence_note: >
+    where2fly und Gleitcast koennten koexistieren — where2fly fuer
+    Site-Suche/Navigation, Gleitcast fuer KI-Wetter-Analyse.
+    Nicht zwingend ein Entweder-Oder.

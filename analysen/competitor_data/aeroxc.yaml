@@ -1,0 +1,72 @@
+# =============================================================================
+# KONKURRENT: AeroXC — Professionelle Vertikalprofile
+# =============================================================================
+# Letzte Aktualisierung: 2026-04-17
+# Naechste Ueberpruefung: 2026-07-17
+
+name: AeroXC
+website: https://aeroxc.com
+tagline: "Precise weather predictions for thermal flights"
+founded: ~2020
+headquarters: Unbekannt
+type: direct_competitor
+priority: medium
+
+# Positioning
+primary_use_case: "Professionelle Wetter-Vertikalprofile fuer Thermikflieger"
+target_audience: "Erfahrene XC-Piloten, professionelle Flieger"
+market_position: "Mid-Tier professionelles Tool"
+
+# Pricing
+pricing_model: subscription
+free_tier: false       # Unklar — Pricing nicht transparent
+starter_price: "Nicht oeffentlich"
+pricing_notes: "Wenig transparentes Pricing"
+
+# Platforms
+platforms:
+  web: false
+  android: true
+  ios: true
+
+# Features (rate 1-5)
+features:
+  vertikalprofile: 5              # 0-12km — Kernkompetenz
+  wind_mehrere_hoehen: 5
+  boeen_analyse: 4
+  temperatur_feuchte: 4
+  taupunkt: 4
+  kondensationsniveau: 4
+  nullgradgrenze: 4
+  wolkendecke: 4                  # Alle Level
+  instabilitaet: 4                # Power + Hoehe
+  jet_stream: 4                   # Professionell
+  vorhersagemodelle: 4            # 3 Modelle
+  startplatz_datenbank: 3         # Weltweit
+  ki_wetter_analyse: 0
+  flyability_score: 0
+
+# Strengths
+strengths:
+  - "Detaillierteste Vertikalprofile (0-12km)"
+  - "Professionelle Qualitaet"
+  - "3 Vorhersagemodelle"
+  - "Jet-Stream-Karten"
+  - "Globale Abdeckung"
+
+# Weaknesses
+weaknesses:
+  - "Pricing nicht transparent"
+  - "Keine Community-Features"
+  - "Keine KI"
+  - "Komplex fuer Anfaenger"
+  - "Kein Flyability-Score"
+
+# Competitive comparison to Gleitcast
+vs_gleitcast:
+  relationship: "Teilweise ueberlappend bei Wetter-Daten"
+  note: >
+    AeroXC bedient erfahrene Piloten die Rohdaten wollen.
+    Gleitcast bedient Piloten die Interpretation wollen.
+    Verschiedene Segmente, aber AeroXC-Nutzer koennten
+    Gleitcast als Ergaenzung nutzen.

@@ -1,0 +1,68 @@
+# =============================================================================
+# KONKURRENT: FlySkyHy — Standard iOS Flight Computer
+# =============================================================================
+# Letzte Aktualisierung: 2026-04-17
+# Naechste Ueberpruefung: 2026-07-17
+
+name: FlySkyHy
+website: https://flyskyhy.com
+tagline: "iPhone flight instrument"
+founded: ~2012
+headquarters: Unbekannt
+type: adjacent_competitor
+priority: low
+
+# Positioning
+primary_use_case: "Flight-Instrument fuer iPhone"
+target_audience: "Gleitschirmpiloten mit iPhone"
+market_position: "Fuehrendes iOS Flight-Instrument — iPhone-Gegenstueck zu XCTrack"
+
+# Pricing
+pricing_model: freemium
+free_tier: true
+free_tier_limits: "Basis gratis, erweiterte Features kostenpflichtig"
+starter_price: "In-App-Kaeufe (Betrag unbekannt)"
+business_price: null
+enterprise: null
+
+# Platforms
+platforms:
+  web: false
+  android: false
+  ios: true            # NUR iOS
+  desktop: false
+
+# Features (rate 1-5)
+features:
+  flight_instrument: 4
+  gps_tracking: 4
+  thermal_detection: 4
+  airspace_alerts: 4
+  variometer: 4
+  route_planung_xc: 3
+  flight_logging: 4
+  platform_integration: 3         # Upload zu Flugplattformen
+  ki_wetter_analyse: 0
+  flyability_score: 0
+  wetter_vorhersage: 0
+
+# Strengths
+strengths:
+  - "Fuehrendes iOS Flight-Instrument"
+  - "Thermal-Erkennung"
+  - "Airspace-Warnungen"
+  - "Gute Hardware-Integration"
+
+# Weaknesses
+weaknesses:
+  - "NUR iOS"
+  - "Primaer In-Flight — keine Flugplanung"
+  - "Nicht so feature-reich wie XCTrack"
+  - "Premium-Features kosten extra"
+
+# Competitive comparison to Gleitcast
+vs_gleitcast:
+  relationship: "Komplementaer — kein direkter Konkurrent"
+  note: >
+    Gleich wie XCTrack: FlySkyHy = In-Flight, Gleitcast = Pre-Flight.
+    Moegliche Integration: FlySkyHy-Flugdaten als Input fuer Gleitcast-KI.

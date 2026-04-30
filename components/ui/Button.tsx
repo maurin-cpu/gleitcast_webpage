@@ -1,25 +1,35 @@
-import { forwardRef, type ButtonHTMLAttributes, type AnchorHTMLAttributes } from "react";
+import {
+  forwardRef,
+  type ButtonHTMLAttributes,
+  type AnchorHTMLAttributes,
+} from "react";
 
-type Variant = "primary" | "secondary" | "ghost" | "accent";
+/**
+ * Button — MASTER §6.1
+ * Genau 3 Varianten: primary | secondary | ghost.
+ * Min-Height 48px (Outdoor / Handschuhe), Border-Radius 8px,
+ * keine Box-Shadow auf statischen States, Focus 3px.
+ */
+
+type Variant = "primary" | "secondary" | "ghost";
 type Size = "sm" | "md" | "lg";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full font-medium transition-all duration-200 focus-ring disabled:opacity-50 disabled:cursor-not-allowed select-none cursor-pointer active:scale-[0.98]";
+  "inline-flex items-center justify-center gap-2 rounded-lg font-semibold tracking-tight transition-[transform,background-color,border-color,color] duration-150 ease-out focus-ring disabled:opacity-50 disabled:cursor-not-allowed select-none cursor-pointer active:scale-[0.97]";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30",
-  accent:
-    "bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30",
+    "bg-slate-900 text-white hover:bg-slate-900/90 active:bg-slate-900",
   secondary:
-    "bg-white text-foreground border border-border hover:border-primary/40 hover:bg-muted/40 shadow-sm",
+    "bg-white text-sky-700 border-2 border-sky-700 hover:bg-sky-50 active:bg-sky-100",
   ghost:
-    "bg-transparent text-foreground hover:bg-muted/60",
+    "bg-transparent text-sky-700 hover:bg-sky-50 active:bg-sky-100",
 };
 
 const sizes: Record<Size, string> = {
-  sm: "h-9 px-4 text-sm",
-  md: "h-11 px-6 text-[0.95rem]",
+  // Touch-Targets ≥44pt überall (MASTER §5.3)
+  sm: "h-11 px-5 text-base",
+  md: "h-12 px-6 text-base",
   lg: "h-14 px-8 text-base",
 };
 

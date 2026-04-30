@@ -1,0 +1,75 @@
+# =============================================================================
+# KONKURRENT: XCTrack — Standard Android Flight Computer
+# =============================================================================
+# Letzte Aktualisierung: 2026-04-17
+# Naechste Ueberpruefung: 2026-07-17
+
+name: XCTrack
+website: https://xctrack.org
+tagline: "Free flight instrument for Android"
+founded: ~2015
+headquarters: Community-Projekt
+type: adjacent_competitor
+priority: low
+
+# Positioning
+primary_use_case: "Gratis Flight-Instrument fuer Android"
+target_audience: "Gleitschirm- und Drachenpiloten (Android)"
+market_position: "De-facto Standard als Android Flight-Computer"
+
+# Pricing
+pricing_model: free
+free_tier: true
+free_tier_limits: "Komplett gratis (Spenden willkommen)"
+starter_price: null
+business_price: null
+enterprise: null
+
+# Platforms
+platforms:
+  web: false
+  android: true
+  ios: false           # NUR Android
+  desktop: false
+
+# Features (rate 1-5)
+features:
+  flight_instrument: 5            # Kernfunktion — beste Android-App
+  fai_assistant: 5
+  xcontest_integration: 5         # Live-Upload, Livetracking
+  wettkaempf_tools: 5
+  airspace: 4                     # Automatische Updates
+  terrain_karten: 4
+  wind_berechnung: 4              # Aus Flugdaten
+  customizable_display: 5
+  externe_sensoren: 4             # Bluetooth-Varios etc.
+  activelook_hud: 3               # HUD-Brillen
+  ki_wetter_analyse: 0
+  flyability_score: 0
+  wetter_vorhersage: 0            # Kein Pre-Flight Wetter
+  startplatz_datenbank: 1
+
+# Strengths
+strengths:
+  - "Komplett gratis"
+  - "Feature-reichstes Android Flight-Instrument"
+  - "Wettkaempf-tauglich"
+  - "Starke XContest-Integration"
+  - "Hoch konfigurierbar"
+  - "Community-getrieben"
+
+# Weaknesses
+weaknesses:
+  - "NUR Android"
+  - "Primaer In-Flight — keine Flugplanung/Wetter"
+  - "Lernkurve fuer Konfiguration"
+  - "Kein Pre-Flight Decision Support"
+
+# Competitive comparison to Gleitcast
+vs_gleitcast:
+  relationship: "Komplementaer — kein direkter Konkurrent"
+  note: >
+    XCTrack = In-Flight Instrument, Gleitcast = Pre-Flight Decision Support.
+    Ideale Kombination: Gleitcast fuer die Entscheidung WO und WANN,
+    XCTrack fuer den Flug selbst. Integration-Opportunity:
+    XCTrack-Flugdaten als Training-Input fuer Gleitcast-KI.

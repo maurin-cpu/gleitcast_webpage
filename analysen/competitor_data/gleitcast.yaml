@@ -1,0 +1,123 @@
+# =============================================================================
+# EIGENES PRODUKT: Gleitcast
+# =============================================================================
+# Zentraler Datensatz — wird von allen Comparison-Pages referenziert
+# Letzte Aktualisierung: 2026-04-17
+
+name: Gleitcast
+website: # TBD
+tagline: "Dein KI-Copilot fuer Gleitschirmfliegen"
+founded: 2026
+headquarters: Schweiz
+type: own_product
+
+# Positioning
+primary_use_case: "KI-gestuetzte Wetter-Aggregation und Fliegbarkeits-Bewertung fuer Gleitschirmflieger"
+target_audience: "Gleitschirmpiloten in der Schweiz und im Alpenraum (Anfaenger bis Experten)"
+market_position: "Erster KI-Copilot spezialisiert auf Schweizer/Alpine Bedingungen"
+unique_value_proposition: >
+  Aggregiert Wetterdaten aus mehreren Quellen, analysiert sie mit KI und
+  liefert personalisierte Fliegbarkeits-Bewertungen schneller und praeziser
+  als manuelle Interpretation — spezialisiert auf Alpine Bedingungen.
+
+# Pricing (geplant)
+pricing_model: freemium
+free_tier: true
+free_tier_limits: "3 Startplaetze, Basis-Flyability-Score, 3-Tage-Vorhersage"
+starter_price: # TBD — geschaetzt CHF 39/Jahr
+business_price: null
+enterprise: null
+pricing_notes: >
+  Freemium-Modell: Gratis-Tier genuegend nuetzlich fuer Gelegenheitsflieger,
+  Premium fuer aktive Piloten. Unterbietet burnair (CHF 49-119) bewusst.
+
+# Features (geplant, rate 1-5)
+features:
+  ki_wetter_aggregation: 5       # Kern-USP — mehrere Quellen, KI-Synthese
+  flyability_score: 5            # Go/No-Go Empfehlung mit Erklaerung
+  startplatz_datenbank: 3        # Start mit Top 50 CH, spaeter mehr
+  alpine_spezialisierung: 5      # Talwinde, Foehn, Lee-Effekte
+  erklaerbare_ki: 5              # Zeigt WARUM empfohlen wird
+  skill_level_anpassung: 4       # Anfaenger vs. Experte
+  wettermodell_vergleich: 4      # Zeigt wo Modelle uebereinstimmen/abweichen
+  live_tracking: 1               # Nicht im MVP
+  flight_logging: 1              # Nicht im MVP
+  community_features: 1          # Nicht im MVP
+  offline_modus: 2               # Eingeschraenkt im MVP
+  push_notifications: 3          # "Dein Spot ist jetzt fliegbar!"
+  mobile_app_ios: 4              # Cross-Platform von Tag 1
+  mobile_app_android: 4          # Cross-Platform von Tag 1
+  web_dashboard: 3               # PWA fuer Desktop-Planung
+  api: 1                         # Spaeter
+  thermalvorhersage: 4           # KK7-Integration geplant
+  airspace_warnungen: 2          # Spaeter
+  xccontest_integration: 1       # Spaeter
+
+# Strengths (ehrlich)
+strengths:
+  - "Erste KI-gestuetzte Wetter-Aggregation fuer Gleitschirm"
+  - "Spezialisiert auf Schweizer/Alpine Bedingungen (Talwinde, Foehn, Lee)"
+  - "Erklaerbare Empfehlungen — Pilot versteht WARUM"
+  - "Cross-Platform (iOS + Android) von Anfang an"
+  - "Skill-Level-Anpassung (Anfaenger bis Experte)"
+  - "Guenstiger als Premium-Konkurrenz (burnair, SeeYou)"
+  - "Reduziert Tool-Fragmentierung — ein Tool statt 5-10"
+
+# Weaknesses (ehrlich)
+weaknesses:
+  - "Neues Produkt — keine Track Record, keine Community"
+  - "KI-Genauigkeit muss sich erst beweisen (Safety-Critical)"
+  - "Kleine Startplatz-Datenbank im MVP (Top 50 CH)"
+  - "Kein Flight-Logging oder Live-Tracking im MVP"
+  - "Abhaengig von Dritt-APIs (Kosten, Verfuegbarkeit)"
+  - "Training-Daten in wenig beflogenen Gebieten duenn"
+  - "KI-Empfehlungen koennten Piloten in falscher Sicherheit wiegen"
+
+# Best for
+best_for:
+  - "Piloten die schnell wissen wollen wo heute/morgen geflogen werden kann"
+  - "Anfaenger die Wetterdaten nicht selbst interpretieren koennen"
+  - "Vielflieger die Zeit bei der Flugplanung sparen wollen"
+  - "Schweizer und Alpine Piloten"
+  - "Piloten die aktuell 5+ Apps/Websites checken muessen"
+
+# Not ideal for
+not_ideal_for:
+  - "Piloten die ein Flight-Instrument suchen (XCTrack/FlySkyHy)"
+  - "Wettkampf-Piloten die XContest-Integration brauchen"
+  - "Piloten ausserhalb des Alpenraums (im MVP)"
+  - "Piloten die lieber selbst alle Rohdaten analysieren"
+  - "Tandempiloten die Live-Tracking fuer Gaeste brauchen"
+
+# Common feedback (noch keine — Platzhalter fuer Beta-Phase)
+expected_feedback:
+  positive:
+    - "Endlich sagt mir eine App ob ich fliegen kann oder nicht"
+    - "Spart mir 30 Minuten Wetter-Checken am Morgen"
+    - "Die Erklaerungen helfen mir Wetter besser zu verstehen"
+  concerns:
+    - "Kann ich der KI wirklich vertrauen bei Sicherheitsfragen?"
+    - "Wie genau ist die Vorhersage fuer meinen Startplatz?"
+    - "Was passiert wenn die API-Daten falsch sind?"
+
+# Migration notes
+migration_from:
+  burnair:
+    difficulty: easy
+    value_add: "KI-Flyability-Score statt manueller Interpretation"
+    what_they_lose: "KK7-Integration (kommt spaeter), detaillierte Live-Thermals"
+  paragliding_map:
+    difficulty: easy
+    value_add: "Intelligente Aggregation statt roher Daten-Sammlung"
+    what_they_lose: "15'000+ Sites-Datenbank (Gleitcast startet mit 50)"
+  windy:
+    difficulty: easy
+    value_add: "Paragliding-spezifische KI statt generisches Wetter"
+    what_they_lose: "Globale Abdeckung, viele Modelle im Rohformat"
+
+# Key metrics (Ziele)
+target_metrics:
+  year_1_users: 1500          # ~10% der CH-Piloten
+  year_1_paying: 300          # 20% Conversion
+  nps_target: 50
+  flyability_accuracy: "80%"  # Muss besser sein als menschliche Einschaetzung

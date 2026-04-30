@@ -1,0 +1,117 @@
+# =============================================================================
+# KONKURRENT: Paragliding Map — Groesste Startplatz-Datenbank
+# =============================================================================
+# Letzte Aktualisierung: 2026-04-17
+# Naechste Ueberpruefung: 2026-07-17
+
+name: Paragliding Map
+website: https://paraglidingmap.com
+tagline: "Paragliding Map"
+founded: ~2019
+headquarters: Unbekannt
+type: direct_competitor
+priority: high
+
+# Positioning
+primary_use_case: "Startplatz-Datenbank mit integrierter Wetteranzeige"
+target_audience: "Gleitschirmpiloten weltweit, insbesondere Reisende und Site-Explorer"
+market_position: "Groesste Startplatz-Datenbank mit Wetter-Aggregation"
+
+# Pricing
+pricing_model: freemium
+free_tier: true
+free_tier_limits: "Viele Features deaktiviert, Werbung. 7-Tage-Trial fuer Premium."
+starter_price: "Nicht oeffentlich (App-Abo)"
+business_price: null
+enterprise: null
+pricing_notes: "Free-Tier zu stark eingeschraenkt — haeufige Nutzer-Beschwerde"
+
+# Platforms
+platforms:
+  web: true
+  android: true
+  ios: true
+  desktop: true        # Web
+
+# Features (rate 1-5)
+features:
+  startplatz_datenbank: 5         # 15'000+ Starts, 7'500+ Landungen
+  wetterstationen: 5              # 30'000 Stationen
+  webcams: 5                      # 39'000 Webcams
+  wetter_aggregation: 4           # Meteoblue, Windy, WindFinder
+  echtzeit_wind: 4                # Pioupiou, Holfuy, MADIS, FFVL
+  talwinde_alpen: 4               # Valley winds fuer Europaeische Alpen
+  airspace_notams: 4              # Automatische Warnungen
+  hike_and_fly: 3                 # Wander-Routen
+  bergbahnen: 3                   # Skilifts, Seilbahnen, Gondeln
+  wind_animation: 3
+  gewitter_tracking: 3
+  ki_wetter_analyse: 0            # KEINE KI
+  flyability_score: 0             # Kein Score
+  erklaerbare_empfehlungen: 0
+  skill_level_anpassung: 0
+  live_tracking: 0
+  flight_logging: 0
+  offline_modus: 2
+  push_notifications: 2
+
+# Strengths
+strengths:
+  - "Riesige Datenbank: 15'000+ Starts, 7'500+ Landungen"
+  - "30'000 Wetterstationen integriert"
+  - "39'000 Webcams (visuelle Bestaetigung)"
+  - "Mehrere Wetter-Anbieter (Meteoblue, Windy, WindFinder)"
+  - "Talwind-Daten fuer Alpen"
+  - "Airspace + NOTAMs (Sicherheit)"
+  - "Hike & Fly Trails"
+  - "Cross-Platform"
+
+# Weaknesses
+weaknesses:
+  - "Free-Tier zu stark eingeschraenkt (Nutzer-Beschwerde Nr.1)"
+  - "KEINE KI oder intelligente Interpretation"
+  - "Wetter wird nur ANGEZEIGT, nicht ANALYSIERT"
+  - "Kann ueberwältigend sein (zu viele Daten)"
+  - "Kein Flyability-Score"
+  - "Trial zu kurz um Wert zu beurteilen"
+
+# Best for
+best_for:
+  - "Reisende Piloten die neue Sites entdecken"
+  - "Piloten die alles an einem Ort sehen wollen"
+  - "Hike & Fly Enthusiasten"
+  - "Erfahrene Piloten die Rohdaten interpretieren koennen"
+
+# Not ideal for
+not_ideal_for:
+  - "Anfaenger die Empfehlungen brauchen"
+  - "Piloten die schnelle Entscheidungshilfe wollen"
+  - "Budget-Piloten (Free-Tier zu limitiert)"
+  - "Wer eine KI-gestuetzte Analyse sucht"
+
+# Common complaints
+common_complaints:
+  - "Zu viele Features in der Gratis-Version deaktiviert"
+  - "7-Tage-Trial reicht nicht um den Wert zu beurteilen"
+  - "Ueberwältigend — zu viele Informationen auf einmal"
+  - "Zeigt Wetter aber sagt nicht was es bedeutet"
+
+# Competitive comparison to Gleitcast
+vs_gleitcast:
+  gleitcast_advantages:
+    - "KI analysiert und interpretiert die Wetter-Daten"
+    - "Flyability-Score statt rohe Datenpunkte"
+    - "Erklaerbare Empfehlungen"
+    - "Nuetzliches Free-Tier"
+    - "Einfachere UX — weniger ist mehr"
+  paragliding_map_advantages:
+    - "15'000+ Sites vs. 50 im Gleitcast-MVP"
+    - "39'000 Webcams"
+    - "30'000 Wetterstationen"
+    - "Hike & Fly Trails"
+    - "Globale Abdeckung"
+    - "Bergbahnen-Info"
+  switching_triggers:
+    - "Will Empfehlungen statt nur Datenpunkte"
+    - "Frustriert vom eingeschraenkten Free-Tier"
+    - "Braucht KI-Unterstuetzung bei Interpretation"

@@ -1,0 +1,74 @@
+# =============================================================================
+# KONKURRENT: Gaggle — Moderner Allrounder
+# =============================================================================
+# Letzte Aktualisierung: 2026-04-17
+# Naechste Ueberpruefung: 2026-07-17
+
+name: Gaggle
+website: https://flygaggle.com
+tagline: "Your flying companion"
+founded: ~2021
+headquarters: Unbekannt
+type: adjacent_competitor
+priority: medium
+
+# Positioning
+primary_use_case: "Moderner Flight-Recorder mit Community und Wetter"
+target_audience: "Gleitschirm- und Motorschirmpiloten"
+market_position: "Wachsender Challenger — modernes Design, starke Community"
+
+# Pricing
+pricing_model: freemium
+free_tier: true
+free_tier_limits: "Recording, Sharing, Live-Tracking gratis. 6 Free-Flights mit Premium."
+starter_price: "Premium-Abo (Betrag unbekannt)"
+business_price: null
+enterprise: null
+
+# Platforms
+platforms:
+  web: true
+  android: true
+  ios: true
+  desktop: true
+
+# Features (rate 1-5)
+features:
+  flight_recording: 4
+  variometer: 4
+  live_tracking: 4                # + Freunde-Tracking
+  in_flight_messaging: 3
+  airspace_alerts: 4
+  safesky_integration: 4          # Kollisionswarnungen
+  wetter_integration: 3           # Premium
+  site_database: 3
+  leaderboards: 3
+  voice_cues: 3
+  3d_replay: 4
+  ki_wetter_analyse: 0
+  flyability_score: 0
+
+# Strengths
+strengths:
+  - "Modernes, poliertes Interface"
+  - "Starke Social/Community-Features"
+  - "SafeSky-Integration (Sicherheit)"
+  - "Cross-Platform von Anfang an"
+  - "3D Flight Replay"
+  - "Schnell wachsende Community"
+
+# Weaknesses
+weaknesses:
+  - "Wetter = Premium-Feature"
+  - "Relativ neu — weniger etabliert"
+  - "Nicht auf Wetter-Planung spezialisiert"
+  - "Staerker im Motorschirm-Bereich"
+
+# Competitive comparison to Gleitcast
+vs_gleitcast:
+  relationship: "Teilweise ueberlappend — Gaggle expandiert in Wetter"
+  note: >
+    Gaggle bewegt sich von Flight-Recording Richtung Wetter/Planning.
+    Wenn Gaggle KI hinzufuegt, wird es zum ernsteren Konkurrenten.
+    Gleitcasts Vorteil: KI-Spezialisierung vs. Gaggles Generalist-Ansatz.
+    Beobachten ob Gaggle in Schweizer Markt expandiert.

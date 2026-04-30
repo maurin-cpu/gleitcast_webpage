@@ -1,0 +1,211 @@
+# =============================================================================
+# PAGE-SET-PLAN: Empfohlene Competitor-Pages fuer Gleitcast
+# =============================================================================
+# Basierend auf Suchvolumen, strategischer Wichtigkeit und Schweizer Marktfokus
+# Letzte Aktualisierung: 2026-04-17
+
+# ===========================================================================
+# PRIORITAET 1 — Sofort erstellen (MVP-Launch)
+# ===========================================================================
+# Hoechstes Suchvolumen + staerkste Positionierung
+
+priority_1_pages:
+
+  - format: "alternative_singular"
+    url: "/alternativen/burnair"
+    title: "Gleitcast als burnair Alternative — KI statt manueller Wetter-Interpretation"
+    target_keywords:
+      - "burnair Alternative"
+      - "Alternative zu burnair"
+      - "burnair zu teuer"
+    rationale: >
+      burnair ist der Marktfuehrer in der Schweiz. Viele Piloten kennen es,
+      aber finden es teuer (EUR 119) und komplex. Groesstes Switching-Potenzial.
+    competitor_data: "burnair.yaml"
+    estimated_search_volume: "mittel (Nische, aber high intent)"
+
+  - format: "vs_page"
+    url: "/vergleich/gleitcast-vs-paraglidable"
+    title: "Gleitcast vs. Paraglidable — Welche KI-Gleitschirm-App ist besser?"
+    target_keywords:
+      - "Paraglidable Alternative"
+      - "Paraglidable vs Gleitcast"
+      - "KI Gleitschirm App"
+      - "AI paragliding app"
+    rationale: >
+      Paraglidable ist der einzige direkte KI-Konkurrent.
+      Diese Seite positioniert Gleitcast als die bessere KI-Loesung
+      (iOS, Alpine Spezialisierung, erklarbare KI).
+    competitor_data: "paraglidable.yaml"
+    estimated_search_volume: "niedrig-mittel (wachsend)"
+
+  - format: "alternatives_plural"
+    url: "/alternativen/gleitschirm-wetter-apps"
+    title: "Die besten Gleitschirm-Wetter-Apps 2026 im Vergleich"
+    target_keywords:
+      - "Gleitschirm Wetter App"
+      - "Paragliding Wetter App"
+      - "beste Gleitschirm App"
+      - "Paragliding App Vergleich"
+    rationale: >
+      Fangseite fuer alle Piloten die nach Wetter-Apps suchen.
+      Positioniert Gleitcast im Kontext aller Alternativen.
+      Hoechstes generisches Suchvolumen.
+    competitor_data: "alle"
+    estimated_search_volume: "hoch (generisch)"
+
+# ===========================================================================
+# PRIORITAET 2 — Innerhalb 3 Monaten nach Launch
+# ===========================================================================
+
+priority_2_pages:
+
+  - format: "alternative_singular"
+    url: "/alternativen/paragliding-map"
+    title: "Gleitcast als Paragliding Map Alternative — KI-Analyse statt Datenflut"
+    target_keywords:
+      - "Paragliding Map Alternative"
+      - "Paragliding Map zu teuer"
+    competitor_data: "paragliding-map.yaml"
+
+  - format: "vs_page"
+    url: "/vergleich/gleitcast-vs-burnair"
+    title: "Gleitcast vs. burnair — KI-Empfehlung vs. manuelle Interpretation"
+    target_keywords:
+      - "Gleitcast vs burnair"
+      - "burnair vs Gleitcast"
+    competitor_data: "burnair.yaml"
+
+  - format: "competitor_vs_competitor"
+    url: "/vergleich/burnair-vs-paraglidable"
+    title: "burnair vs. Paraglidable — Wetter-Experte oder KI?"
+    target_keywords:
+      - "burnair vs Paraglidable"
+      - "Paraglidable vs burnair"
+    rationale: >
+      Fängt Traffic von Piloten die zwischen den zwei Marktfuehrern
+      vergleichen. Gleitcast als dritte Option positionieren.
+    competitor_data: ["burnair.yaml", "paraglidable.yaml"]
+
+  - format: "alternatives_plural"
+    url: "/alternativen/burnair-alternativen"
+    title: "5 beste burnair Alternativen 2026 (guenstiger + smarter)"
+    target_keywords:
+      - "burnair Alternativen"
+      - "beste burnair Alternativen"
+      - "Apps wie burnair"
+    competitor_data: "alle"
+
+# ===========================================================================
+# PRIORITAET 3 — Innerhalb 6 Monaten
+# ===========================================================================
+
+priority_3_pages:
+
+  - format: "alternative_singular"
+    url: "/alternativen/windy-fuer-gleitschirm"
+    title: "Warum Windy allein nicht reicht — Gleitcast als KI-Ergaenzung"
+    target_keywords:
+      - "Windy Gleitschirm"
+      - "Windy Paragliding"
+      - "Windy Alternative Paragliding"
+    rationale: >
+      Fast jeder Pilot nutzt Windy. Positioniert Gleitcast nicht als
+      Ersatz, sondern als KI-Schicht oberhalb von Windy.
+    competitor_data: "windy.yaml"
+
+  - format: "competitor_vs_competitor"
+    url: "/vergleich/xctrack-vs-flyskyhy"
+    title: "XCTrack vs. FlySkyHy — Der grosse Flight-App-Vergleich 2026"
+    target_keywords:
+      - "XCTrack vs FlySkyHy"
+      - "FlySkyHy vs XCTrack"
+      - "beste Flight App Gleitschirm"
+    rationale: >
+      Sehr gesuchter Vergleich. Gleitcast als Pre-Flight-Ergaenzung
+      zu beiden positionieren.
+    competitor_data: ["xctrack.yaml", "flyskyhy.yaml"]
+
+  - format: "vs_page"
+    url: "/vergleich/gleitcast-vs-where2fly"
+    title: "Gleitcast vs. where2fly — KI-Power oder gratis Klassiker?"
+    target_keywords:
+      - "where2fly Alternative"
+      - "where2fly vs Gleitcast"
+    competitor_data: "where2fly.yaml"
+
+  - format: "alternative_singular"
+    url: "/alternativen/meteo-parapente"
+    title: "Gleitcast als Meteo-Parapente Alternative — endlich moderne UX"
+    target_keywords:
+      - "Meteo-Parapente Alternative"
+      - "Meteo-Parapente Ersatz"
+    rationale: >
+      Meteo-Parapente verliert Nutzer (schlechter Support, veraltete UI).
+      Frustrierte Nutzer sind leicht zu konvertieren.
+    competitor_data: "meteo-parapente.yaml"
+
+  - format: "alternative_singular"
+    url: "/alternativen/xctherm"
+    title: "Gleitcast als XC Therm Alternative — KI-Thermik statt statische Karten"
+    target_keywords:
+      - "XC Therm Alternative"
+      - "XC Therm App"
+      - "xctherm Alternative"
+      - "Thermik Vorhersage App"
+    rationale: >
+      XC Therm ist populaer und gratis, aber rein web-basiert ohne Mobile-App
+      und ohne KI-Interpretation. Piloten die XC Therm nutzen wollen
+      eine mobile Loesung die die gleichen ICON-D2-Daten intelligent
+      aufbereitet. Starkes Upgrade-Argument: von statischer Anzeige
+      zu KI-interpretierter Empfehlung.
+    competitor_data: "xctherm.yaml"
+
+  - format: "competitor_vs_competitor"
+    url: "/vergleich/xctherm-vs-burnair"
+    title: "XC Therm vs. burnair — Gratis-Thermik oder Premium-Alpin-Tool?"
+    target_keywords:
+      - "XC Therm vs burnair"
+      - "Thermik Vorhersage Vergleich"
+      - "gratis Thermik App"
+    rationale: >
+      Viele Piloten stehen vor genau dieser Entscheidung: kostenloses
+      XC Therm oder bezahltes burnair? Gleitcast als dritte Option
+      positionieren die KI-Interpretation zum fairen Preis bietet.
+    competitor_data: ["xctherm.yaml", "burnair.yaml"]
+
+# ===========================================================================
+# INDEX-PAGES (Hub-Seiten)
+# ===========================================================================
+
+index_pages:
+
+  - url: "/alternativen"
+    title: "Gleitcast Alternativen-Hub — Vergleiche alle Gleitschirm-Apps"
+    purpose: "Hub-Seite die alle Alternative-Pages verlinkt"
+    create_with: "priority_1"
+
+  - url: "/vergleich"
+    title: "Gleitschirm-App Vergleiche — Gleitcast vs. Konkurrenz"
+    purpose: "Hub-Seite die alle Vs-Pages und Competitor-vs-Competitor verlinkt"
+    create_with: "priority_2"
+
+# ===========================================================================
+# CONTENT-STRATEGIE NOTIZEN
+# ===========================================================================
+
+content_notes:
+  language: "Deutsch (Schweizer Markt-Fokus, kein Oesterreichisch/Bundesdeutsch)"
+  tone: "Ehrlich, hilfreich, technisch kompetent aber zugaenglich"
+  update_frequency: "Quartalsweise Pricing + Feature-Check"
+  schema_markup: "FAQ-Schema auf allen Pages"
+  internal_linking: "Alle Pages verlinken zurueck auf Hub-Seiten"
+  footer_links: "Top 4 Vergleiche im Website-Footer"
+
+  key_messaging:
+    primary: "Erste KI die dir sagt wo du heute fliegen kannst"
+    secondary: "Spezialisiert auf Schweizer und Alpine Bedingungen"
+    tertiary: "Versteht Talwinde, Foehn und Lee — wie ein erfahrener Pilot"
+    honesty: >
+      Auf jeder Seite ehrlich sein wo Gleitcast noch schwaechelt
+      (kleine Site-DB, neues Produkt). Vertrauen aufbauen.

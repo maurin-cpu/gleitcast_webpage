@@ -1,0 +1,149 @@
+# =============================================================================
+# KONKURRENT: burnair — Marktfuehrer Schweiz/Alpen
+# =============================================================================
+# Letzte Aktualisierung: 2026-04-17
+# Naechste Ueberpruefung: 2026-07-17
+
+name: burnair
+website: https://burnair.cloud
+tagline: "Your Alpine flying companion"
+founded: ~2018
+headquarters: Schweiz (vermutet)
+type: direct_competitor
+priority: critical
+
+# Positioning
+primary_use_case: "Umfassende Flugplanung und Live-Tracking fuer Alpine Piloten"
+target_audience: "Aktive Gleitschirm- und Drachenpiloten im Alpenraum"
+market_position: "Fuehrendes Premium-Tool fuer Alpine Flieger"
+
+# Pricing
+pricing_model: subscription
+free_tier: false
+free_tier_limits: null
+starter_price: "EUR 49/Jahr (regulaer EUR 59)"
+business_price: "EUR 119/Jahr Premium (regulaer EUR 129)"
+enterprise: null
+pricing_notes: >
+  Zwei Tiers: Basic (49) und Premium (119). Premium bietet erweiterte
+  Thermik-Karten, Live-Thermals und detaillierte Talwind-Infos. Kein Free-Tier.
+
+# Platforms
+platforms:
+  web: true
+  android: true       # burnair Go + burnair Map
+  ios: true           # burnair Go + burnair Map
+  desktop: true       # Web-Dashboard
+
+# Apps
+apps:
+  - name: "burnair Go"
+    type: "Flug-App (In-Flight)"
+    platforms: [ios, android]
+  - name: "burnair Map"
+    type: "Planungs-App (Pre-Flight)"
+    platforms: [ios, android]
+
+# Features (rate 1-5)
+features:
+  startplatz_datenbank: 5         # 5'000+ Startplaetze
+  kk7_thermal_maps: 5            # Seasonal + Daily Thermals
+  live_thermals: 5               # Echtzeit von anderen Fliegern
+  talwind_systeme: 5             # Lokale Talwinde — einzigartig
+  lee_informationen: 4           # Leeward-Gebiete
+  mehrtages_uebersicht: 4        # Druckdiagramme
+  live_wind: 4                   # Echtzeit-Windmessungen
+  regenradar: 4                  # EURADCOM
+  xc_planung: 4                  # XC Flugplanung
+  live_tracking: 5               # + Freunde-Tracking
+  airspace_notams: 4             # Luftraeume mit NOTAMs
+  glide_ratio: 3                 # Live Glide Ratio Calculator
+  ki_wetter_analyse: 0           # KEINE KI
+  flyability_score: 0            # Kein Go/No-Go Score
+  erklaerbare_empfehlungen: 0    # Pilot muss selbst interpretieren
+  skill_level_anpassung: 1       # Einheitliches Interface
+  push_notifications: 2
+  offline_modus: 3
+  flight_logging: 3
+
+# Strengths
+strengths:
+  - "Umfassendste Alpine Abdeckung (5'000+ Sites)"
+  - "KK7-Thermik-Integration — beste Thermal-Daten"
+  - "Live Thermals von anderen Fliegern (Community-Daten)"
+  - "Talwind-Expertise — kritisch fuer Alpenfliegen"
+  - "Lee-Informationen (Sicherheit)"
+  - "Mehrtages-Planung mit Druckdiagrammen"
+  - "Etabliert im Schweizer Markt"
+  - "Zwei spezialisierte Apps (Planung + Flug)"
+  - "Cross-Platform (iOS + Android)"
+
+# Weaknesses
+weaknesses:
+  - "Teuer — EUR 119 fuer Premium, kein Free-Tier"
+  - "KEINE KI oder intelligente Wetter-Interpretation"
+  - "Pilot muss alle Daten selbst interpretieren"
+  - "UI wird von manchen als komplex empfunden"
+  - "Zwei separate Apps noetig (Go + Map)"
+  - "Kein Flyability-Score oder Go/No-Go-Empfehlung"
+  - "Keine Anfaenger-freundliche Aufbereitung"
+  - "Hohe Lernkurve"
+
+# Best for
+best_for:
+  - "Erfahrene Alpine Piloten mit Wetter-Know-How"
+  - "XC-Flieger die detaillierte Thermik-Daten brauchen"
+  - "Piloten die bereit sind EUR 119/Jahr zu zahlen"
+  - "Schweizer/Oesterreichische Piloten"
+  - "Teams die Live-Tracking nutzen wollen"
+
+# Not ideal for
+not_ideal_for:
+  - "Anfaenger ohne Wetter-Kenntnisse"
+  - "Gelegenheitsflieger (Preis zu hoch)"
+  - "Piloten die schnelle Go/No-Go-Entscheidungen wollen"
+  - "Budget-bewusste Piloten"
+
+# Common complaints (aus Reviews/Foren)
+common_complaints:
+  - "Teuer fuer das was es bietet"
+  - "Brauche Wetter-Wissen um die Daten zu nutzen"
+  - "UI koennte einfacher sein"
+  - "Warum zwei Apps statt einer?"
+  - "Vermisse eine einfache Empfehlung ob fliegbar oder nicht"
+
+# Competitive comparison to Gleitcast
+vs_gleitcast:
+  gleitcast_advantages:
+    - "KI-gestuetzte Flyability-Bewertung statt Rohdaten"
+    - "Erklaerbare Empfehlungen fuer alle Levels"
+    - "Guenstiger (CHF 39 vs. EUR 49-119)"
+    - "Free-Tier verfuegbar"
+    - "Eine App statt zwei"
+    - "Anfaenger-freundlich"
+    - "Aggregiert mehrere Wetter-Quellen intelligent"
+  burnair_advantages:
+    - "5'000+ Startplaetze vs. 50 im Gleitcast-MVP"
+    - "KK7 Thermik-Integration (bewaehrt)"
+    - "Live Thermals von Community"
+    - "Detaillierte Talwind-Daten"
+    - "Etablierte Marke im Alpenraum"
+    - "Live-Tracking + Freunde"
+    - "Umfangreiche XC-Planung"
+    - "Lee-Informationen"
+  switching_triggers:
+    - "Frustriert von manueller Wetter-Interpretation"
+    - "Will schnelle Go/No-Go-Entscheidung"
+    - "Anfaenger der Erklaerungen braucht"
+    - "Preis-sensitiv (EUR 119 zu teuer)"
+  who_should_stay_with_burnair:
+    - "XC-Piloten die Live-Thermals brauchen"
+    - "Piloten die detaillierte KK7-Daten schaetzen"
+    - "Wer Live-Tracking + Freunde-Funktion nutzt"
+
+# Review ratings
+ratings:
+  google_play: ~4.2
+  app_store: ~4.3
+  g2: null
+  capterra: null
