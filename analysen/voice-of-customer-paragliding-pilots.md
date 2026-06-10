@@ -622,7 +622,7 @@
 - Leading German-language paragliding publication
 - Detailed weather planning articles
 - Tech reviews including burnair, XCTrack
-- Audience: DACH pilots (core Gleitcast target market)
+- Audience: DACH pilots (core Wingcast target market)
 - Regular weather forecasting guides and tutorials
 
 **Swiss Paragliding Blogs / Flugschulen**
@@ -737,11 +737,11 @@
 
 ---
 
-## Summary: Top Insights for Gleitcast Positioning
+## Summary: Top Insights for Wingcast Positioning
 
 ### The 5 Biggest Pains (in order of intensity)
 
-| Rank | Pain | Evidence Strength | Gleitcast Opportunity |
+| Rank | Pain | Evidence Strength | Wingcast Opportunity |
 |------|------|-------------------|---------------------|
 | 1 | **Too many apps required** — 5-10 tools for one flight day | Very strong (universal complaint) | "One app to replace them all" |
 | 2 | **Manual interpretation required** — raw data, no guidance | Very strong (beginners + intermediates) | "AI explains what the weather means for YOUR flight" |

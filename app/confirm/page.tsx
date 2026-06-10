@@ -2,10 +2,18 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { Check, ArrowUpRight } from "@/components/ui/Icons";
 
-const APP_URL = "https://app.gleitcast.ch";
+const APP_URL = "https://app.wingcast.ch";
 
 export const metadata = {
   title: "Anmeldung bestätigt",
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
 };
 
 export default function ConfirmPage() {
@@ -31,7 +39,7 @@ export default function ConfirmPage() {
             rel="noopener"
             className="focus-ring mt-8 inline-flex h-14 items-center gap-2 rounded-lg bg-slate-900 px-8 text-base font-semibold text-white transition-colors hover:bg-slate-900/90"
           >
-            Zur Gleitcast App
+            Zur Wingcast App
             <ArrowUpRight className="h-5 w-5" />
           </a>
         </div>

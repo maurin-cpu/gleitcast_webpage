@@ -193,8 +193,8 @@ paragliding weather app comparison
 - [ ] Top 10 loved features (ranked)
 - [ ] Top 10 unmet needs (ranked)
 - [ ] Competitive matrix (feature comparison)
-- [ ] Gleitcast must-haves list
-- [ ] Gleitcast must-avoids list
+- [ ] Wingcast must-haves list
+- [ ] Wingcast must-avoids list
 - [ ] Differentiation opportunities
 - [ ] Pricing insights
 
@@ -339,7 +339,7 @@ Better to do:
    ↓
 8. Identify top 10 pains/gains/needs
    ↓
-9. Create Gleitcast implications (must-haves/must-avoids)
+9. Create Wingcast implications (must-haves/must-avoids)
    ↓
 10. Share with team + validate
 ```
@@ -371,7 +371,7 @@ Better to do:
 │  ⬜ Insights Synthesized (Apply frameworks)                │
 │  ⬜ Team Aligned (Share findings)                          │
 │  ⬜ Strategy Updated (Product decisions)                   │
-│  ⬜ Development Started (Build Gleitcast)                    │
+│  ⬜ Development Started (Build Wingcast)                    │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -383,6 +383,6 @@ Better to do:
 **Print this page and keep it handy during your research.**
 
 **File Location:**
-`C:\Users\user\OneDrive\Projekte\marketing\marketing_gleitcast\analysen\`
+`C:\Users\user\OneDrive\Projekte\marketing\marketing_wingcast\analysen\`
 
 **Questions? Start with:** `README-review-mining.md`

@@ -375,8 +375,8 @@ After collecting all data, create:
 - Pain/Gain matrix
 - Opportunity gaps
 
-### File 4: Gleitcast Insights
-`app-reviews-gleitcast-implications.md`
+### File 4: Wingcast Insights
+`app-reviews-wingcast-implications.md`
 - Must-have features
 - Must-avoid pitfalls
 - Differentiation opportunities

@@ -6,6 +6,7 @@ import {
   websiteSchema,
   jsonLdScript,
 } from "@/lib/schema";
+import { ConsentManager } from "@/components/consent/ConsentManager";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,57 +15,82 @@ const inter = Inter({
 });
 
 const TITLE_DEFAULT =
-  "Gleitcast — Gratis KI-Flugwetter & Thermik-Forecast für die Schweiz";
+  "Wingcast — Gratis KI-Flugwetter & Thermik-Forecast für die Schweiz";
 const DESCRIPTION =
-  "Gratis Gleitschirm-Wetter-App für die Schweiz: KI-bewerteter 5-Tage-Fliegbarkeits- und Thermik-Forecast für 488 Startplätze. Spots automatisch sortiert, Begründung in Klartext — ohne Meteorologie-Studium und ohne Kreditkarte. Decision Support für Pilot:innen, kein Decision Maker.";
+  "Gratis KI-Flugwetter für 488 Schweizer Startplätze. 5-Tage-Forecast sortiert pro Tag, in Klartext erklärt. Ohne Kreditkarte. Decision Support, du entscheidest.";
+
+// OG-Image: temporär das App-Dashboard wiederverwendet (1200x630 dedicated TBD).
+const OG_IMAGE = "https://wingcast.ch/screenshot_app_dashboard.png";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gleitcast.ch"),
+  metadataBase: new URL("https://wingcast.ch"),
   title: {
     default: TITLE_DEFAULT,
-    template: "%s · Gleitcast",
+    template: "%s · Wingcast",
   },
   description: DESCRIPTION,
   keywords: [
+    // Core: Personas-Suchen
     "Gleitschirm Wetter App",
     "Gleitschirm Wetter App gratis",
     "kostenlose Gleitschirm App",
-    "gratis Thermik Forecast",
-    "Thermik Forecast Schweiz",
-    "Thermik Vorhersage gratis",
-    "Flugwetter Schweiz",
-    "Flugwetter App",
-    "Paragliding Forecast",
     "Paragliding Wetter kostenlos",
-    "free paragliding weather Switzerland",
-    "Burnair Alternative",
-    "Burnair gratis Alternative",
-    "Paraglidable iOS",
-    "Föhn Warnung Gleitschirm",
+    // High-Intent regional (siehe strategie/keywords.md §4 P1)
+    "Flugwetter Schweiz",
+    "Thermik Forecast Schweiz",
+    "Thermikprognose Schweiz",
+    "Windprognose Schweiz",
+    // KI-Differenziator
     "KI Flugwetter",
     "KI Wetter Gleitschirm",
+    // Gratis-Differenziator
+    "gratis Thermik Forecast",
+    "Thermik Vorhersage gratis",
+    // Spot-Cluster
     "Startplatz Wetter Schweiz",
+    "Gleitschirm Startplätze",
     "Fliegbarkeit Schweiz",
+    // Engine-Details (Marco-relevant)
+    "Föhn Warnung Gleitschirm",
     "ICON-CH1 Gleitschirm",
+    // English long-tail
+    "free paragliding weather Switzerland",
+    "Paragliding Forecast Switzerland",
   ],
-  authors: [{ name: "Maurin", url: "https://gleitcast.ch" }],
+  authors: [{ name: "Maurin", url: "https://wingcast.ch" }],
   creator: "Maurin",
-  publisher: "Gleitcast",
+  publisher: "Wingcast",
   alternates: {
-    canonical: "https://gleitcast.ch/",
+    canonical: "https://wingcast.ch/",
+  },
+  icons: {
+    icon: [
+      { url: "/brand/logo.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/brand/logo.svg",
+    apple: "/brand/logo.svg",
   },
   openGraph: {
     type: "website",
     locale: "de_CH",
-    url: "https://gleitcast.ch",
-    siteName: "Gleitcast",
+    url: "https://wingcast.ch",
+    siteName: "Wingcast",
     title: TITLE_DEFAULT,
     description: DESCRIPTION,
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 2400,
+        height: 1400,
+        alt: "Wingcast App-Dashboard: Karte mit allen 488 Schweizer Startplätzen, gefärbt nach KI-Bewertung",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: TITLE_DEFAULT,
     description: DESCRIPTION,
+    images: [OG_IMAGE],
   },
   robots: {
     index: true,
@@ -108,6 +134,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={jsonLdScript(websiteSchema)}
         />
+        <ConsentManager />
       </body>
     </html>
   );

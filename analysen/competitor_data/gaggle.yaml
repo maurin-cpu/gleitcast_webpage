@@ -64,11 +64,11 @@ weaknesses:
   - "Nicht auf Wetter-Planung spezialisiert"
   - "Staerker im Motorschirm-Bereich"
 
-# Competitive comparison to Gleitcast
-vs_gleitcast:
+# Competitive comparison to Wingcast
+vs_wingcast:
   relationship: "Teilweise ueberlappend — Gaggle expandiert in Wetter"
   note: >
     Gaggle bewegt sich von Flight-Recording Richtung Wetter/Planning.
     Wenn Gaggle KI hinzufuegt, wird es zum ernsteren Konkurrenten.
-    Gleitcasts Vorteil: KI-Spezialisierung vs. Gaggles Generalist-Ansatz.
+    Wingcasts Vorteil: KI-Spezialisierung vs. Gaggles Generalist-Ansatz.
     Beobachten ob Gaggle in Schweizer Markt expandiert.

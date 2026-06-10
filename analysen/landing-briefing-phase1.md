@@ -1,4 +1,4 @@
-# Gleitcast Landing-Page — Briefing für Phase-1-Review
+# Wingcast Landing-Page — Briefing für Phase-1-Review
 
 **Erstellt:** 2026-04-29 nach 10-Block-Discovery mit dem Founder
 **Adressaten:** academic-psychologist + product-behavioral-nudge-engine + design-ux-researcher
@@ -33,7 +33,7 @@
 ## 3. Conversion-Funnel (kritisch)
 
 ### Primärer CTA der Page
-**App-Outbound zur Registrierung** — `app.gleitcast.ch`
+**App-Outbound zur Registrierung** — `app.wingcast.ch`
 
 ### Abgestufter Wert-Pfad in der App (psychologischer Hebel!)
 1. Klick auf Page-Link → **1 Tag Forecast direkt sichtbar** (kein Login)
@@ -70,11 +70,11 @@
 
 ## 5. USP & Differenzierung (selbstreferenziell, ohne Konkurrenznennung)
 
-### Was Gleitcast nachweislich kann
+### Was Wingcast nachweislich kann
 *„Du siehst direkt, welche Startplätze für gute Thermikflüge geeignet sind — ohne mehrere Meteogramme zu studieren. Die KI übernimmt das."*
 
 ### Wettbewerbslage (NICHT in Copy nennen, nur als Kontext)
-| Konkurrent | Schwäche | Gleitcast-Hebel |
+| Konkurrent | Schwäche | Wingcast-Hebel |
 |---|---|---|
 | Paraglidable | KI-Score *ohne Erklärung*, nur Android | KI mit Erklärung, alle Plattformen |
 | burnair | Daten ohne KI, 119 €/Jahr | KI-Interpretation, gratis |

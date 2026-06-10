@@ -3,7 +3,11 @@
     "allow": [
       "Bash(curl -s http://localhost:3001/_next/static/css/app/layout.css)",
       "Read(//c/Users/user/agency-agents/**)",
-      "Bash(bash ./scripts/install.sh --tool claude-code --no-interactive)"
+      "Bash(bash ./scripts/install.sh --tool claude-code --no-interactive)",
+      "Bash(npx tsc *)",
+      "Read(//c/Users/user/OneDrive/Projekte/marketing/.claude/skills/seo-google/**)",
+      "Read(//c/Users/user/OneDrive/Projekte/marketing/.claude/skills/seo/**)",
+      "Read(//c/Users/user/OneDrive/Projekte/marketing/.claude/skills/ai-seo/**)"
     ]
   }
 }

@@ -8,7 +8,7 @@
 
 ### What Users Say vs What They Mean
 
-| What They Say | What They Actually Mean | Implication for Gleitcast |
+| What They Say | What They Actually Mean | Implication for Wingcast |
 |---------------|-------------------------|-------------------------|
 | "It's okay" | Disappointed, looking for alternatives | Feature parity is not enough |
 | "Does what it says" | Bare minimum, no delight | Must exceed expectations |
@@ -351,19 +351,19 @@ Extract:
 
 #### Quick, Helpful Responses
 - **Signal:** Active development, care about users
-- **Gleitcast action:** Must have responsive support
+- **Wingcast action:** Must have responsive support
 
 #### Defensive Responses
 - **Signal:** Not listening to feedback
-- **Gleitcast action:** Don't make excuses, fix issues
+- **Wingcast action:** Don't make excuses, fix issues
 
 #### "Coming soon" Promises
 - **Signal:** Feature is requested often
-- **Gleitcast action:** Consider if actually needed
+- **Wingcast action:** Consider if actually needed
 
 #### No Responses
 - **Signal:** Abandoned app or overwhelmed
-- **Gleitcast action:** Opportunity to be responsive
+- **Wingcast action:** Opportunity to be responsive
 
 ---
 
@@ -537,10 +537,10 @@ After collecting all reviews, answer:
 8. What features differentiate (only some have)?
 9. Where are the biggest gaps (no one has)?
 
-### Gleitcast Strategy
-10. What must Gleitcast match (baseline features)?
-11. What must Gleitcast avoid (common pitfalls)?
-12. Where can Gleitcast differentiate (opportunities)?
+### Wingcast Strategy
+10. What must Wingcast match (baseline features)?
+11. What must Wingcast avoid (common pitfalls)?
+12. Where can Wingcast differentiate (opportunities)?
 13. What's the right pricing strategy (based on value perception)?
 14. What's the MVP (minimum viable product based on "must-haves")?
 

@@ -284,7 +284,7 @@ Theme: Weather Accuracy Issues
 10. **Opportunity gap (no one does well)?**
     → [answer with reasoning]
 
-### Step 4: Gleitcast Implications (15 min)
+### Step 4: Wingcast Implications (15 min)
 
 **Create three lists:**
 
@@ -380,7 +380,7 @@ User Profile:
 - Platform: iOS (locked in)
 - Price sensitivity: HIGH (detailed cost calculation)
 
-Actionable Insights for Gleitcast:
+Actionable Insights for Wingcast:
 1. Price ceiling is around $15/month (perceived as "too much")
 2. Free alternatives (XCTrack) set expectations
 3. iOS exclusivity creates platform lock-in frustration
@@ -463,7 +463,7 @@ You should have:
 - Pricing insights summary
 - Competitive landscape summary
 
-### Document 3: Gleitcast Action Plan
+### Document 3: Wingcast Action Plan
 - Must-have features (10-15 items)
 - Must-avoid pitfalls (5-10 items)
 - Differentiation opportunities (5-10 items)
@@ -536,7 +536,7 @@ You've succeeded when you can answer:
 - [ ] What differentiates the winners from losers?
 
 ### Tactical Questions
-- [ ] What features must Gleitcast have on day 1?
+- [ ] What features must Wingcast have on day 1?
 - [ ] What features can wait for v2?
 - [ ] What UX patterns should we copy?
 - [ ] What UX patterns should we avoid?
@@ -623,7 +623,7 @@ Top 3 Feature Requests:
 Pricing Insights:
 → [1-2 sentences about price mentions]
 
-Immediate Gleitcast Insights:
+Immediate Wingcast Insights:
 1. [Actionable insight]
 2. [Actionable insight]
 3. [Actionable insight]

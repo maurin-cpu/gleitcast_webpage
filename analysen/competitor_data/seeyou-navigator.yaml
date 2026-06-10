@@ -64,10 +64,10 @@ weaknesses:
   - "Primaer Wettbewerbs-fokussiert"
   - "Wetter via Dritt-Anbieter"
 
-# Competitive comparison to Gleitcast
-vs_gleitcast:
+# Competitive comparison to Wingcast
+vs_wingcast:
   relationship: "Komplementaer — verschiedene Zielgruppen"
   note: >
-    SeeYou = Wettbewerbs-Tool, Gleitcast = Planungs-Tool.
+    SeeYou = Wettbewerbs-Tool, Wingcast = Planungs-Tool.
     Wenig direkte Ueberschneidung. SeeYou-Nutzer koennten
-    Gleitcast ergaenzend fuer Pre-Flight-Planung nutzen.
+    Wingcast ergaenzend fuer Pre-Flight-Planung nutzen.

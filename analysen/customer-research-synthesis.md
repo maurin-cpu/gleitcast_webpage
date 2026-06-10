@@ -2,7 +2,7 @@
 # Pains, Gains & Jobs to Be Done
 
 **Datum:** 2026-04-17
-**Projekt:** Gleitcast — KI-gestuetzte Gleitschirm-Wetter-App
+**Projekt:** Wingcast — KI-gestuetzte Gleitschirm-Wetter-App
 **Markt:** Schweiz (primaer), Alpenraum (sekundaer)
 **Methode:** Mode 2 Digital Watering Hole Research (Reddit, Foren, App-Reviews, Blogs, YouTube)
 **Confidence-Hinweis:** Insights basieren auf oeffentlich zugaenglichen Quellen. Quotes sind teils rekonstruierte Muster aus Foren/Reviews — markiert mit Confidence-Level.
@@ -37,7 +37,7 @@ Piloten nutzen systematisch 5-10 verschiedene Tools fuer eine einzige Flugentsch
 **Zeitaufwand:** 30-60 Minuten pro Flugentscheidung
 **Kognitiver Aufwand:** Extrem hoch — widerspruechliche Daten muessen manuell synthetisiert werden
 
-**Implikation fuer Gleitcast:**
+**Implikation fuer Wingcast:**
 - MUSS mehrere Quellen intelligent aggregieren
 - MUSS einheitlichen Flyability-Score liefern
 - SOLLTE zeigen wo Modelle uebereinstimmen/abweichen
@@ -62,7 +62,7 @@ Alle existierenden Tools zeigen Rohdaten — kein Tool sagt dem Piloten was es F
 - *"The fundamental problem: weather apps show you numbers. But what you need is a decision. Flyable or not."* — paraglidingforum.com Pattern [HIGH]
 - *"Ein einfaches Ampelsystem waere Gold wert. Gruen = fliegen, Gelb = vorsichtig, Rot = nicht fliegen."* — deutschsprachiges Forum Pattern [MEDIUM]
 
-**Implikation fuer Gleitcast:**
+**Implikation fuer Wingcast:**
 - Flyability-Score PLUS Erklaerung WARUM
 - Ampelsystem: Gruen / Gelb / Rot
 - Skill-Level-angepasst (was fuer Experten OK ist, ist fuer Anfaenger zu riskant)
@@ -93,7 +93,7 @@ Schweizer Alpen haben einzigartige Wetterphaenomene die von globalen Modellen ni
 - *"International weather websites like Accuweather use generic computer models that completely disregard local conditions."* — swiss-paragliding.ch [HIGH, verifiziert]
 - *"Flights may be canceled at short notice due to uncertain or changeable weather."* — Standard-Disclaimer Schweizer Tandem-Anbieter [HIGH, verifiziert]
 
-**Implikation fuer Gleitcast:**
+**Implikation fuer Wingcast:**
 - MUSS ICON-D2, MeteoSchweiz integrieren (Alpen-Aufloesung)
 - Foehn-Erkennung = nicht verhandelbar fuer Glaubwuerdigkeit
 - Talwind-Modellierung fuer Haupt-Sites
@@ -119,7 +119,7 @@ Frisch brevetierte Piloten koennen Wetterdaten nicht interpretieren und trauen s
 - *"The learning curve for weather assessment is steeper than learning to fly. It took me 2 years."* — paraglidingforum.com Pattern [MEDIUM]
 - *"Fuer Anfaenger ist das Wetter-Lesen das Schwierigste."* — deutschsprachiges Forum Pattern [MEDIUM]
 
-**Implikation fuer Gleitcast:**
+**Implikation fuer Wingcast:**
 - Anfaenger-Modus: einfache, klare Empfehlungen
 - Klartext statt Fachjargon (kein "CAPE", sondern "Gewitterrisiko")
 - Konservative Empfehlungen fuer Anfaenger
@@ -148,7 +148,7 @@ Falsche Vorhersagen haben reale Konsequenzen — von verschwendeter Anfahrt bis 
 5. Ein einzelnes Wettermodell
 6. Flyability-Score einer App (geringstes Vertrauen)
 
-**Implikation fuer Gleitcast:**
+**Implikation fuer Wingcast:**
 - Confidence-Score IMMER anzeigen ("85% Zuversicht" statt nur "fliegbar")
 - Nie behaupten Piloten-Urteil zu ersetzen — "Decision Support, nicht Decision Maker"
 - Alert wenn Bedingungen von Vorhersage abweichen
@@ -179,7 +179,7 @@ Falsche Vorhersagen haben reale Konsequenzen — von verschwendeter Anfahrt bis 
 | CHF 100+ | "Teuer" — nur fuer Vielflieger |
 | Einmalkauf | Stark bevorzugt gegenueber Abo |
 
-**Implikation fuer Gleitcast:**
+**Implikation fuer Wingcast:**
 - CHF 39/Jahr positionieren (unter burnair, ueber "gratis")
 - Nuetzliches Free-Tier (nicht nur Demo)
 - Monats-Option: CHF 4.99/Monat fuer Saison-Flieger
@@ -199,21 +199,21 @@ Die besten Apps sind Single-Platform:
 
 **Quote:** *"I have an iPhone, can't use XCTrack"* — universelle Beschwerde [HIGH]
 
-**Implikation fuer Gleitcast:**
+**Implikation fuer Wingcast:**
 - iOS + Android von Tag 1 = sofortige Differenzierung
 
 ---
 
 ### NEUE ENTDECKUNG: Flybubble Weather
 
-**Wichtig:** Waehrend der Recherche entdeckt — Flybubble Weather (UK) macht etwas Aehnliches wie Gleitcast:
+**Wichtig:** Waehrend der Recherche entdeckt — Flybubble Weather (UK) macht etwas Aehnliches wie Wingcast:
 - Ampelsystem pro Startplatz (gruen/orange/rot)
 - 5-Tage-Vorhersage mit Stunden-Aufloesung
 - "Anybody flying?" Community-Feature
 - Email-Benachrichtigungen pro Site
 - ABER: **nur UK/Ireland**, basiert auf RASP (nicht KI), kein Alpen-Fokus
 
-**Bedeutung fuer Gleitcast:** Validiert den Ansatz (Ampelsystem + Site-spezifisch). Gleitcast geht weiter mit KI-Aggregation und Alpine Spezialisierung.
+**Bedeutung fuer Wingcast:** Validiert den Ansatz (Ampelsystem + Site-spezifisch). Wingcast geht weiter mit KI-Aggregation und Alpine Spezialisierung.
 
 ---
 
@@ -434,7 +434,7 @@ Optimale XC-Tage identifizieren und Routen basierend auf Thermik-Vorhersage plan
 
 ### Was Piloten an existierenden Apps LIEBEN (= Must-Match)
 
-| App | Was geliebt wird | Gleitcast muss... |
+| App | Was geliebt wird | Wingcast muss... |
 |-----|------------------|-----------------|
 | burnair | KK7-Thermik, Talwinde, Live-Thermals von Piloten | Thermik-Daten integrieren |
 | Windy | Visualisierung, Multi-Modell, "Air Profile" | Nie versuchen Windy zu ersetzen — ergaenzen |
@@ -443,9 +443,9 @@ Optimale XC-Tage identifizieren und Routen basierend auf Thermik-Vorhersage plan
 | Paraglidable | KI-Flyability-Score, 10-Tage-Forecast | Score + Erklaerung liefern |
 | Flybubble Weather | Ampelsystem pro Site, Email-Alerts, "Anybody flying?" | Ampel-Ansatz uebernehmen, mit KI aufwerten |
 
-### Was Piloten HASSEN (= Gleitcast-Opportunities)
+### Was Piloten HASSEN (= Wingcast-Opportunities)
 
-| App | Hauptbeschwerde | Gleitcast-Vorteil |
+| App | Hauptbeschwerde | Wingcast-Vorteil |
 |-----|----------------|-----------------|
 | burnair | "Zu teuer (EUR 119), keine Interpretation" | Guenstiger + KI-Interpretation |
 | burnair | "Warum zwei Apps (Go + Map)?" | Eine App |

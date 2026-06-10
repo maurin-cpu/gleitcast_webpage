@@ -1,7 +1,7 @@
-# Gleitcast Webpage — Konzept
+# Wingcast Webpage — Konzept
 
 **Stand:** 2026-04-27
-**Produkt:** Gleitcast — KI-Co-Pilot für Gleitschirmpiloten (Schweiz)
+**Produkt:** Wingcast — KI-Co-Pilot für Gleitschirmpiloten (Schweiz)
 **Backend:** Bestehende Flask-App in `C:\Users\user\OneDrive\Projekte\flychat`
 
 ---
@@ -86,7 +86,7 @@ Drei kurze Zeilen — Mirror-Pattern, Pilot erkennt sich:
 > Du checkst Windy. Dann Meteo-Parapente. Dann Burnair. Dann zwei Webcams.
 > 45 Minuten später bist du **unsicherer als vorher**.
 
-Visuell: 3 Screenshots (Windy / Burnair / Meteo-Parapente) gegen einen Gleitcast-Briefing-Screenshot. "Aus 7 Apps wird 1 E-Mail."
+Visuell: 3 Screenshots (Windy / Burnair / Meteo-Parapente) gegen einen Wingcast-Briefing-Screenshot. "Aus 7 Apps wird 1 E-Mail."
 
 ---
 
@@ -204,7 +204,7 @@ MITTWOCH — 🟣 Legendär
 
 ```
 ┌─────────────────────────────────┐
-│  Public Webpage (gleitcast.ch)  │
+│  Public Webpage (wingcast.ch)  │
 │  - HTML/CSS/JS (statisch)       │
 │  - Vite oder reines Static      │
 │  - Hosting: Vercel / Cloudflare │
@@ -234,7 +234,7 @@ Eine neue Route `/` (oder `/landing`) im bestehenden Flask, neues Template `temp
 
 ### Empfehlung
 
-**Variante A** — separates statisches Projekt im Ordner `gleitcast_webpage` (also genau hier), Anmelde-API geht an den bestehenden Flask-Endpoint von Flychat.
+**Variante A** — separates statisches Projekt im Ordner `wingcast_webpage` (also genau hier), Anmelde-API geht an den bestehenden Flask-Endpoint von Flychat.
 
 **Konkrete Tech:**
 - **HTML + Tailwind CSS** (oder die existierende `style.css` aus Flychat wiederverwenden für Design-Konsistenz)
@@ -271,7 +271,7 @@ Eine neue Route `/` (oder `/landing`) im bestehenden Flask, neues Template `temp
 ## 6. Subscriber-Flow (technisch)
 
 ```
-1. User öffnet gleitcast.ch
+1. User öffnet wingcast.ch
 2. Füllt Form aus: E-Mail + Regionen
 3. POST /api/subscribe → Flychat-Backend
 4. Backend speichert in InstantDB (subscriber.py existiert)
@@ -320,7 +320,7 @@ Eine neue Route `/` (oder `/landing`) im bestehenden Flask, neues Template `temp
 1. **Konzept-Review** mit dir — Stimmen Struktur, Tonalität, Tech-Stack?
 2. **Wireframe** der Hero + Briefing-Preview als HTML-Mockup
 3. **Region-Liste finalisieren** — welche Regionen zeigen wir auf der Page?
-4. **Domain klären** — `gleitcast.ch`? `gleitcast.app`? Andere?
+4. **Domain klären** — `wingcast.ch`? `wingcast.app`? Andere?
 5. **API-Vertrag mit Flychat-Backend** — welcher Endpoint nimmt die Anmeldung entgegen?
 6. **Implementierung** in 2 Phasen:
    - Phase 1: Static HTML + Form (3-5 Tage)
@@ -330,7 +330,7 @@ Eine neue Route `/` (oder `/landing`) im bestehenden Flask, neues Template `temp
 
 ## Offene Fragen an dich
 
-1. **Domain & Branding:** Heisst das Produkt nach aussen "Gleitcast" oder "Flychat"? In den Marketing-Docs ist es Gleitcast, im Code-Ordner Flychat.
+1. **Domain & Branding:** Heisst das Produkt nach aussen "Wingcast" oder "Flychat"? In den Marketing-Docs ist es Wingcast, im Code-Ordner Flychat.
 2. **Live-Demo-Link:** Wollen wir den `/newspaper` öffentlich verlinken, oder ist die App im Soft-Launch?
 3. **Scarcity-Element:** Ist "Erste 500 Piloten kostenlos" ein realer Plan oder Marketing-Theorie? Wenn theoretisch, weglassen.
 4. **Zahlungs-Modell:** Bleibt das Briefing dauerhaft gratis, oder kommt später ein Paid-Tier (siehe `produktkonzept-core-offer.md` mit EUR 4.99/Monat)?

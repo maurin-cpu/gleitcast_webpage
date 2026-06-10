@@ -2,7 +2,7 @@
 
 ## Overview
 
-This directory contains a comprehensive framework for mining app store reviews, online forums, and user feedback for paragliding weather and flight apps. The goal is to extract pain points, unmet needs, and insights that will inform Gleitcast's product strategy.
+This directory contains a comprehensive framework for mining app store reviews, online forums, and user feedback for paragliding weather and flight apps. The goal is to extract pain points, unmet needs, and insights that will inform Wingcast's product strategy.
 
 ---
 
@@ -91,7 +91,7 @@ This directory contains a comprehensive framework for mining app store reviews, 
 - Top 10 pain points
 - Top 10 loved features
 - Top 10 unmet needs
-- Gleitcast must-haves/must-avoids
+- Wingcast must-haves/must-avoids
 
 ### Phase 3: Deep Dive (3 days / 24 hours)
 **Goal:** Comprehensive competitive intelligence
@@ -116,7 +116,7 @@ This directory contains a comprehensive framework for mining app store reviews, 
 - What differentiates winners from losers?
 
 ### Tactical
-- What features must Gleitcast have on day 1?
+- What features must Wingcast have on day 1?
 - What features can wait for v2?
 - What UX patterns should we copy/avoid?
 - What's the right pricing model?
@@ -138,7 +138,7 @@ This directory contains a comprehensive framework for mining app store reviews, 
 ### If You Have 4 Hours
 → Read: `review-mining-quick-start.md` (4-hour sprint)
 → Follow: Step-by-step sprint guide
-→ Output: Thematic summary + Gleitcast implications
+→ Output: Thematic summary + Wingcast implications
 
 ### If You Have 3 Days
 → Read: `app-review-research-guide.md`
@@ -210,8 +210,8 @@ This directory contains a comprehensive framework for mining app store reviews, 
 - [ ] Top 10 pain points (ranked)
 - [ ] Top 10 loved features (ranked)
 - [ ] Top 10 unmet needs (ranked)
-- [ ] Gleitcast must-haves list (10-15 items)
-- [ ] Gleitcast must-avoids list (5-10 items)
+- [ ] Wingcast must-haves list (10-15 items)
+- [ ] Wingcast must-avoids list (5-10 items)
 - [ ] Differentiation opportunities (5-10 items)
 - [ ] Pricing insights summary
 

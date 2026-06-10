@@ -5,7 +5,7 @@ export const metadata = {
   title: "Datenschutz",
 };
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://app.gleitcast.ch";
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://app.wingcast.ch";
 
 export default function DatenschutzPage() {
   return (
@@ -27,12 +27,12 @@ export default function DatenschutzPage() {
                 Maurin Vögeli<br />
                 Naphtastrasse 6<br />
                 Schweiz<br />
-                E-Mail: <a className="text-sky-700 underline" href="mailto:info@gleitcast.ch">info@gleitcast.ch</a>
+                E-Mail: <a className="text-sky-700 underline" href="mailto:info@wingcast.ch">info@wingcast.ch</a>
               </p>
               <p className="mt-3">
                 Diese Erklärung beschreibt, welche Daten beim Besuch dieser Webseite
-                (<strong>gleitcast.ch</strong>) und bei Nutzung der Gleitcast-App
-                (<strong>app.gleitcast.ch</strong>) verarbeitet werden, zu welchem
+                (<strong>wingcast.ch</strong>) und bei Nutzung der Wingcast-App
+                (<strong>app.wingcast.ch</strong>) verarbeitet werden, zu welchem
                 Zweck und auf welcher Rechtsgrundlage. Sie richtet sich nach dem
                 revidierten Schweizer Datenschutzgesetz (revDSG, in Kraft seit
                 01.09.2023).
@@ -118,6 +118,13 @@ export default function DatenschutzPage() {
                   bis zu 30 Tage zur Missbrauchsprüfung und nutzt sie nicht für
                   Modell-Training.
                 </li>
+                <li>
+                  <strong>Google Analytics 4</strong> (Google Ireland Ltd.) und{" "}
+                  <strong>PostHog</strong> (EU-Cloud, Frankfurt) &mdash; Statistik
+                  und Reichweitenmessung der Webseite,{" "}
+                  <strong>ausschliesslich mit deiner Einwilligung</strong>. Details
+                  und Widerruf siehe Punkt 8.
+                </li>
               </ul>
             </Section>
 
@@ -170,8 +177,8 @@ export default function DatenschutzPage() {
               </ul>
               <p className="mt-3">
                 Anfragen richtest du an{" "}
-                <a className="text-sky-700 underline" href="mailto:info@gleitcast.ch">
-                  info@gleitcast.ch
+                <a className="text-sky-700 underline" href="mailto:info@wingcast.ch">
+                  info@wingcast.ch
                 </a>
                 . Antwortzeit max. 30 Tage.
               </p>
@@ -179,10 +186,39 @@ export default function DatenschutzPage() {
 
             <Section title="8. Cookies und Tracking">
               <p>
-                Wir setzen <strong>ein einziges, technisch notwendiges Cookie</strong>:
-                ein Session-Cookie zur Aufrechterhaltung deines Logins (HTTP-only,
-                Secure, SameSite=Lax). Kein Tracking, keine Werbe-Cookies, keine
-                Drittanbieter-Analytics. Daher kein Cookie-Banner nötig.
+                <strong>Technisch notwendig:</strong> Die Wingcast-App setzt ein
+                Session-Cookie zur Aufrechterhaltung deines Logins (HTTP-only,
+                Secure, SameSite=Lax). Dieses ist für den Betrieb erforderlich und
+                bedarf keiner Einwilligung. Die Marketing-Seite (wingcast.ch)
+                selbst setzt ohne deine Zustimmung keine Cookies.
+              </p>
+              <p className="mt-3">
+                <strong>Statistik &amp; Analyse (nur mit deiner Einwilligung):</strong>{" "}
+                Zur Verbesserung der Seite nutzen wir – erst nach deiner aktiven
+                Zustimmung über den Cookie-Banner – folgende Dienste:
+              </p>
+              <ul className="mt-3 list-disc space-y-3 pl-6">
+                <li>
+                  <strong>Google Analytics 4</strong> (Google Ireland Ltd.) &mdash;
+                  anonymisierte Reichweiten- und Nutzungsmessung. IP-Anonymisierung
+                  ist aktiviert. Google Consent Mode v2 ist implementiert; ohne
+                  Einwilligung wird kein Analytics-Script geladen.{" "}
+                  <strong>Übermittlung in die USA</strong> (Drittstaat) auf Basis
+                  des EU-US Data Privacy Framework bzw. der EU-Standardvertrags&shy;klauseln.
+                </li>
+                <li>
+                  <strong>PostHog</strong> (PostHog Inc., über EU-Cloud in
+                  Frankfurt) &mdash; Produkt-Analyse (z. B. welche Abschnitte
+                  genutzt werden). Datenverarbeitung in der EU.
+                </li>
+              </ul>
+              <p className="mt-3">
+                Rechtsgrundlage ist deine <strong>Einwilligung</strong> (revDSG
+                Art. 6 / Art. 31; im EU-Raum Art. 6 Abs. 1 lit. a DSGVO). Du kannst
+                sie jederzeit ohne Nachteil verweigern oder später widerrufen
+                &mdash; über den Link <strong>„Cookie-Einstellungen"</strong> im
+                Footer. Bis zur Einwilligung wird kein Tracking-Cookie gesetzt und
+                kein Tracking-Dienst geladen.
               </p>
             </Section>
 
@@ -210,7 +246,7 @@ export default function DatenschutzPage() {
                 ändert. Wesentliche Änderungen kündigen wir per E-Mail an. Die
                 jeweils aktuelle Fassung findest du immer unter{" "}
                 <a className="text-sky-700 underline" href="/datenschutz">
-                  gleitcast.ch/datenschutz
+                  wingcast.ch/datenschutz
                 </a>
                 .
               </p>
@@ -219,8 +255,8 @@ export default function DatenschutzPage() {
             <Section title="12. Kontakt">
               <p>
                 Bei Fragen oder Anliegen zum Datenschutz:<br />
-                <a className="text-sky-700 underline" href="mailto:info@gleitcast.ch">
-                  info@gleitcast.ch
+                <a className="text-sky-700 underline" href="mailto:info@wingcast.ch">
+                  info@wingcast.ch
                 </a>
               </p>
               <p className="mt-3 text-sm text-slate-500">

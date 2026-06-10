@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight } from "./ui/Icons";
 
-const APP_URL = "https://app.gleitcast.ch";
+const APP_URL = "https://app.wingcast.ch";
 
 export function FloatingAppCTA() {
   const [visible, setVisible] = useState(false);
@@ -53,7 +53,7 @@ export function FloatingAppCTA() {
       href={APP_URL}
       target="_blank"
       rel="noopener"
-      aria-label="Spots in der Gleitcast App ansehen"
+      aria-label="Spots in der Wingcast App ansehen"
       className={`focus-ring fixed bottom-5 right-5 z-50 inline-flex h-12 items-center gap-2 rounded-lg border-2 border-slate-900 bg-slate-900 px-5 text-base font-semibold text-white transition-[transform,opacity] duration-200 ease-out active:scale-[0.97] md:hidden ${
         visible
           ? "translate-y-0 opacity-100"

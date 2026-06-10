@@ -65,11 +65,11 @@ weaknesses:
   - "Lernkurve fuer Konfiguration"
   - "Kein Pre-Flight Decision Support"
 
-# Competitive comparison to Gleitcast
-vs_gleitcast:
+# Competitive comparison to Wingcast
+vs_wingcast:
   relationship: "Komplementaer — kein direkter Konkurrent"
   note: >
-    XCTrack = In-Flight Instrument, Gleitcast = Pre-Flight Decision Support.
-    Ideale Kombination: Gleitcast fuer die Entscheidung WO und WANN,
+    XCTrack = In-Flight Instrument, Wingcast = Pre-Flight Decision Support.
+    Ideale Kombination: Wingcast fuer die Entscheidung WO und WANN,
     XCTrack fuer den Flug selbst. Integration-Opportunity:
-    XCTrack-Flugdaten als Training-Input fuer Gleitcast-KI.
+    XCTrack-Flugdaten als Training-Input fuer Wingcast-KI.

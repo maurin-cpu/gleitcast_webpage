@@ -19,15 +19,15 @@ export default function ImpressumPage() {
 
             <Section title="Anbieter">
               <p>
-                <strong>Gleitcast</strong><br />
+                <strong>Wingcast</strong><br />
                 Maurin Vögeli<br />
                 Naphtastrasse 6<br />
                 Schweiz
               </p>
               <p className="mt-3">
                 E-Mail:{" "}
-                <a className="text-sky-700 underline" href="mailto:info@gleitcast.ch">
-                  info@gleitcast.ch
+                <a className="text-sky-700 underline" href="mailto:info@wingcast.ch">
+                  info@wingcast.ch
                 </a>
               </p>
             </Section>
@@ -38,7 +38,7 @@ export default function ImpressumPage() {
 
             <Section title="Rechtsform">
               <p>
-                Gleitcast wird als nicht-eingetragenes Einzelunternehmen
+                Wingcast wird als nicht-eingetragenes Einzelunternehmen
                 (Privatperson) betrieben. Eintragung im Handelsregister: keine.
                 MwSt-Nr.: keine (unter der Mehrwertsteuergrenze gemäss MWSTG
                 Art. 10).
@@ -47,7 +47,7 @@ export default function ImpressumPage() {
 
             <Section title="Haftungsausschluss">
               <p>
-                Gleitcast ist <strong>Decision Support</strong>, keine garantierte
+                Wingcast ist <strong>Decision Support</strong>, keine garantierte
                 Vorhersage. Die finale Entscheidung &mdash; ob und wann geflogen
                 wird &mdash; trifft immer der Pilot oder die Pilotin selbst. Im
                 Zweifelsfall: nicht fliegen.
@@ -63,7 +63,7 @@ export default function ImpressumPage() {
 
             <Section title="Urheberrecht">
               <p>
-                Inhalte und Texte auf gleitcast.ch und app.gleitcast.ch sind
+                Inhalte und Texte auf wingcast.ch und app.wingcast.ch sind
                 urheberrechtlich geschützt. Wetterdaten stammen von den jeweiligen
                 Anbietern (MeteoSchweiz, ECMWF, Open-Meteo, NOAA/GFS) und
                 unterliegen deren Lizenzbedingungen.

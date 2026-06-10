@@ -1,6 +1,6 @@
 # Swiss Paragliding Research - Progress Checklist
 
-**Project**: Gleitcast AI Weather App Customer Research
+**Project**: Wingcast AI Weather App Customer Research
 **Started**: [Date]
 **Target Completion**: [Date + 4 weeks]
 **Researcher**: [Name]

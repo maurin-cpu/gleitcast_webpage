@@ -96,16 +96,16 @@ common_complaints:
   - "Ueberwältigend — zu viele Informationen auf einmal"
   - "Zeigt Wetter aber sagt nicht was es bedeutet"
 
-# Competitive comparison to Gleitcast
-vs_gleitcast:
-  gleitcast_advantages:
+# Competitive comparison to Wingcast
+vs_wingcast:
+  wingcast_advantages:
     - "KI analysiert und interpretiert die Wetter-Daten"
     - "Flyability-Score statt rohe Datenpunkte"
     - "Erklaerbare Empfehlungen"
     - "Nuetzliches Free-Tier"
     - "Einfachere UX — weniger ist mehr"
   paragliding_map_advantages:
-    - "15'000+ Sites vs. 50 im Gleitcast-MVP"
+    - "15'000+ Sites vs. 50 im Wingcast-MVP"
     - "39'000 Webcams"
     - "30'000 Wetterstationen"
     - "Hike & Fly Trails"

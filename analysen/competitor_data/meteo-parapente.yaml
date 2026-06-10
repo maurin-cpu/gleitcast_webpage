@@ -59,10 +59,10 @@ weaknesses:
   - "Limitierte Features vs. Premium-Konkurrenz"
   - "Verliert aktiv Nutzer"
 
-# Competitive comparison to Gleitcast
-vs_gleitcast:
+# Competitive comparison to Wingcast
+vs_wingcast:
   relationship: "Schwacher Konkurrent — eher Nutzer zum Wechseln bereit"
   opportunity: >
     Meteo-Parapente-Nutzer sind frustriert (schlechter Support, veraltete UI).
-    Ideale Zielgruppe fuer Gleitcast-Akquise: bereits gewohnt eine
+    Ideale Zielgruppe fuer Wingcast-Akquise: bereits gewohnt eine
     Gleitschirm-Wetter-App zu nutzen, aber unzufrieden.

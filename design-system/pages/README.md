@@ -9,7 +9,7 @@ design-system/pages/<page-slug>.md
 ```
 
 Beispiele:
-- `landing.md` — Marketing-Landing (gleitcast.ch)
+- `landing.md` — Marketing-Landing (wingcast.ch)
 - `briefing.md` — interaktive Briefing-Vorschau
 - `dashboard.md` — App-Dashboard (Spot-Liste)
 - `onboarding.md` — Erst-Anmeldung

@@ -1,10 +1,10 @@
 # =============================================================================
-# EIGENES PRODUKT: Gleitcast
+# EIGENES PRODUKT: Wingcast
 # =============================================================================
 # Zentraler Datensatz — wird von allen Comparison-Pages referenziert
 # Letzte Aktualisierung: 2026-04-17
 
-name: Gleitcast
+name: Wingcast
 website: # TBD
 tagline: "Dein KI-Copilot fuer Gleitschirmfliegen"
 founded: 2026
@@ -109,7 +109,7 @@ migration_from:
   paragliding_map:
     difficulty: easy
     value_add: "Intelligente Aggregation statt roher Daten-Sammlung"
-    what_they_lose: "15'000+ Sites-Datenbank (Gleitcast startet mit 50)"
+    what_they_lose: "15'000+ Sites-Datenbank (Wingcast startet mit 50)"
   windy:
     difficulty: easy
     value_add: "Paragliding-spezifische KI statt generisches Wetter"

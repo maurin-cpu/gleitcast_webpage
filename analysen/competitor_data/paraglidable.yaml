@@ -101,16 +101,16 @@ common_complaints:
   - "Score sagt mir nicht warum ein Tag gut oder schlecht ist"
   - "Fuer mein Fluggebiet in den Alpen nicht genau genug"
 
-# Competitive comparison to Gleitcast
-vs_gleitcast:
-  gleitcast_advantages:
+# Competitive comparison to Wingcast
+vs_wingcast:
+  wingcast_advantages:
     - "iOS + Android von Tag 1"
     - "Schweiz/Alpin-Spezialisierung (Talwinde, Foehn, Lee)"
     - "Erklaerbare KI — zeigt WARUM"
     - "Skill-Level-Anpassung"
     - "Aggregiert mehrere Wetter-Quellen transparent"
   paraglidable_advantages:
-    - "10 Jahre Trainingsdaten vs. Gleitcast = neu"
+    - "10 Jahre Trainingsdaten vs. Wingcast = neu"
     - "2M Fluege als Datengrundlage"
     - "Etablierter im Markt"
     - "Breitere europaeische Abdeckung"

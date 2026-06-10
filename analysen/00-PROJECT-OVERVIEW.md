@@ -1,6 +1,6 @@
 # Swiss Paragliding Customer Research - Project Overview
 
-**Project Name**: Gleitcast Weather App - Swiss Pilot Customer Research
+**Project Name**: Wingcast Weather App - Swiss Pilot Customer Research
 **Project Type**: Pre-Product Customer Discovery (Mode 2: Digital Watering Hole Research)
 **Created**: April 17, 2026
 **Status**: Ready to Execute
@@ -386,7 +386,7 @@ A comprehensive customer research project to understand Swiss paragliding pilots
 ## Contact & Questions
 
 **Project Lead**: [Name]
-**Project Folder**: `C:\Users\user\OneDrive\Projekte\marketing\marketing_gleitcast\analysen\`
+**Project Folder**: `C:\Users\user\OneDrive\Projekte\marketing\marketing_wingcast\analysen\`
 
 **Questions about methodology?**
 → See swiss-paragliding-research-plan.md

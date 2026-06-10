@@ -1,8 +1,8 @@
-# MVP-Konzept: Gleitcast E-Mail-Briefing
+# MVP-Konzept: Wingcast E-Mail-Briefing
 
 ## Context
 
-Gleitcast hat ein starkes technisches Fundament (488 Startplaetze, Multi-Modell-Wetterdaten, Flyability-Tiers, Foehn-Erkennung, Thermik-Berechnung, LLM-Analysen). Aber dieses Fundament ist ein Proof of Concept — es ist nicht auf die echten Pains der Piloten ausgerichtet.
+Wingcast hat ein starkes technisches Fundament (488 Startplaetze, Multi-Modell-Wetterdaten, Flyability-Tiers, Foehn-Erkennung, Thermik-Berechnung, LLM-Analysen). Aber dieses Fundament ist ein Proof of Concept — es ist nicht auf die echten Pains der Piloten ausgerichtet.
 
 Die Customer Research zeigt: Das #1-Problem ist **"Ich checke 5-10 Apps pro Flugtag und brauche 30-60 Minuten fuer eine Flugentscheidung — und bin trotzdem unsicher."**
 
@@ -28,7 +28,7 @@ Kein App-Bau. Kein App Store. Nur eine Landing Page, ein Backend und E-Mails.
 ### App-Status & Pricing
 - **Beta mit Anmeldepflicht.** Launch der Landing-Page Anfang Mai 2026 zum Schweizer Saisonstart.
 - **Aktuell dauerhaft gratis.** Paid-Tier kommt vermutlich spaeter, **wird auf der Landing-Page nicht thematisiert**.
-- Conversion-Pfad: Landing → App-Outbound auf `app.gleitcast.ch` → Account erstellen + Magic-Link bestaetigen
+- Conversion-Pfad: Landing → App-Outbound auf `app.wingcast.ch` → Account erstellen + Magic-Link bestaetigen
 - Abgestufter Wert in der App: Klick auf Page-Link → 1 Tag Forecast direkt sichtbar (kein Login) → Magic-Link-Login → 5 Tage Forecast → Briefing-Abo nach Account
 
 ### Personas
@@ -82,7 +82,7 @@ Jeder Schweizer Pilot. Jede Woche. 30-60 Minuten verschwendet mit 5-10 Apps. Das
 | Warum wichtig | Kein anderes Tool gibt eine klare Go/No-Go-Empfehlung pro Region und Woche |
 | Existiert technisch | Ja — `fly_status: gray/green/violet` + `safety_status` + `is_conditional` aus Spot-Analyse |
 
-**Mapping auf bestehende Tiers (identisch mit Gleitcast-App):**
+**Mapping auf bestehende Tiers (identisch mit Wingcast-App):**
 - `violet` + `safety_status: safe` → 🟣 VIOLET — "Legendaer" (Rating 8.5-10.0, Top-Tag, #8b5cf6)
 - `green` + `safety_status: safe` → 🟢 GRUEN — "Fliegbar" (Rating 5.0-8.4, Guter Flugtag, #22c55e)
 - `gray` + `safety_status: safe` → 🟤 BRONZE — "Abgleiter" (Rating 2.0-4.9, Fliegbar aber kurz, #B08D57)
@@ -348,7 +348,7 @@ Fenster vor 14 Uhr nutzen.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Basierend auf: ICON-CH1 (1km), ICON-D2, ICON-EU, Open-Meteo
-Gleitcast ist Decision Support — die finale Entscheidung triffst du.
+Wingcast ist Decision Support — die finale Entscheidung triffst du.
 Im Zweifel empfehlen wir: NICHT fliegen. Sicherheit geht vor.
 
 👉 Alle Details im Flugwetter-Dashboard ansehen: [Link]
@@ -538,7 +538,7 @@ Der Pilot sieht sofort seine Regionen, kann aber den Filter aufheben um alles zu
 
 ### Was der Pilot eingibt (Pflicht):
 1. **E-Mail-Adresse**
-2. **Regionen** (Mehrfachauswahl, identisch mit Regionen im Code: z.B. Berner Oberland, Zentralschweiz, Wallis, Glarnerland, Jura, ...) — Der Pilot waehlt die Regionen, fuer die er ein Wochen-Feedback erhalten will. Gleitcast zeigt dann die besten Startplaetze in diesen Regionen automatisch.
+2. **Regionen** (Mehrfachauswahl, identisch mit Regionen im Code: z.B. Berner Oberland, Zentralschweiz, Wallis, Glarnerland, Jura, ...) — Der Pilot waehlt die Regionen, fuer die er ein Wochen-Feedback erhalten will. Wingcast zeigt dann die besten Startplaetze in diesen Regionen automatisch.
 
 ### Optional (vorerst nicht im MVP):
 - Startplatz-Auswahl (individuelle Favoriten aus den 488 vorhandenen) — spaeter
@@ -587,14 +587,14 @@ Der Pilot sieht sofort seine Regionen, kann aber den Filter aufheben um alles zu
 ### 2. E-Mail-Template-Engine (interaktiv)
 - HTML E-Mail Template mit **CSS-only Tabs** (Radio-Button-Hack fuer Wochentag-Auswahl)
 - 5-Farben-Tier-Darstellung (Violet/Gruen/Bronze/Gelb/Rot)
-- CSS-Farben identisch mit Gleitcast-App: `--color-fly-violet: #8b5cf6`, `--color-fly-green: #22c55e`, `--color-fly-gray: #B08D57`
+- CSS-Farben identisch mit Wingcast-App: `--color-fly-violet: #8b5cf6`, `--color-fly-green: #22c55e`, `--color-fly-gray: #B08D57`
 - Tab-Leiste: 5 Wochentage mit Ampelfarbe, bester Tag vorausgewaehlt
 - **Fallback:** Outlook Desktop / alte Clients sehen alle 5 Tage gestapelt (kein Tab-Switch)
 - 1 Variante (Standard-Modus) — Anfaenger/Experte-Varianten spaeter optional
 - Responsive (Mobile-first — Piloten lesen auf dem Handy)
 - Personalisierung: Name, Regionen (Startplaetze automatisch aus Regionen)
 
-### 3. Tier-Mapping-Logik (identisch mit Gleitcast-App)
+### 3. Tier-Mapping-Logik (identisch mit Wingcast-App)
 - `fly_status` (violet/green/gray) direkt aus Spot-Analyse uebernehmen
 - `is_conditional` + `conditional_reason` als eigene Gelb-Stufe
 - `safety_status: not_safe` → immer Rot (Rating 0.0)

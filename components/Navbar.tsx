@@ -2,7 +2,7 @@ import { LinkButton } from "./ui/Button";
 import { Logo } from "./ui/Logo";
 import { ArrowUpRight } from "./ui/Icons";
 
-const APP_URL = "https://app.gleitcast.ch";
+const APP_URL = "https://app.wingcast.ch";
 
 export function Navbar() {
   return (
@@ -11,7 +11,7 @@ export function Navbar() {
         <a
           href="#hero"
           className="focus-ring -ml-1 rounded-md px-1 py-1"
-          aria-label="Gleitcast Startseite"
+          aria-label="Wingcast Startseite"
         >
           <Logo />
         </a>
@@ -21,22 +21,16 @@ export function Navbar() {
           aria-label="Hauptnavigation"
         >
           <a
-            href="#preview"
-            className="focus-ring rounded-md px-4 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700"
-          >
-            Briefing
-          </a>
-          <a
-            href="#features"
-            className="focus-ring rounded-md px-4 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700"
-          >
-            Features
-          </a>
-          <a
             href="#solution"
             className="focus-ring rounded-md px-4 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700"
           >
             So funktioniert's
+          </a>
+          <a
+            href="#preview"
+            className="focus-ring rounded-md px-4 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700"
+          >
+            Cast
           </a>
           <a
             href="#faq"

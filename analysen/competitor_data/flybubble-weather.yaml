@@ -13,7 +13,7 @@ founded: ~2023
 headquarters: UK (Flybubble = britischer Gleitschirm-Haendler)
 type: concept_competitor
 priority: high
-note: "WICHTIG: Macht etwas sehr Aehnliches wie Gleitcast — aber nur UK/Ireland, kein KI"
+note: "WICHTIG: Macht etwas sehr Aehnliches wie Wingcast — aber nur UK/Ireland, kein KI"
 
 # Positioning
 primary_use_case: "Ampelsystem pro Startplatz — zeigt ob Site fliegbar ist"
@@ -85,16 +85,16 @@ weaknesses:
   - "Keine Alpine Phaenomene (kein Foehn, keine Talwinde)"
   - "Kein Offline-Modus"
 
-# Competitive comparison to Gleitcast
-vs_gleitcast:
-  was_gleitcast_lernen_kann:
+# Competitive comparison to Wingcast
+vs_wingcast:
+  was_wingcast_lernen_kann:
     - "Ampelsystem (gruen/orange/rot) = genau richtig, Piloten lieben es"
     - "'Anybody flying?' Feature = brillant, schafft Community"
     - "Email-Alerts pro Site = das was Piloten wollen (JTBD 4)"
     - "Wing-Type-Anpassung = gute Idee fuer Skill-Level"
     - "Club-Embedding = Verbreitungs-Strategie"
     - "UX-Referenz: einfach, klar, fokussiert"
-  wo_gleitcast_besser_sein_wird:
+  wo_wingcast_besser_sein_wird:
     - "KI-Aggregation (nicht nur ein Modell)"
     - "Schweiz/Alpen-Abdeckung (Flybubble = nur UK)"
     - "Lernende KI statt manueller Site-Kriterien"
@@ -103,8 +103,8 @@ vs_gleitcast:
     - "Erklaerbare Empfehlungen"
     - "Multi-Source statt Single-Model (RASP)"
   strategische_bedeutung: >
-    Flybubble Weather VALIDIERT den gesamten Gleitcast-Ansatz.
+    Flybubble Weather VALIDIERT den gesamten Wingcast-Ansatz.
     Es beweist: Piloten wollen ein Ampelsystem pro Site.
-    Gleitcast geht weiter: KI statt manueller Regeln,
+    Wingcast geht weiter: KI statt manueller Regeln,
     Alpen statt UK, Mobile statt Web-only.
-    Flybubble = UX-Vorbild, Gleitcast = technologischer Nachfolger.
+    Flybubble = UX-Vorbild, Wingcast = technologischer Nachfolger.

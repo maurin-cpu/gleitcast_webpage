@@ -54,9 +54,9 @@ weaknesses:
   - "Keine Startplatz-Datenbank"
   - "Keine KI"
 
-# Competitive comparison to Gleitcast
-vs_gleitcast:
+# Competitive comparison to Wingcast
+vs_wingcast:
   relationship: "Potenzielle DATENQUELLE"
   note: >
     XC Therm-Daten (ICON-EU/ICON-D2) koennten als Input
-    fuer Gleitcasts KI dienen. Eher komplementaer als konkurrierend.
+    fuer Wingcasts KI dienen. Eher komplementaer als konkurrierend.

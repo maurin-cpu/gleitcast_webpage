@@ -60,9 +60,9 @@ weaknesses:
   - "Nicht so feature-reich wie XCTrack"
   - "Premium-Features kosten extra"
 
-# Competitive comparison to Gleitcast
-vs_gleitcast:
+# Competitive comparison to Wingcast
+vs_wingcast:
   relationship: "Komplementaer — kein direkter Konkurrent"
   note: >
-    Gleich wie XCTrack: FlySkyHy = In-Flight, Gleitcast = Pre-Flight.
-    Moegliche Integration: FlySkyHy-Flugdaten als Input fuer Gleitcast-KI.
+    Gleich wie XCTrack: FlySkyHy = In-Flight, Wingcast = Pre-Flight.
+    Moegliche Integration: FlySkyHy-Flugdaten als Input fuer Wingcast-KI.

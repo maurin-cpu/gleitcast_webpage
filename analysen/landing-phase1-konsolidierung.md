@@ -1,4 +1,4 @@
-# Phase-1-Konsolidierung — Gleitcast Landing-Page
+# Phase-1-Konsolidierung — Wingcast Landing-Page
 
 **Erstellt:** 2026-04-29 nach parallelen Reviews durch academic-psychologist, product-behavioral-nudge-engine und design-ux-researcher
 **Quellen:** Discovery-Briefing `landing-briefing-phase1.md` + drei Agent-Audits

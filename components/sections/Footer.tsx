@@ -1,7 +1,14 @@
 import { Logo } from "../ui/Logo";
 import { ArrowUpRight } from "../ui/Icons";
+import { CookieSettingsLink } from "../consent/CookieSettingsLink";
+import { PAGE_LAST_UPDATED } from "@/lib/schema";
 
-const APP_URL = "https://app.gleitcast.ch";
+const LAST_UPDATED_LABEL = new Date(PAGE_LAST_UPDATED).toLocaleDateString(
+  "de-CH",
+  { day: "numeric", month: "long", year: "numeric" },
+);
+
+const APP_URL = "https://app.wingcast.ch";
 
 export function Footer() {
   return (
@@ -13,7 +20,7 @@ export function Footer() {
               <Logo />
             </div>
             <p className="mt-4 max-w-sm text-base leading-[1.6] text-white/85">
-              KI-Flugwetter-Briefing für Schweizer Gleitschirmpiloten — damit
+              KI-Flugwetter-Cast für Schweizer Gleitschirmpiloten — damit
               du schneller weisst, wo's diese Woche geht.
             </p>
             <a
@@ -30,9 +37,9 @@ export function Footer() {
           <FooterCol
             title="Produkt"
             links={[
-              { label: "Briefing", href: "#preview" },
               { label: "So funktioniert's", href: "#solution" },
-              { label: "Features", href: "#features" },
+              { label: "Cast-Vorschau", href: "#preview" },
+              { label: "Beta-Feedback", href: "#feedback" },
               { label: "FAQ", href: "#faq" },
             ]}
           />
@@ -41,7 +48,7 @@ export function Footer() {
             title="App"
             links={[
               { label: "Live-Dashboard", href: APP_URL, external: true },
-              { label: "Briefing", href: `${APP_URL}/briefing`, external: true },
+              { label: "Cast", href: `${APP_URL}/briefing`, external: true },
               { label: "Spots-Karte", href: `${APP_URL}/map`, external: true },
               { label: "Chat", href: APP_URL, external: true },
             ]}
@@ -51,19 +58,57 @@ export function Footer() {
             title="Rechtliches"
             links={[
               { label: "Impressum", href: "/impressum" },
+              { label: "Nutzungsbedingungen", href: "/nutzungsbedingungen" },
               { label: "Datenschutz", href: "/datenschutz" },
-              { label: "Kontakt", href: "mailto:hi@gleitcast.ch" },
+              { label: "Kontakt", href: "mailto:hi@wingcast.ch" },
               {
                 label: "Beta-Feedback",
-                href: "mailto:info@gleitcast.ch?subject=Gleitcast%20Beta%20%E2%80%94%20Feedback",
+                href: "mailto:info@wingcast.ch?subject=Wingcast%20Beta%20%E2%80%94%20Feedback",
               },
             ]}
+            extra={<CookieSettingsLink />}
           />
         </div>
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-white/15 pt-6 text-sm text-white/85 sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} Gleitcast · Made in Switzerland.</p>
-          <p>Wetterdaten via Open-Meteo · inkl. ICON-CH1, ICON-D2, ECMWF</p>
+          <p>
+            © {new Date().getFullYear()} Wingcast · Made in Switzerland ·{" "}
+            <time
+              dateTime={PAGE_LAST_UPDATED}
+              className="text-white/70"
+            >
+              Stand {LAST_UPDATED_LABEL}
+            </time>
+          </p>
+          <p>
+            Wetterdaten via{" "}
+            <a
+              href="https://open-meteo.com"
+              target="_blank"
+              rel="noopener"
+              className="underline-offset-2 hover:underline"
+            >
+              Open-Meteo
+            </a>{" "}
+            · ICON-CH1 (1 km) und ICON-CH2 (2 km) von{" "}
+            <a
+              href="https://www.meteoschweiz.admin.ch"
+              target="_blank"
+              rel="noopener"
+              className="underline-offset-2 hover:underline"
+            >
+              MeteoSchweiz
+            </a>
+            , ICON-D2, ICON-EU,{" "}
+            <a
+              href="https://www.nco.ncep.noaa.gov/pmb/products/gfs/"
+              target="_blank"
+              rel="noopener"
+              className="underline-offset-2 hover:underline"
+            >
+              GFS
+            </a>
+          </p>
         </div>
       </div>
     </footer>
@@ -73,9 +118,11 @@ export function Footer() {
 function FooterCol({
   title,
   links,
+  extra,
 }: {
   title: string;
   links: { label: string; href: string; external?: boolean }[];
+  extra?: React.ReactNode;
 }) {
   return (
     <div>
@@ -95,6 +142,7 @@ function FooterCol({
             </a>
           </li>
         ))}
+        {extra && <li>{extra}</li>}
       </ul>
     </div>
   );

@@ -91,9 +91,9 @@ common_complaints:
   - "Muss trotzdem andere Apps fuer Thermik-Vorhersage nutzen"
   - "Kein Startplatz-Bezug"
 
-# Competitive comparison to Gleitcast
-vs_gleitcast:
-  gleitcast_advantages:
+# Competitive comparison to Wingcast
+vs_wingcast:
+  wingcast_advantages:
     - "Paragliding-spezifische KI-Analyse"
     - "Flyability-Score"
     - "Aggregiert Windy-Daten PLUS weitere Quellen"
@@ -108,8 +108,8 @@ vs_gleitcast:
     - "Grosszuegiges Free-Tier"
     - "Globale Abdeckung"
   coexistence_note: >
-    Windy und Gleitcast sind KEINE Entweder-Oder-Entscheidung.
+    Windy und Wingcast sind KEINE Entweder-Oder-Entscheidung.
     Die meisten Piloten werden Windy weiterhin als visuelles Tool nutzen.
-    Gleitcast positioniert sich als KI-Schicht OBERHALB von Windy
-    und anderen Quellen — "Windy zeigt das Wetter, Gleitcast sagt dir
+    Wingcast positioniert sich als KI-Schicht OBERHALB von Windy
+    und anderen Quellen — "Windy zeigt das Wetter, Wingcast sagt dir
     was es fuer deinen Flug bedeutet."

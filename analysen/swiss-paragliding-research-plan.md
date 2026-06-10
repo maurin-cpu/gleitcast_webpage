@@ -2,7 +2,7 @@
 ## AI-Powered Weather App Customer Research
 
 **Date Created**: April 17, 2026
-**Project**: Gleitcast (AI Paragliding Weather App)
+**Project**: Wingcast (AI Paragliding Weather App)
 **Research Mode**: Digital Watering Hole Research (Mode 2)
 **Target Market**: Swiss Paragliding Pilots
 

@@ -62,11 +62,11 @@ weaknesses:
   - "Komplex fuer Anfaenger"
   - "Kein Flyability-Score"
 
-# Competitive comparison to Gleitcast
-vs_gleitcast:
+# Competitive comparison to Wingcast
+vs_wingcast:
   relationship: "Teilweise ueberlappend bei Wetter-Daten"
   note: >
     AeroXC bedient erfahrene Piloten die Rohdaten wollen.
-    Gleitcast bedient Piloten die Interpretation wollen.
+    Wingcast bedient Piloten die Interpretation wollen.
     Verschiedene Segmente, aber AeroXC-Nutzer koennten
-    Gleitcast als Ergaenzung nutzen.
+    Wingcast als Ergaenzung nutzen.

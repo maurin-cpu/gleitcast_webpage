@@ -1,7 +1,7 @@
 # Paragliding Pilot Pain Points Research - Deliverables Summary
 
 **Date Created:** April 17, 2026
-**Project:** Gleitcast AI-Powered Weather App
+**Project:** Wingcast AI-Powered Weather App
 **Status:** Framework Complete - Ready for Manual Data Collection
 
 ---
@@ -349,7 +349,7 @@ This framework was created in an environment without access to WebSearch or WebF
 ## File Locations Quick Reference
 
 ```
-marketing_gleitcast/
+marketing_wingcast/
 └── analysen/
     ├── paragliding-pilot-pain-points-research-guide.md  ← START HERE
     ├── paragliding-pilot-pain-points-synthesis.md       ← Analysis Framework

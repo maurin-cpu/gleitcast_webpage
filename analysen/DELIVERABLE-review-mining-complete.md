@@ -9,7 +9,7 @@ I've created a **comprehensive app review mining research kit** for analyzing co
 ## 📦 Deliverables (7 Documents + 1 Checklist)
 
 All files are located in:
-`C:\Users\user\OneDrive\Projekte\marketing\marketing_gleitcast\analysen\`
+`C:\Users\user\OneDrive\Projekte\marketing\marketing_wingcast\analysen\`
 
 ### 1. **README-review-mining.md** (14 KB)
 **START HERE - Master Overview**
@@ -147,7 +147,7 @@ All files are located in:
 **Best for:** Immediate decisions needed
 
 ### Option 2: 4-Hour Sprint
-**Deliverable:** 50-100 quotes, top 10 lists, Gleitcast must-haves
+**Deliverable:** 50-100 quotes, top 10 lists, Wingcast must-haves
 **Path:** review-mining-quick-start.md → 4-hour sprint
 **Best for:** Actionable insights without full deep dive
 
@@ -255,7 +255,7 @@ You already have:
 - Top 10 pain points (ranked)
 - Top 10 loved features (ranked)
 - Top 10 unmet needs (ranked)
-- Gleitcast must-haves/must-avoids lists
+- Wingcast must-haves/must-avoids lists
 - Pricing insights
 - Differentiation opportunities
 
@@ -298,7 +298,7 @@ You'll know you've succeeded when you can answer:
 ✅ What differentiates winners?
 
 ### Tactical Questions
-✅ What features must Gleitcast have on day 1?
+✅ What features must Wingcast have on day 1?
 ✅ What features can wait?
 ✅ What UX patterns to copy/avoid?
 ✅ What's the right pricing?
@@ -501,7 +501,7 @@ You DON'T have (and need to collect):
 ---
 
 **Created:** 2026-04-17
-**Location:** `C:\Users\user\OneDrive\Projekte\marketing\marketing_gleitcast\analysen\`
+**Location:** `C:\Users\user\OneDrive\Projekte\marketing\marketing_wingcast\analysen\`
 **Total Documents:** 8
 **Total Size:** ~113 KB
 **Total Pages:** ~121

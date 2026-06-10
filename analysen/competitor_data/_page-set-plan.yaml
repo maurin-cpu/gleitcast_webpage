@@ -1,5 +1,5 @@
 # =============================================================================
-# PAGE-SET-PLAN: Empfohlene Competitor-Pages fuer Gleitcast
+# PAGE-SET-PLAN: Empfohlene Competitor-Pages fuer Wingcast
 # =============================================================================
 # Basierend auf Suchvolumen, strategischer Wichtigkeit und Schweizer Marktfokus
 # Letzte Aktualisierung: 2026-04-17
@@ -13,7 +13,7 @@ priority_1_pages:
 
   - format: "alternative_singular"
     url: "/alternativen/burnair"
-    title: "Gleitcast als burnair Alternative — KI statt manueller Wetter-Interpretation"
+    title: "Wingcast als burnair Alternative — KI statt manueller Wetter-Interpretation"
     target_keywords:
       - "burnair Alternative"
       - "Alternative zu burnair"
@@ -25,16 +25,16 @@ priority_1_pages:
     estimated_search_volume: "mittel (Nische, aber high intent)"
 
   - format: "vs_page"
-    url: "/vergleich/gleitcast-vs-paraglidable"
-    title: "Gleitcast vs. Paraglidable — Welche KI-Gleitschirm-App ist besser?"
+    url: "/vergleich/wingcast-vs-paraglidable"
+    title: "Wingcast vs. Paraglidable — Welche KI-Gleitschirm-App ist besser?"
     target_keywords:
       - "Paraglidable Alternative"
-      - "Paraglidable vs Gleitcast"
+      - "Paraglidable vs Wingcast"
       - "KI Gleitschirm App"
       - "AI paragliding app"
     rationale: >
       Paraglidable ist der einzige direkte KI-Konkurrent.
-      Diese Seite positioniert Gleitcast als die bessere KI-Loesung
+      Diese Seite positioniert Wingcast als die bessere KI-Loesung
       (iOS, Alpine Spezialisierung, erklarbare KI).
     competitor_data: "paraglidable.yaml"
     estimated_search_volume: "niedrig-mittel (wachsend)"
@@ -49,7 +49,7 @@ priority_1_pages:
       - "Paragliding App Vergleich"
     rationale: >
       Fangseite fuer alle Piloten die nach Wetter-Apps suchen.
-      Positioniert Gleitcast im Kontext aller Alternativen.
+      Positioniert Wingcast im Kontext aller Alternativen.
       Hoechstes generisches Suchvolumen.
     competitor_data: "alle"
     estimated_search_volume: "hoch (generisch)"
@@ -62,18 +62,18 @@ priority_2_pages:
 
   - format: "alternative_singular"
     url: "/alternativen/paragliding-map"
-    title: "Gleitcast als Paragliding Map Alternative — KI-Analyse statt Datenflut"
+    title: "Wingcast als Paragliding Map Alternative — KI-Analyse statt Datenflut"
     target_keywords:
       - "Paragliding Map Alternative"
       - "Paragliding Map zu teuer"
     competitor_data: "paragliding-map.yaml"
 
   - format: "vs_page"
-    url: "/vergleich/gleitcast-vs-burnair"
-    title: "Gleitcast vs. burnair — KI-Empfehlung vs. manuelle Interpretation"
+    url: "/vergleich/wingcast-vs-burnair"
+    title: "Wingcast vs. burnair — KI-Empfehlung vs. manuelle Interpretation"
     target_keywords:
-      - "Gleitcast vs burnair"
-      - "burnair vs Gleitcast"
+      - "Wingcast vs burnair"
+      - "burnair vs Wingcast"
     competitor_data: "burnair.yaml"
 
   - format: "competitor_vs_competitor"
@@ -84,7 +84,7 @@ priority_2_pages:
       - "Paraglidable vs burnair"
     rationale: >
       Fängt Traffic von Piloten die zwischen den zwei Marktfuehrern
-      vergleichen. Gleitcast als dritte Option positionieren.
+      vergleichen. Wingcast als dritte Option positionieren.
     competitor_data: ["burnair.yaml", "paraglidable.yaml"]
 
   - format: "alternatives_plural"
@@ -104,13 +104,13 @@ priority_3_pages:
 
   - format: "alternative_singular"
     url: "/alternativen/windy-fuer-gleitschirm"
-    title: "Warum Windy allein nicht reicht — Gleitcast als KI-Ergaenzung"
+    title: "Warum Windy allein nicht reicht — Wingcast als KI-Ergaenzung"
     target_keywords:
       - "Windy Gleitschirm"
       - "Windy Paragliding"
       - "Windy Alternative Paragliding"
     rationale: >
-      Fast jeder Pilot nutzt Windy. Positioniert Gleitcast nicht als
+      Fast jeder Pilot nutzt Windy. Positioniert Wingcast nicht als
       Ersatz, sondern als KI-Schicht oberhalb von Windy.
     competitor_data: "windy.yaml"
 
@@ -122,21 +122,21 @@ priority_3_pages:
       - "FlySkyHy vs XCTrack"
       - "beste Flight App Gleitschirm"
     rationale: >
-      Sehr gesuchter Vergleich. Gleitcast als Pre-Flight-Ergaenzung
+      Sehr gesuchter Vergleich. Wingcast als Pre-Flight-Ergaenzung
       zu beiden positionieren.
     competitor_data: ["xctrack.yaml", "flyskyhy.yaml"]
 
   - format: "vs_page"
-    url: "/vergleich/gleitcast-vs-where2fly"
-    title: "Gleitcast vs. where2fly — KI-Power oder gratis Klassiker?"
+    url: "/vergleich/wingcast-vs-where2fly"
+    title: "Wingcast vs. where2fly — KI-Power oder gratis Klassiker?"
     target_keywords:
       - "where2fly Alternative"
-      - "where2fly vs Gleitcast"
+      - "where2fly vs Wingcast"
     competitor_data: "where2fly.yaml"
 
   - format: "alternative_singular"
     url: "/alternativen/meteo-parapente"
-    title: "Gleitcast als Meteo-Parapente Alternative — endlich moderne UX"
+    title: "Wingcast als Meteo-Parapente Alternative — endlich moderne UX"
     target_keywords:
       - "Meteo-Parapente Alternative"
       - "Meteo-Parapente Ersatz"
@@ -147,7 +147,7 @@ priority_3_pages:
 
   - format: "alternative_singular"
     url: "/alternativen/xctherm"
-    title: "Gleitcast als XC Therm Alternative — KI-Thermik statt statische Karten"
+    title: "Wingcast als XC Therm Alternative — KI-Thermik statt statische Karten"
     target_keywords:
       - "XC Therm Alternative"
       - "XC Therm App"
@@ -170,7 +170,7 @@ priority_3_pages:
       - "gratis Thermik App"
     rationale: >
       Viele Piloten stehen vor genau dieser Entscheidung: kostenloses
-      XC Therm oder bezahltes burnair? Gleitcast als dritte Option
+      XC Therm oder bezahltes burnair? Wingcast als dritte Option
       positionieren die KI-Interpretation zum fairen Preis bietet.
     competitor_data: ["xctherm.yaml", "burnair.yaml"]
 
@@ -181,12 +181,12 @@ priority_3_pages:
 index_pages:
 
   - url: "/alternativen"
-    title: "Gleitcast Alternativen-Hub — Vergleiche alle Gleitschirm-Apps"
+    title: "Wingcast Alternativen-Hub — Vergleiche alle Gleitschirm-Apps"
     purpose: "Hub-Seite die alle Alternative-Pages verlinkt"
     create_with: "priority_1"
 
   - url: "/vergleich"
-    title: "Gleitschirm-App Vergleiche — Gleitcast vs. Konkurrenz"
+    title: "Gleitschirm-App Vergleiche — Wingcast vs. Konkurrenz"
     purpose: "Hub-Seite die alle Vs-Pages und Competitor-vs-Competitor verlinkt"
     create_with: "priority_2"
 
@@ -207,5 +207,5 @@ content_notes:
     secondary: "Spezialisiert auf Schweizer und Alpine Bedingungen"
     tertiary: "Versteht Talwinde, Foehn und Lee — wie ein erfahrener Pilot"
     honesty: >
-      Auf jeder Seite ehrlich sein wo Gleitcast noch schwaechelt
+      Auf jeder Seite ehrlich sein wo Wingcast noch schwaechelt
       (kleine Site-DB, neues Produkt). Vertrauen aufbauen.

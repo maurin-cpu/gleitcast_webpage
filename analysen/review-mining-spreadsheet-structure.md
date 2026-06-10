@@ -27,7 +27,7 @@
 | Specific Feature | Text | "Thermal maps", "Wind layers" | Feature mentioned |
 | Competitor Mentioned | Text | XCTrack, burnair, etc. | Comparison made |
 | Price Point Mentioned | Text | "$15/month", "too expensive" | Pricing reference |
-| Action for Gleitcast | Text | "Must have thermal maps", "Avoid complex UI" | Takeaway |
+| Action for Wingcast | Text | "Must have thermal maps", "Avoid complex UI" | Takeaway |
 | Tags | Multi-select | #weather_accuracy, #pricing, #thermal_forecast | All applicable tags |
 | Priority | Dropdown | P0 (Critical), P1 (High), P2 (Medium), P3 (Low) | Importance |
 | Status | Dropdown | New, Reviewed, Categorized, Actioned | Processing stage |
@@ -86,7 +86,7 @@ Legend:
 
 ## SHEET 4: Pain Points Inventory
 
-| Pain Point | Frequency | Apps Affected | Severity | User Impact | Sample Quotes (3 best) | Gleitcast Action |
+| Pain Point | Frequency | Apps Affected | Severity | User Impact | Sample Quotes (3 best) | Wingcast Action |
 |------------|-----------|---------------|----------|-------------|----------------------|----------------|
 | Wind speed inaccurate | 47 | burnair (15), Windy (12), XCTrack (10), Others (10) | CRITICAL | Safety risk, early landing | 1. "[quote]"<br>2. "[quote]"<br>3. "[quote]" | Multi-source validation, confidence scores |
 | Price too high | 28 | burnair (18), Meteo-Parapente (10) | HIGH | Churn, switch to free | 1. "[quote]"<br>2. "[quote]"<br>3. "[quote]" | Competitive pricing, clear value prop |
@@ -98,7 +98,7 @@ Legend:
 
 ## SHEET 5: Loved Features Inventory
 
-| Feature | Praise Count | Apps With Feature | Quality Leader | Why Users Love It | Sample Quotes (3 best) | Gleitcast Priority |
+| Feature | Praise Count | Apps With Feature | Quality Leader | Why Users Love It | Sample Quotes (3 best) | Wingcast Priority |
 |---------|--------------|-------------------|----------------|-------------------|----------------------|------------------|
 | Thermal maps | 42 | burnair (28), FlySkyHy (10), Others (4) | burnair | Visual, intuitive, accurate | 1. "[quote]"<br>2. "[quote]"<br>3. "[quote]" | P0 - Must have |
 | Wind layers | 38 | Windy (20), burnair (10), Others (8) | Windy | Detailed, animated, useful | 1. "[quote]"<br>2. "[quote]"<br>3. "[quote]" | P0 - Must have |
@@ -175,7 +175,7 @@ Legend:
 
 ---
 
-## SHEET 10: Action Items for Gleitcast
+## SHEET 10: Action Items for Wingcast
 
 | Priority | Category | Action Item | Based On | Evidence | Owner | Status |
 |----------|----------|-------------|----------|----------|-------|--------|

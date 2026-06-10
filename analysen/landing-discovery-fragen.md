@@ -1,4 +1,4 @@
-# Gleitcast Landing-Page — Discovery-Fragenkatalog
+# Wingcast Landing-Page — Discovery-Fragenkatalog
 
 **Erstellt:** 2026-04-29 vor Phase-1-Review (academic-psychologist + product-behavioral-nudge-engine + design-ux-researcher)
 **Anweisung:** Lieber einmal zu viel fragen als Annahmen treffen. Antworten füttern dann die drei Phase-1-Agents.
@@ -13,7 +13,7 @@
 3. (UX) Konkrete Demografie der Primär-Persona: Alter-Range, Geschlecht-Verteilung, Erfahrungsjahre, Flüge/Jahr, Schirmklassen-Verteilung, Beruf?
 4. (UX) Wie tech-affin sind sie — wie viele Wetter-Tools nutzen sie heute parallel, und wie kompetent sind sie im Lesen von Soundings/Windgrammen?
 5. (UX) KONZEPT.md zeigt drei Personas (Sarah B-Schirm, Lukas A-Schirm, Marco D-Schirm) — sind diese drei noch gültig, oder hat sich das Personenbild seit dem 2026-04-27-Stand geschärft?
-6. (UX) Wer ist die Persona, der Gleitcast **nicht** dienen soll (z. B. der Profi-Wettkampfpilot, der eigene RASP-Auswertungen fährt)?
+6. (UX) Wer ist die Persona, der Wingcast **nicht** dienen soll (z. B. der Profi-Wettkampfpilot, der eigene RASP-Auswertungen fährt)?
 7. (UX) Konkreter Job-to-be-done am Morgen eines potenziellen Flugtages in einem Satz, formuliert in der Sprache der Persona?
 8. (UX) Konkurrierende Job-to-be-done's: Was macht die Persona **statt** Wetter-Check (Familie, Arbeit, andere Hobbys), wenn das Wetter unklar ist?
 9. (UX) Welcher Wochentag und welche Tageszeit ist der typische Erstkontakt mit der Landing-Page (Sonntagabend? Freitagabend? Sa-Morgen am Flugtag selbst?)?
@@ -21,10 +21,10 @@
 
 ## 2. Conversion-Ziel & Funnel
 
-11. (Behav) Was ist der **EINE primäre CTA** der Page — App-Registrierung auf `app.gleitcast.ch`, E-Mail-Subscribe, Briefing ansehen, oder etwas anderes? (KONZEPT.md sagt "E-Mail-Anmeldung", aber alle Sektionen schicken zur App.)
+11. (Behav) Was ist der **EINE primäre CTA** der Page — App-Registrierung auf `app.wingcast.ch`, E-Mail-Subscribe, Briefing ansehen, oder etwas anderes? (KONZEPT.md sagt "E-Mail-Anmeldung", aber alle Sektionen schicken zur App.)
 12. (Behav) Gibt es einen sekundären CTA, oder soll alles ohne Verzweigung auf einen einzigen Punkt zulaufen?
 13. (Behav) Ist die App "live", "Beta mit Anmeldepflicht" oder "Wartelist" — und welche Erwartungshaltung soll die Page setzen?
-14. (Behav) Wie viel Reibung steht auf `app.gleitcast.ch` zwischen Klick und nutzbarem Forecast (E-Mail + Double-Opt-in + Regionen, oder direkt sichtbar)?
+14. (Behav) Wie viel Reibung steht auf `app.wingcast.ch` zwischen Klick und nutzbarem Forecast (E-Mail + Double-Opt-in + Regionen, oder direkt sichtbar)?
 15. (Behav) Soll das Briefing direkt auf der Page abonniert werden können (One-Click), oder bewusst nur via App-Account (mehr Reibung, höhere Qualifikation)?
 16. (Behav) Free-/Freemium-/Paid-Pfad: Bleibt es bei "dauerhaft gratis", oder wird es perspektivisch ein Paid-Tier geben — und falls ja, soll die Page das andeuten oder bewusst verschweigen?
 17. (Behav) Was ist die definierte **Conversion-Rate-Zielmarke** (KONZEPT.md sagt >8%, KPI 4-Wochen)? Gilt das noch?
@@ -48,7 +48,7 @@
 ## 4. Vertrauenssignale
 
 31. (UX) Welche **konkreten** Trust-Signale sind heute verfügbar: Testimonials, Beta-Tester-Quotes mit Namen, Vereins-Kooperationen (SHV-Kontakte? Flugschulen?), Reichweiten-Zahlen, Press, Awards, Ambassadoren?
-32. (UX) Wie viele Beta-Nutzer hat Gleitcast aktuell, und ist die Zahl groß genug für ein ehrliches Social-Proof-Element ("X Piloten nutzen es")?
+32. (UX) Wie viele Beta-Nutzer hat Wingcast aktuell, und ist die Zahl groß genug für ein ehrliches Social-Proof-Element ("X Piloten nutzen es")?
 33. (Behav) Wenn Social Proof zu dünn ist: Welcher Ersatz (Modell-Quellen-Logos, Sicherheits-Zertifizierung, Auszeichnungen, Founder-Authority)?
 34. (Psy) Wie viel persönliche Founder-Story will Maurin auf der Page zeigen — was ist die Komfortzone (nur Vorname + Bild + Motiv) vs. Maximum (eigene Flugbiografie, Beinahe-Unfall als Auslöser, Hintergrund)?
 35. (UX) Soll ein Foto von Maurin den aktuellen Initial-Platzhalter ("M") in `Trust.tsx:80-85` ersetzen, und wann ist es verfügbar?
@@ -59,15 +59,15 @@
 ## 5. Sprache & Lokalisierung
 
 39. (UX) Page-Sprache: nur Deutsch? DE+EN? Französisch und Italienisch (für CH)? Falls D/AT als Zielmarkt — wie wichtig ist das gegenüber CH-Fokus?
-40. (UX) Im Code steht "488 Schweizer Startplätze" — hat Gleitcast überhaupt schon Spot-Daten für AT und D, oder ist die Page de-facto CH-only trotz DACH-Brief?
+40. (UX) Im Code steht "488 Schweizer Startplätze" — hat Wingcast überhaupt schon Spot-Daten für AT und D, oder ist die Page de-facto CH-only trotz DACH-Brief?
 41. (UX) Schweizerdeutsch-Touches in der Copy — wenn ja, wo (Hero, FAQ, Microcopy) und wie viel?
 42. (UX) Soll die Page für DACH einheitlich sein, oder regional unterschiedliche Hero-Versionen (Föhn-Frame für CH/AT, andere Phänomene für D)?
 43. (UX) Du-Form ist gesetzt (CD-Guideline) — gilt das auch in AT und D unverändert oder gibt es regionale Anpassungen?
 
 ## 6. Wettbewerbskontext (selbstreferenziell, ohne Namen)
 
-44. (UX) Was kann Gleitcast, das andere Pilot-Wetter-Tools heute **nachweislich nicht** können — formuliert in einem Satz, ohne Konkurrenznennung?
-45. (UX) Wo verliert Gleitcast heute Nutzer an Alternativen — was ist die ehrlichste Selbstkritik?
+44. (UX) Was kann Wingcast, das andere Pilot-Wetter-Tools heute **nachweislich nicht** können — formuliert in einem Satz, ohne Konkurrenznennung?
+45. (UX) Wo verliert Wingcast heute Nutzer an Alternativen — was ist die ehrlichste Selbstkritik?
 46. (UX) Ist "automatisch sortierte Spot-Empfehlung pro Tag" wirklich USP, oder können andere das auch — und wenn ja, was ist der echte Differenziator?
 47. (UX) Trust.tsx hat den Pratfall-Effect aus KONZEPT.md (XC-Thermik → Meteo-Parapente) entfernt. Bewusst — und durch was wurde die Glaubwürdigkeits-Funktion ersetzt?
 48. (UX) Welcher Vergleich darf in der Copy stehen ("statt 30 Min Modell-Vergleich"), und welcher ist rechtlich/ethisch heikel?
@@ -105,7 +105,7 @@
 
 ## 10. Codebase-Widersprüche, die Entscheidung brauchen
 
-71. **CTA-Strategie inkonsistent:** `KONZEPT.md:11-13` sagt "E-Mail-Subscribe", aber jeder CTA in `Hero.tsx:33-42`, `BriefingPreview.tsx:46-54`, `AppVision.tsx:58-67`, `SubscribeForm.tsx:55-71`, `Footer.tsx:19-27` führt zu `https://app.gleitcast.ch`. Direkter Subscribe oder Outbound zur App?
+71. **CTA-Strategie inkonsistent:** `KONZEPT.md:11-13` sagt "E-Mail-Subscribe", aber jeder CTA in `Hero.tsx:33-42`, `BriefingPreview.tsx:46-54`, `AppVision.tsx:58-67`, `SubscribeForm.tsx:55-71`, `Footer.tsx:19-27` führt zu `https://app.wingcast.ch`. Direkter Subscribe oder Outbound zur App?
 72. **`SubscribeForm.tsx` ist kein Form mehr** — nur ein Outbound-Link. Soll das so bleiben oder echtes Inline-Subscribe?
 73. **`lib/regions.ts` deleted** (git status: `AD`). Regionen-Auswahl auf Page aufgegeben? KONZEPT.md `:155-167` plant noch 8 Regionen.
 74. **Hero-Headline-Drift:** KONZEPT.md `:65-67` will Loss-Aversion ("Verpasse keinen guten Flugtag mehr"), Code in `Hero.tsx:24` hat neutral-explorativ "Wo fliegst du diese Woche?". Bewusst gegen FOMO oder Drift?

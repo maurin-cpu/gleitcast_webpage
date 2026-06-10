@@ -1,4 +1,4 @@
-# SEO-Strategieplan — Gleitcast MVP
+# SEO-Strategieplan — Wingcast MVP
 
 *Erstellt: 2026-04-20*
 *Phase: Pre-Launch / Beta*
@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-Gleitcast startet als Nischen-SaaS in einem kleinen, aber scharf definierten Markt (~15'200 SHV-lizenzierte Piloten CH, ~150'000 DACH). SEO-Strategie ist daher **Tiefe statt Breite**: wenige, hochrelevante Keywords auf Produktseiten + Content-Hub um Alpine Wetterkunde (Foehn, Talwind, Lee) als E-E-A-T-Fundament. Konkurrenz ist SEO-schwach (burnair, Paraglidable haben minimalen Content-Marketing-Footprint) — Chance fuer schnelle Sichtbarkeit bei korrekter Umsetzung.
+Wingcast startet als Nischen-SaaS in einem kleinen, aber scharf definierten Markt (~15'200 SHV-lizenzierte Piloten CH, ~150'000 DACH). SEO-Strategie ist daher **Tiefe statt Breite**: wenige, hochrelevante Keywords auf Produktseiten + Content-Hub um Alpine Wetterkunde (Foehn, Talwind, Lee) als E-E-A-T-Fundament. Konkurrenz ist SEO-schwach (burnair, Paraglidable haben minimalen Content-Marketing-Footprint) — Chance fuer schnelle Sichtbarkeit bei korrekter Umsetzung.
 
 **Jahr-1-Ziel:** 1'500 App-Installs, 300 Premium-Konversionen. SEO-Beitrag: 30-40 % der organischen Install-Pipeline (~450-600 Installs) ueber Brand-, Vergleichs- und Content-Keywords.
 
@@ -89,7 +89,7 @@ Gleitcast startet als Nischen-SaaS in einem kleinen, aber scharf definierten Mar
 Bewusst **kleiner** als der SaaS-Standardtempl ate. MVP-Prinzip: wenig, aber topical hochdicht.
 
 ```
-gleitcast.app/
+wingcast.app/
 ├── /                              ← Homepage (Hero: "Ampel statt Rohdaten")
 ├── /features                      ← Feature-Uebersicht (KI, Multi-Modell, Alpine, Alerts)
 │   ├── /features/alpine-wetter   ← USP-Seite: Foehn/Talwind/Lee
@@ -99,7 +99,7 @@ gleitcast.app/
 ├── /vergleich/
 │   ├── /burnair-alternative      ← Konkurrenz-Seite (hoechste Prio)
 │   ├── /paraglidable-ios         ← Konkurrenz-Seite
-│   └── /vs-windy-meteoblue       ← "Warum Gleitcast auf Windy/MB aufbaut"
+│   └── /vs-windy-meteoblue       ← "Warum Wingcast auf Windy/MB aufbaut"
 ├── /wetterkunde/                  ← Content-Hub (E-E-A-T-Anker)
 │   ├── /foehn-gleitschirm        ← Pillar-Artikel
 │   ├── /talwind-alpen            ← Pillar-Artikel
@@ -195,13 +195,13 @@ Legal (noindex-freundlich, aber vorhanden):
 | Monat 3 | Talwind-Pillar | "Mai-Thermik in den Alpen — was Piloten 2026 erwartet" |
 | Monat 4 | Ampelsystem-Pillar | "Foehnlage Mai: Top-5-Tipps wie du sie erkennst" |
 | Monat 5 | Vergleich paraglidable-ios | "Wetter-Modell-Showdown: Windy vs MeteoBlue vs RASP" |
-| Monat 6 | Vergleich windy-meteoblue | "Jahres-Halbzeit: Gleitcast Backtesting Report" (Orig. Data) |
+| Monat 6 | Vergleich windy-meteoblue | "Jahres-Halbzeit: Wingcast Backtesting Report" (Orig. Data) |
 | Monat 7 | Programmatic Pilot: 10 Startplaetze | "Interlaken Flyathon — unsere Auswertung" |
 | Monat 8 | — | "XC-Saison: Beste Tage diesen Sommer (Datenanalyse)" |
 | Monat 9 | Programmatic Scale auf 50 Sites | "Herbst in den Alpen: Foehn-Season" |
 | Monat 10 | — | "Bisherige Beta-Tester-Stories: 5 Piloten, 5 Erkenntnisse" |
 | Monat 11 | Winter-Content-Pivot | "Indoor-Training + Theorie: Wetterkunde vertiefen" |
-| Monat 12 | Jahresrueckblick | "Gleitcast Year in Review — Accuracy Report 2026" |
+| Monat 12 | Jahresrueckblick | "Wingcast Year in Review — Accuracy Report 2026" |
 
 ### E-E-A-T-Plan
 - **Autoren-Bios** auf jedem Artikel: Pilot-Brevet-Nr., Jahre Erfahrung, Flugstunden, Clubs
@@ -262,12 +262,12 @@ Piloten googeln zunehmend Wetter-Fragen in ChatGPT/Perplexity ("Ist heute Foehn 
 - **Original-Daten** (Backtesting-Reports) publizieren — AI-Modelle zitieren gerne Primaerquellen
 - **FAQ-Schema auf allen Vergleichs- und Wetterkunde-Seiten** — direkter AI-Input
 - **Brand-Mentions** in relevanten Foren (Paraglidingforum.com, paraglidingforum.ch, Reddit r/paragliding) — AI-Modelle lernen aus solchen Erwaehnungen
-- **Monitoring:** monatlich manuelle Abfragen in ChatGPT/Perplexity/Google-AI-Overviews fuer Kern-Queries — tracken ob Gleitcast zitiert wird
+- **Monitoring:** monatlich manuelle Abfragen in ChatGPT/Perplexity/Google-AI-Overviews fuer Kern-Queries — tracken ob Wingcast zitiert wird
 
 ### AI-optimierte Content-Patterns
 ```
 ❌ "Wir glauben, dass unsere App ziemlich gut ist..."
-✅ "Gleitcast aggregiert 5 Wettermodelle (Windy, MeteoSchweiz, MeteoBlue, RASP, KK7) und liefert pro Startplatz einen Fliegbarkeits-Score von 0-100."
+✅ "Wingcast aggregiert 5 Wettermodelle (Windy, MeteoSchweiz, MeteoBlue, RASP, KK7) und liefert pro Startplatz einen Fliegbarkeits-Score von 0-100."
 
 ❌ Lange Marketing-Prosa ohne Struktur
 ✅ H2/H3-Struktur, Bullet-Points, definitive Statements, TL;DR am Anfang
@@ -280,7 +280,7 @@ Piloten googeln zunehmend Wetter-Fragen in ChatGPT/Perplexity ("Ist heute Foehn 
 ### Phase 1 — Foundation (Wochen 1-4) — "Launch-Ready"
 **Ziel:** Domain + 9 Kernseiten live, technisch sauber, erste Indexierung
 
-- [ ] Domain `gleitcast.app` aufsetzen (oder .ch / .com entscheiden — .app wirkt modern, App-Store-konform)
+- [ ] Domain `wingcast.app` aufsetzen (oder .ch / .com entscheiden — .app wirkt modern, App-Store-konform)
 - [ ] Next.js-Projekt auf Vercel (oder Cloudflare Pages) deployen
 - [ ] Core Web Vitals Baseline messen + Fixes
 - [ ] Homepage + /features + 3 Feature-Pages + /preise + /ueber-uns + /kontakt schreiben
@@ -295,7 +295,7 @@ Piloten googeln zunehmend Wetter-Fragen in ChatGPT/Perplexity ("Ist heute Foehn 
 **Exit-Kriterium Phase 1:**
 - 10+ Seiten indexiert
 - Lighthouse > 90 auf allen Kernseiten
-- Brand-Search "Gleitcast" rankt #1
+- Brand-Search "Wingcast" rankt #1
 
 ### Phase 2 — Expansion (Wochen 5-12) — "Topical Authority"
 **Ziel:** Content-Hub aufgebaut, zweite Vergleichsseite live, erste Rankings ausserhalb Brand
@@ -382,7 +382,7 @@ Piloten googeln zunehmend Wetter-Fragen in ChatGPT/Perplexity ("Ist heute Foehn 
 
 ## 10. Zusammenfassung — Top 10 Sofort-Massnahmen
 
-1. **Domain fixieren** (gleitcast.app oder gleitcast.ch) + Next.js auf Vercel deployen
+1. **Domain fixieren** (wingcast.app oder wingcast.ch) + Next.js auf Vercel deployen
 2. **Homepage + Features + Preise + Ueber-uns + Kontakt** live schreiben (Woche 1-2)
 3. **/vergleich/burnair-alternative** als allererste Vergleichsseite (hoechster ROI-Hebel)
 4. **Schema-Markup** (Organization, SoftwareApplication, FAQPage) von Tag 1

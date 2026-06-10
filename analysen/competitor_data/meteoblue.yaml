@@ -24,7 +24,7 @@ free_tier_limits: "Basis-Vorhersagen gratis, professionelle Features kostenpflic
 starter_price: "Variiert nach Produkt"
 business_price: "API-Zugang fuer Entwickler (eigene Preisliste)"
 enterprise: "Individuelle Loesungen"
-pricing_notes: "Interessant als DATENQUELLE fuer Gleitcast — API verfuegbar"
+pricing_notes: "Interessant als DATENQUELLE fuer Wingcast — API verfuegbar"
 
 # Platforms
 platforms:
@@ -65,11 +65,11 @@ weaknesses:
   - "Keine Startplatz-Datenbank"
   - "Keine Community-Features"
 
-# Competitive comparison to Gleitcast
-vs_gleitcast:
+# Competitive comparison to Wingcast
+vs_wingcast:
   relationship: "Potenzielle DATENQUELLE statt Konkurrent"
-  gleitcast_opportunity: >
-    MeteoBlue ist ideal als eine der Wetter-APIs die Gleitcast
+  wingcast_opportunity: >
+    MeteoBlue ist ideal als eine der Wetter-APIs die Wingcast
     aggregiert. Schweizer Herkunft, exzellente Thermik-Daten,
     API verfuegbar. Eher Partner als Konkurrent.
   api_notes: >

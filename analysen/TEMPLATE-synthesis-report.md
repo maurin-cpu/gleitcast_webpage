@@ -1,6 +1,6 @@
 # Swiss Paragliding Pilot Research - Synthesis Report
 
-**Project**: AI-Powered Paragliding Weather App (Gleitcast)
+**Project**: AI-Powered Paragliding Weather App (Wingcast)
 **Research Period**: [Start Date] - [End Date]
 **Report Date**: [Date]
 **Researcher**: [Name]

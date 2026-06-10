@@ -49,10 +49,15 @@ export function Problem() {
         </div>
 
         <div className="mx-auto mt-10 max-w-2xl text-center text-base leading-[1.6] text-white/85">
-          Gleitcast filtert die Spots, die diese Woche überhaupt fliegbar sind
-          — bewertet pro Tag und Startplatz, mit Begründung. Du nimmst die
-          Empfehlung als Startpunkt, gleichst sie mit deinen Quellen ab und
-          entscheidest selbst.
+          <p className="mb-4 text-lg font-semibold text-white">
+            Am Ende willst du nur eines schnell sehen: welcher Spot heute
+            fliegt — und welcher nicht.
+          </p>
+          <p>
+            Wingcast sortiert die Spots pro Tag, mit Begründung in Klartext.
+            Du nimmst die Empfehlung als Startpunkt, gleichst sie mit deinen
+            Quellen ab und entscheidest selbst.
+          </p>
         </div>
       </div>
     </section>

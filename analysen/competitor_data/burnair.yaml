@@ -112,9 +112,9 @@ common_complaints:
   - "Warum zwei Apps statt einer?"
   - "Vermisse eine einfache Empfehlung ob fliegbar oder nicht"
 
-# Competitive comparison to Gleitcast
-vs_gleitcast:
-  gleitcast_advantages:
+# Competitive comparison to Wingcast
+vs_wingcast:
+  wingcast_advantages:
     - "KI-gestuetzte Flyability-Bewertung statt Rohdaten"
     - "Erklaerbare Empfehlungen fuer alle Levels"
     - "Guenstiger (CHF 39 vs. EUR 49-119)"
@@ -123,7 +123,7 @@ vs_gleitcast:
     - "Anfaenger-freundlich"
     - "Aggregiert mehrere Wetter-Quellen intelligent"
   burnair_advantages:
-    - "5'000+ Startplaetze vs. 50 im Gleitcast-MVP"
+    - "5'000+ Startplaetze vs. 50 im Wingcast-MVP"
     - "KK7 Thermik-Integration (bewaehrt)"
     - "Live Thermals von Community"
     - "Detaillierte Talwind-Daten"

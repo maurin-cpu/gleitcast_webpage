@@ -1,7 +1,7 @@
 # Paragliding Pilot Pain Points Research - START HERE
 
 **Date:** April 17, 2026
-**Project:** Gleitcast AI-Powered Weather App for Swiss/Alpine Pilots
+**Project:** Wingcast AI-Powered Weather App for Swiss/Alpine Pilots
 **Status:** Framework Complete - Ready for Your Manual Research
 
 ---

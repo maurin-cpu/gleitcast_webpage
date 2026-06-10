@@ -1,20 +1,20 @@
-# Gleitcast — Corporate Design Guideline
+# Wingcast — Corporate Design Guideline
 
 **Version:** 1.0 · **Stand:** 2026-04-28
-**Gilt für:** Webseite (`gleitcast.ch`) **und** Flychat/Gleitcast-App (Web/Mobile)
+**Gilt für:** Webseite (`wingcast.ch`) **und** Flychat/Wingcast-App (Web/Mobile)
 **Source of Truth:** Diese Datei. Seitenspezifische Abweichungen liegen in `design-system/pages/<page>.md` und überschreiben Master.
 
 ---
 
 ## 0. Designprinzipien (das Warum)
 
-Gleitcast wird **am Berg, am Startplatz, im Sonnenlicht** gelesen — nicht am Schreibtisch. Jede Designentscheidung muss in dieser Reihenfolge bestehen:
+Wingcast wird **am Berg, am Startplatz, im Sonnenlicht** gelesen — nicht am Schreibtisch. Jede Designentscheidung muss in dieser Reihenfolge bestehen:
 
 1. **Lesbar bei direkter Sonneneinstrahlung.** Kontrast > Eleganz. Pastell-Töne, Glassmorphism, dünne Schriften und niedrige Helligkeitsunterschiede sind verboten.
 2. **Entscheidung in 60 Sekunden.** Eine Frage — eine Antwort. Hierarchie zählt mehr als Dichte.
 3. **Bedienbar mit einer Hand und Handschuhen.** 44 pt Touch-Targets sind Minimum, 48 pt Standard.
 4. **Ehrlich.** Wir zeigen Confidence, Quellen, Grenzen. Keine fake Scarcity, keine Fortschrittsbalken die lügen.
-5. **Konsistent zwischen Web & App.** Wer auf gleitcast.ch klickt, erkennt die App wieder.
+5. **Konsistent zwischen Web & App.** Wer auf wingcast.ch klickt, erkennt die App wieder.
 
 **Anti-Patterns (was wir NIE tun):**
 - ❌ Dark Mode als Default (App wird im Hellen genutzt)
@@ -29,7 +29,7 @@ Gleitcast wird **am Berg, am Startplatz, im Sonnenlicht** gelesen — nicht am S
 ## 1. Markenidentität
 
 ### Wesen
-Gleitcast ist der **nüchterne Co-Pilot**, nicht der euphorische Wetterfrosch. Wir sind:
+Wingcast ist der **nüchterne Co-Pilot**, nicht der euphorische Wetterfrosch. Wir sind:
 
 - **Direkt** wie ein Tower-Funkspruch — keine Marketing-Floskeln
 - **Schweizerisch präzise** — Zahlen, Quellen, Confidence
@@ -194,7 +194,7 @@ Die 5 Tier-Symbole sind **eigene SVGs**, nicht Lucide:
 | Bedingt | Dreieck mit Ausrufezeichen | warning-triangle |
 | Nicht fliegbar | Kreuz im Kreis | x-circle |
 
-Diese 5 Icons + ihre Farben + ihre Texte sind das **visuelle Markenzeichen** von Gleitcast. Sie tauchen auf Web, im E-Mail-Briefing und in der App identisch auf.
+Diese 5 Icons + ihre Farben + ihre Texte sind das **visuelle Markenzeichen** von Wingcast. Sie tauchen auf Web, im E-Mail-Briefing und in der App identisch auf.
 
 ---
 
@@ -366,7 +366,7 @@ So bleibt jede Änderung **eine** Änderung.
 
 ## 9. Outdoor-spezifische Regeln (das Differenzierende)
 
-Diese Sektion ist der eigentliche Grund, warum Gleitcast eine eigene CD braucht.
+Diese Sektion ist der eigentliche Grund, warum Wingcast eine eigene CD braucht.
 
 ### 9.1 Sonnen-Lesbarkeitstest
 

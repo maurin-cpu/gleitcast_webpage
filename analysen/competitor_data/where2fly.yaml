@@ -96,9 +96,9 @@ common_complaints:
   - "Wetter-Vorhersage koennte detaillierter sein"
   - "Flugbuch sollte auch gratis sein"
 
-# Competitive comparison to Gleitcast
-vs_gleitcast:
-  gleitcast_advantages:
+# Competitive comparison to Wingcast
+vs_wingcast:
+  wingcast_advantages:
     - "Eigene KI statt Paraglidable-Abhaengigkeit"
     - "Android + iOS (Cross-Platform)"
     - "Tiefere Wetter-Analyse und Aggregation"
@@ -116,6 +116,6 @@ vs_gleitcast:
     - "Will eigene KI statt abhaengig von Paraglidable"
     - "Braucht tiefere Wetter-Analyse"
   coexistence_note: >
-    where2fly und Gleitcast koennten koexistieren — where2fly fuer
-    Site-Suche/Navigation, Gleitcast fuer KI-Wetter-Analyse.
+    where2fly und Wingcast koennten koexistieren — where2fly fuer
+    Site-Suche/Navigation, Wingcast fuer KI-Wetter-Analyse.
     Nicht zwingend ein Entweder-Oder.

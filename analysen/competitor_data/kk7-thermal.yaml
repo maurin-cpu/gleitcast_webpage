@@ -22,7 +22,7 @@ market_position: "De-facto Standard fuer Thermik-Daten im Alpenraum"
 pricing_model: licensing
 free_tier: true        # Web-Tool gratis nutzbar
 free_tier_limits: "Web-Interface gratis, Daten-Lizenzierung fuer andere Apps"
-licensing_notes: "burnair lizenziert KK7-Daten — Gleitcast sollte das auch pruefen"
+licensing_notes: "burnair lizenziert KK7-Daten — Wingcast sollte das auch pruefen"
 
 # Features (rate 1-5)
 features:
@@ -49,13 +49,13 @@ weaknesses:
   - "Abhaengig von Flugdichte (duenne Daten in wenig beflogenen Gebieten)"
   - "Keine KI-Interpretation"
 
-# Competitive comparison to Gleitcast
-vs_gleitcast:
+# Competitive comparison to Wingcast
+vs_wingcast:
   relationship: "Potenzieller DATEN-PARTNER"
   opportunity: >
-    KK7 + Gleitcast = ideale Kombination:
+    KK7 + Wingcast = ideale Kombination:
     KK7 liefert historische Thermik-Wahrscheinlichkeiten,
-    Gleitcast-KI kombiniert diese mit aktuellen Wetter-Vorhersagen
+    Wingcast-KI kombiniert diese mit aktuellen Wetter-Vorhersagen
     fuer praediktive Thermik-Bewertung.
     UNBEDINGT Lizenzierung pruefen.
   action_items:

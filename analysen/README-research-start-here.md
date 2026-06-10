@@ -413,8 +413,8 @@ A: Yes, but tag them as "non-Swiss" for comparison. General paragliding pains vs
 ## Contact & Support
 
 **Research Lead**: [Your name]
-**Project**: Gleitcast - AI Paragliding Weather App
-**Research Files Location**: `C:\Users\user\OneDrive\Projekte\marketing\marketing_gleitcast\analysen\`
+**Project**: Wingcast - AI Paragliding Weather App
+**Research Files Location**: `C:\Users\user\OneDrive\Projekte\marketing\marketing_wingcast\analysen\`
 
 **Questions about research methodology?**
 → Re-read swiss-paragliding-research-plan.md, Section "Research Quality Guardrails"
