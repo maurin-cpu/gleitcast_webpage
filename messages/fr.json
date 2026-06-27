@@ -1,12 +1,12 @@
 {
   "Metadata": {
-    "title": "Wingcast — Gratis KI-Flugwetter & Thermik-Forecast für die Schweiz",
-    "description": "Gratis KI-Flugwetter für 488 Schweizer Startplätze. 5-Tage-Forecast sortiert pro Tag, in Klartext erklärt. Ohne Kreditkarte. Decision Support, du entscheidest.",
-    "ogImageAlt": "Wingcast App-Dashboard: Karte mit allen 488 Schweizer Startplätzen, gefärbt nach KI-Bewertung",
-    "keywords": "Gleitschirm Wetter App | Gleitschirm Wetter App gratis | kostenlose Gleitschirm App | Paragliding Wetter kostenlos | Flugwetter Schweiz | Thermik Forecast Schweiz | Thermikprognose Schweiz | Windprognose Schweiz | KI Flugwetter | KI Wetter Gleitschirm | gratis Thermik Forecast | Thermik Vorhersage gratis | Startplatz Wetter Schweiz | Gleitschirm Startplätze | Fliegbarkeit Schweiz | Föhn Warnung Gleitschirm | ICON-CH1 Gleitschirm | free paragliding weather Switzerland | Paragliding Forecast Switzerland"
+    "title": "Wingcast — Météo de vol IA & prévisions de thermique gratuites pour la Suisse",
+    "description": "Météo de vol IA gratuite pour 488 sites de décollage suisses. Prévisions à 5 jours triées par jour, expliquées en clair. Sans carte de crédit. Decision Support, c'est vous qui décidez.",
+    "ogImageAlt": "Tableau de bord de l'app Wingcast : carte des 488 sites de décollage suisses, colorés selon l'évaluation IA",
+    "keywords": "app météo parapente | app météo parapente gratuite | application parapente gratuite | météo parapente gratuit | météo de vol Suisse | prévisions thermique Suisse | prévision thermique Suisse | prévision du vent Suisse | météo de vol IA | météo IA parapente | prévisions thermique gratuites | prévision de thermique gratuite | météo sites de décollage Suisse | sites de décollage parapente | volabilité Suisse | alerte foehn parapente | ICON-CH1 parapente | free paragliding weather Switzerland | Paragliding Forecast Switzerland"
   },
   "Layout": {
-    "skipToContent": "Zum Hauptinhalt springen"
+    "skipToContent": "Aller au contenu principal"
   },
   "LocaleSwitcher": {
     "label": "Langue",
@@ -15,227 +15,227 @@
     "it": "Italiano"
   },
   "Navbar": {
-    "ariaHome": "Wingcast Startseite",
-    "ariaNav": "Hauptnavigation",
-    "howItWorks": "So funktioniert's",
+    "ariaHome": "Page d'accueil Wingcast",
+    "ariaNav": "Navigation principale",
+    "howItWorks": "Comment ça marche",
     "cast": "Cast",
     "faq": "FAQ",
-    "toApp": "Zur App"
+    "toApp": "Vers l'app"
   },
   "Hero": {
-    "badge": "Beta · KI-Experiment für Schweizer Piloten",
-    "headlineLine1": "Welcher Spot fliegt diese Woche?",
-    "headlineLine2": "Du siehst es auf einen Blick.",
-    "subline": "5-Tage-Forecast für 488 Schweizer Startplätze — sortiert pro Tag, in Klartext erklärt, von ersten Flügen bis XC. Gratis, keine Kreditkarte.",
-    "ctaPrimary": "Spots ansehen",
-    "ctaSecondary": "Cast ansehen",
-    "trustSpots": "<b>488 Schweizer Spots</b>",
-    "trustModels": "<b>5 Wettermodelle</b> aggregiert",
-    "trustAi": "<b>KI bewertet</b>, Physik rechnet",
-    "screenshotAlt": "Wingcast App-Dashboard: Chat-Berater links, Karte mit allen 488 Schweizer Startplätzen rechts, gefärbt nach Bewertung",
-    "figcaption": "Live in der App · 488 Startplätze, gefärbt nach Bewertung"
+    "badge": "Bêta · Expérience IA pour les pilotes suisses",
+    "headlineLine1": "Quel spot vole cette semaine ?",
+    "headlineLine2": "Vous le voyez d'un coup d'œil.",
+    "subline": "Prévisions à 5 jours pour 488 sites de décollage suisses — triées par jour, expliquées en clair, des premiers vols jusqu'au cross. Gratuit, sans carte de crédit.",
+    "ctaPrimary": "Voir les spots",
+    "ctaSecondary": "Voir le Cast",
+    "trustSpots": "<b>488 spots suisses</b>",
+    "trustModels": "<b>5 modèles météo</b> agrégés",
+    "trustAi": "<b>L'IA évalue</b>, la physique calcule",
+    "screenshotAlt": "Tableau de bord de l'app Wingcast : conseiller chat à gauche, carte des 488 sites de décollage suisses à droite, colorés selon l'évaluation",
+    "figcaption": "En direct dans l'app · 488 sites de décollage, colorés selon l'évaluation"
   },
   "Problem": {
-    "kicker": "Kennst du das?",
-    "headlineLine1": "Samstag, 6:30 Uhr.",
-    "headlineLine2": "Wo soll's heute hingehen?",
-    "intro": "Du checkst Windgramme, schaust dir Wetter-Modelle an, vergleichst Webcams. 45 Minuten später hast du viele Daten — aber noch keine klare Antwort, welcher Spot diese Woche der richtige ist.",
-    "cardLabel": "Zu prüfen",
+    "kicker": "Ça vous parle ?",
+    "headlineLine1": "Samedi, 6h30.",
+    "headlineLine2": "Où aller aujourd'hui ?",
+    "intro": "Vous consultez les windgrammes, vous regardez les modèles météo, vous comparez les webcams. 45 minutes plus tard, vous avez beaucoup de données — mais toujours pas de réponse claire sur le spot qui convient cette semaine.",
+    "cardLabel": "À vérifier",
     "cards": [
-      { "topic": "Wind", "note": "Hangwind, Talwind, Höhenwind" },
-      { "topic": "Thermik", "note": "Auslöse, Stärke, Basis" },
-      { "topic": "Sicherheit", "note": "Föhn, Front, Lee" },
-      { "topic": "Spot-Wahl", "note": "488 Startplätze, ein Tag" }
+      { "topic": "Vent", "note": "Vent de pente, vent de vallée, vent d'altitude" },
+      { "topic": "Thermique", "note": "Déclenchement, force, plafond" },
+      { "topic": "Sécurité", "note": "Foehn, front, sous le vent" },
+      { "topic": "Choix du spot", "note": "488 sites de décollage, un seul jour" }
     ],
-    "conclusionLead": "Am Ende willst du nur eines schnell sehen: welcher Spot heute fliegt — und welcher nicht.",
-    "conclusionBody": "Wingcast sortiert die Spots pro Tag, mit Begründung in Klartext. Du nimmst die Empfehlung als Startpunkt, gleichst sie mit deinen Quellen ab und entscheidest selbst."
+    "conclusionLead": "Au final, vous voulez voir une seule chose rapidement : quel spot vole aujourd'hui — et lequel non.",
+    "conclusionBody": "Wingcast trie les spots par jour, avec une justification en clair. Vous prenez la recommandation comme point de départ, vous la comparez à vos sources et vous décidez vous-même."
   },
   "HowItWorks": {
-    "kicker": "Vom Wetter zum Cast",
-    "headline": "Drei Schritte, keine Magie.",
-    "intro": "Validierte Wettermodelle, klassische Atmosphären-Physik, KI obenauf zur Bewertung. Keine Black Box, kein Hokuspokus.",
+    "kicker": "De la météo au Cast",
+    "headline": "Trois étapes, sans magie.",
+    "intro": "Des modèles météo validés, de la physique de l'atmosphère classique, l'IA par-dessus pour l'évaluation. Pas de boîte noire, pas de tour de passe-passe.",
     "steps": [
       {
-        "label": "Daten",
-        "title": "Wettermodelle einlesen",
-        "body": "ICON-CH1 (1 km) und ICON-CH2 (2 km) von MeteoSchweiz, ICON-D2, ICON-EU und GFS — einmal morgens aggregiert via Open-Meteo, für den ganzen Tag."
+        "label": "Données",
+        "title": "Lire les modèles météo",
+        "body": "ICON-CH1 (1 km) et ICON-CH2 (2 km) de MétéoSuisse, ICON-D2, ICON-EU et GFS — agrégés une fois le matin via Open-Meteo, pour toute la journée."
       },
       {
-        "label": "Physik",
-        "title": "Atmosphäre durchrechnen",
-        "body": "Thermikbasis (Parcel-Methode mit Inversions-Erkennung), Föhn-Detektion (Druckgradient Nord–Süd, Höhenwind, Feuchte-Signatur), Gust-Decay übers Terrain, Cloud-Holes — deterministisch im Code, ohne KI."
+        "label": "Physique",
+        "title": "Calculer l'atmosphère",
+        "body": "Plafond thermique (méthode de la particule avec détection d'inversion), détection du foehn (gradient de pression nord–sud, vent d'altitude, signature d'humidité), atténuation des rafales sur le terrain, trouées de nuages — de manière déterministe dans le code, sans IA."
       },
       {
-        "label": "KI",
-        "title": "Analysieren und bewerten",
-        "body": "Auf Basis der berechneten Physik analysiert und bewertet die KI Sicherheit und Eignung pro Spot. Die Begründung kommt in Klartext — Wind, Thermik, Zeitfenster."
+        "label": "IA",
+        "title": "Analyser et évaluer",
+        "body": "Sur la base de la physique calculée, l'IA analyse et évalue la sécurité et la pertinence pour chaque spot. La justification arrive en clair — vent, thermique, fenêtre horaire."
       }
     ],
     "tiers": {
-      "violet": "Legendär",
-      "green": "Fliegbar",
-      "bronze": "Abgleiter",
-      "amber": "Bedingt",
-      "red": "Nicht fliegbar"
+      "violet": "Légendaire",
+      "green": "Volable",
+      "bronze": "Plané",
+      "amber": "Sous conditions",
+      "red": "Non volable"
     },
-    "weekdays": ["Mo", "Di", "Mi", "Do", "Fr"],
-    "previewTitle": "Flugwetter",
-    "previewStand": "Stand 05:42",
-    "previewWeekdaysAria": "Wochentage",
-    "previewActiveDay": "Mittwoch, 20. Mai",
-    "previewSpotCount": "308 Spots",
+    "weekdays": ["lun", "mar", "mer", "jeu", "ven"],
+    "previewTitle": "Météo de vol",
+    "previewStand": "Mis à jour 05:42",
+    "previewWeekdaysAria": "Jours de la semaine",
+    "previewActiveDay": "Mercredi 20 mai",
+    "previewSpotCount": "308 spots",
     "regions": {
-      "berner-oberland": "Berner Oberland",
-      "zentralschweiz": "Zentralschweiz"
+      "berner-oberland": "Oberland bernois",
+      "zentralschweiz": "Suisse centrale"
     },
     "tags": {
-      "top-week": "Top der Woche",
-      "thermik-strong": "Thermik stark",
-      "foehn-tendency": "Föhn-Tendenz"
+      "top-week": "Top de la semaine",
+      "thermik-strong": "Thermique forte",
+      "foehn-tendency": "Tendance au foehn"
     },
-    "figcaption": "<b>Niesen, 11–14 Uhr</b> — Wind 8 km/h Süd, Thermikbasis ~2400 m. Ab 14:30 Süd-Föhn-Tendenz → Lee. Konfidenz hoch (3/3 Modelle einig).",
-    "exampleNote": "Beispieldaten — echte Werte in der App auf <link>app.wingcast.ch</link>."
+    "figcaption": "<b>Niesen, 11h–14h</b> — Vent 8 km/h sud, plafond thermique ~2400 m. Dès 14h30 tendance au foehn du sud → sous le vent. Confiance élevée (3/3 modèles concordants).",
+    "exampleNote": "Données d'exemple — valeurs réelles dans l'app sur <link>app.wingcast.ch</link>."
   },
   "Trust": {
-    "kicker": "Wer das baut",
-    "founderAlt": "Maurin, Gründer von Wingcast",
-    "headline": "Ein Pilot. Ein Daten-Problem. Ein Experiment.",
-    "paragraph1": "Ich flieg selber, und beim Spot-Check am Morgen hatte ich am Schluss oft zu viele Daten im Kopf — Windgramme, Modelle, Webcams, Talwinde, Inversionen. Alles gleichzeitig zu verarbeiten ist schwierig.",
-    "paragraph2": "Wingcast ist mein Versuch, da KI sinnvoll einzusetzen. Kein Heilsversprechen, einfach ein Werkzeug, das hilft, geeignete Spots schneller zu finden. Egal ob 15 oder 400 Flüge: die KI macht dir aus den Rohdaten Klartext, statt dass du mit hPa-Werten allein dastehst. <b>Decision Support, kein Decision Maker.</b> Die Entscheidung am Startplatz triffst du.",
+    "kicker": "Qui construit ça",
+    "founderAlt": "Maurin, fondateur de Wingcast",
+    "headline": "Un pilote. Un problème de données. Une expérience.",
+    "paragraph1": "Je vole moi-même, et lors du check des spots le matin, j'avais souvent trop de données en tête à la fin — windgrammes, modèles, webcams, vents de vallée, inversions. Traiter tout ça en même temps, c'est difficile.",
+    "paragraph2": "Wingcast est ma tentative d'y employer l'IA de manière utile. Pas une promesse miracle, simplement un outil qui aide à trouver plus vite les spots adaptés. Que vous ayez 15 ou 400 vols : l'IA vous transforme les données brutes en clair, au lieu de vous laisser seul face aux valeurs en hPa. <b>Decision Support, pas Decision Maker.</b> La décision au décollage, c'est vous qui la prenez.",
     "signature": "— Maurin",
-    "emailSuffix": "— schreib mir direkt, jede Mail wird gelesen."
+    "emailSuffix": "— écrivez-moi directement, chaque mail est lu."
   },
   "Subscribe": {
-    "kicker": "Loslegen · ca. 60 Sekunden",
-    "headline": "Magic-Link, Regionen, los.",
-    "intro": "Anmeldung läuft auf <b>app.wingcast.ch</b>. Wir speichern nur deine E-Mail und gewählte Regionen — sonst nichts.",
-    "cta": "Account erstellen",
-    "stepLabel": "Schritt {n}",
+    "kicker": "Se lancer · env. 60 secondes",
+    "headline": "Magic-Link, régions, c'est parti.",
+    "intro": "L'inscription se fait sur <b>app.wingcast.ch</b>. Nous enregistrons uniquement votre e-mail et les régions choisies — rien d'autre.",
+    "cta": "Créer un compte",
+    "stepLabel": "Étape {n}",
     "steps": [
       {
         "t": "00:00",
-        "title": "E-Mail eingeben",
-        "body": "Magic-Link kommt sofort. Kein Passwort, keine Kreditkarte."
+        "title": "Saisir l'e-mail",
+        "body": "Le Magic-Link arrive immédiatement. Pas de mot de passe, pas de carte de crédit."
       },
       {
         "t": "00:30",
-        "title": "Regionen wählen",
-        "body": "z. B. Berner Oberland, Wallis, Ostschweiz. Jederzeit änderbar."
+        "title": "Choisir les régions",
+        "body": "p. ex. Oberland bernois, Valais, Suisse orientale. Modifiable à tout moment."
       },
       {
         "t": "01:00",
-        "title": "Cast lesen",
-        "body": "5 Tage, sortiert nach Fliegbarkeit, mit Begründung pro Spot."
+        "title": "Lire le Cast",
+        "body": "5 jours, triés selon la volabilité, avec une justification par spot."
       }
     ]
   },
   "Feedback": {
-    "kicker": "Beta · bau mit",
-    "headline": "Was du meldest, kommt ins nächste Update.",
-    "intro": "Wingcast ist Beta — manche Spots fehlen, einzelne Start-Winkel stimmen nicht, vereinzelt hakt eine Funktion. Jede Mail wird gelesen, das meiste landet binnen einer Woche im Build.",
+    "kicker": "Bêta · construisez avec nous",
+    "headline": "Ce que vous signalez arrive dans la prochaine mise à jour.",
+    "intro": "Wingcast est en bêta — certains spots manquent, quelques angles de décollage sont incorrects, parfois une fonction coince. Chaque mail est lu, et la plupart atterrissent dans le build en une semaine.",
     "items": [
-      { "tag": "Spot fehlt?", "body": "Name und Region reicht." },
-      { "tag": "Winkel passt nicht?", "body": "Kurzer Hinweis, wir korrigieren." },
-      { "tag": "Bug?", "body": "Was passiert ist + Screenshot." }
+      { "tag": "Un spot manque ?", "body": "Le nom et la région suffisent." },
+      { "tag": "Un angle ne convient pas ?", "body": "Un bref message, nous corrigeons." },
+      { "tag": "Un bug ?", "body": "Ce qui s'est passé + une capture d'écran." }
     ],
-    "note": "— Maurin liest jede Mail persönlich."
+    "note": "— Maurin lit chaque mail personnellement."
   },
   "Faq": {
     "kicker": "FAQ",
-    "headline": "Was Pilot:innen oft fragen.",
-    "intro": "Steht deine Frage nicht dabei? Schreib an <link>info@wingcast.ch</link> — Antwort kommt von Maurin.",
+    "headline": "Ce que les pilotes demandent souvent.",
+    "intro": "Votre question n'y figure pas ? Écrivez à <link>info@wingcast.ch</link> — la réponse vient de Maurin.",
     "items": [
       {
-        "q": "Was ist Wingcast?",
-        "a": "Wingcast ist eine gratis KI-Flugwetter-App für Schweizer Gleitschirmpiloten. Sie aggregiert fünf Wettermodelle via Open-Meteo (ICON-CH1 mit 1 km Auflösung und ICON-CH2 mit 2 km von MeteoSchweiz, dazu ICON-D2, ICON-EU und GFS), rechnet daraus klassische Atmosphären-Physik (Thermikbasis, Inversionen, Föhn-Detektion, Gust-Decay) deterministisch im Code aus, und lässt erst dann die KI Sicherheit und Eignung pro Spot analysieren und bewerten. 488 Schweizer Startplätze werden pro Tag automatisch nach Fliegbarkeit sortiert, dazu kommt eine Begründung in Klartext — Wind, Thermik, Föhn-Lage, Lee-Risiken. Statt 45 Minuten durch Wettermodelle zu wühlen, siehst du in 30 Sekunden, wo es heute oder diese Woche fliegt — und warum. Anmeldung mit E-Mail und Magic-Link, keine Kreditkarte, kein Trial-Counter. Optional kommt ein E-Mail-Cast an frei wählbaren Wochentagen um 06:00 Uhr. Wingcast ist Decision Support für Pilot:innen, kein Decision Maker — die finale Entscheidung am Startplatz triffst du."
+        "q": "Qu'est-ce que Wingcast ?",
+        "a": "Wingcast est une app de météo de vol IA gratuite pour les pilotes de parapente suisses. Elle agrège cinq modèles météo via Open-Meteo (ICON-CH1 avec une résolution de 1 km et ICON-CH2 avec 2 km de MétéoSuisse, plus ICON-D2, ICON-EU et GFS), en calcule de manière déterministe dans le code la physique de l'atmosphère classique (plafond thermique, inversions, détection du foehn, atténuation des rafales), et ce n'est qu'ensuite qu'elle laisse l'IA analyser et évaluer la sécurité et la pertinence pour chaque spot. 488 sites de décollage suisses sont automatiquement triés chaque jour selon la volabilité, avec en plus une justification en clair — vent, thermique, situation de foehn, risques de sous le vent. Au lieu de fouiller 45 minutes dans les modèles météo, vous voyez en 30 secondes où ça vole aujourd'hui ou cette semaine — et pourquoi. Inscription par e-mail et Magic-Link, sans carte de crédit, sans compteur d'essai. En option, un Cast par e-mail arrive aux jours de la semaine librement choisis à 06h00. Wingcast est un Decision Support pour les pilotes, pas un Decision Maker — la décision finale au décollage, c'est vous qui la prenez."
       },
       {
-        "q": "Was kostet die Anmeldung?",
-        "a": "Aktuell nichts. Forecast für Regionen, Spot-Bewertung für jeden der 488 Startplätze und das Wochen-Briefing sind ohne Kreditkarte und ohne Trial-Counter zugänglich — du musst dich nur anmelden. Wenn sich am Modell etwas ändert, kommunizieren wir's offen, bevor wir umstellen."
+        "q": "Combien coûte l'inscription ?",
+        "a": "Actuellement rien. Les prévisions pour les régions, l'évaluation des spots pour chacun des 488 sites de décollage et le Briefing hebdomadaire sont accessibles sans carte de crédit et sans compteur d'essai — il vous suffit de vous inscrire. Si quelque chose change au niveau du modèle, nous le communiquerons ouvertement avant de procéder au changement."
       },
       {
-        "q": "Was funktioniert in der Beta noch nicht?",
-        "a": "Ehrliche Antwort: einiges. Wingcast ist Beta — einzelne Startplätze fehlen noch im Datensatz, der hinterlegte Start-Winkel kann an manchen Spots nicht ganz stimmen, und vereinzelt gibt's Funktions-Bugs oder Aussetzer. Wir arbeiten laufend daran und priorisieren nach dem, was uns die Beta-Community meldet. Fehlt dir ein Spot, stimmt ein Winkel nicht, hakt eine Funktion? Schreib uns an info@wingcast.ch — kurzer Hinweis reicht, jede Meldung hilft."
+        "q": "Qu'est-ce qui ne fonctionne pas encore dans la bêta ?",
+        "a": "Réponse honnête : pas mal de choses. Wingcast est en bêta — certains sites de décollage manquent encore dans le jeu de données, l'angle de décollage enregistré peut ne pas être tout à fait exact sur certains spots, et il y a parfois des bugs de fonction ou des ratés. Nous y travaillons en continu et priorisons selon ce que nous remonte la communauté bêta. Un spot vous manque, un angle n'est pas correct, une fonction coince ? Écrivez-nous à info@wingcast.ch — un bref message suffit, chaque signalement aide."
       },
       {
-        "q": "Was ist der Vorteil gegenüber meinen aktuellen Quellen?",
-        "a": "Wingcast ersetzt sie nicht — es macht dir die Vorauswahl. Statt 30 bis 45 Minuten Modelle und Webcams zu vergleichen, bekommst du in 30 Sekunden eine sortierte Liste der besten Spots für die kommenden 5 Tage. Die Feinabstimmung machst du wie gewohnt mit deinen vertrauten Tools."
+        "q": "Quel est l'avantage par rapport à mes sources actuelles ?",
+        "a": "Wingcast ne les remplace pas — il fait la présélection pour vous. Au lieu de comparer 30 à 45 minutes les modèles et les webcams, vous obtenez en 30 secondes une liste triée des meilleurs spots pour les 5 prochains jours. Le réglage fin, vous le faites comme d'habitude avec vos outils de confiance."
       },
       {
-        "q": "Was ist Föhn — und warum ist er für Gleitschirmflieger gefährlich?",
-        "a": "Föhn ist ein warmer, trockener Fallwind, der entsteht, wenn Luft über einen Gebirgskamm gezwungen wird, auf der Luvseite abregnet und auf der Leeseite aufgewärmt herabsinkt. Für Pilot:innen bedeutet Föhn: hohe Windgeschwindigkeiten in der Höhe, starke Turbulenz im Lee der Berge, schnelle Wetterwechsel. Wingcast erkennt Föhn-Lagen über den Druckgradient zwischen Zürich und Lugano, kombiniert mit Höhenwind bei 700 hPa und der Feuchte-Signatur — die gleichen Indikatoren, die MeteoSchweiz für ihre Föhn-Warnungen nutzt. Bei aktivem Föhn werden betroffene Spots automatisch zurückgestuft, mit Hinweis im Klartext. Mehr Hintergrund: meteoschweiz.admin.ch/wetter/wetterphaenomene/foehn."
+        "q": "Qu'est-ce que le foehn — et pourquoi est-il dangereux pour les parapentistes ?",
+        "a": "Le foehn est un vent descendant chaud et sec qui se forme lorsque l'air est forcé de passer au-dessus d'une crête montagneuse, déverse ses précipitations au vent et redescend réchauffé sous le vent. Pour les pilotes, le foehn signifie : des vitesses de vent élevées en altitude, de fortes turbulences sous le vent des montagnes, des changements de temps rapides. Wingcast détecte les situations de foehn via le gradient de pression entre Zurich et Lugano, combiné au vent d'altitude à 700 hPa et à la signature d'humidité — les mêmes indicateurs que MétéoSuisse utilise pour ses alertes de foehn. En cas de foehn actif, les spots concernés sont automatiquement rétrogradés, avec une indication en clair. Plus de détails : meteoschweiz.admin.ch/wetter/wetterphaenomene/foehn."
       },
       {
-        "q": "Lerne ich beim Gebrauch dazu?",
-        "a": "Ja. Jede Bewertung kommt mit Begründung in Klartext — zum Beispiel: Niesen heute Bedingt, weil Föhn-Tendenz ab 14 Uhr → Lee-Risiko, sicheres Slot 11–13:30 Uhr. Über die Wochen erkennst du die Muster selbst — wann Föhn kommt, wie Inversionen die Thermik bremsen, wo Lee zu erwarten ist. Wir wollen dein Wetter-Verständnis nicht ersetzen, sondern beschleunigen."
+        "q": "Est-ce que j'apprends en l'utilisant ?",
+        "a": "Oui. Chaque évaluation est accompagnée d'une justification en clair — par exemple : Niesen aujourd'hui sous conditions, car tendance au foehn dès 14h → risque de sous le vent, créneau sûr 11h–13h30. Au fil des semaines, vous reconnaissez les schémas vous-même — quand le foehn arrive, comment les inversions freinent la thermique, où s'attendre à du sous le vent. Nous ne voulons pas remplacer votre compréhension de la météo, mais l'accélérer."
       },
       {
-        "q": "Wie genau ist der Forecast — und was macht die KI eigentlich?",
-        "a": "Wir aggregieren via Open-Meteo fünf Wettermodelle: ICON-CH1 (1 km) und ICON-CH2 (2 km) von MeteoSchweiz für die Schweizer Topographie, dazu ICON-D2, ICON-EU und GFS für grossräumige Lagen und längere Horizonte. Auf diesen Daten laufen klassische Atmosphären-Berechnungen deterministisch im Code: Thermikbasis via Parcel-Methode mit Inversions-Erkennung und terrain-kalibrierten Zonen, Föhn-Detektion über Druckgradient Nord–Süd plus Höhenwind und Feuchte-Signatur, Gust-Decay übers Terrain, Cloud-Holes über Referenzpunkte. Erst auf dieser Datenlage analysiert und bewertet die KI Sicherheit und Eignung pro Spot — sie evaluiert die gerechnete Physik und schreibt die Begründung. Keine Magie, kein Hokuspokus. Bei unsicheren Bedingungen sind wir bewusst konservativ. Perfektion versprechen wir nicht."
+        "q": "Quelle est la précision des prévisions — et que fait l'IA au juste ?",
+        "a": "Nous agrégeons via Open-Meteo cinq modèles météo : ICON-CH1 (1 km) et ICON-CH2 (2 km) de MétéoSuisse pour la topographie suisse, plus ICON-D2, ICON-EU et GFS pour les situations à grande échelle et les horizons plus longs. Sur ces données s'exécutent des calculs atmosphériques classiques de manière déterministe dans le code : plafond thermique via la méthode de la particule avec détection d'inversion et zones calibrées sur le terrain, détection du foehn via le gradient de pression nord–sud plus le vent d'altitude et la signature d'humidité, atténuation des rafales sur le terrain, trouées de nuages via des points de référence. Ce n'est que sur cette base de données que l'IA analyse et évalue la sécurité et la pertinence pour chaque spot — elle évalue la physique calculée et rédige la justification. Pas de magie, pas de tour de passe-passe. En cas de conditions incertaines, nous sommes délibérément conservateurs. Nous ne promettons pas la perfection."
       },
       {
-        "q": "Was passiert nach der Anmeldung?",
-        "a": "Du wählst deine Regionen in der App, bestätigst die E-Mail und hast sofort Zugang zu Forecast und Karte. Wenn du das Briefing willst, legst du in der App fest, an welchen Wochentagen es kommen soll — die erste E-Mail folgt dann am nächsten gewählten Tag um 06:00."
+        "q": "Que se passe-t-il après l'inscription ?",
+        "a": "Vous choisissez vos régions dans l'app, vous confirmez l'e-mail et vous avez immédiatement accès aux prévisions et à la carte. Si vous voulez le Briefing, vous définissez dans l'app les jours de la semaine où il doit arriver — le premier e-mail suit alors le prochain jour choisi à 06h00."
       },
       {
-        "q": "Funktioniert das auf meinem iPhone?",
-        "a": "Ja. Die App läuft direkt im Browser, das Briefing ist mit allen Mail-Clients kompatibel. Apple Mail und Gmail unterstützen die interaktiven Wochentag-Tabs vollständig."
+        "q": "Est-ce que ça fonctionne sur mon iPhone ?",
+        "a": "Oui. L'app tourne directement dans le navigateur, le Briefing est compatible avec tous les clients de messagerie. Apple Mail et Gmail prennent entièrement en charge les onglets interactifs des jours de la semaine."
       },
       {
-        "q": "Wer steckt hinter Wingcast?",
-        "a": "Maurin, Pilot aus Zürich. Beim eigenen Spot-Check fand ich oft den Wald vor lauter Daten nicht — Windgramme, Modelle, Webcams, Talwinde. Wingcast ist mein Experiment: Kann KI helfen, diese Datenmengen so aufzubereiten, dass am Ende eine klare Entscheidungsgrundlage auf dem Tisch liegt? Genau das prüfe ich gerade — gemeinsam mit der Beta-Community."
+        "q": "Qui se cache derrière Wingcast ?",
+        "a": "Maurin, pilote de Zurich. Lors de mon propre check des spots, je ne voyais souvent plus la forêt cachée par les données — windgrammes, modèles, webcams, vents de vallée. Wingcast est mon expérience : l'IA peut-elle aider à préparer ces masses de données pour qu'au final une base de décision claire soit posée sur la table ? C'est exactement ce que je teste en ce moment — avec la communauté bêta."
       },
       {
-        "q": "Was passiert mit meinen Daten?",
-        "a": "Wir speichern nur deine E-Mail und die gewählten Regionen. Kein Tracking, keine Drittanbieter-Cookies, keine Weitergabe. Abmeldung jederzeit mit einem Klick."
+        "q": "Qu'advient-il de mes données ?",
+        "a": "Nous enregistrons uniquement votre e-mail et les régions choisies. Pas de tracking, pas de cookies tiers, aucune transmission. Désinscription à tout moment en un clic."
       }
     ]
   },
   "Footer": {
-    "tagline": "KI-Flugwetter-Cast für Schweizer Gleitschirmpiloten — damit du schneller weisst, wo's diese Woche geht.",
-    "toApp": "Zur Live-App",
-    "colProduct": "Produkt",
+    "tagline": "Cast de météo de vol IA pour les pilotes de parapente suisses — pour que vous sachiez plus vite où aller cette semaine.",
+    "toApp": "Vers l'app en direct",
+    "colProduct": "Produit",
     "colApp": "App",
-    "colLegal": "Rechtliches",
-    "linkHowItWorks": "So funktioniert's",
-    "linkCastPreview": "Cast-Vorschau",
-    "linkBetaFeedback": "Beta-Feedback",
+    "colLegal": "Mentions légales",
+    "linkHowItWorks": "Comment ça marche",
+    "linkCastPreview": "Aperçu du Cast",
+    "linkBetaFeedback": "Retour bêta",
     "linkFaq": "FAQ",
-    "linkLiveDashboard": "Live-Dashboard",
+    "linkLiveDashboard": "Tableau de bord en direct",
     "linkCast": "Cast",
-    "linkSpotsMap": "Spots-Karte",
+    "linkSpotsMap": "Carte des spots",
     "linkChat": "Chat",
-    "linkImpressum": "Impressum",
-    "linkTerms": "Nutzungsbedingungen",
-    "linkPrivacy": "Datenschutz",
-    "linkContact": "Kontakt",
-    "cookieSettings": "Cookie-Einstellungen",
-    "copyright": "© {year} Wingcast · Made in Switzerland · <time>Stand {date}</time>",
-    "weatherCredit": "Wetterdaten via <ometeo>Open-Meteo</ometeo> · ICON-CH1 (1 km) und ICON-CH2 (2 km) von <meteoswiss>MeteoSchweiz</meteoswiss>, ICON-D2, ICON-EU, <gfs>GFS</gfs>"
+    "linkImpressum": "Mentions légales",
+    "linkTerms": "Conditions d'utilisation",
+    "linkPrivacy": "Protection des données",
+    "linkContact": "Contact",
+    "cookieSettings": "Paramètres des cookies",
+    "copyright": "© {year} Wingcast · Made in Switzerland · <time>Mis à jour {date}</time>",
+    "weatherCredit": "Données météo via <ometeo>Open-Meteo</ometeo> · ICON-CH1 (1 km) et ICON-CH2 (2 km) de <meteoswiss>MétéoSuisse</meteoswiss>, ICON-D2, ICON-EU, <gfs>GFS</gfs>"
   },
   "Cta": {
-    "viewSpots": "Spots ansehen",
-    "ariaViewSpots": "Spots in der Wingcast App ansehen"
+    "viewSpots": "Voir les spots",
+    "ariaViewSpots": "Voir les spots dans l'app Wingcast"
   },
   "Consent": {
-    "title": "Datenschutz — deine Wahl",
-    "desc": "Wir nutzen optional <b>Statistik-Tools</b> (Google Analytics 4 & PostHog, EU-Server), um zu verstehen, wie die Seite genutzt wird, und Wingcast zu verbessern. Diese laden <b>erst nach deiner Zustimmung</b>. Notwendige Funktionen brauchen kein Tracking. Du kannst jederzeit über „Cookie-Einstellungen“ im Footer widerrufen. Details in der <link>Datenschutzerklärung</link>.",
-    "necessaryTitle": "Notwendig",
-    "necessaryBody": "Für den Betrieb erforderlich. Auf dieser Seite kein Cookie; in der App ein Login-Session-Cookie. Immer aktiv.",
-    "analyticsTitle": "Statistik & Analyse",
-    "analyticsBody": "Google Analytics 4 und PostHog (EU). Anonymisierte Nutzungsmessung. GA4 überträgt Daten in die USA (EU-US Data Privacy Framework).",
-    "save": "Auswahl speichern",
-    "acceptAll": "Alle akzeptieren",
-    "reject": "Ablehnen",
-    "settings": "Einstellungen",
-    "less": "Weniger anzeigen",
-    "close": "Schließen"
+    "title": "Protection des données — votre choix",
+    "desc": "Nous utilisons en option des <b>outils de statistiques</b> (Google Analytics 4 & PostHog, serveurs UE) pour comprendre comment le site est utilisé et améliorer Wingcast. Ceux-ci ne se chargent <b>qu'après votre consentement</b>. Les fonctions nécessaires n'ont besoin d'aucun tracking. Vous pouvez révoquer à tout moment via « Paramètres des cookies » dans le pied de page. Détails dans la <link>politique de confidentialité</link>.",
+    "necessaryTitle": "Nécessaire",
+    "necessaryBody": "Requis pour le fonctionnement. Aucun cookie sur cette page ; dans l'app, un cookie de session de connexion. Toujours actif.",
+    "analyticsTitle": "Statistiques & analyse",
+    "analyticsBody": "Google Analytics 4 et PostHog (UE). Mesure d'usage anonymisée. GA4 transfère des données aux États-Unis (EU-US Data Privacy Framework).",
+    "save": "Enregistrer la sélection",
+    "acceptAll": "Tout accepter",
+    "reject": "Refuser",
+    "settings": "Paramètres",
+    "less": "Afficher moins",
+    "close": "Fermer"
   },
   "Confirm": {
-    "metaTitle": "Anmeldung bestätigt",
-    "headline": "Du bist dabei.",
-    "body": "In der App wählst du Regionen und Wochentage — die erste Mail kommt dann am nächsten gewählten Tag um 06:00. Forecast und Karte kannst du sofort nutzen.",
-    "cta": "Zur Wingcast App"
+    "metaTitle": "Inscription confirmée",
+    "headline": "Vous en êtes.",
+    "body": "Dans l'app, vous choisissez les régions et les jours de la semaine — le premier mail arrive ensuite le prochain jour choisi à 06h00. Les prévisions et la carte sont utilisables immédiatement.",
+    "cta": "Vers l'app Wingcast"
   },
   "Legal": {
     "impressumTitle": "Mentions légales",
