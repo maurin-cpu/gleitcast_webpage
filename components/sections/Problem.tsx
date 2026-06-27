@@ -1,4 +1,9 @@
+import { useTranslations } from "next-intl";
+
 export function Problem() {
+  const t = useTranslations("Problem");
+  const cards = t.raw("cards") as Array<{ topic: string; note: string }>;
+
   return (
     <section
       id="problem"
@@ -8,39 +13,30 @@ export function Problem() {
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-sky-300">
-            Kennst du das?
+            {t("kicker")}
           </p>
           <h2
             id="problem-headline"
             className="text-balance text-3xl font-bold leading-[1.15] tracking-tight sm:text-4xl lg:text-5xl"
           >
-            Samstag, 6:30 Uhr.
+            {t("headlineLine1")}
             <br />
-            <span className="text-sky-300">
-              Wo soll's heute hingehen?
-            </span>
+            <span className="text-sky-300">{t("headlineLine2")}</span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-reading text-lg leading-[1.6] text-white/85">
-            Du checkst Windgramme, schaust dir Wetter-Modelle an, vergleichst
-            Webcams. 45 Minuten später hast du viele Daten — aber noch keine
-            klare Antwort, welcher Spot diese Woche der richtige ist.
+            {t("intro")}
           </p>
         </div>
 
         <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            { topic: "Wind", note: "Hangwind, Talwind, Höhenwind" },
-            { topic: "Thermik", note: "Auslöse, Stärke, Basis" },
-            { topic: "Sicherheit", note: "Föhn, Front, Lee" },
-            { topic: "Spot-Wahl", note: "488 Startplätze, ein Tag" },
-          ].map((p) => (
+          {cards.map((p) => (
             <div
               key={p.topic}
               className="rounded-card border border-white/15 bg-white/5 p-4"
             >
               <div className="text-sm font-semibold uppercase tracking-wider text-sky-300">
-                Zu prüfen
+                {t("cardLabel")}
               </div>
               <div className="mt-1 text-base font-semibold">{p.topic}</div>
               <div className="text-sm text-white/90">{p.note}</div>
@@ -50,14 +46,9 @@ export function Problem() {
 
         <div className="mx-auto mt-10 max-w-2xl text-center text-base leading-[1.6] text-white/85">
           <p className="mb-4 text-lg font-semibold text-white">
-            Am Ende willst du nur eines schnell sehen: welcher Spot heute
-            fliegt — und welcher nicht.
+            {t("conclusionLead")}
           </p>
-          <p>
-            Wingcast sortiert die Spots pro Tag, mit Begründung in Klartext.
-            Du nimmst die Empfehlung als Startpunkt, gleichst sie mit deinen
-            Quellen ab und entscheidest selbst.
-          </p>
+          <p>{t("conclusionBody")}</p>
         </div>
       </div>
     </section>

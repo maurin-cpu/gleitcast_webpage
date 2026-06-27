@@ -1,16 +1,14 @@
+import { useTranslations } from "next-intl";
 import { LinkButton } from "../ui/Button";
 import { Mail } from "../ui/Icons";
 
 const FEEDBACK_MAIL =
   "mailto:info@wingcast.ch?subject=Wingcast%20Beta%20%E2%80%94%20Feedback";
 
-const items = [
-  { tag: "Spot fehlt?", body: "Name und Region reicht." },
-  { tag: "Winkel passt nicht?", body: "Kurzer Hinweis, wir korrigieren." },
-  { tag: "Bug?", body: "Was passiert ist + Screenshot." },
-];
-
 export function BetaFeedback() {
+  const t = useTranslations("Feedback");
+  const items = t.raw("items") as Array<{ tag: string; body: string }>;
+
   return (
     <section
       id="feedback"
@@ -20,18 +18,16 @@ export function BetaFeedback() {
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl rounded-card border border-slate-200 bg-slate-50 p-6 sm:p-10">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700">
-            Beta · bau mit
+            {t("kicker")}
           </p>
           <h2
             id="feedback-headline"
             className="mt-3 text-balance text-3xl font-bold leading-[1.1] tracking-tight text-slate-900 sm:text-4xl"
           >
-            Was du meldest, kommt ins nächste Update.
+            {t("headline")}
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-[1.65] text-slate-700">
-            Wingcast ist Beta — manche Spots fehlen, einzelne Start-Winkel
-            stimmen nicht, vereinzelt hakt eine Funktion. Jede Mail wird gelesen,
-            das meiste landet binnen einer Woche im Build.
+            {t("intro")}
           </p>
 
           <ul className="mt-7 grid gap-x-8 gap-y-3 sm:grid-cols-3">
@@ -50,9 +46,7 @@ export function BetaFeedback() {
               <Mail className="h-4 w-4" />
               info@wingcast.ch
             </LinkButton>
-            <p className="text-sm italic text-slate-500">
-              — Maurin liest jede Mail persönlich.
-            </p>
+            <p className="text-sm italic text-slate-500">{t("note")}</p>
           </div>
         </div>
       </div>

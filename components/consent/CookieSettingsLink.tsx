@@ -6,16 +6,18 @@
  * ConsentManager. Optisch identisch zu den übrigen Footer-Links.
  */
 
+import { useTranslations } from "next-intl";
 import { OPEN_SETTINGS_EVENT } from "@/lib/consent";
 
 export function CookieSettingsLink() {
+  const t = useTranslations("Footer");
   return (
     <button
       type="button"
       onClick={() => window.dispatchEvent(new Event(OPEN_SETTINGS_EVENT))}
       className="focus-ring inline-flex items-center gap-1.5 rounded text-left text-white/80 transition-colors hover:text-white"
     >
-      Cookie-Einstellungen
+      {t("cookieSettings")}
     </button>
   );
 }

@@ -1,10 +1,19 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { LinkButton } from "../ui/Button";
 import { ArrowRight, ArrowUpRight, Layers, MapPin, Sparkles } from "../ui/Icons";
 
 const APP_URL = "https://app.wingcast.ch";
 
+const bold = {
+  b: (chunks: React.ReactNode) => (
+    <strong className="font-semibold text-slate-900">{chunks}</strong>
+  ),
+};
+
 export function Hero() {
+  const t = useTranslations("Hero");
+
   return (
     <section
       id="hero"
@@ -48,7 +57,7 @@ export function Hero() {
             style={{ ["--hero-delay" as string]: "0ms" }}
           >
             <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
-            Beta · KI-Experiment für Schweizer Piloten
+            {t("badge")}
           </div>
 
           <h1
@@ -56,18 +65,16 @@ export function Hero() {
             className="hero-in text-balance text-[clamp(2.25rem,4.5vw+0.5rem,4rem)] font-extrabold leading-[1.05] tracking-[-0.025em] text-slate-900"
             style={{ ["--hero-delay" as string]: "120ms" }}
           >
-            Welcher Spot fliegt diese Woche?
+            {t("headlineLine1")}
             <br />
-            <span className="text-sky-700">Du siehst es auf einen Blick.</span>
+            <span className="text-sky-700">{t("headlineLine2")}</span>
           </h1>
 
           <p
             className="hero-in mx-auto mt-4 max-w-reading text-pretty text-[clamp(1rem,0.8vw+0.7rem,1.25rem)] leading-[1.6] text-slate-700 sm:mt-5"
             style={{ ["--hero-delay" as string]: "240ms" }}
           >
-            5-Tage-Forecast für 488 Schweizer Startplätze — sortiert pro Tag,
-            in Klartext erklärt, von ersten Flügen bis XC. Gratis, keine
-            Kreditkarte.
+            {t("subline")}
           </p>
 
           <div
@@ -81,14 +88,14 @@ export function Hero() {
               variant="primary"
               size="lg"
             >
-              Spots ansehen
+              {t("ctaPrimary")}
               <ArrowUpRight className="h-4 w-4" />
             </LinkButton>
             <a
               href="#preview"
               className="focus-ring inline-flex h-12 items-center gap-1.5 rounded-lg px-3 text-base font-semibold text-sky-700 transition-colors hover:text-sky-700/75"
             >
-              Cast ansehen
+              {t("ctaSecondary")}
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
@@ -100,21 +107,15 @@ export function Hero() {
           >
             <li className="inline-flex items-center gap-1.5">
               <MapPin className="h-4 w-4 text-sky-700" aria-hidden="true" />
-              <span>
-                <strong className="font-semibold text-slate-900">488 Schweizer Spots</strong>
-              </span>
+              <span>{t.rich("trustSpots", bold)}</span>
             </li>
             <li className="inline-flex items-center gap-1.5">
               <Layers className="h-4 w-4 text-sky-700" aria-hidden="true" />
-              <span>
-                <strong className="font-semibold text-slate-900">5 Wettermodelle</strong> aggregiert
-              </span>
+              <span>{t.rich("trustModels", bold)}</span>
             </li>
             <li className="inline-flex items-center gap-1.5">
               <Sparkles className="h-4 w-4 text-sky-700" aria-hidden="true" />
-              <span>
-                <strong className="font-semibold text-slate-900">KI bewertet</strong>, Physik rechnet
-              </span>
+              <span>{t.rich("trustAi", bold)}</span>
             </li>
           </ul>
         </div>
@@ -137,7 +138,7 @@ export function Hero() {
           <div className="overflow-hidden rounded-card border border-slate-200 bg-white shadow-[0_20px_60px_-20px_rgba(2,132,199,0.25)]">
             <Image
               src="/screenshot_app_dashboard.png"
-              alt="Wingcast App-Dashboard: Chat-Berater links, Karte mit allen 488 Schweizer Startplätzen rechts, gefärbt nach Bewertung"
+              alt={t("screenshotAlt")}
               width={2400}
               height={1400}
               priority
@@ -146,7 +147,7 @@ export function Hero() {
             />
           </div>
           <figcaption className="mt-4 text-center text-sm text-slate-600 sm:mt-5">
-            Live in der App · 488 Startplätze, gefärbt nach Bewertung
+            {t("figcaption")}
           </figcaption>
         </figure>
       </div>

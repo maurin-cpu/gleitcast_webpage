@@ -13,7 +13,9 @@
  */
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "../ui/Button";
+import { Link } from "@/i18n/navigation";
 
 type Props = {
   mode: "banner" | "settings";
@@ -32,6 +34,7 @@ export function ConsentBanner({
   onDecide,
   onClose,
 }: Props) {
+  const t = useTranslations("Consent");
   const [details, setDetails] = useState(mode === "settings");
   const [analytics, setAnalytics] = useState(analyticsDefault);
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -66,39 +69,37 @@ export function ConsentBanner({
               tabIndex={-1}
               className="text-lg font-bold tracking-tight text-slate-900 focus:outline-none sm:text-xl"
             >
-              Datenschutz — deine Wahl
+              {t("title")}
             </h2>
             <p
               id="consent-desc"
               className="mt-2 max-w-2xl text-sm leading-[1.6] text-slate-700"
             >
-              Wir nutzen optional <strong>Statistik-Tools</strong> (Google
-              Analytics 4 &amp; PostHog, EU-Server), um zu verstehen, wie die
-              Seite genutzt wird, und Wingcast zu verbessern. Diese laden{" "}
-              <strong>erst nach deiner Zustimmung</strong>. Notwendige Funktionen
-              brauchen kein Tracking. Du kannst jederzeit über
-              „Cookie-Einstellungen" im Footer widerrufen. Details in der{" "}
-              <a
-                href="/datenschutz"
-                className="font-semibold text-sky-700 underline underline-offset-2 hover:text-sky-800"
-              >
-                Datenschutzerklärung
-              </a>
-              .
+              {t.rich("desc", {
+                b: (chunks) => <strong>{chunks}</strong>,
+                link: (chunks) => (
+                  <Link
+                    href="/datenschutz"
+                    className="font-semibold text-sky-700 underline underline-offset-2 hover:text-sky-800"
+                  >
+                    {chunks}
+                  </Link>
+                ),
+              })}
             </p>
 
             {details && (
               <div className="mt-5 space-y-3 border-t border-slate-200 pt-5">
                 <CategoryRow
-                  title="Notwendig"
-                  body="Für den Betrieb erforderlich. Auf dieser Seite kein Cookie; in der App ein Login-Session-Cookie. Immer aktiv."
+                  title={t("necessaryTitle")}
+                  body={t("necessaryBody")}
                   checked
                   disabled
                   onToggle={() => {}}
                 />
                 <CategoryRow
-                  title="Statistik & Analyse"
-                  body="Google Analytics 4 und PostHog (EU). Anonymisierte Nutzungsmessung. GA4 überträgt Daten in die USA (EU-US Data Privacy Framework)."
+                  title={t("analyticsTitle")}
+                  body={t("analyticsBody")}
                   checked={analytics}
                   disabled={false}
                   onToggle={() => setAnalytics((v) => !v)}
@@ -115,7 +116,7 @@ export function ConsentBanner({
                 onClick={() => onDecide(analytics)}
                 className="w-full"
               >
-                Auswahl speichern
+                {t("save")}
               </Button>
             ) : (
               <>
@@ -125,7 +126,7 @@ export function ConsentBanner({
                   onClick={() => onDecide(true)}
                   className="w-full"
                 >
-                  Alle akzeptieren
+                  {t("acceptAll")}
                 </Button>
                 <Button
                   variant="secondary"
@@ -133,7 +134,7 @@ export function ConsentBanner({
                   onClick={() => onDecide(false)}
                   className="w-full"
                 >
-                  Ablehnen
+                  {t("reject")}
                 </Button>
               </>
             )}
@@ -143,7 +144,7 @@ export function ConsentBanner({
               onClick={() => setDetails((v) => !v)}
               className="focus-ring mt-1 rounded text-sm font-semibold text-slate-600 underline underline-offset-2 hover:text-slate-900"
             >
-              {details ? "Weniger anzeigen" : "Einstellungen"}
+              {details ? t("less") : t("settings")}
             </button>
 
             {closable && (
@@ -152,7 +153,7 @@ export function ConsentBanner({
                 onClick={onClose}
                 className="focus-ring rounded text-sm text-slate-500 hover:text-slate-700"
               >
-                Schließen
+                {t("close")}
               </button>
             )}
           </div>

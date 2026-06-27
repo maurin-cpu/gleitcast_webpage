@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { ArrowUpRight } from "./ui/Icons";
 
 const APP_URL = "https://app.wingcast.ch";
 
 export function FloatingAppCTA() {
+  const t = useTranslations("Cta");
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -53,14 +55,14 @@ export function FloatingAppCTA() {
       href={APP_URL}
       target="_blank"
       rel="noopener"
-      aria-label="Spots in der Wingcast App ansehen"
+      aria-label={t("ariaViewSpots")}
       className={`focus-ring fixed bottom-5 right-5 z-50 inline-flex h-12 items-center gap-2 rounded-lg border-2 border-slate-900 bg-slate-900 px-5 text-base font-semibold text-white transition-[transform,opacity] duration-200 ease-out active:scale-[0.97] md:hidden ${
         visible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-4 opacity-0"
       }`}
     >
-      Spots ansehen
+      {t("viewSpots")}
       <ArrowUpRight className="h-4 w-4" />
     </a>
   );

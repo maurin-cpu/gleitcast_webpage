@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 
 export const metadata: Metadata = {
   title: "Logo-Auswahl · Wingcast (intern)",
   robots: { index: false, follow: false },
 };
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 type Variant = {
   id: string;
@@ -291,7 +297,13 @@ function VariantCard({ v }: { v: Variant }) {
   );
 }
 
-export default function LogoPreviewPage() {
+export default async function LogoPreviewPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <main className="bg-white py-12">
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">

@@ -1,13 +1,33 @@
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/sections/Footer";
+import { LegalNotice } from "@/components/LegalNotice";
+import { routing } from "@/i18n/routing";
 
-export const metadata = {
-  title: "Datenschutz",
-};
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Legal" });
+  return { title: t("privacyTitle") };
+}
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://app.wingcast.ch";
 
-export default function DatenschutzPage() {
+export default async function DatenschutzPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <Navbar />
@@ -19,6 +39,7 @@ export default function DatenschutzPage() {
           <p className="mt-4 text-sm text-slate-500">
             Stand: {new Date().toLocaleDateString("de-CH", { year: "numeric", month: "long" })}
           </p>
+          <LegalNotice locale={locale} />
 
           <div className="mt-12 space-y-12 text-base leading-[1.7] text-slate-700">
 

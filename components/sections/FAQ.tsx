@@ -1,7 +1,10 @@
-import { FAQ_ITEMS } from "@/lib/faq";
+import { useTranslations } from "next-intl";
 import { ChevronDown } from "../ui/Icons";
 
 export function FAQ() {
+  const t = useTranslations("Faq");
+  const items = t.raw("items") as Array<{ q: string; a: string }>;
+
   return (
     <section
       id="faq"
@@ -12,28 +15,30 @@ export function FAQ() {
         <div className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-[5fr_7fr] lg:gap-16">
           <div className="lg:pt-2">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700">
-              FAQ
+              {t("kicker")}
             </p>
             <h2
               id="faq-headline"
               className="mt-3 text-balance text-3xl font-bold leading-[1.1] tracking-tight text-slate-900 sm:text-[2.5rem]"
             >
-              Was Pilot:innen oft fragen.
+              {t("headline")}
             </h2>
             <p className="mt-5 max-w-md text-base leading-[1.65] text-slate-700">
-              Steht deine Frage nicht dabei? Schreib an{" "}
-              <a
-                href="mailto:info@wingcast.ch"
-                className="font-medium text-sky-700 underline-offset-2 hover:underline"
-              >
-                info@wingcast.ch
-              </a>{" "}
-              — Antwort kommt von Maurin.
+              {t.rich("intro", {
+                link: (chunks) => (
+                  <a
+                    href="mailto:info@wingcast.ch"
+                    className="font-medium text-sky-700 underline-offset-2 hover:underline"
+                  >
+                    {chunks}
+                  </a>
+                ),
+              })}
             </p>
           </div>
 
           <div className="space-y-2.5">
-            {FAQ_ITEMS.map((item, i) => (
+            {items.map((item, i) => (
               <details
                 key={item.q}
                 className="group overflow-hidden rounded-card border border-slate-200 bg-white open:border-sky-700"

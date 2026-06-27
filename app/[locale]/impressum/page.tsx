@@ -1,11 +1,31 @@
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/sections/Footer";
+import { LegalNotice } from "@/components/LegalNotice";
+import { routing } from "@/i18n/routing";
 
-export const metadata = {
-  title: "Impressum",
-};
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
-export default function ImpressumPage() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Legal" });
+  return { title: t("impressumTitle") };
+}
+
+export default async function ImpressumPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <Navbar />
@@ -14,6 +34,7 @@ export default function ImpressumPage() {
           <h1 className="text-balance text-4xl font-bold leading-[1.1] tracking-tight text-slate-900 sm:text-5xl">
             Impressum
           </h1>
+          <LegalNotice locale={locale} />
 
           <div className="mt-12 space-y-12 text-base leading-[1.7] text-slate-700">
 
