@@ -31,15 +31,15 @@ export function Trust() {
 
             <div className="mt-6 space-y-4 text-base leading-[1.7] text-slate-700">
               <p>
-                Beim morgendlichen Spot-Check fand ich oft den Wald vor lauter
-                Daten nicht — Windgramme, Modelle, Webcams, Talwinde, Inversionen.
-                Zu viele Quellen, zu wenig klare Antwort.
+                Ich flieg selber. Und beim Spot-Check am Morgen hatte ich am
+                Schluss oft mehr Daten als Antworten — Windgramme, Modelle,
+                Webcams, Talwinde, Inversionen. Alles da, nur keine klare Ansage.
               </p>
               <p>
-                Wingcast ist mein Versuch, das Problem mit KI zu lösen —
-                nicht als Heilsversprechen, sondern als ehrliches Werkzeug.
-                Egal ob 15 oder 400 Flüge: die KI übersetzt die Rohdaten in
-                Klartext, statt dich mit hPa-Werten allein zu lassen.{" "}
+                Wingcast ist mein Versuch, das mit KI zu lösen. Kein
+                Heilsversprechen, einfach ein Werkzeug, das hilft. Egal ob 15
+                oder 400 Flüge: die KI macht dir aus den Rohdaten Klartext, statt
+                dass du mit hPa-Werten allein dastehst.{" "}
                 <span className="font-semibold text-slate-900">
                   Decision Support, kein Decision Maker.
                 </span>{" "}
