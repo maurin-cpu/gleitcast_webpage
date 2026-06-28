@@ -11,6 +11,7 @@ import {
 } from "@/lib/schema";
 import { ConsentManager } from "@/components/consent/ConsentManager";
 import { PostHogPageView } from "@/components/analytics/PostHogPageView";
+import { AnalyticsEvents } from "@/components/analytics/AnalyticsEvents";
 import { routing, type Locale } from "@/i18n/routing";
 
 const inter = Inter({
@@ -143,6 +144,7 @@ export default async function LocaleLayout({
           />
           <ConsentManager />
           <PostHogPageView />
+          <AnalyticsEvents />
         </NextIntlClientProvider>
       </body>
     </html>
