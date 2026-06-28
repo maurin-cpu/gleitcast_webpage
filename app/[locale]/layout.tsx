@@ -10,6 +10,7 @@ import {
   jsonLdScript,
 } from "@/lib/schema";
 import { ConsentManager } from "@/components/consent/ConsentManager";
+import { PostHogPageView } from "@/components/analytics/PostHogPageView";
 import { routing, type Locale } from "@/i18n/routing";
 
 const inter = Inter({
@@ -141,6 +142,7 @@ export default async function LocaleLayout({
             dangerouslySetInnerHTML={jsonLdScript(websiteSchema(locale))}
           />
           <ConsentManager />
+          <PostHogPageView />
         </NextIntlClientProvider>
       </body>
     </html>

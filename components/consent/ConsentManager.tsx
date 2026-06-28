@@ -71,16 +71,23 @@ async function startPostHog(key: string, host: string, uiHost: string) {
   const posthog = (await import("posthog-js")).default;
   if (phStarted) {
     posthog.opt_in_capturing();
+    posthog.capture("$pageview");
     return;
   }
   phStarted = true;
   posthog.init(key, {
     api_host: host,
     ui_host: uiHost,
-    capture_pageview: true,
+    // Pageviews senden wir selbst: einmal hier (initialer View) und pro
+    // Client-Navigation in <PostHogPageView>. PostHogs Automatik (`true`)
+    // erfasst keine SPA-Navigationen und verpasst den initialen View, weil
+    // wir erst NACH dem Page-Load (nach Consent) initialisieren.
+    capture_pageview: false,
     capture_pageleave: true,
     persistence: "localStorage+cookie",
   });
+  // Initialer Pageview der Seite, auf der zugestimmt wurde.
+  posthog.capture("$pageview");
 }
 
 async function applyConsent(analytics: ConsentChoice) {
