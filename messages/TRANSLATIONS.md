@@ -1,5 +1,13 @@
 # Übersetzungen FR / IT — Anleitung
 
+> **GRUNDREGEL — gilt für jede Änderung:** Sobald irgendwo sichtbarer Text
+> hinzukommt, geändert oder entfernt wird, **müssen alle drei Sprachdateien
+> (`de.json`, `fr.json`, `it.json`) gemeinsam mitgezogen werden** — gleiche Keys,
+> gleiche Struktur, gleiche Array-Längen. Niemals nur Deutsch ändern und FR/IT
+> „später". Neuer Key in `de.json` → sofort denselben Key in `fr.json` **und**
+> `it.json` mit übersetztem Wert ergänzen. Prüfen mit dem Key-Parity-Check unten
+> und `npm run build` (rendert alle drei Locales).
+
 Die Seite ist mehrsprachig (next-intl). Routing:
 
 - `wingcast.ch/` → Deutsch (Default, ohne Prefix)
@@ -59,3 +67,15 @@ npm run build
 ```
 
 prüft, dass alle drei Sprachen sauber kompilieren.
+
+## Key-Parität prüfen (vor jedem Commit)
+
+Stellt sicher, dass `fr.json` / `it.json` exakt dieselben Keys und Array-Längen
+wie `de.json` haben und keine Tags/Platzhalter verloren gingen:
+
+```
+node scripts/check-i18n.mjs
+```
+
+Gibt fehlende/überzählige Keys und Tag-Abweichungen pro Sprache aus. Muss leer
+sein, bevor committet wird.
