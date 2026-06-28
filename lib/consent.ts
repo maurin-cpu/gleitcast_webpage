@@ -68,7 +68,11 @@ export function writeConsent(analytics: ConsentChoice): ConsentState {
 export const analyticsEnv = {
   gaId: process.env.NEXT_PUBLIC_GA_ID,
   posthogKey: process.env.NEXT_PUBLIC_POSTHOG_KEY,
-  // EU-Cloud (Frankfurt) ist Default — niemals der US-Endpoint.
-  posthogHost: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://eu.i.posthog.com",
+  // Reverse-Proxy: first-party über /ingest (next.config-Rewrites → EU-Cloud
+  // Frankfurt). Relativer Pfad → funktioniert auf wingcast.ch wie auf localhost
+  // und wird von Adblockern nicht erkannt. Per Env überschreibbar (z. B. um im
+  // Notfall direkt auf https://eu.i.posthog.com zu gehen).
+  posthogHost: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "/ingest",
+  // UI-Host für „View recording/session"-Links — bleibt die echte EU-Domain.
   posthogUiHost: "https://eu.posthog.com",
 };
