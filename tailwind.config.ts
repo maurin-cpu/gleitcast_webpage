@@ -38,7 +38,7 @@ const config: Config = {
         flyRed: "#DC2626",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "Plus Jakarta Sans", "system-ui", "sans-serif"],
       },
       maxWidth: {
         prose: "65ch",

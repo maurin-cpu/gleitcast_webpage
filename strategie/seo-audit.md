@@ -161,7 +161,7 @@ Landing-Page-Mindestwert: 600 Wörter, 100 % unique.
 
 | Aspekt | Status | LCP/CLS/INP-Bezug |
 |---|---|---|
-| Inter via `next/font` mit `display: swap` | ✓ | Kein FOIT → bessere LCP |
+| Plus Jakarta Sans via `next/font` mit `display: swap` | ✓ | Kein FOIT → bessere LCP |
 | Hero-Screenshot mit `width="2400"` + `height="1400"` + `loading="eager"` | ✓ | LCP-Image bekommt Priority, CLS-Reserve gesetzt |
 | Spätere Bilder `loading="lazy"` (Trust, HowItWorks-Preview) | ✓ | Verhindert Render-Blocking |
 | Animationen nur `transform` + `opacity` (Hero-orbs, hero-in fade-in-up) | ✓ | GPU-beschleunigt, keine Layout-Reflows → CLS-safe |

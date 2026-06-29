@@ -26,7 +26,6 @@
   body {
     background-color: theme("colors.slate.50");
     color: theme("colors.slate.900");
-    font-feature-settings: "cv11", "ss01";
     text-rendering: optimizeLegibility;
   }
 

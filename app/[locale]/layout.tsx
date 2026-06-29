@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -14,9 +14,9 @@ import { PostHogPageView } from "@/components/analytics/PostHogPageView";
 import { AnalyticsEvents } from "@/components/analytics/AnalyticsEvents";
 import { routing, type Locale } from "@/i18n/routing";
 
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -124,7 +124,7 @@ export default async function LocaleLayout({
   const t = await getTranslations({ locale, namespace: "Layout" });
 
   return (
-    <html lang={HTML_LANG[locale]} className={inter.variable}>
+    <html lang={HTML_LANG[locale]} className={jakarta.variable}>
       <body className="min-h-dvh font-sans antialiased">
         <NextIntlClientProvider>
           <a

@@ -125,17 +125,17 @@ Spätere V2: nur dann Dark Mode, wenn explizit per Toggle und mit eigener, getre
 
 ### 3.1 Schrift-System
 
-**Inter** als Single-Family-System. Gründe:
+**Plus Jakarta Sans** als Single-Family-System. Gründe:
 - Höchste Lesbarkeit auf kleinen Mobil-Bildschirmen (hohe x-Höhe)
 - Free, Variable Font, deutsch + französisch + italienisch (für CH-Roadmap)
 - Tabular Nums für Wetter-Tabellen
-- Bewährt bei Outdoor/Tech-Produkten
+- Eigenständiger, geometrisch-moderner Charakter (kein generischer Default)
 
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
 }
 ```
@@ -143,7 +143,7 @@ Spätere V2: nur dann Dark Mode, wenn explizit per Toggle und mit eigener, getre
 Tailwind:
 ```ts
 fontFamily: {
-  sans: ['Inter', 'sans-serif'],
+  sans: ['Plus Jakarta Sans', 'sans-serif'],
 }
 ```
 
@@ -217,7 +217,7 @@ Tailwind-default ist kompatibel. **Keine Zwischenwerte** (kein `5px`, kein `13px
 | `lg` (Desktop) | 1024 | 960 | 32 |
 | `xl` (Large) | 1280 | 1120 | 32 |
 
-**Content-Max-Width für Reading-Sections:** 720 px (auch auf Desktop) — das ist die Lesbarkeit-Obergrenze für 65–75 Zeichen Inter 18 px.
+**Content-Max-Width für Reading-Sections:** 720 px (auch auf Desktop) — das ist die Lesbarkeit-Obergrenze für 65–75 Zeichen Plus Jakarta Sans 18 px.
 
 ### 5.3 Touch-Targets
 
@@ -328,7 +328,7 @@ Spec:
 
 ### Was ist identisch (single source of truth)
 - **Farbtokens** (CSS-Variablen werden in beiden Codebases via JSON exportiert)
-- **Typografie-Skala** (Inter überall)
+- **Typografie-Skala** (Plus Jakarta Sans überall)
 - **Icon-Set** (Lucide + 5 eigene Tier-Icons)
 - **Spacing-Skala**
 - **Tonalität** (Du-Form, kurze Sätze)
@@ -342,7 +342,7 @@ Spec:
 | Navigation | Top-Bar oder kein Nav (Landing) | Bottom-Tab-Bar (max. 5) |
 | CTA-Position | Inline + Sticky-Bottom (Mobil) | Floating Action Button (FAB) für Primär-Aktion |
 | Modals | Center-Modal, Backdrop blur(0) + scrim 50% | Bottom-Sheet (iOS/Android-konform) |
-| Typografie | Web-Inter via Google Fonts | System-Inter (iOS 17+) oder bundle |
+| Typografie | Plus Jakarta Sans via Google Fonts | Plus Jakarta Sans (gebundelt) |
 | Touch | Hover-States erlaubt (Desktop) | Pressed-States (Scale 0.97 + opacity 0.85) |
 | Back-Behavior | Browser-History | iOS Swipe-Back / Android Predictive Back — nicht übersteuern |
 
@@ -406,7 +406,7 @@ Vor jedem Release einer neuen Page/Component:
 ### Visuell
 - [ ] Kontrast Body ≥ 7:1, Caption ≥ 4.5:1 (Tool: WebAIM Contrast Checker)
 - [ ] Nur Lucide-Icons + 5 Tier-Icons — keine Emoji im UI
-- [ ] Inter-Font, keine anderen Schriften
+- [ ] Plus-Jakarta-Sans-Font, keine anderen Schriften
 - [ ] Spacing in 4-pt-Rhythmus
 - [ ] Keine Box-Shadows auf statischen Cards
 
