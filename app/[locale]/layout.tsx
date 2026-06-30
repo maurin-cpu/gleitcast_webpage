@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -17,6 +17,13 @@ import { routing, type Locale } from "@/i18n/routing";
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
+});
+
+// Inter — bewusst NUR für das Logo/Wordmark (siehe components/ui/Logo.tsx).
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-logo",
   display: "swap",
 });
 
@@ -124,7 +131,7 @@ export default async function LocaleLayout({
   const t = await getTranslations({ locale, namespace: "Layout" });
 
   return (
-    <html lang={HTML_LANG[locale]} className={jakarta.variable}>
+    <html lang={HTML_LANG[locale]} className={`${jakarta.variable} ${inter.variable}`}>
       <body className="min-h-dvh font-sans antialiased">
         <NextIntlClientProvider>
           <a

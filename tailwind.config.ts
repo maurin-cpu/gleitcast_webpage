@@ -39,6 +39,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", "Plus Jakarta Sans", "system-ui", "sans-serif"],
+        // Nur für das Logo/Wordmark (siehe components/ui/Logo.tsx).
+        logo: ["var(--font-logo)", "Inter", "system-ui", "sans-serif"],
       },
       maxWidth: {
         prose: "65ch",

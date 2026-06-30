@@ -20,7 +20,7 @@ export function Logo({ className = "" }: { className?: string }) {
         />
         <circle cx="16" cy="22" r="2" fill="#0F172A" />
       </svg>
-      <span className="text-[20px] font-bold leading-none tracking-[-0.5px]">
+      <span className="font-logo text-[20px] font-bold leading-none tracking-[-0.5px]">
         Wing
         <span className="bg-gradient-to-br from-sky-700 to-sky-600 bg-clip-text text-transparent">
           cast
