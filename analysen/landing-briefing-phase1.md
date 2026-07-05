@@ -171,7 +171,7 @@ Volle Strategie in `seo-plan-mvp.md`. Kern-Targets:
 - **AAA-Kontrast-Niveau für Body-Text** (Outdoor-Lesbarkeit, Light-First)
 - 7:1 Kontrast Body, 4.5:1 Buttons/UI
 
-### Analytics: cookie-frei (Plausible-Stil), kein Tracking
+### Analytics: consent-basiert (GA4 & PostHog laden erst nach Einwilligung) — ursprünglich cookie-frei/Plausible-Stil geplant, in Phase 2/3 auf opt-in GA4 & PostHog umgestellt
 ### In-Scope: Landing + `app/confirm` (Magic-Link-Landing) + `app/impressum` + `app/datenschutz`
 
 ## 10. Codebase-Korrekturen (für Implementierung Phase 2/3)

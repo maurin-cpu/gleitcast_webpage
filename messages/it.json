@@ -187,7 +187,7 @@
       },
       {
         "q": "Cosa succede ai miei dati?",
-        "a": "Salviamo solo la tua e-mail e le regioni scelte. Nessun tracciamento, nessun cookie di terze parti, nessuna cessione. Disiscrizione in qualsiasi momento con un clic."
+        "a": "Salviamo la tua e-mail e le regioni scelte. Gli strumenti di statistica (Google Analytics 4 & PostHog) si caricano solo con il tuo consenso — senza consenso nessun tracciamento. Nessuna cessione a inserzionisti. Disiscrizione in qualsiasi momento con un clic."
       }
     ]
   },

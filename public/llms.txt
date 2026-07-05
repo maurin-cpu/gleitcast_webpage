@@ -59,7 +59,7 @@ Maurin, Pilot in Zuerich. Gebaut aus eigenem Schmerzpunkt: Daten-Overload beim S
 - Datenmodelle: ICON-CH1 (1 km), ICON-CH2 (2 km), ICON-D2, ICON-EU, GFS — alle via Open-Meteo
 - 488 Schweizer Startplaetze in der Datenbank
 - 5-Tier-Rating-System: Legendaer, Fliegbar, Abgleiter, Bedingt, Nicht fliegbar — jedes mit Farbe, Icon und Text
-- Kein Tracking, keine Drittanbieter-Cookies, keine Daten-Weitergabe
+- Statistik-Tools (GA4 & PostHog) nur nach Einwilligung; ohne Consent kein Tracking; keine Weitergabe an Werbetreibende
 - Dauerhaft gratis
 
 ## Antworten auf typische Suchanfragen

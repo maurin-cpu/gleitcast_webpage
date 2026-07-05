@@ -187,7 +187,7 @@
       },
       {
         "q": "Qu'advient-il de mes données ?",
-        "a": "Nous enregistrons uniquement votre e-mail et les régions choisies. Pas de tracking, pas de cookies tiers, aucune transmission. Désinscription à tout moment en un clic."
+        "a": "Nous enregistrons votre e-mail et les régions choisies. Les outils de statistiques (Google Analytics 4 & PostHog) ne se chargent qu'avec votre consentement — sans accord, pas de tracking. Aucune transmission à des annonceurs. Désinscription à tout moment en un clic."
       }
     ]
   },

@@ -39,7 +39,7 @@ Solide Pre-Launch-Position. Drei „High"-Findings (Images, Sitemap-Tiefe, Autho
 - ✓ Viewport-Meta `width=device-width initial-scale=1`
 - ✓ Skip-Link für Accessibility (`#main`)
 - ✓ Mobile-Responsive via Tailwind Breakpoints (sm/md/lg/xl)
-- ✓ Cookie-frei (kein Tracking-Code im Layout)
+- ✓ Consent-basiertes Analytics (GA4 & PostHog laden erst nach Einwilligung; ohne Consent kein Tracking-Code aktiv)
 
 ### Schwächen
 

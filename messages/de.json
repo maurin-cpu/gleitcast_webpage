@@ -187,7 +187,7 @@
       },
       {
         "q": "Was passiert mit meinen Daten?",
-        "a": "Wir speichern nur deine E-Mail und die gewählten Regionen. Kein Tracking, keine Drittanbieter-Cookies, keine Weitergabe. Abmeldung jederzeit mit einem Klick."
+        "a": "Wir speichern deine E-Mail und die gewählten Regionen. Statistik-Tools (Google Analytics 4 & PostHog) laden nur, wenn du zustimmst — ohne Einwilligung kein Tracking. Keine Weitergabe an Werbetreibende. Abmeldung jederzeit mit einem Klick."
       }
     ]
   },

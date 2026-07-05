@@ -185,7 +185,7 @@ MITTWOCH — 🟣 Legendär
 | Wie unterscheidet ihr euch von Burnair / Windy? | Andere zeigen Daten. Wir geben eine Empfehlung — und erklären warum. |
 | Funktioniert das auf meinem iPhone? | Ja, E-Mail mit interaktiven Tabs (Apple Mail, Gmail). Outlook Desktop sieht alle Tage gestapelt. |
 | Wie aktuell sind die Daten? | Wetterdaten 4× täglich, Analyse Sonntagnacht für die kommende Woche. |
-| Speichert ihr meine Daten? | Nur E-Mail + Regionen-Wahl. Kein Tracking, keine Drittanbieter. |
+| Speichert ihr meine Daten? | E-Mail + Regionen-Wahl. Analytics (GA4 & PostHog) nur nach Einwilligung; ohne Consent kein Tracking, keine Weitergabe an Werbetreibende. |
 
 ---
 
