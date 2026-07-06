@@ -35,6 +35,15 @@ declare global {
 let gaStarted = false;
 let phStarted = false;
 
+// Lokale Entwicklung erzeugt sonst Rausch-Events (eigene Domain-Einträge in
+// PostHog, Sessions in GA4). Auf localhost/127.0.0.1 wird deshalb gar kein
+// Analytics geladen — das verhindert Tracking an der Quelle.
+function isLocalhost() {
+  if (typeof window === "undefined") return false;
+  const h = window.location.hostname;
+  return h === "localhost" || h === "127.0.0.1" || h === "[::1]";
+}
+
 function startGA(gaId: string) {
   if (gaStarted) {
     window.gtag?.("consent", "update", { analytics_storage: "granted" });
@@ -92,6 +101,9 @@ async function startPostHog(key: string, host: string, uiHost: string) {
 
 async function applyConsent(analytics: ConsentChoice) {
   const { gaId, posthogKey, posthogHost, posthogUiHost } = analyticsEnv;
+
+  // Auf localhost: Consent respektieren, aber niemals Tracking laden.
+  if (isLocalhost()) return;
 
   if (analytics === "granted") {
     if (gaId) startGA(gaId);
