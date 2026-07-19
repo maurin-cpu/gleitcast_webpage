@@ -1,10 +1,10 @@
 /**
  * Consent-Kern — DSGVO / revDSG.
  *
- * Prinzip: Opt-in. GA4 und PostHog laden NIE vor aktiver Zustimmung.
+ * Prinzip: Opt-in. PostHog lädt NIE vor aktiver Zustimmung.
  * „Notwendig" (Session-Login der App) ist keine abwählbare Kategorie und
  * wird hier nicht gespeichert — es gibt nur eine optionale Kategorie:
- * Statistik/Analyse (GA4 + PostHog gemeinsam).
+ * Statistik/Analyse (PostHog).
  *
  * Wird der Banner inhaltlich erweitert (neue Kategorie, neuer Dienst, neuer
  * Drittstaaten-Transfer), CONSENT_VERSION erhöhen → alte Zustimmung verfällt,
@@ -23,7 +23,7 @@ export type ConsentState = {
   version: number;
   /** Zeitpunkt des Entscheids (Nachweis-Pflicht). ISO-String. */
   decidedAt: string;
-  /** GA4 + PostHog gemeinsam. */
+  /** PostHog. */
   analytics: ConsentChoice;
 };
 
@@ -66,7 +66,6 @@ export function writeConsent(analytics: ConsentChoice): ConsentState {
  * geladen (lokale Entwicklung ohne Tracking).
  */
 export const analyticsEnv = {
-  gaId: process.env.NEXT_PUBLIC_GA_ID,
   posthogKey: process.env.NEXT_PUBLIC_POSTHOG_KEY,
   // Reverse-Proxy: first-party über /ingest (next.config-Rewrites → EU-Cloud
   // Frankfurt). Relativer Pfad → funktioniert auf wingcast.ch wie auf localhost

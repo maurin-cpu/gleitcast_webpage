@@ -140,7 +140,6 @@ export default async function DatenschutzPage({
                   Modell-Training.
                 </li>
                 <li>
-                  <strong>Google Analytics 4</strong> (Google Ireland Ltd.) und{" "}
                   <strong>PostHog</strong> (EU-Cloud, Frankfurt) &mdash; Statistik
                   und Reichweitenmessung der Webseite,{" "}
                   <strong>ausschliesslich mit deiner Einwilligung</strong>. Details
@@ -220,17 +219,11 @@ export default async function DatenschutzPage({
               </p>
               <ul className="mt-3 list-disc space-y-3 pl-6">
                 <li>
-                  <strong>Google Analytics 4</strong> (Google Ireland Ltd.) &mdash;
-                  anonymisierte Reichweiten- und Nutzungsmessung. IP-Anonymisierung
-                  ist aktiviert. Google Consent Mode v2 ist implementiert; ohne
-                  Einwilligung wird kein Analytics-Script geladen.{" "}
-                  <strong>Übermittlung in die USA</strong> (Drittstaat) auf Basis
-                  des EU-US Data Privacy Framework bzw. der EU-Standardvertrags&shy;klauseln.
-                </li>
-                <li>
                   <strong>PostHog</strong> (PostHog Inc., über EU-Cloud in
-                  Frankfurt) &mdash; Produkt-Analyse (z. B. welche Abschnitte
-                  genutzt werden). Datenverarbeitung in der EU.
+                  Frankfurt) &mdash; anonymisierte Reichweiten- und Produkt-Analyse
+                  (z. B. welche Abschnitte genutzt werden). Ohne deine Einwilligung
+                  wird kein Analytics-Script geladen. Datenverarbeitung in der EU
+                  &mdash; keine Übermittlung in die USA.
                 </li>
               </ul>
               <p className="mt-3">

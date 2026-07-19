@@ -187,7 +187,7 @@
       },
       {
         "q": "Qu'advient-il de mes données ?",
-        "a": "Nous enregistrons votre e-mail et les régions choisies. Les outils de statistiques (Google Analytics 4 & PostHog) ne se chargent qu'avec votre consentement — sans accord, pas de tracking. Aucune transmission à des annonceurs. Désinscription à tout moment en un clic."
+        "a": "Nous enregistrons votre e-mail et les régions choisies. Notre outil de statistiques PostHog ne se charge qu'avec votre consentement — sans accord, pas de tracking. Aucune transmission à des annonceurs. Désinscription à tout moment en un clic."
       }
     ]
   },
@@ -219,11 +219,11 @@
   },
   "Consent": {
     "title": "Protection des données — votre choix",
-    "desc": "Nous utilisons en option des <b>outils de statistiques</b> (Google Analytics 4 & PostHog, serveurs UE) pour comprendre comment le site est utilisé et améliorer Wingcast. Ceux-ci ne se chargent <b>qu'après votre consentement</b>. Les fonctions nécessaires n'ont besoin d'aucun tracking. Vous pouvez révoquer à tout moment via « Paramètres des cookies » dans le pied de page. Détails dans la <link>politique de confidentialité</link>.",
+    "desc": "Nous utilisons en option l'<b>outil de statistiques</b> PostHog (serveurs UE) pour comprendre comment le site est utilisé et améliorer Wingcast. Celui-ci ne se charge <b>qu'après votre consentement</b>. Les fonctions nécessaires n'ont besoin d'aucun tracking. Vous pouvez révoquer à tout moment via « Paramètres des cookies » dans le pied de page. Détails dans la <link>politique de confidentialité</link>.",
     "necessaryTitle": "Nécessaire",
     "necessaryBody": "Requis pour le fonctionnement. Aucun cookie sur cette page ; dans l'app, un cookie de session de connexion. Toujours actif.",
     "analyticsTitle": "Statistiques & analyse",
-    "analyticsBody": "Google Analytics 4 et PostHog (UE). Mesure d'usage anonymisée. GA4 transfère des données aux États-Unis (EU-US Data Privacy Framework).",
+    "analyticsBody": "PostHog (cloud UE, Francfort). Mesure d'usage anonymisée. Aucun transfert de données vers les États-Unis.",
     "save": "Enregistrer la sélection",
     "acceptAll": "Tout accepter",
     "reject": "Refuser",

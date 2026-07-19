@@ -187,7 +187,7 @@
       },
       {
         "q": "Cosa succede ai miei dati?",
-        "a": "Salviamo la tua e-mail e le regioni scelte. Gli strumenti di statistica (Google Analytics 4 & PostHog) si caricano solo con il tuo consenso — senza consenso nessun tracciamento. Nessuna cessione a inserzionisti. Disiscrizione in qualsiasi momento con un clic."
+        "a": "Salviamo la tua e-mail e le regioni scelte. Il nostro strumento di statistica PostHog si carica solo con il tuo consenso — senza consenso nessun tracciamento. Nessuna cessione a inserzionisti. Disiscrizione in qualsiasi momento con un clic."
       }
     ]
   },
@@ -219,11 +219,11 @@
   },
   "Consent": {
     "title": "Privacy — la tua scelta",
-    "desc": "Utilizziamo opzionalmente <b>strumenti di statistica</b> (Google Analytics 4 & PostHog, server UE) per capire come viene usato il sito e migliorare Wingcast. Questi si caricano <b>solo dopo il tuo consenso</b>. Le funzioni necessarie non richiedono tracciamento. Puoi revocare in qualsiasi momento tramite «Impostazioni cookie» nel footer. Dettagli nell'<link>informativa sulla privacy</link>.",
+    "desc": "Utilizziamo opzionalmente lo <b>strumento di statistica</b> PostHog (server UE) per capire come viene usato il sito e migliorare Wingcast. Questo si carica <b>solo dopo il tuo consenso</b>. Le funzioni necessarie non richiedono tracciamento. Puoi revocare in qualsiasi momento tramite «Impostazioni cookie» nel footer. Dettagli nell'<link>informativa sulla privacy</link>.",
     "necessaryTitle": "Necessari",
     "necessaryBody": "Richiesti per il funzionamento. Su questo sito nessun cookie; nell'app un cookie di sessione di login. Sempre attivi.",
     "analyticsTitle": "Statistica & analisi",
-    "analyticsBody": "Google Analytics 4 e PostHog (UE). Misurazione anonimizzata dell'utilizzo. GA4 trasferisce dati negli USA (EU-US Data Privacy Framework).",
+    "analyticsBody": "PostHog (cloud UE, Francoforte). Misurazione anonimizzata dell'utilizzo. Nessun trasferimento di dati negli USA.",
     "save": "Salva la selezione",
     "acceptAll": "Accetta tutti",
     "reject": "Rifiuta",

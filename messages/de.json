@@ -187,7 +187,7 @@
       },
       {
         "q": "Was passiert mit meinen Daten?",
-        "a": "Wir speichern deine E-Mail und die gewählten Regionen. Statistik-Tools (Google Analytics 4 & PostHog) laden nur, wenn du zustimmst — ohne Einwilligung kein Tracking. Keine Weitergabe an Werbetreibende. Abmeldung jederzeit mit einem Klick."
+        "a": "Wir speichern deine E-Mail und die gewählten Regionen. Das Statistik-Tool PostHog lädt nur, wenn du zustimmst — ohne Einwilligung kein Tracking. Keine Weitergabe an Werbetreibende. Abmeldung jederzeit mit einem Klick."
       }
     ]
   },
@@ -219,11 +219,11 @@
   },
   "Consent": {
     "title": "Datenschutz — deine Wahl",
-    "desc": "Wir nutzen optional <b>Statistik-Tools</b> (Google Analytics 4 & PostHog, EU-Server), um zu verstehen, wie die Seite genutzt wird, und Wingcast zu verbessern. Diese laden <b>erst nach deiner Zustimmung</b>. Notwendige Funktionen brauchen kein Tracking. Du kannst jederzeit über „Cookie-Einstellungen“ im Footer widerrufen. Details in der <link>Datenschutzerklärung</link>.",
+    "desc": "Wir nutzen optional das <b>Statistik-Tool</b> PostHog (EU-Server), um zu verstehen, wie die Seite genutzt wird, und Wingcast zu verbessern. Es lädt <b>erst nach deiner Zustimmung</b>. Notwendige Funktionen brauchen kein Tracking. Du kannst jederzeit über „Cookie-Einstellungen“ im Footer widerrufen. Details in der <link>Datenschutzerklärung</link>.",
     "necessaryTitle": "Notwendig",
     "necessaryBody": "Für den Betrieb erforderlich. Auf dieser Seite kein Cookie; in der App ein Login-Session-Cookie. Immer aktiv.",
     "analyticsTitle": "Statistik & Analyse",
-    "analyticsBody": "Google Analytics 4 und PostHog (EU). Anonymisierte Nutzungsmessung. GA4 überträgt Daten in die USA (EU-US Data Privacy Framework).",
+    "analyticsBody": "PostHog (EU-Cloud, Frankfurt). Anonymisierte Nutzungsmessung. Keine Datenübertragung in die USA.",
     "save": "Auswahl speichern",
     "acceptAll": "Alle akzeptieren",
     "reject": "Ablehnen",
