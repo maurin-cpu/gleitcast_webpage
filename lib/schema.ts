@@ -170,20 +170,29 @@ export function webPageSchema(locale: string) {
 }
 
 // ── Wetterkunde-Hub und Pillar-Artikel ────────────────────────────────────
-// Die Wetterkunde ist DE-only (siehe lib/wetterkunde.ts), deshalb hier keine
-// Locale-Varianten: alle URLs zeigen auf die deutsche Fassung ohne Prefix.
+// DE ohne Prefix (wingcast.ch/wetterkunde), FR/IT mit Prefix — passend zu
+// localePrefix: "as-needed" im Routing.
 
-const WETTERKUNDE_URL = `${SITE_URL}/wetterkunde`;
+function wetterkundeUrl(locale: string): string {
+  return locale === "de"
+    ? `${SITE_URL}/wetterkunde`
+    : `${SITE_URL}/${locale}/wetterkunde`;
+}
 
-export function wetterkundeHubSchema(description: string, name: string) {
+export function wetterkundeHubSchema(
+  description: string,
+  name: string,
+  locale = "de",
+) {
+  const url = wetterkundeUrl(locale);
   return {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": `${WETTERKUNDE_URL}/#webpage`,
-    url: WETTERKUNDE_URL,
+    "@id": `${url}/#webpage`,
+    url,
     name,
     description,
-    inLanguage: "de-CH",
+    inLanguage: inLanguage(locale),
     isPartOf: { "@id": `${SITE_URL}/#website` },
     publisher: { "@id": `${SITE_URL}/#organization` },
   };
@@ -202,8 +211,9 @@ interface ArticleSchemaInput {
 
 // Article — ohne das ist ein Pillar für AI-Systeme nur ein Textblock
 // (GEO-ANALYSIS-2026-08-02_wetterkunde.md §6).
-export function articleSchema(a: ArticleSchemaInput) {
-  const url = `${WETTERKUNDE_URL}/${a.slug}`;
+export function articleSchema(a: ArticleSchemaInput, locale = "de") {
+  const hub = wetterkundeUrl(locale);
+  const url = `${hub}/${a.slug}`;
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -212,12 +222,12 @@ export function articleSchema(a: ArticleSchemaInput) {
     description: a.metaDescription,
     url,
     mainEntityOfPage: { "@type": "WebPage", "@id": `${url}/#webpage` },
-    inLanguage: "de-CH",
+    inLanguage: inLanguage(locale),
     datePublished: a.veroeffentlicht,
     dateModified: a.stand,
     author: { "@id": `${SITE_URL}/#maurin` },
     publisher: { "@id": `${SITE_URL}/#organization` },
-    isPartOf: { "@id": `${WETTERKUNDE_URL}/#webpage` },
+    isPartOf: { "@id": `${hub}/#webpage` },
     ...(a.bild ? { image: `${SITE_URL}${a.bild}` } : {}),
   };
 }
@@ -243,12 +253,13 @@ export function articleFaqSchema(
   slug: string,
   items: ReadonlyArray<{ q: string; a: string }>,
   dateModified: string,
+  locale = "de",
 ) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "@id": `${WETTERKUNDE_URL}/${slug}/#faq`,
-    inLanguage: "de-CH",
+    "@id": `${wetterkundeUrl(locale)}/${slug}/#faq`,
+    inLanguage: inLanguage(locale),
     dateModified,
     mainEntity: items.map((item) => ({
       "@type": "Question",

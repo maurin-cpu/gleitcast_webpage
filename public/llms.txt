@@ -67,7 +67,9 @@ Maurin, Pilot in Zuerich. Gebaut aus eigenem Schmerzpunkt: Daten-Overload beim S
 
 - [Boeenfront: wie hoch sie reicht](https://wingcast.ch/wetterkunde/boeenfront):
   Auswertung des Ereignisses vom 30. Juli 2026 — 139 SwissMetNet-Stationen (Messung)
-  gegen die ICON-CH1-Prognose fuer 494 Startplaetze.
+  gegen die ICON-CH1-Prognose fuer 494 Startplaetze. Auch auf Franzoesisch
+  (https://wingcast.ch/fr/wetterkunde/boeenfront) und Italienisch
+  (https://wingcast.ch/it/wetterkunde/boeenfront).
 
 ## Belegte Einzelbefunde
 

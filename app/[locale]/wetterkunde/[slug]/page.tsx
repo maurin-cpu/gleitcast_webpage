@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/sections/Footer";
+import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { getAllSlugs, getArticle } from "@/lib/wetterkunde";
+import {
+  getAllSlugs,
+  getArticle,
+  getArticleLocales,
+  type WkLocale,
+} from "@/lib/wetterkunde";
 import {
   articleSchema,
   articleFaqSchema,
@@ -13,10 +18,26 @@ import {
   jsonLdScript,
 } from "@/lib/schema";
 
-// DE-only, wie der Hub. Entwürfe bauen mit, sind aber noindex (s. unten) und
-// stehen weder im Hub noch in der Sitemap.
+const SITE_URL = "https://wingcast.ch";
+
+const HREFLANG: Record<WkLocale, string> = {
+  de: "de-CH",
+  fr: "fr-CH",
+  it: "it-CH",
+};
+
+// Default-Locale ohne Prefix, fr/it mit Prefix (localePrefix: "as-needed").
+function prefixed(locale: string, path: string): string {
+  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+  return `${prefix}${path}`;
+}
+
+// Pro Sprache nur die Slugs, für die eine Datei existiert. Entwürfe bauen mit,
+// sind aber noindex (s. unten) und stehen weder im Hub noch in der Sitemap.
 export function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ locale: routing.defaultLocale, slug }));
+  return routing.locales.flatMap((locale) =>
+    getAllSlugs(locale as WkLocale).map((slug) => ({ locale, slug })),
+  );
 }
 
 export async function generateMetadata({
@@ -24,17 +45,31 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
-  const article = getArticle(slug);
+  const { locale, slug } = await params;
+  const article = getArticle(slug, locale as WkLocale);
   if (!article) return {};
 
-  const url = `https://wingcast.ch/wetterkunde/${slug}`;
+  const url = `${SITE_URL}${prefixed(locale, `/wetterkunde/${slug}`)}`;
   const isDraft = article.status === "draft";
+  const published = getArticleLocales(slug);
 
   return {
     title: article.metaTitle,
     description: article.metaDescription,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      // hreflang nur für Sprachen, in denen der Artikel publiziert ist.
+      ...(published.length > 1
+        ? {
+            languages: Object.fromEntries(
+              published.map((l) => [
+                HREFLANG[l],
+                `${SITE_URL}${prefixed(l, `/wetterkunde/${slug}`)}`,
+              ]),
+            ),
+          }
+        : {}),
+    },
     // Entwürfe dürfen nicht in den Index — sie sind nur zur Vorschau erreichbar.
     ...(isDraft ? { robots: { index: false, follow: false } } : {}),
     openGraph: {
@@ -58,10 +93,9 @@ export default async function WetterkundeArtikel({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  if (locale !== routing.defaultLocale) notFound();
   setRequestLocale(locale);
 
-  const article = getArticle(slug);
+  const article = getArticle(slug, locale as WkLocale);
   if (!article) notFound();
 
   const t = await getTranslations({ locale, namespace: "Wetterkunde" });
@@ -106,23 +140,29 @@ export default async function WetterkundeArtikel({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={jsonLdScript(
-          articleSchema({
-            slug: article.slug,
-            titel: article.titel,
-            metaDescription: article.metaDescription,
-            veroeffentlicht: article.veroeffentlicht,
-            stand: article.stand,
-            bild: article.ogBild,
-          }),
+          articleSchema(
+            {
+              slug: article.slug,
+              titel: article.titel,
+              metaDescription: article.metaDescription,
+              veroeffentlicht: article.veroeffentlicht,
+              stand: article.stand,
+              bild: article.ogBild,
+            },
+            locale,
+          ),
         )}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={jsonLdScript(
           breadcrumbSchema([
-            { name: "Wingcast", path: "/" },
-            { name: t("hubTitle"), path: "/wetterkunde" },
-            { name: article.titel, path: `/wetterkunde/${article.slug}` },
+            { name: "Wingcast", path: prefixed(locale, "") || "/" },
+            { name: t("hubTitle"), path: prefixed(locale, "/wetterkunde") },
+            {
+              name: article.titel,
+              path: prefixed(locale, `/wetterkunde/${article.slug}`),
+            },
           ]),
         )}
       />
@@ -130,7 +170,7 @@ export default async function WetterkundeArtikel({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={jsonLdScript(
-            articleFaqSchema(article.slug, article.faq, article.stand),
+            articleFaqSchema(article.slug, article.faq, article.stand, locale),
           )}
         />
       )}

@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/sections/Footer";
+import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { getPublishedArticles } from "@/lib/wetterkunde";
+import { getPublishedArticles, type WkLocale } from "@/lib/wetterkunde";
 import { wetterkundeHubSchema, breadcrumbSchema, jsonLdScript } from "@/lib/schema";
 
-// Der Hub ist DE-only. /fr/wetterkunde und /it/wetterkunde gibt es nicht,
-// solange keine Übersetzung freigegeben ist — deshalb nur der de-Param.
+const SITE_URL = "https://wingcast.ch";
+
+// Default-Locale ohne Prefix, fr/it mit Prefix (localePrefix: "as-needed").
+function prefixed(locale: string, path: string): string {
+  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+  return `${prefix}${path}`;
+}
+
 export function generateStaticParams() {
-  return [{ locale: routing.defaultLocale }];
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({
@@ -24,7 +29,14 @@ export async function generateMetadata({
   return {
     title: t("hubMetaTitle"),
     description: t("hubMetaDescription"),
-    alternates: { canonical: "https://wingcast.ch/wetterkunde" },
+    alternates: {
+      canonical: `${SITE_URL}${prefixed(locale, "/wetterkunde")}`,
+      languages: {
+        "de-CH": `${SITE_URL}/wetterkunde`,
+        "fr-CH": `${SITE_URL}/fr/wetterkunde`,
+        "it-CH": `${SITE_URL}/it/wetterkunde`,
+      },
+    },
   };
 }
 
@@ -34,11 +46,10 @@ export default async function WetterkundeHub({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  if (locale !== routing.defaultLocale) notFound();
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "Wetterkunde" });
-  const articles = getPublishedArticles();
+  const articles = getPublishedArticles(locale as WkLocale);
 
   return (
     <>
@@ -89,15 +100,15 @@ export default async function WetterkundeHub({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={jsonLdScript(
-          wetterkundeHubSchema(t("hubMetaDescription"), t("hubTitle")),
+          wetterkundeHubSchema(t("hubMetaDescription"), t("hubTitle"), locale),
         )}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={jsonLdScript(
           breadcrumbSchema([
-            { name: "Wingcast", path: "/" },
-            { name: t("hubTitle"), path: "/wetterkunde" },
+            { name: "Wingcast", path: prefixed(locale, "") || "/" },
+            { name: t("hubTitle"), path: prefixed(locale, "/wetterkunde") },
           ]),
         )}
       />

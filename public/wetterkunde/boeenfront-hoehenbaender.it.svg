@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" role="img" aria-label="Balkendiagramm: Anteil der Stationen mit vollstaendiger Front-Signatur je Hoehenband. Gemessen 47 Prozent unter 1000 Metern, 21 Prozent bis 1500, 6 Prozent bis 2000 und 0 Prozent in allen Baendern darueber. Die Prognose zeigt in denselben Baendern 88, 74, 78, 52, 35 und 14 Prozent.">
+<defs><pattern id="hatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#CBD5E1"/><line x1="0" y1="0" x2="0" y2="7" stroke="#94A3B8" stroke-width="3.5"/></pattern></defs>
+<rect width="900" height="480" fill="#FFFFFF"/>
+<rect x="168" y="20" width="16" height="16" rx="2" fill="#0369A1"/>
+<text x="192" y="33" font-family="Plus Jakarta Sans,Helvetica,Arial,sans-serif" font-size="15" font-weight="600" fill="#334155">Misurato · 139 stazioni SwissMetNet</text>
+<rect x="498" y="20" width="16" height="16" rx="2" fill="url(#hatch)" stroke="#94A3B8"/>
+<text x="522" y="33" font-family="Plus Jakarta Sans,Helvetica,Arial,sans-serif" font-size="15" font-weight="600" fill="#334155">Previsione ICON-CH1 · 494 siti</text>
+<line x1="168.0" y1="62" x2="168.0" y2="432" stroke="#E2E8F0" stroke-width="1"/>
+<text x="168.0" y="454" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#64748B">0 %</text>
+<line x1="327.0" y1="62" x2="327.0" y2="432" stroke="#E2E8F0" stroke-width="1"/>
+<text x="327.0" y="454" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#64748B">25 %</text>
+<line x1="486.0" y1="62" x2="486.0" y2="432" stroke="#E2E8F0" stroke-width="1"/>
+<text x="486.0" y="454" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#64748B">50 %</text>
+<line x1="645.0" y1="62" x2="645.0" y2="432" stroke="#E2E8F0" stroke-width="1"/>
+<text x="645.0" y="454" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#64748B">75 %</text>
+<line x1="804.0" y1="62" x2="804.0" y2="432" stroke="#E2E8F0" stroke-width="1"/>
+<text x="804.0" y="454" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#64748B">100 %</text>
+<text x="152" y="90" text-anchor="end" font-family="Plus Jakarta Sans,Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#0F172A">oltre 3'000 m</text>
+<text x="152" y="108" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12" fill="#64748B">n = 4 / 7</text>
+<text x="176" y="89" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" font-weight="700" fill="#0369A1">0 %</text>
+<rect x="168" y="100" width="89.0" height="20" fill="url(#hatch)" stroke="#94A3B8" stroke-width="1"/>
+<text x="265.0" y="115" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" font-weight="700" fill="#64748B">14 %</text>
+<text x="152" y="152" text-anchor="end" font-family="Plus Jakarta Sans,Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#0F172A">2'500–3'000 m</text>
+<text x="152" y="170" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12" fill="#64748B">n = 6 / 34</text>
+<text x="176" y="151" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" font-weight="700" fill="#0369A1">0 %</text>
+<rect x="168" y="162" width="222.6" height="20" fill="url(#hatch)" stroke="#94A3B8" stroke-width="1"/>
+<text x="398.6" y="177" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" font-weight="700" fill="#64748B">35 %</text>
+<text x="152" y="214" text-anchor="end" font-family="Plus Jakarta Sans,Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#0F172A">2'000–2'500 m</text>
+<text x="152" y="232" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12" fill="#64748B">n = 6 / 164</text>
+<text x="176" y="213" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" font-weight="700" fill="#0369A1">0 %</text>
+<rect x="168" y="224" width="330.7" height="20" fill="url(#hatch)" stroke="#94A3B8" stroke-width="1"/>
+<text x="506.7" y="239" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" font-weight="700" fill="#64748B">52 %</text>
+<text x="152" y="276" text-anchor="end" font-family="Plus Jakarta Sans,Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#0F172A">1'500–2'000 m</text>
+<text x="152" y="294" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12" fill="#64748B">n = 16 / 174</text>
+<rect x="168" y="260" width="38.2" height="20" fill="#0369A1"/>
+<text x="214.2" y="275" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" font-weight="700" fill="#0369A1">6 %</text>
+<rect x="168" y="286" width="496.1" height="20" fill="url(#hatch)" stroke="#94A3B8" stroke-width="1"/>
+<text x="672.1" y="301" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" font-weight="700" fill="#64748B">78 %</text>
+<text x="152" y="338" text-anchor="end" font-family="Plus Jakarta Sans,Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#0F172A">1'000–1'500 m</text>
+<text x="152" y="356" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12" fill="#64748B">n = 24 / 99</text>
+<rect x="168" y="322" width="133.6" height="20" fill="#0369A1"/>
+<text x="309.6" y="337" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" font-weight="700" fill="#0369A1">21 %</text>
+<rect x="168" y="348" width="470.6" height="20" fill="url(#hatch)" stroke="#94A3B8" stroke-width="1"/>
+<text x="646.6" y="363" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" font-weight="700" fill="#64748B">74 %</text>
+<text x="152" y="400" text-anchor="end" font-family="Plus Jakarta Sans,Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#0F172A">sotto 1'000 m</text>
+<text x="152" y="418" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12" fill="#64748B">n = 83 / 16</text>
+<rect x="168" y="384" width="298.9" height="20" fill="#0369A1"/>
+<text x="474.9" y="399" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" font-weight="700" fill="#0369A1">47 %</text>
+<rect x="168" y="410" width="559.7" height="20" fill="url(#hatch)" stroke="#94A3B8" stroke-width="1"/>
+<text x="735.7" y="425" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" font-weight="700" fill="#64748B">88 %</text>
+</svg>

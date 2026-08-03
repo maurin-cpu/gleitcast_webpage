@@ -1,6 +1,10 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
-import { getPublishedArticles } from "@/lib/wetterkunde";
+import {
+  getArticleLocales,
+  getPublishedArticles,
+  type WkLocale,
+} from "@/lib/wetterkunde";
 
 const SITE_URL = "https://wingcast.ch";
 
@@ -43,26 +47,47 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  // Wetterkunde ist DE-only: kein hreflang-Block, kein fr/it-Eintrag. Entwürfe
+  // Wetterkunde pro Sprache: Hub in allen Locales, Artikel nur dort, wo eine
+  // publizierte Fassung existiert — hreflang entsprechend. Entwürfe
   // (status != published) bleiben draussen — sie sind zusätzlich auf noindex.
-  const articles = getPublishedArticles();
-  const wetterkunde: MetadataRoute.Sitemap =
-    articles.length === 0
-      ? []
-      : [
-          {
-            url: `${SITE_URL}/wetterkunde`,
-            lastModified,
-            changeFrequency: "weekly" as const,
-            priority: 0.7,
-          },
-          ...articles.map((a) => ({
-            url: `${SITE_URL}/wetterkunde/${a.slug}`,
-            lastModified: new Date(a.stand),
-            changeFrequency: "monthly" as const,
-            priority: 0.8,
-          })),
-        ];
+  const hreflang: Record<WkLocale, string> = {
+    de: "de-CH",
+    fr: "fr-CH",
+    it: "it-CH",
+  };
+  const wetterkunde: MetadataRoute.Sitemap = [];
+  for (const locale of routing.locales) {
+    const articles = getPublishedArticles(locale as WkLocale);
+    if (articles.length === 0) continue;
+    wetterkunde.push({
+      url: localized("/wetterkunde", locale),
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+      alternates: { languages: languages("/wetterkunde") },
+    });
+    for (const a of articles) {
+      const locs = getArticleLocales(a.slug);
+      wetterkunde.push({
+        url: localized(`/wetterkunde/${a.slug}`, locale),
+        lastModified: new Date(a.stand),
+        changeFrequency: "monthly" as const,
+        priority: 0.8,
+        ...(locs.length > 1
+          ? {
+              alternates: {
+                languages: Object.fromEntries(
+                  locs.map((l) => [
+                    hreflang[l],
+                    localized(`/wetterkunde/${a.slug}`, l),
+                  ]),
+                ),
+              },
+            }
+          : {}),
+      });
+    }
+  }
 
   return [...localized3, ...wetterkunde];
 }

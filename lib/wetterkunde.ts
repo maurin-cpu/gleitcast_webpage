@@ -6,7 +6,8 @@ import { Marked } from "marked";
 /**
  * Wetterkunde — Pillar-Artikel aus Markdown.
  *
- * Ablage: content/wetterkunde/<slug>.md (Deutsch). Ein Artikel geht live,
+ * Ablage: content/wetterkunde/<slug>.md (Deutsch, führende Fassung) plus
+ * <slug>.fr.md / <slug>.it.md für die Übersetzungen. Ein Artikel geht live,
  * sobald die Datei dort liegt UND im Frontmatter `status: published` steht.
  * `status: draft` wird lokal gerendert (Vorschau unter /wetterkunde/<slug>),
  * erscheint aber weder im Hub noch in der Sitemap und ist auf noindex.
@@ -14,12 +15,16 @@ import { Marked } from "marked";
  * Frontmatter-Konvention wie im Marketing-Repo (deutsche Schlüssel):
  *   titel, slug, ziel_keyword, typ, sprache, status, autor, stand,
  *   meta_title, meta_description, og_bild, schema[]
- *
- * Der Ordner ist bewusst NUR Deutsch: die Wetterkunde ist DE-only, bis eine
- * Übersetzung freigegeben ist (webseite/00-README.md im Marketing-Repo).
  */
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "wetterkunde");
+
+export type WkLocale = "de" | "fr" | "it";
+export const WK_LOCALES: readonly WkLocale[] = ["de", "fr", "it"] as const;
+
+function fileNameFor(slug: string, locale: WkLocale): string {
+  return locale === "de" ? `${slug}.md` : `${slug}.${locale}.md`;
+}
 
 export type ArticleStatus = "draft" | "published";
 
@@ -49,8 +54,8 @@ export interface Article extends ArticleMeta {
 /** Eigene marked-Instanz — GFM-Tabellen an, Smartypants aus (Typografie steht im Text). */
 const marked = new Marked({ gfm: true, breaks: false });
 
-function readFile(slug: string): string | null {
-  const file = path.join(CONTENT_DIR, `${slug}.md`);
+function readFile(slug: string, locale: WkLocale): string | null {
+  const file = path.join(CONTENT_DIR, fileNameFor(slug, locale));
   if (!fs.existsSync(file)) return null;
   return fs.readFileSync(file, "utf8");
 }
@@ -89,12 +94,14 @@ function readingTime(md: string): number {
 /**
  * FAQ für das FAQPage-Schema. Konvention im Artikel:
  *
- *   ## Häufige Fragen
+ *   ## Häufige Fragen   (fr: Questions fréquentes · it: Domande frequenti)
  *   **Frage?**
  *   Antwort in einer Zeile.
  */
 function extractFaq(md: string): Array<{ q: string; a: string }> {
-  const section = md.split(/^##\s+Häufige Fragen\s*$/m)[1];
+  const section = md.split(
+    /^##\s+(?:Häufige Fragen|Questions fréquentes|Domande frequenti)\s*$/m,
+  )[1];
   if (!section) return [];
   const body = section.split(/^##\s+/m)[0];
   const items: Array<{ q: string; a: string }> = [];
@@ -158,16 +165,20 @@ function parse(slug: string, raw: string): Article {
   };
 }
 
-/** Alle Artikel im Ordner — auch Entwürfe. Neueste zuerst. */
-export function getAllArticles(): Article[] {
+/** Alle Artikel einer Sprache — auch Entwürfe. Neueste zuerst. */
+export function getAllArticles(locale: WkLocale = "de"): Article[] {
   if (!fs.existsSync(CONTENT_DIR)) return [];
+  const suffix = locale === "de" ? /\.md$/ : new RegExp(`\\.${locale}\\.md$`);
   return fs
     .readdirSync(CONTENT_DIR)
-    // .fr.md / .it.md sind Übersetzungen und bleiben liegen, bis FR/IT freigegeben ist.
-    .filter((f) => f.endsWith(".md") && !/\.(fr|it)\.md$/.test(f) && f !== "README.md")
-    .map((f) => f.replace(/\.md$/, ""))
+    .filter((f) => {
+      if (f === "README.md") return false;
+      if (locale === "de") return f.endsWith(".md") && !/\.(fr|it)\.md$/.test(f);
+      return f.endsWith(`.${locale}.md`);
+    })
+    .map((f) => f.replace(suffix, ""))
     .map((slug) => {
-      const raw = readFile(slug);
+      const raw = readFile(slug, locale);
       return raw ? parse(slug, raw) : null;
     })
     .filter((a): a is Article => a !== null)
@@ -175,16 +186,25 @@ export function getAllArticles(): Article[] {
 }
 
 /** Nur was freigegeben ist — Hub, Sitemap und llms.txt arbeiten damit. */
-export function getPublishedArticles(): Article[] {
-  return getAllArticles().filter((a) => a.status === "published");
+export function getPublishedArticles(locale: WkLocale = "de"): Article[] {
+  return getAllArticles(locale).filter((a) => a.status === "published");
 }
 
-export function getArticle(slug: string): Article | null {
-  const raw = readFile(slug);
+export function getArticle(slug: string, locale: WkLocale = "de"): Article | null {
+  const raw = readFile(slug, locale);
   return raw ? parse(slug, raw) : null;
 }
 
 /** Slugs für generateStaticParams — Entwürfe eingeschlossen, damit die Vorschau baut. */
-export function getAllSlugs(): string[] {
-  return getAllArticles().map((a) => a.slug);
+export function getAllSlugs(locale: WkLocale = "de"): string[] {
+  return getAllArticles(locale).map((a) => a.slug);
+}
+
+/** In welchen Sprachen ist dieser Artikel PUBLIZIERT? Für hreflang und Sitemap. */
+export function getArticleLocales(slug: string): WkLocale[] {
+  return WK_LOCALES.filter((locale) => {
+    const raw = readFile(slug, locale);
+    if (!raw) return false;
+    return parse(slug, raw).status === "published";
+  });
 }

@@ -20,6 +20,7 @@
     "howItWorks": "So funktioniert's",
     "cast": "Cast",
     "faq": "FAQ",
+    "wetterkunde": "Wetterkunde",
     "toApp": "Zur App"
   },
   "Hero": {
@@ -201,6 +202,7 @@
     "linkCastPreview": "Cast-Vorschau",
     "linkBetaFeedback": "Beta-Feedback",
     "linkFaq": "FAQ",
+    "linkWetterkunde": "Wetterkunde",
     "linkLiveDashboard": "Live-Dashboard",
     "linkCast": "Cast",
     "linkSpotsMap": "Spots-Karte",

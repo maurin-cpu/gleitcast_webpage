@@ -29,11 +29,14 @@ export function Footer() {
     { day: "numeric", month: "long", year: "numeric" },
   );
 
+  // Volle Pfade statt reiner #-Anker: der Footer steht auch auf
+  // /wetterkunde-Seiten — dort liefen nackte Anker ins Leere.
   const productLinks: FooterLink[] = [
-    { label: t("linkHowItWorks"), href: "#solution", kind: "anchor" },
-    { label: t("linkCastPreview"), href: "#preview", kind: "anchor" },
-    { label: t("linkBetaFeedback"), href: "#feedback", kind: "anchor" },
-    { label: t("linkFaq"), href: "#faq", kind: "anchor" },
+    { label: t("linkHowItWorks"), href: "/#solution", kind: "internal" },
+    { label: t("linkCastPreview"), href: "/#preview", kind: "internal" },
+    { label: t("linkBetaFeedback"), href: "/#feedback", kind: "internal" },
+    { label: t("linkFaq"), href: "/#faq", kind: "internal" },
+    { label: t("linkWetterkunde"), href: "/wetterkunde", kind: "internal" },
   ];
 
   const appLinks: FooterLink[] = [
