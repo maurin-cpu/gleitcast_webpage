@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
+import { getPublishedArticles } from "@/lib/wetterkunde";
 
 const SITE_URL = "https://wingcast.ch";
 
@@ -32,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/nutzungsbedingungen", changeFrequency: "yearly", priority: 0.3 },
   ];
 
-  return pages.flatMap((page) =>
+  const localized3 = pages.flatMap((page) =>
     routing.locales.map((locale) => ({
       url: localized(page.path === "" ? "/" : page.path, locale),
       lastModified,
@@ -41,4 +42,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: languages(page.path === "" ? "/" : page.path) },
     })),
   );
+
+  // Wetterkunde ist DE-only: kein hreflang-Block, kein fr/it-Eintrag. Entwürfe
+  // (status != published) bleiben draussen — sie sind zusätzlich auf noindex.
+  const articles = getPublishedArticles();
+  const wetterkunde: MetadataRoute.Sitemap =
+    articles.length === 0
+      ? []
+      : [
+          {
+            url: `${SITE_URL}/wetterkunde`,
+            lastModified,
+            changeFrequency: "weekly" as const,
+            priority: 0.7,
+          },
+          ...articles.map((a) => ({
+            url: `${SITE_URL}/wetterkunde/${a.slug}`,
+            lastModified: new Date(a.stand),
+            changeFrequency: "monthly" as const,
+            priority: 0.8,
+          })),
+        ];
+
+  return [...localized3, ...wetterkunde];
 }

@@ -61,7 +61,7 @@ export function organizationSchema(locale: string) {
     url: SITE_URL,
     logo: `${SITE_URL}/og-image.png`,
     description:
-      "KI-Flugwetter-Cast für Schweizer Gleitschirmpiloten — 5-Tage-Fliegbarkeits-Forecast für 488 Startplätze, automatisch sortiert mit Begründung in Klartext.",
+      "KI-Flugwetter-Cast für Schweizer Gleitschirmpiloten — 5-Tage-Fliegbarkeits-Forecast für 494 Startplätze, automatisch sortiert mit Begründung in Klartext.",
     email: "info@wingcast.ch",
     founder: { "@id": `${SITE_URL}/#maurin` },
     areaServed: {
@@ -96,7 +96,7 @@ export function softwareApplicationSchema(locale: string) {
     operatingSystem: "Web",
     url: APP_URL,
     description:
-      "KI-bewertetes 5-Tage-Flugwetter für 488 Schweizer Startplätze. Automatische Sortierung nach Fliegbarkeit, Begründung in Klartext, optional E-Mail-Cast (Briefing) an frei wählbaren Wochentagen.",
+      "KI-bewertetes 5-Tage-Flugwetter für 494 Schweizer Startplätze. Automatische Sortierung nach Fliegbarkeit, Begründung in Klartext, optional E-Mail-Cast (Briefing) an frei wählbaren Wochentagen.",
     inLanguage: inLanguage(locale),
     isAccessibleForFree: true,
     offers: {
@@ -118,7 +118,7 @@ export function softwareApplicationSchema(locale: string) {
       "KI analysiert und bewertet auf Basis der gerechneten Physik",
       "Automatische Spot-Sortierung pro Tag und Region",
       "Begründung in Klartext",
-      "488 Schweizer Startplätze",
+      "494 Schweizer Startplätze",
       "Optionaler E-Mail-Cast (Briefing) an frei wählbaren Wochentagen",
     ],
     publisher: { "@id": `${SITE_URL}/#organization` },
@@ -157,7 +157,7 @@ export function webPageSchema(locale: string) {
     url: localizedUrl(locale),
     name: "Wingcast — Gratis KI-Flugwetter & Thermik-Forecast für die Schweiz",
     description:
-      "Gratis KI-Flugwetter für 488 Schweizer Startplätze. 5-Tage-Forecast sortiert pro Tag, in Klartext erklärt. Ohne Kreditkarte. Decision Support, du entscheidest.",
+      "Gratis KI-Flugwetter für 494 Schweizer Startplätze. 5-Tage-Forecast sortiert pro Tag, in Klartext erklärt. Ohne Kreditkarte. Decision Support, du entscheidest.",
     inLanguage: inLanguage(locale),
     isPartOf: { "@id": `${SITE_URL}/#website` },
     about: { "@id": `${SITE_URL}/#app` },
@@ -166,6 +166,95 @@ export function webPageSchema(locale: string) {
     dateModified: PAGE_LAST_UPDATED,
     author: { "@id": `${SITE_URL}/#maurin` },
     publisher: { "@id": `${SITE_URL}/#organization` },
+  };
+}
+
+// ── Wetterkunde-Hub und Pillar-Artikel ────────────────────────────────────
+// Die Wetterkunde ist DE-only (siehe lib/wetterkunde.ts), deshalb hier keine
+// Locale-Varianten: alle URLs zeigen auf die deutsche Fassung ohne Prefix.
+
+const WETTERKUNDE_URL = `${SITE_URL}/wetterkunde`;
+
+export function wetterkundeHubSchema(description: string, name: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${WETTERKUNDE_URL}/#webpage`,
+    url: WETTERKUNDE_URL,
+    name,
+    description,
+    inLanguage: "de-CH",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  };
+}
+
+interface ArticleSchemaInput {
+  slug: string;
+  titel: string;
+  metaDescription: string;
+  /** Erstveröffentlichung, ISO-Datum. */
+  veroeffentlicht: string;
+  /** Letzter inhaltlicher Stand, ISO-Datum. */
+  stand: string;
+  bild: string | null;
+}
+
+// Article — ohne das ist ein Pillar für AI-Systeme nur ein Textblock
+// (GEO-ANALYSIS-2026-08-02_wetterkunde.md §6).
+export function articleSchema(a: ArticleSchemaInput) {
+  const url = `${WETTERKUNDE_URL}/${a.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${url}/#article`,
+    headline: a.titel,
+    description: a.metaDescription,
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${url}/#webpage` },
+    inLanguage: "de-CH",
+    datePublished: a.veroeffentlicht,
+    dateModified: a.stand,
+    author: { "@id": `${SITE_URL}/#maurin` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    isPartOf: { "@id": `${WETTERKUNDE_URL}/#webpage` },
+    ...(a.bild ? { image: `${SITE_URL}${a.bild}` } : {}),
+  };
+}
+
+export function breadcrumbSchema(
+  trail: ReadonlyArray<{ name: string; path: string }>,
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: trail.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: `${SITE_URL}${item.path}`,
+    })),
+  };
+}
+
+// FAQ eines Artikels — eigene @id je Artikel, damit sie nicht mit der
+// Landing-FAQ (#faq) kollidiert.
+export function articleFaqSchema(
+  slug: string,
+  items: ReadonlyArray<{ q: string; a: string }>,
+  dateModified: string,
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${WETTERKUNDE_URL}/${slug}/#faq`,
+    inLanguage: "de-CH",
+    dateModified,
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
   };
 }
 

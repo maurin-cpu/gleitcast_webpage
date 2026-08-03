@@ -9,14 +9,14 @@
 
 ## 1 · One-Line-Positioning
 
-> **Für** Schweizer Gleitschirm-Pilot:innen, die schnell entscheiden wollen, wo es diese Woche fliegt, **ist Wingcast** die KI-bewertete Flugwetter-App, **die** 488 Schweizer Startplätze sortiert ausspielt und in Klartext erklärt, weshalb ein Spot gut oder schlecht ist — **dauerhaft gratis**.
+> **Für** Schweizer Gleitschirm-Pilot:innen, die schnell entscheiden wollen, wo es diese Woche fliegt, **ist Wingcast** die KI-bewertete Flugwetter-App, **die** 494 Schweizer Startplätze sortiert ausspielt und in Klartext erklärt, weshalb ein Spot gut oder schlecht ist — **dauerhaft gratis**.
 
 ### Kurzvarianten (für unterschiedliche Slots)
 
 | Slot | Länge | Variante |
 |---|---|---|
 | Hero-Headline (aktuell) | ~10 Worte | *„Welcher Spot fliegt diese Woche? Du siehst es auf einen Blick."* |
-| Social-Bio | ~10 Worte | *„Schweizer Flugwetter, in Klartext. 488 Spots, sortiert pro Tag, gratis."* |
+| Social-Bio | ~10 Worte | *„Schweizer Flugwetter, in Klartext. 494 Spots, sortiert pro Tag, gratis."* |
 | Pitch in 1 Satz | ~25 Worte | *„Statt stundenlang durch Wettermodelle zu wühlen, siehst du in 30 Sekunden, welche Schweizer Startplätze fliegen — mit Erklärung in Klartext, weshalb ein Spot heute gut oder schlecht ist."* |
 | Pitch in 1 Wort | 1 Wort | **Decision Support.** *(nicht Decision Maker — Memory)* |
 
@@ -30,7 +30,7 @@
 
 > *„Du siehst sofort, welche Gebiete heute oder diese Woche gut sein könnten — ohne dich stundenlang durch Wetterdaten zu wühlen."*
 
-- 488 Schweizer Startplätze werden automatisch pro Tag sortiert
+- 494 Schweizer Startplätze werden automatisch pro Tag sortiert
 - 5-Tier-Rating mit Farbe + Icon + Text → in Sekunden lesbar
 - Aggregierter Forecast statt manuellem Modell-Vergleich
 - **Adressiert:** Sarah („45 Min Routine"), Lukas („ich weiss nicht wo anfangen")
@@ -95,7 +95,7 @@ Strukturiert als **Pain → Relief** und **Job → Outcome**, mit *Killer-Hebel*
 | Element | Inhalt |
 |---|---|
 | **Pain** | „45 Minuten Wetter-Check jeden Samstag ist Wahnsinn — und letzte Woche war die 1.5-h-Fahrt umsonst." |
-| **Relief** | **5-Tage-Forecast für alle 488 Spots, sortiert pro Tag** + optionaler Freitag-Wochencast per Mail. |
+| **Relief** | **5-Tage-Forecast für alle 494 Spots, sortiert pro Tag** + optionaler Freitag-Wochencast per Mail. |
 | **Job** | Maximale Flugtage bei minimalem Planungsaufwand — jeden Samstag den besten Spot finden. |
 | **Outcome** | 40 Minuten/Woche zurück + keine umsonst-Fahrten + kein zusätzliches Abo. |
 | **Killer-Hebel** | **„0 CHF statt EUR 49"** + **„in 30 Sekunden statt 45 Minuten"** + **„automatisch sortiert pro Tag"**. |
@@ -124,9 +124,9 @@ Aus `personas.md` „Top-Pains" und `wettbewerber.md` „Was Piloten wollen":
 |---|---|---|---|
 | „Sag mir einfach, ob ich fliegen kann" | Lukas, Sarah | ✓ | 5-Tier-Rating mit Icon + Text + Farbe (HowItWorks-Preview) |
 | „Erklär mir WARUM" | Lukas, Marco | ✓ | KI-Klartext-Begründung pro Spot (FAQ + Hero-Pill) |
-| „Spar mir Zeit" | Sarah | ✓ | 488 Spots automatisch sortiert pro Tag |
+| „Spar mir Zeit" | Sarah | ✓ | 494 Spots automatisch sortiert pro Tag |
 | „Gratis" | Lukas, Sarah | ✓ | Dauerhaft, ohne Kreditkarte (Hero-Subline + FAQ) |
-| „Schweizer Alpen-Fokus" | Alle drei | ✓ | ICON-CH1/CH2 + Föhn-ΔP + 488 CH-Spots |
+| „Schweizer Alpen-Fokus" | Alle drei | ✓ | ICON-CH1/CH2 + Föhn-ΔP + 494 CH-Spots |
 | „Eine App, nicht zwei" | Sarah, Lukas | ✓ | Web-App + optional Cast-Mail |
 | „iOS-Support" | Lukas | ✓ | Web-App läuft auf iOS |
 | „Zeig mir die Logik" | Marco | ✓ | HowItWorks-Schritte + FAQ „Was macht die KI?" |
@@ -146,29 +146,29 @@ Aus `personas.md` „Top-Pains" und `wettbewerber.md` „Was Piloten wollen":
 ### 5.1 · Landing (wingcast.ch) — aktueller Stand
 
 - **Hero-Headline:** *„Welcher Spot fliegt diese Woche? Du siehst es auf einen Blick."*
-- **Subline:** *„5-Tage-Forecast für 488 Schweizer Startplätze — sortiert pro Tag, in Klartext erklärt, von ersten Flügen bis XC. Gratis, keine Kreditkarte."*
-- **Trust-Pills:** *488 Schweizer Spots · 5 Wettermodelle aggregiert · KI bewertet, Physik rechnet*
+- **Subline:** *„5-Tage-Forecast für 494 Schweizer Startplätze — sortiert pro Tag, in Klartext erklärt, von ersten Flügen bis XC. Gratis, keine Kreditkarte."*
+- **Trust-Pills:** *494 Schweizer Spots · 5 Wettermodelle aggregiert · KI bewertet, Physik rechnet*
 
 ### 5.2 · Outreach / Cold Reach (Reddit, Forum, E-Mail)
 
 ```
 Hi, ich baue Wingcast — eine gratis Schweizer Flugwetter-App mit
 Multi-Modell-Aggregation (ICON-CH1, ICON-CH2, ICON-D2, ICON-EU, GFS)
-und KI-Bewertung pro Spot. Aktuell Beta, 488 Spots. Würde mich über
+und KI-Bewertung pro Spot. Aktuell Beta, 494 Spots. Würde mich über
 Feedback freuen: wingcast.ch
 ```
 
 ### 5.3 · Pitch im Gespräch / Event
 
-> *„Stell dir vor: Statt am Samstag um 6:30 fünf Apps zu vergleichen, öffnest du eine App und siehst sofort, welcher Spot heute fliegt — mit Begründung, was Wind und Thermik machen. Das ist Wingcast. Multi-Modell-Aggregation aus fünf Wettermodellen, klassische Atmosphären-Physik im Code, und eine KI obenauf, die das in Klartext übersetzt. 488 Schweizer Startplätze. Dauerhaft gratis."*
+> *„Stell dir vor: Statt am Samstag um 6:30 fünf Apps zu vergleichen, öffnest du eine App und siehst sofort, welcher Spot heute fliegt — mit Begründung, was Wind und Thermik machen. Das ist Wingcast. Multi-Modell-Aggregation aus fünf Wettermodellen, klassische Atmosphären-Physik im Code, und eine KI obenauf, die das in Klartext übersetzt. 494 Schweizer Startplätze. Dauerhaft gratis."*
 
 ### 5.4 · Social Bio (Instagram / Twitter / LinkedIn)
 
-> *Schweizer Flugwetter mit KI. 488 Spots aus 5 Modellen, gratis. Beta — bau mit. → wingcast.ch*
+> *Schweizer Flugwetter mit KI. 494 Spots aus 5 Modellen, gratis. Beta — bau mit. → wingcast.ch*
 
 ### 5.5 · App-Store-Beschreibung (für späteren native-App-Launch)
 
-> *„488 Schweizer Startplätze, 5 Wettermodelle, KI-Bewertung in Klartext. Erfahre in 30 Sekunden, welcher Spot diese Woche fliegt — mit Begründung, ohne Wetter-Studium. Dauerhaft gratis."*
+> *„494 Schweizer Startplätze, 5 Wettermodelle, KI-Bewertung in Klartext. Erfahre in 30 Sekunden, welcher Spot diese Woche fliegt — mit Begründung, ohne Wetter-Studium. Dauerhaft gratis."*
 
 ---
 
@@ -211,13 +211,13 @@ Damit die Value Proposition glaubwürdig bleibt:
 
 | Claim | Status | Beleg |
 |---|---|---|
-| 488 Spots | ✓ belegt | Datenbank-Anzahl in flychat |
+| 494 Spots | ✓ belegt | Datenbank-Anzahl in flychat |
 | 5 Wettermodelle | ✓ belegt | `flychat/config.py` (WIND_MODEL, THERMAL_MODEL, FALLBACK_MODEL, validation gusts, GFS) |
 | Deterministische Physik-Layer | ✓ belegt | `flychat/thermik_calculator.py`, `foehn_indicators.py`, `gust_calculator.py` |
 | KI-Bewertung mit Klartext | ✓ belegt | `flychat/chat_engine.py`, LLM-Output |
 | Dauerhaft gratis | ✓ Strategie-Entscheid | Memory `project_markt_strategie` |
 | 5-Tage-Forecast | ✓ belegt | Engine + UI |
-| CH-Alpen-Fokus | ✓ belegt | ICON-CH1/CH2 + 488 CH-Spots |
+| CH-Alpen-Fokus | ✓ belegt | ICON-CH1/CH2 + 494 CH-Spots |
 | Föhn-Detektion über ΔP Zürich–Lugano | ✓ belegt | `flychat/foehn_indicators.py` |
 | „30 Sekunden statt 45 Minuten" | ⚠ plausibel | Nicht gemessen — UX-Annahme. Bei Outreach lieber unterspielen oder mit „in unter einer Minute" arbeiten. |
 | „einmal morgens aggregiert für den ganzen Tag" | ✓ belegt | Daten-Update-Rhythmus (User-Bestätigung 2026-05-13) |
@@ -255,7 +255,7 @@ Damit die Value Proposition glaubwürdig bleibt:
 
 ## 10 · Offene Value-Prop-Entscheidungen
 
-1. **Mehrsprachigkeit** — Bekommt FR/IT eine eigene Value-Prop-Variante (z. B. *„météo de vol Suisse — IA, 488 sites, gratuit"*)? Hängt an `wettbewerber.md` offene Frage 2.
+1. **Mehrsprachigkeit** — Bekommt FR/IT eine eigene Value-Prop-Variante (z. B. *„météo de vol Suisse — IA, 494 sites, gratuit"*)? Hängt an `wettbewerber.md` offene Frage 2.
 2. **Marco-spezifische Sub-Page** (`/xc` oder `/pilot-pro`) — Wert für SEO + XC-Community? Würde Headline-Variante 3.3 in eigene Page giessen.
 3. **Native-App-Versprechen** — Wenn iOS/Android-App kommt, ändert sich Punkt 6 des USP-Stacks („eine App"). Aktuell „Web-App" → später „iOS + Android + Web".
 4. **„Lernen" als expliziter Gewinn für Lukas** — Aktuell implizit. Könnte als eigener Bullet *„Lerne dabei: warum Föhn, was ist Inversion"* aufgenommen werden? Risiko: macht Page edukativ statt entscheidend.

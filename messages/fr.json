@@ -1,8 +1,8 @@
 {
   "Metadata": {
     "title": "Wingcast — Météo de vol IA & prévisions de thermique gratuites pour la Suisse",
-    "description": "Météo de vol IA gratuite pour 488 sites de décollage suisses. Prévisions à 5 jours triées par jour, expliquées en clair. Sans carte de crédit. Decision Support, c'est vous qui décidez.",
-    "ogImageAlt": "Tableau de bord de l'app Wingcast : carte des 488 sites de décollage suisses, colorés selon l'évaluation IA",
+    "description": "Météo de vol IA gratuite pour 494 sites de décollage suisses. Prévisions à 5 jours triées par jour, expliquées en clair. Sans carte de crédit. Decision Support, c'est vous qui décidez.",
+    "ogImageAlt": "Tableau de bord de l'app Wingcast : carte des 494 sites de décollage suisses, colorés selon l'évaluation IA",
     "keywords": "app météo parapente | app météo parapente gratuite | application parapente gratuite | météo parapente gratuit | météo de vol Suisse | prévisions thermique Suisse | prévision thermique Suisse | prévision du vent Suisse | météo de vol IA | météo IA parapente | prévisions thermique gratuites | prévision de thermique gratuite | météo sites de décollage Suisse | sites de décollage parapente | volabilité Suisse | alerte foehn parapente | ICON-CH1 parapente | free paragliding weather Switzerland | Paragliding Forecast Switzerland"
   },
   "Layout": {
@@ -26,14 +26,14 @@
     "badge": "Bêta · Expérience IA pour les pilotes suisses",
     "headlineLine1": "Quel spot vole cette semaine ?",
     "headlineLine2": "Vous le voyez d'un coup d'œil.",
-    "subline": "Prévisions à 5 jours pour 488 sites de décollage suisses — triées par jour, expliquées en clair, des premiers vols jusqu'au cross. Gratuit, sans carte de crédit.",
+    "subline": "Prévisions à 5 jours pour 494 sites de décollage suisses — triées par jour, expliquées en clair, des premiers vols jusqu'au cross. Gratuit, sans carte de crédit.",
     "ctaPrimary": "Voir les spots",
     "ctaSecondary": "Voir le Cast",
-    "trustSpots": "<b>488 spots suisses</b>",
+    "trustSpots": "<b>494 spots suisses</b>",
     "trustModels": "<b>5 modèles météo</b> agrégés",
     "trustAi": "<b>L'IA évalue</b>, la physique calcule",
-    "screenshotAlt": "Tableau de bord de l'app Wingcast : conseiller chat à gauche, carte des 488 sites de décollage suisses à droite, colorés selon l'évaluation",
-    "figcaption": "En direct dans l'app · 488 sites de décollage, colorés selon l'évaluation"
+    "screenshotAlt": "Tableau de bord de l'app Wingcast : conseiller chat à gauche, carte des 494 sites de décollage suisses à droite, colorés selon l'évaluation",
+    "figcaption": "En direct dans l'app · 494 sites de décollage, colorés selon l'évaluation"
   },
   "Problem": {
     "kicker": "Ça vous parle ?",
@@ -45,7 +45,7 @@
       { "topic": "Vent", "note": "Vent de pente, vent de vallée, vent d'altitude" },
       { "topic": "Thermique", "note": "Déclenchement, force, plafond" },
       { "topic": "Sécurité", "note": "Foehn, front, sous le vent" },
-      { "topic": "Choix du spot", "note": "488 sites de décollage, un seul jour" }
+      { "topic": "Choix du spot", "note": "494 sites de décollage, un seul jour" }
     ],
     "conclusionLead": "Au final, vous voulez voir une seule chose rapidement : quel spot vole aujourd'hui — et lequel non.",
     "conclusionBody": "Wingcast trie les spots par jour, avec une justification en clair. Vous prenez la recommandation comme point de départ, vous la comparez à vos sources et vous décidez vous-même."
@@ -147,11 +147,11 @@
     "items": [
       {
         "q": "Qu'est-ce que Wingcast ?",
-        "a": "Wingcast est une app de météo de vol IA gratuite pour les pilotes de parapente suisses. Elle agrège cinq modèles météo via Open-Meteo (ICON-CH1 avec une résolution de 1 km et ICON-CH2 avec 2 km de MétéoSuisse, plus ICON-D2, ICON-EU et GFS), en calcule de manière déterministe dans le code la physique de l'atmosphère classique (plafond thermique, inversions, détection du foehn, atténuation des rafales), et ce n'est qu'ensuite qu'elle laisse l'IA analyser et évaluer la sécurité et la pertinence pour chaque spot. 488 sites de décollage suisses sont automatiquement triés chaque jour selon la volabilité, avec en plus une justification en clair — vent, thermique, situation de foehn, risques de sous le vent. Au lieu de fouiller 45 minutes dans les modèles météo, vous voyez en 30 secondes où ça vole aujourd'hui ou cette semaine — et pourquoi. Inscription par e-mail et Magic-Link, sans carte de crédit, sans compteur d'essai. En option, un Cast par e-mail arrive aux jours de la semaine librement choisis à 06h00. Wingcast est un Decision Support pour les pilotes, pas un Decision Maker — la décision finale au décollage, c'est vous qui la prenez."
+        "a": "Wingcast est une app de météo de vol IA gratuite pour les pilotes de parapente suisses. Elle agrège cinq modèles météo via Open-Meteo (ICON-CH1 avec une résolution de 1 km et ICON-CH2 avec 2 km de MétéoSuisse, plus ICON-D2, ICON-EU et GFS), en calcule de manière déterministe dans le code la physique de l'atmosphère classique (plafond thermique, inversions, détection du foehn, atténuation des rafales), et ce n'est qu'ensuite qu'elle laisse l'IA analyser et évaluer la sécurité et la pertinence pour chaque spot. 494 sites de décollage suisses sont automatiquement triés chaque jour selon la volabilité, avec en plus une justification en clair — vent, thermique, situation de foehn, risques de sous le vent. Au lieu de fouiller 45 minutes dans les modèles météo, vous voyez en 30 secondes où ça vole aujourd'hui ou cette semaine — et pourquoi. Inscription par e-mail et Magic-Link, sans carte de crédit, sans compteur d'essai. En option, un Cast par e-mail arrive aux jours de la semaine librement choisis à 06h00. Wingcast est un Decision Support pour les pilotes, pas un Decision Maker — la décision finale au décollage, c'est vous qui la prenez."
       },
       {
         "q": "Combien coûte l'inscription ?",
-        "a": "Actuellement rien. Les prévisions pour les régions, l'évaluation des spots pour chacun des 488 sites de décollage et le Briefing hebdomadaire sont accessibles sans carte de crédit et sans compteur d'essai — il vous suffit de vous inscrire. Si quelque chose change au niveau du modèle, nous le communiquerons ouvertement avant de procéder au changement."
+        "a": "Actuellement rien. Les prévisions pour les régions, l'évaluation des spots pour chacun des 494 sites de décollage et le Briefing hebdomadaire sont accessibles sans carte de crédit et sans compteur d'essai — il vous suffit de vous inscrire. Si quelque chose change au niveau du modèle, nous le communiquerons ouvertement avant de procéder au changement."
       },
       {
         "q": "Qu'est-ce qui ne fonctionne pas encore dans la bêta ?",
@@ -242,5 +242,18 @@
     "privacyTitle": "Politique de confidentialité",
     "termsTitle": "Conditions d’utilisation",
     "onlyGermanNotice": "Ces textes juridiques ne sont actuellement disponibles qu’en allemand. La version allemande fait foi."
+  },
+  "Wetterkunde": {
+    "eyebrow": "Météo",
+    "hubTitle": "Météo pour pilotes de parapente",
+    "hubIntro": "Analyses de journées de vol réelles en Suisse, recalculées à partir de mesures et de modèles.",
+    "hubMetaTitle": "Météo — analyses de vol en Suisse",
+    "hubMetaDescription": "Analyses de journées de vol réelles en Suisse, recalculées à partir de mesures et de modèles.",
+    "empty": "Les articles paraîtront ici dès leur publication.",
+    "meta": "{minuten} min de lecture · état {stand}",
+    "stand": "État {stand}",
+    "lesezeit": "{minuten} min de lecture",
+    "breadcrumbLabel": "Fil d'Ariane",
+    "draftNotice": "Brouillon — pas encore publié."
   }
 }

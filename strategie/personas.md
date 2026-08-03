@@ -138,7 +138,7 @@ Sicher und selbstständig fliegen lernen, **ohne ständig den Instruktor fragen 
 
 ### Landing-Implikationen
 
-- *„488 Schweizer Spots"* + *„automatisch sortiert pro Tag"* adressiert ihren Falsch-Spot-Schmerz direkt.
+- *„494 Schweizer Spots"* + *„automatisch sortiert pro Tag"* adressiert ihren Falsch-Spot-Schmerz direkt.
 - Wochencast-per-E-Mail-Pfad (in SubscribeForm + FAQ erklärt) deckt ihren Freitagabend-Push-Wunsch.
 - Hero-Trust-Pills sind kompakt → Sarah scannt, will keine langen Erklärungen.
 
@@ -212,7 +212,7 @@ Optimale XC-Tage identifizieren und **Routen basierend auf Thermik-Vorhersage pl
 | Sektion | Adressiert primär | Hebel |
 |---|---|---|
 | Hero | Lukas + Sarah | Spot-Wahl-Frust, Zeitersparnis, „gratis", Beta-Pill als Asset |
-| Trust-Pills | Lukas (Anti-Magie) + Marco (Engine-Glaubwürdigkeit) | 488 Spots / 5 Modelle / Physik + KI |
+| Trust-Pills | Lukas (Anti-Magie) + Marco (Engine-Glaubwürdigkeit) | 494 Spots / 5 Modelle / Physik + KI |
 | Problem | Lukas + Sarah | Samstag 06:30, 4 Subthemen (Wind/Thermik/Sicherheit/Spot-Wahl) |
 | HowItWorks | Lukas (Verständnis) + Marco (Transparenz) | Daten → Physik → KI mit konkreten Modellen |
 | Trust (Maurin) | Lukas + Sarah | Founder-Mirror, Authentizität, „ich hatte das Problem selbst" |

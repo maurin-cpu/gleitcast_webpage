@@ -1,8 +1,8 @@
 {
   "Metadata": {
     "title": "Wingcast — Gratis KI-Flugwetter & Thermik-Forecast für die Schweiz",
-    "description": "Gratis KI-Flugwetter für 488 Schweizer Startplätze. 5-Tage-Forecast sortiert pro Tag, in Klartext erklärt. Ohne Kreditkarte. Decision Support, du entscheidest.",
-    "ogImageAlt": "Wingcast App-Dashboard: Karte mit allen 488 Schweizer Startplätzen, gefärbt nach KI-Bewertung",
+    "description": "Gratis KI-Flugwetter für 494 Schweizer Startplätze. 5-Tage-Forecast sortiert pro Tag, in Klartext erklärt. Ohne Kreditkarte. Decision Support, du entscheidest.",
+    "ogImageAlt": "Wingcast App-Dashboard: Karte mit allen 494 Schweizer Startplätzen, gefärbt nach KI-Bewertung",
     "keywords": "Gleitschirm Wetter App | Gleitschirm Wetter App gratis | kostenlose Gleitschirm App | Paragliding Wetter kostenlos | Flugwetter Schweiz | Thermik Forecast Schweiz | Thermikprognose Schweiz | Windprognose Schweiz | KI Flugwetter | KI Wetter Gleitschirm | gratis Thermik Forecast | Thermik Vorhersage gratis | Startplatz Wetter Schweiz | Gleitschirm Startplätze | Fliegbarkeit Schweiz | Föhn Warnung Gleitschirm | ICON-CH1 Gleitschirm | free paragliding weather Switzerland | Paragliding Forecast Switzerland"
   },
   "Layout": {
@@ -26,14 +26,14 @@
     "badge": "Beta · KI-Experiment für Schweizer Piloten",
     "headlineLine1": "Welcher Spot fliegt diese Woche?",
     "headlineLine2": "Du siehst es auf einen Blick.",
-    "subline": "5-Tage-Forecast für 488 Schweizer Startplätze — sortiert pro Tag, in Klartext erklärt, von ersten Flügen bis XC. Gratis, keine Kreditkarte.",
+    "subline": "5-Tage-Forecast für 494 Schweizer Startplätze — sortiert pro Tag, in Klartext erklärt, von ersten Flügen bis XC. Gratis, keine Kreditkarte.",
     "ctaPrimary": "Spots ansehen",
     "ctaSecondary": "Cast ansehen",
-    "trustSpots": "<b>488 Schweizer Spots</b>",
+    "trustSpots": "<b>494 Schweizer Spots</b>",
     "trustModels": "<b>5 Wettermodelle</b> aggregiert",
     "trustAi": "<b>KI bewertet</b>, Physik rechnet",
-    "screenshotAlt": "Wingcast App-Dashboard: Chat-Berater links, Karte mit allen 488 Schweizer Startplätzen rechts, gefärbt nach Bewertung",
-    "figcaption": "Live in der App · 488 Startplätze, gefärbt nach Bewertung"
+    "screenshotAlt": "Wingcast App-Dashboard: Chat-Berater links, Karte mit allen 494 Schweizer Startplätzen rechts, gefärbt nach Bewertung",
+    "figcaption": "Live in der App · 494 Startplätze, gefärbt nach Bewertung"
   },
   "Problem": {
     "kicker": "Kennst du das?",
@@ -45,7 +45,7 @@
       { "topic": "Wind", "note": "Hangwind, Talwind, Höhenwind" },
       { "topic": "Thermik", "note": "Auslöse, Stärke, Basis" },
       { "topic": "Sicherheit", "note": "Föhn, Front, Lee" },
-      { "topic": "Spot-Wahl", "note": "488 Startplätze, ein Tag" }
+      { "topic": "Spot-Wahl", "note": "494 Startplätze, ein Tag" }
     ],
     "conclusionLead": "Am Ende willst du nur eines schnell sehen: welcher Spot heute fliegt — und welcher nicht.",
     "conclusionBody": "Wingcast sortiert die Spots pro Tag, mit Begründung in Klartext. Du nimmst die Empfehlung als Startpunkt, gleichst sie mit deinen Quellen ab und entscheidest selbst."
@@ -147,11 +147,11 @@
     "items": [
       {
         "q": "Was ist Wingcast?",
-        "a": "Wingcast ist eine gratis KI-Flugwetter-App für Schweizer Gleitschirmpiloten. Sie aggregiert fünf Wettermodelle via Open-Meteo (ICON-CH1 mit 1 km Auflösung und ICON-CH2 mit 2 km von MeteoSchweiz, dazu ICON-D2, ICON-EU und GFS), rechnet daraus klassische Atmosphären-Physik (Thermikbasis, Inversionen, Föhn-Detektion, Gust-Decay) deterministisch im Code aus, und lässt erst dann die KI Sicherheit und Eignung pro Spot analysieren und bewerten. 488 Schweizer Startplätze werden pro Tag automatisch nach Fliegbarkeit sortiert, dazu kommt eine Begründung in Klartext — Wind, Thermik, Föhn-Lage, Lee-Risiken. Statt 45 Minuten durch Wettermodelle zu wühlen, siehst du in 30 Sekunden, wo es heute oder diese Woche fliegt — und warum. Anmeldung mit E-Mail und Magic-Link, keine Kreditkarte, kein Trial-Counter. Optional kommt ein E-Mail-Cast an frei wählbaren Wochentagen um 06:00 Uhr. Wingcast ist Decision Support für Pilot:innen, kein Decision Maker — die finale Entscheidung am Startplatz triffst du."
+        "a": "Wingcast ist eine gratis KI-Flugwetter-App für Schweizer Gleitschirmpiloten. Sie aggregiert fünf Wettermodelle via Open-Meteo (ICON-CH1 mit 1 km Auflösung und ICON-CH2 mit 2 km von MeteoSchweiz, dazu ICON-D2, ICON-EU und GFS), rechnet daraus klassische Atmosphären-Physik (Thermikbasis, Inversionen, Föhn-Detektion, Gust-Decay) deterministisch im Code aus, und lässt erst dann die KI Sicherheit und Eignung pro Spot analysieren und bewerten. 494 Schweizer Startplätze werden pro Tag automatisch nach Fliegbarkeit sortiert, dazu kommt eine Begründung in Klartext — Wind, Thermik, Föhn-Lage, Lee-Risiken. Statt 45 Minuten durch Wettermodelle zu wühlen, siehst du in 30 Sekunden, wo es heute oder diese Woche fliegt — und warum. Anmeldung mit E-Mail und Magic-Link, keine Kreditkarte, kein Trial-Counter. Optional kommt ein E-Mail-Cast an frei wählbaren Wochentagen um 06:00 Uhr. Wingcast ist Decision Support für Pilot:innen, kein Decision Maker — die finale Entscheidung am Startplatz triffst du."
       },
       {
         "q": "Was kostet die Anmeldung?",
-        "a": "Aktuell nichts. Forecast für Regionen, Spot-Bewertung für jeden der 488 Startplätze und das Wochen-Briefing sind ohne Kreditkarte und ohne Trial-Counter zugänglich — du musst dich nur anmelden. Wenn sich am Modell etwas ändert, kommunizieren wir's offen, bevor wir umstellen."
+        "a": "Aktuell nichts. Forecast für Regionen, Spot-Bewertung für jeden der 494 Startplätze und das Wochen-Briefing sind ohne Kreditkarte und ohne Trial-Counter zugänglich — du musst dich nur anmelden. Wenn sich am Modell etwas ändert, kommunizieren wir's offen, bevor wir umstellen."
       },
       {
         "q": "Was funktioniert in der Beta noch nicht?",
@@ -242,5 +242,18 @@
     "privacyTitle": "Datenschutz",
     "termsTitle": "Nutzungsbedingungen",
     "onlyGermanNotice": "Diese rechtlichen Texte liegen derzeit nur auf Deutsch vor. Massgeblich ist die deutsche Fassung."
+  },
+  "Wetterkunde": {
+    "eyebrow": "Wetterkunde",
+    "hubTitle": "Wetterkunde für Gleitschirmpiloten",
+    "hubIntro": "Auswertungen echter Flugtage in der Schweiz — nachgerechnet an Messdaten und Modellen, mit offengelegter Methode. Kein Lehrbuch, sondern das, was an einem konkreten Tag messbar war.",
+    "hubMetaTitle": "Wetterkunde — Flugwetter-Auswertungen aus der Schweiz",
+    "hubMetaDescription": "Auswertungen echter Flugtage: Messdaten von MeteoSchweiz gegen Wettermodelle gerechnet, Methode und Grenzen offengelegt. Für Gleitschirmpiloten in der Schweiz.",
+    "empty": "Hier erscheinen die Wetterkunde-Artikel, sobald sie freigegeben sind.",
+    "meta": "{minuten} Min. Lesezeit · Stand {stand}",
+    "stand": "Stand {stand}",
+    "lesezeit": "{minuten} Min. Lesezeit",
+    "breadcrumbLabel": "Brotkrümelnavigation",
+    "draftNotice": "Entwurf — noch nicht freigegeben. Diese Seite ist von Suchmaschinen ausgeschlossen."
   }
 }

@@ -87,11 +87,11 @@ Beide sind direkte Schweizer Gleitschirm-Wetter/Tracking-Wettbewerber.
 |---|---|---|---|---|
 | `hike and fly` | 260 | — | #21 | Burnair nur Seite 2 |
 | `hike&fly` | 260 | — | #16 | |
-| `gleitschirm startplätze` | 70 | — | **#8** | **Direkt relevant für Wingcast** (488 Spots) |
+| `gleitschirm startplätze` | 70 | — | **#8** | **Direkt relevant für Wingcast** (494 Spots) |
 | `startplatz` | 70 | — | #10 | |
 | `fly map` | 320 | — | #42 | Niemand stark |
 
-**Klare Lücke:** „startplätze" + Regional-Kombinationen — Wingcast hat 488 davon im Datensatz, kann hier eigene Pages bauen.
+**Klare Lücke:** „startplätze" + Regional-Kombinationen — Wingcast hat 494 davon im Datensatz, kann hier eigene Pages bauen.
 
 ### 3.5 Föhn / Atmosphäre
 
@@ -151,7 +151,7 @@ Sortiert nach Volume × Rank-Erreichbarkeit × CPC-Signal:
 | **P1** | `flugwetter schweiz` | 90 | — | Burnair #14 / XC-Therm — | Hoch — niemand stark |
 | **P1** | `thermik prognose` | 140 | **$42.56** | XC-Therm #1 / Burnair #7 | Mittel — XC-Therm stark, aber CPC zeigt Marktwert |
 | **P2** | `windprognose schweiz` | 320 | $2.91 | XC-Therm #12 / Burnair — | Mittel — Volume hoch, kein Dominator |
-| **P2** | `gleitschirm startplätze` | 70 | $1.38 | Burnair #8 | Hoch — Wingcast hat 488 Spots als USP |
+| **P2** | `gleitschirm startplätze` | 70 | $1.38 | Burnair #8 | Hoch — Wingcast hat 494 Spots als USP |
 | **P2** | `paragliding schweiz` | 590 | $2.52 | XC-Therm #39 | Hoch — niemand TOP-10 fest |
 | **P3** | `gleitschirmfliegen` | **3 600** | $2.20 | XC-Therm #84 | Niedrig kurzfristig — nur via Content-Hub |
 | **P3** | `hike and fly` | 260 | $0.22 | Burnair #21 | Mittel — eher Content |
@@ -182,7 +182,7 @@ Keywords, die in **keinem** Wettbewerber-Datensatz auftauchen und zu Wingcast-US
 
 → Volume aktuell vermutlich gering, aber wachsend und Wettbewerber **nutzen den Begriff nicht**. Erst-Mover-Vorteil.
 
-### 5.3 Spot- / Region-Cluster (Differenziator: 488 Startplätze, regionsweise sortiert)
+### 5.3 Spot- / Region-Cluster (Differenziator: 494 Startplätze, regionsweise sortiert)
 
 Region + „Gleitschirm wetter":
 - `gleitschirm wetter berner oberland`
@@ -191,7 +191,7 @@ Region + „Gleitschirm wetter":
 - `gleitschirm wetter graubünden`
 - `startplatz [name]` (z. B. Niesen, Niederhorn, Fronalpstock, Stanserhorn)
 
-→ Skaliert auf bis zu 488 spot-spezifische Long-Tail-URLs (programmatic SEO). **Mittelfristige Strategie.**
+→ Skaliert auf bis zu 494 spot-spezifische Long-Tail-URLs (programmatic SEO). **Mittelfristige Strategie.**
 
 ### 5.4 „Wochencast"/„E-Mail-Briefing"-Cluster
 
@@ -212,7 +212,7 @@ Folgende Brand- und Konkurrenz-Begriffe **nicht** auf der Landing nennen oder al
 - `meteo parapente`, `parapente météo`
 - `XCSkies`
 
-Differenziatoren bleiben selbstreferenziell („gratis, 488 Spots, KI auf Physik") statt komparativ.
+Differenziatoren bleiben selbstreferenziell („gratis, 494 Spots, KI auf Physik") statt komparativ.
 
 ---
 
@@ -260,10 +260,10 @@ Aktuell schon ähnlich konfiguriert — die meisten Targets sind drin. Optional:
 | P1 | Landing-Headline-Variante (A/B) | „Gratis KI-Flugwetter für die Schweiz" | Differenziator + Geo-Modifier |
 | P1 | FAQ-Eintrag | „Was kostet Wingcast?" | Bereits vorhanden — gut |
 | P1 | FAQ-Eintrag | „Was macht die KI?" | Bereits in dieser Iteration aktualisiert |
-| P2 | Landing-Sub-Section | „488 Startplätze · alle Regionen" mit Region-Liste | Spot-Cluster Long-Tail |
+| P2 | Landing-Sub-Section | „494 Startplätze · alle Regionen" mit Region-Liste | Spot-Cluster Long-Tail |
 | P2 | Blog-Post | „Föhn erkennen — wie der Cast Druckgradient + Höhenwind kombiniert" | Föhn-Gap (Burnair nur #19/#29) |
 | P3 | Blog/Hub | „Gleitschirmfliegen in der Schweiz — die Regionen" | Hoch-Volume `gleitschirmfliegen`, langfristig |
-| P3 | Spot-Pages (programmatic) | `/spots/[slug]` mit dynamischem Forecast-Snapshot | 488 URLs, jedes ein Long-Tail-Target |
+| P3 | Spot-Pages (programmatic) | `/spots/[slug]` mit dynamischem Forecast-Snapshot | 494 URLs, jedes ein Long-Tail-Target |
 
 ---
 
@@ -276,8 +276,8 @@ Aktuell schon ähnlich konfiguriert — die meisten Targets sind drin. Optional:
 
 **Wingcast-Strategie:**
 
-1. **Kurz (Pre-Launch):** Keywords in `layout.tsx` halten/feinjustieren auf P1/P2 (Abschnitt 7). Hero schon richtig (gratis, KI, 488 Spots).
-2. **Mittel (3-6 Monate nach Launch):** Spot-Pages programmatic für die 488 Startplätze + 3-4 Region-Hub-Pages. Föhn-Erklär-Content.
+1. **Kurz (Pre-Launch):** Keywords in `layout.tsx` halten/feinjustieren auf P1/P2 (Abschnitt 7). Hero schon richtig (gratis, KI, 494 Spots).
+2. **Mittel (3-6 Monate nach Launch):** Spot-Pages programmatic für die 494 Startplätze + 3-4 Region-Hub-Pages. Föhn-Erklär-Content.
 3. **Lang (6-12 Monate):** Content-Hub um `gleitschirmfliegen` (3 600 Volume) + KI-Wetter als Thema-Authority.
 
 **Wichtigster nicht-besetzter Slot:** `flugwetter schweiz` + `thermikprognose schweiz` — beide Wettbewerber rangieren nicht im stabilen Top-3. Mit konsistentem On-Page-SEO + Domain-Authority-Aufbau realistisch erreichbar.

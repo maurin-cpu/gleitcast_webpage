@@ -57,7 +57,7 @@ Die wichtigsten Pilot-Suchanfragen, bei denen wir zitiert werden wollen — komb
 | Finding | Hebel | Priorität |
 |---|---|---|
 | Hero hat kein expliziter Definition-Block über die H1 hinaus — *„Wingcast ist eine gratis KI-Flugwetter-App für die Schweiz…"* als zitierbarer Satz fehlt direkt unter dem Hero | AI-Crawler ziehen oft den ersten konkreten Definitionssatz | **High** |
-| **Wenig konkrete Statistiken mit Quellen** — *„488 Startplätze"*, *„5 Modelle"* sind im Text, aber ohne externe Verlinkung zur Quelle | Princeton GEO: Cite Sources +40 %, Statistics +37 % | **High** |
+| **Wenig konkrete Statistiken mit Quellen** — *„494 Startplätze"*, *„5 Modelle"* sind im Text, aber ohne externe Verlinkung zur Quelle | Princeton GEO: Cite Sources +40 %, Statistics +37 % | **High** |
 | **Keine Comparison-Tabellen** für „X vs Y"-Queries | Memory `feedback_keine_konkurrenz_attacks` verbietet Namen-Vergleich. Alternative: „Wingcast vs. manuelle Routine" oder „mit Cast vs. ohne" | **Medium** (Memory-konforme Variante prüfen) |
 | **Keine Expert-Quotes** auf der Page (Maurin spricht in 1. Person, aber kein dedizierter Quote-Block) | Princeton GEO: Quotations +30 % | **Medium** |
 | Heading-Wording in Hero ist creative („Welcher Spot fliegt diese Woche?") — gut für Pilot:innen, weniger zitierbar für AI-Antworten auf *„Was ist die beste App"* | Hero-H1 kann nicht geändert werden (Memory `feedback_hero_final`), aber Subline oder Trust-Pills könnten kanonischer formuliert werden | **Low** |
@@ -71,7 +71,7 @@ Die wichtigsten Pilot-Suchanfragen, bei denen wir zitiert werden wollen — komb
 | Methode | Boost | Status auf Wingcast |
 |---|---|---|
 | **Cite sources** | +40 % | ⚠ Schwach — Footer hat Quellen, aber **im Body fehlen Outbound-Links** zu MeteoSchweiz, Open-Meteo, etc. |
-| **Add statistics** | +37 % | ⚠ Mittel — 488 Spots, 5 Modelle, 1 km ICON-Auflösung sind da, aber kein klarer „Stat-Block" |
+| **Add statistics** | +37 % | ⚠ Mittel — 494 Spots, 5 Modelle, 1 km ICON-Auflösung sind da, aber kein klarer „Stat-Block" |
 | **Add quotations** | +30 % | ❌ Fehlt komplett — keine Expert-Quotes, keine User-Testimonials |
 | **Authoritative tone** | +25 % | ✓ Stark — Engine-Transparenz, technische Tiefe, Konservativismus bei unsicheren Bedingungen |
 | **Improve clarity** | +20 % | ✓ Stark — Klartext-Versprechen, kein Jargon-Stuffing |
@@ -174,7 +174,7 @@ Die wichtigsten Pilot-Suchanfragen, bei denen wir zitiert werden wollen — komb
 |---|---|---|---|
 | AM1 | Glossar-FAQ-Eintrag *„Was ist Föhn?"* mit Wikipedia-Verlinkung + Klartext-Definition — fischt Long-Tail-Citations für Pilot-Anfänger-Queries | Structure + Authority | 30 Min |
 | AM2 | „Mit vs. ohne Cast"-Mini-Comparison-Block (Memory-konform, ohne Konkurrenten zu nennen) | Structure | 1 h |
-| AM3 | Stats-Block visuell im Hero oder Trust — kompakte Zahlen-Liste (488 Spots / 5 Modelle / 1 km Auflösung / 5-Tier-Bewertung) | Structure + Authority | 1 h |
+| AM3 | Stats-Block visuell im Hero oder Trust — kompakte Zahlen-Liste (494 Spots / 5 Modelle / 1 km Auflösung / 5-Tier-Bewertung) | Structure + Authority | 1 h |
 | AM4 | Reddit-Outreach-Plan (`r/paragliding`, `r/freeflight`, Schweizer Foren) | Presence | Strategisch |
 | AM5 | Flugschulen-Outreach-Liste + Empfehlungs-Programm-Konzept | Presence | Strategisch |
 

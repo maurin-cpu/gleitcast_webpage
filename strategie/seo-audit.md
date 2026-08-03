@@ -45,7 +45,7 @@ Solide Pre-Launch-Position. Drei „High"-Findings (Images, Sitemap-Tiefe, Autho
 
 | Finding | Impact | Priorität |
 |---|---|---|
-| Sitemap hat nur 4 URLs (`/`, `/datenschutz`, `/impressum`, `/nutzungsbedingungen`) | Long-Tail-SEO-Potenzial ungenutzt — 488 Spot-Pages + 4–6 Region-Hubs könnten je 1 URL liefern | **High** |
+| Sitemap hat nur 4 URLs (`/`, `/datenschutz`, `/impressum`, `/nutzungsbedingungen`) | Long-Tail-SEO-Potenzial ungenutzt — 494 Spot-Pages + 4–6 Region-Hubs könnten je 1 URL liefern | **High** |
 | `/confirm` (Magic-Link-Landing) müsste explizit `noindex` haben | Risiko: Confirmation-Page wird indexiert | **Medium** |
 | Keine 404-Page-Customization geprüft | Bei UX-Fehler keine markenkonforme Fehlerseite | **Low** |
 | Performance Pre-Launch nicht gemessen | CWV-Optimierung blind | **Medium** (post-launch P1) |
@@ -96,9 +96,9 @@ Landing-Page-Mindestwert: 600 Wörter, 100 % unique.
 
 ### Meta-Description
 
-- **Aktuell:** „Gratis KI-Flugwetter für 488 Schweizer Startplätze. 5-Tage-Forecast sortiert pro Tag, in Klartext erklärt. Ohne Kreditkarte. Decision Support, du entscheidest."
+- **Aktuell:** „Gratis KI-Flugwetter für 494 Schweizer Startplätze. 5-Tage-Forecast sortiert pro Tag, in Klartext erklärt. Ohne Kreditkarte. Decision Support, du entscheidest."
 - **Länge:** 156 Zeichen ✓ (Sweet-Spot Google-Mobile 150–160)
-- **Click-Trigger:** ✓ „Gratis", konkret (488), Value-Prop („sortiert pro Tag", „in Klartext erklärt")
+- **Click-Trigger:** ✓ „Gratis", konkret (494), Value-Prop („sortiert pro Tag", „in Klartext erklärt")
 - **Bewertung:** ✓ Strong
 
 ### Heading Hierarchie
@@ -244,7 +244,7 @@ Keine. ✓
 |---|---|---|
 | H1 | `Person`-Schema für Maurin als eigenständige Entität ergänzen, in `lib/schema.ts` + `<Trust>` als JSON-LD eingeben | 30 Min |
 | H2 | Alle Page-Bilder von PNG → WebP/AVIF konvertieren, srcset für `[640w, 960w, 1280w, 2400w]` aufsetzen — am einfachsten via Migration zu `next/image` | 2–3 h |
-| H3 | Programmatic-SEO-Plan für Spot-Pages (`/spots/[slug]` × 488) ausarbeiten — siehe `strategie/keywords.md §5.3` | 1 Tag Konzept + 2 Tage Build |
+| H3 | Programmatic-SEO-Plan für Spot-Pages (`/spots/[slug]` × 494) ausarbeiten — siehe `strategie/keywords.md §5.3` | 1 Tag Konzept + 2 Tage Build |
 
 ### Medium (Pre-Launch wenn Zeit, sonst direkt nach Launch)
 

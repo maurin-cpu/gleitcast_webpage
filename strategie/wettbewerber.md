@@ -37,7 +37,7 @@
 
 **Wingcast-Hebel gegen XC-Therm:**
 
-1. **488 spezifische Schweizer Startplätze** statt 1 354 Regionen → näher an der Pilot-Entscheidung
+1. **494 spezifische Schweizer Startplätze** statt 1 354 Regionen → näher an der Pilot-Entscheidung
 2. **Mobile-First** (App + Mail) statt Web-only
 3. **KI-Bewertung mit Klartext-Begründung** statt Roh-Forecast
 4. **CH-Alpen-Fokus** mit ICON-CH1 (1 km) + ICON-CH2 (2 km) — XC-Therm nutzt nur ICON-D2/EU
@@ -78,7 +78,7 @@
 
 **Gegnerische Hebel:**
 
-- 5 000 vs. 488 Spots (10× mehr)
+- 5 000 vs. 494 Spots (10× mehr)
 - KK7-Lizenz für Thermik-Hotspots (Wingcast hat keine)
 - Live-Tracking + Community-Thermals (Wingcast hat das nicht)
 - 8+ Jahre Marktpräsenz, etablierte Marke im SHV-Umfeld
@@ -220,7 +220,7 @@
 - **Paragliding Map (`paragliding-map.com`)** — globale Startplatz-DB, Free-Tier eingeschränkt
 - **where2fly** (siehe T2 oben)
 
-**Strategische Relevanz:** Komplementär. Wingcast hat 488 Spots **mit Wetterbewertung** — Site-DBs haben mehr Spots **ohne Bewertung**.
+**Strategische Relevanz:** Komplementär. Wingcast hat 494 Spots **mit Wetterbewertung** — Site-DBs haben mehr Spots **ohne Bewertung**.
 
 ---
 
@@ -246,7 +246,7 @@ Die meisten Wettbewerber nutzen ähnliche Modell-Quellen. Der Unterschied liegt 
 1. **Speed-to-Decision** — XC-Therm/Burnair zeigen Daten, Pilot muss synthetisieren. Wingcast sortiert vor → **Sarah-Killer** (45 Min Routine wegfällt)
 2. **Klartext-Erklärung** — Paraglidable bietet Score ohne WARUM, Burnair Rohdaten ohne Übersetzung → **Lukas-Killer** (versteht endlich, weshalb)
 3. **Preis** — Burnair EUR 49–119/J vs. Wingcast 0 CHF → preissensitive Persona-Schicht
-4. **CH-Alpen-Fokus** — Föhn-Erkennung via ΔP Zürich–Lugano + 488 Schweizer Spots — niemand sonst hat diese Lokal-Tiefe
+4. **CH-Alpen-Fokus** — Föhn-Erkennung via ΔP Zürich–Lugano + 494 Schweizer Spots — niemand sonst hat diese Lokal-Tiefe
 
 ### Was wir NICHT als Vorteil behaupten
 
@@ -256,7 +256,7 @@ Die meisten Wettbewerber nutzen ähnliche Modell-Quellen. Der Unterschied liegt 
 
 ### Hauptverteidigungslinien (Wo wir kämpfen müssen)
 
-1. **Spot-Anzahl** — Burnair 5 000 vs. Wingcast 488 → langfristig auf 1 000+ erweitern
+1. **Spot-Anzahl** — Burnair 5 000 vs. Wingcast 494 → langfristig auf 1 000+ erweitern
 2. **Live-Daten** — Burnair hat KK7-Hotspots + Live-Thermals, Wingcast hat Modellvorhersage → KK7-Lizenz prüfen, Pilot-Live-Submission als V2-Feature
 3. **Plattform-Reichweite** — Wingcast aktuell Web-App → native iOS/Android als V2/V3
 

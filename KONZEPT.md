@@ -74,7 +74,7 @@ Sekundärziel: Bestehende Flychat-App (Chat + Karte + Newspaper) als Live-Demo z
 
 **Sekundärer CTA:** `[Live-Demo ansehen]` → linkt zu `/newspaper` der Flychat-App
 
-**Trust-Pill unter CTA:** `Basierend auf ICON-CH1, ICON-D2, ECMWF · 488 Startplätze in der Schweiz`
+**Trust-Pill unter CTA:** `Basierend auf ICON-CH1, ICON-D2, ECMWF · 494 Startplätze in der Schweiz`
 
 ---
 
@@ -94,7 +94,7 @@ Visuell: 3 Screenshots (Windy / Burnair / Meteo-Parapente) gegen einen Wingcast-
 
 | Schritt | Headline | Erklärung |
 |---|---|---|
-| **1** | Wähle deine Regionen | Berner Oberland, Wallis, Zentralschweiz, ... — wir kennen alle 488 Startplätze. |
+| **1** | Wähle deine Regionen | Berner Oberland, Wallis, Zentralschweiz, ... — wir kennen alle 494 Startplätze. |
 | **2** | Bekomm Montag 06:00 dein Briefing | 5 Tage Vorschau. Pro Tag eine Ampelfarbe. Beste Spots automatisch sortiert. |
 | **3** | Entscheide und flieg | Eine Frage — eine Antwort. Klick auf den Link für volle Details im Dashboard. |
 
@@ -142,7 +142,7 @@ MITTWOCH — 🟣 Legendär
 **Trust-Elemente (kompakt, eine Zeile pro Punkt):**
 
 - ✓ Wetterdaten von **ICON-CH1 (1km), ICON-D2, ECMWF, Open-Meteo**
-- ✓ **488 Schweizer Startplätze** — manuell kuratiert
+- ✓ **494 Schweizer Startplätze** — manuell kuratiert
 - ✓ Jede Empfehlung mit **Confidence-Level** (hoch/mittel/niedrig)
 - ✓ **Decision Support** — die finale Entscheidung triffst du
 
@@ -334,4 +334,4 @@ Eine neue Route `/` (oder `/landing`) im bestehenden Flask, neues Template `temp
 2. **Live-Demo-Link:** Wollen wir den `/newspaper` öffentlich verlinken, oder ist die App im Soft-Launch?
 3. **Scarcity-Element:** Ist "Erste 500 Piloten kostenlos" ein realer Plan oder Marketing-Theorie? Wenn theoretisch, weglassen.
 4. **Zahlungs-Modell:** Bleibt das Briefing dauerhaft gratis, oder kommt später ein Paid-Tier (siehe `produktkonzept-core-offer.md` mit EUR 4.99/Monat)?
-5. **Geografie:** Nur Schweiz, oder auch DACH-weit? (488 Spots sind aktuell nur CH.)
+5. **Geografie:** Nur Schweiz, oder auch DACH-weit? (494 Spots sind aktuell nur CH.)
