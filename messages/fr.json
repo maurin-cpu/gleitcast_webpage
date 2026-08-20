@@ -12,7 +12,8 @@
     "label": "Langue",
     "de": "Deutsch",
     "fr": "Français",
-    "it": "Italiano"
+    "it": "Italiano",
+    "unavailable": "non disponible"
   },
   "Navbar": {
     "ariaHome": "Page d'accueil Wingcast",
@@ -43,10 +44,22 @@
     "intro": "Vous consultez les windgrammes, vous regardez les modèles météo, vous comparez les webcams. 45 minutes plus tard, vous avez beaucoup de données — mais toujours pas de réponse claire sur le spot qui convient cette semaine.",
     "cardLabel": "À vérifier",
     "cards": [
-      { "topic": "Vent", "note": "Vent de pente, vent de vallée, vent d'altitude" },
-      { "topic": "Thermique", "note": "Déclenchement, force, plafond" },
-      { "topic": "Sécurité", "note": "Foehn, front, sous le vent" },
-      { "topic": "Choix du spot", "note": "494 sites de décollage, un seul jour" }
+      {
+        "topic": "Vent",
+        "note": "Vent de pente, vent de vallée, vent d'altitude"
+      },
+      {
+        "topic": "Thermique",
+        "note": "Déclenchement, force, plafond"
+      },
+      {
+        "topic": "Sécurité",
+        "note": "Foehn, front, sous le vent"
+      },
+      {
+        "topic": "Choix du spot",
+        "note": "494 sites de décollage, un seul jour"
+      }
     ],
     "conclusionLead": "Au final, vous voulez voir une seule chose rapidement : quel spot vole aujourd'hui — et lequel non.",
     "conclusionBody": "Wingcast trie les spots par jour, avec une justification en clair. Vous prenez la recommandation comme point de départ, vous la comparez à vos sources et vous décidez vous-même."
@@ -79,7 +92,13 @@
       "amber": "Sous conditions",
       "red": "Non volable"
     },
-    "weekdays": ["lun", "mar", "mer", "jeu", "ven"],
+    "weekdays": [
+      "lun",
+      "mar",
+      "mer",
+      "jeu",
+      "ven"
+    ],
     "previewTitle": "Météo de vol",
     "previewStand": "Mis à jour 05:42",
     "previewWeekdaysAria": "Jours de la semaine",
@@ -135,9 +154,18 @@
     "headline": "Ce que vous signalez arrive dans la prochaine mise à jour.",
     "intro": "Wingcast est en bêta — certains spots manquent, quelques angles de décollage sont incorrects, parfois une fonction coince. Chaque mail est lu, et la plupart atterrissent dans le build en une semaine.",
     "items": [
-      { "tag": "Un spot manque ?", "body": "Le nom et la région suffisent." },
-      { "tag": "Un angle ne convient pas ?", "body": "Un bref message, nous corrigeons." },
-      { "tag": "Un bug ?", "body": "Ce qui s'est passé + une capture d'écran." }
+      {
+        "tag": "Un spot manque ?",
+        "body": "Le nom et la région suffisent."
+      },
+      {
+        "tag": "Un angle ne convient pas ?",
+        "body": "Un bref message, nous corrigeons."
+      },
+      {
+        "tag": "Un bug ?",
+        "body": "Ce qui s'est passé + une capture d'écran."
+      }
     ],
     "note": "— Maurin lit chaque mail personnellement."
   },

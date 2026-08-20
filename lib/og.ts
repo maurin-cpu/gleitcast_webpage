@@ -48,8 +48,15 @@ interface ArticleOgInput {
 export function resolveArticleOgImage(
   article: ArticleOgInput,
   locale: string,
+  /**
+   * Bereichsbezeichnung in der Sprache der Seite (`Wetterkunde.eyebrow`:
+   * „Wetterkunde" / „Météo" / „Meteorologia"). Muss übergeben werden, weil der
+   * alt-Text sonst auf der französischen Seite deutsch wäre — Screenreader und
+   * Suchmaschinen lesen ihn in der Sprache des Dokuments.
+   */
+  sectionLabel: string,
 ): OgImage {
-  const alt = `Wingcast Wetterkunde — ${article.titel}`;
+  const alt = `Wingcast ${sectionLabel} — ${article.titel}`;
 
   if (article.ogBild && publicFileExists(article.ogBild)) {
     // Konvention für Handbilder in public/og/: exakt 1200×630.

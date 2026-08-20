@@ -7,7 +7,15 @@ import { ArrowUpRight } from "./ui/Icons";
 
 const APP_URL = "https://app.wingcast.ch";
 
-export function Navbar() {
+/**
+ * `availableLocales` reicht nur durch, in welche Sprachen die aktuelle Seite
+ * übersetzt ist — siehe LocaleSwitcher. Weglassen heisst „alle drei".
+ */
+export function Navbar({
+  availableLocales,
+}: {
+  availableLocales?: readonly string[];
+} = {}) {
   const t = useTranslations("Navbar");
 
   return (
@@ -54,7 +62,7 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <LocaleSwitcher />
+          <LocaleSwitcher available={availableLocales} />
           <LinkButton href={APP_URL} target="_blank" rel="noopener" size="sm">
             {t("toApp")}
             <ArrowUpRight className="h-4 w-4" />

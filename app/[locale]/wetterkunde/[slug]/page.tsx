@@ -66,6 +66,8 @@ export async function generateMetadata({
   const url = localeUrl(locale, `/wetterkunde/${slug}`);
   const isDraft = article.status === "draft";
   const published = getArticleLocales(slug);
+  // Bereichsbezeichnung in der Seitensprache — geht in den alt-Text des OG-Bilds.
+  const tWk = await getTranslations({ locale, namespace: "Wetterkunde" });
 
   return {
     title: article.metaTitle,
@@ -95,7 +97,7 @@ export async function generateMetadata({
       description: article.metaDescription,
       url,
       type: "article",
-      image: resolveArticleOgImage(article, locale),
+      image: resolveArticleOgImage(article, locale, tWk("eyebrow")),
       article: {
         publishedTime: article.veroeffentlicht,
         modifiedTime: article.stand,
@@ -117,10 +119,13 @@ export default async function WetterkundeArtikel({
   if (!article) notFound();
 
   const t = await getTranslations({ locale, namespace: "Wetterkunde" });
+  // Nur Sprachen, in denen dieser Artikel publiziert ist — sonst böte der
+  // Sprachumschalter Fassungen an, die es nicht gibt, und landete auf 404.
+  const availableLocales = getArticleLocales(slug);
 
   return (
     <>
-      <Navbar />
+      <Navbar availableLocales={availableLocales} />
       <main id="main" className="bg-slate-50">
         <article className="mx-auto max-w-reading px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
           <nav aria-label={t("breadcrumbLabel")} className="text-sm text-slate-500">
@@ -166,7 +171,7 @@ export default async function WetterkundeArtikel({
               veroeffentlicht: article.veroeffentlicht,
               stand: article.stand,
               // Dasselbe Bild wie in og:image — kein zweiter, womöglich toter Pfad.
-              bildUrl: resolveArticleOgImage(article, locale).url,
+              bildUrl: resolveArticleOgImage(article, locale, t("eyebrow")).url,
             },
             locale,
           ),

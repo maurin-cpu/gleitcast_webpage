@@ -12,7 +12,8 @@
     "label": "Sprache",
     "de": "Deutsch",
     "fr": "Français",
-    "it": "Italiano"
+    "it": "Italiano",
+    "unavailable": "nicht verfügbar"
   },
   "Navbar": {
     "ariaHome": "Wingcast Startseite",
@@ -43,10 +44,22 @@
     "intro": "Du checkst Windgramme, schaust dir Wetter-Modelle an, vergleichst Webcams. 45 Minuten später hast du viele Daten — aber noch keine klare Antwort, welcher Spot diese Woche der richtige ist.",
     "cardLabel": "Zu prüfen",
     "cards": [
-      { "topic": "Wind", "note": "Hangwind, Talwind, Höhenwind" },
-      { "topic": "Thermik", "note": "Auslöse, Stärke, Basis" },
-      { "topic": "Sicherheit", "note": "Föhn, Front, Lee" },
-      { "topic": "Spot-Wahl", "note": "494 Startplätze, ein Tag" }
+      {
+        "topic": "Wind",
+        "note": "Hangwind, Talwind, Höhenwind"
+      },
+      {
+        "topic": "Thermik",
+        "note": "Auslöse, Stärke, Basis"
+      },
+      {
+        "topic": "Sicherheit",
+        "note": "Föhn, Front, Lee"
+      },
+      {
+        "topic": "Spot-Wahl",
+        "note": "494 Startplätze, ein Tag"
+      }
     ],
     "conclusionLead": "Am Ende willst du nur eines schnell sehen: welcher Spot heute fliegt — und welcher nicht.",
     "conclusionBody": "Wingcast sortiert die Spots pro Tag, mit Begründung in Klartext. Du nimmst die Empfehlung als Startpunkt, gleichst sie mit deinen Quellen ab und entscheidest selbst."
@@ -79,7 +92,13 @@
       "amber": "Bedingt",
       "red": "Nicht fliegbar"
     },
-    "weekdays": ["Mo", "Di", "Mi", "Do", "Fr"],
+    "weekdays": [
+      "Mo",
+      "Di",
+      "Mi",
+      "Do",
+      "Fr"
+    ],
     "previewTitle": "Flugwetter",
     "previewStand": "Stand 05:42",
     "previewWeekdaysAria": "Wochentage",
@@ -135,9 +154,18 @@
     "headline": "Was du meldest, kommt ins nächste Update.",
     "intro": "Wingcast ist Beta — manche Spots fehlen, einzelne Start-Winkel stimmen nicht, vereinzelt hakt eine Funktion. Jede Mail wird gelesen, das meiste landet binnen einer Woche im Build.",
     "items": [
-      { "tag": "Spot fehlt?", "body": "Name und Region reicht." },
-      { "tag": "Winkel passt nicht?", "body": "Kurzer Hinweis, wir korrigieren." },
-      { "tag": "Bug?", "body": "Was passiert ist + Screenshot." }
+      {
+        "tag": "Spot fehlt?",
+        "body": "Name und Region reicht."
+      },
+      {
+        "tag": "Winkel passt nicht?",
+        "body": "Kurzer Hinweis, wir korrigieren."
+      },
+      {
+        "tag": "Bug?",
+        "body": "Was passiert ist + Screenshot."
+      }
     ],
     "note": "— Maurin liest jede Mail persönlich."
   },

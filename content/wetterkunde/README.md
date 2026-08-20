@@ -67,14 +67,19 @@ Datei stehen — sie dokumentieren die Herkunft und stören nicht.
 Die Seite läuft in drei Sprachen (`i18n/routing.ts`: `de` als Default ohne Prefix, `fr`
 und `it` mit Prefix). Für die Artikel gilt: **jede Sprachfassung ist eine eigene Datei.**
 
-| Datei | URL | OG-Bild bei Handbetrieb |
-|---|---|---|
-| `<slug>.md` | `/wetterkunde/<slug>` | `public/og/wetterkunde-<slug>.png` |
-| `<slug>.fr.md` | `/fr/wetterkunde/<slug>` | `public/og/wetterkunde-<slug>.fr.png` |
-| `<slug>.it.md` | `/it/wetterkunde/<slug>` | `public/og/wetterkunde-<slug>.it.png` |
+| Datei | URL | OG-Bild bei Handbetrieb | Abbildungen im Text |
+|---|---|---|---|
+| `<slug>.md` | `/wetterkunde/<slug>` | `public/og/wetterkunde-<slug>.png` | `public/wetterkunde/<name>.svg` |
+| `<slug>.fr.md` | `/fr/wetterkunde/<slug>` | `public/og/wetterkunde-<slug>.fr.png` | `public/wetterkunde/<name>.fr.svg` |
+| `<slug>.it.md` | `/it/wetterkunde/<slug>` | `public/og/wetterkunde-<slug>.it.png` | `public/wetterkunde/<name>.it.svg` |
 
 Der `slug` ist in allen Fassungen **derselbe** — auch wenn der Titel übersetzt ist. Nur so
 finden hreflang und die Sprachumschaltung zusammengehörige Seiten.
+
+Abbildungen tragen Text im Bild und müssen deshalb pro Sprache eine eigene Datei haben
+(gleiches Schema für Video: `<name>.fr.mp4`). Jede Sprachfassung verweist auf ihre eigene
+Datei — `npm run check:og` prüft für **jede** Markdown-Datei, dass alle darin
+referenzierten Pfade in `public/` existieren, egal in welcher Sprache.
 
 Zur Bildbenennung: der Loader liest den Pfad aus `og_bild` und ist mit dem Dateinamen
 zufrieden, egal wie er lautet. Die Tabelle oben ist trotzdem verbindlich, weil
@@ -95,6 +100,9 @@ Weiterleitung auf die deutsche**. Konkret:
 - Die Sitemap führt ihn unter `/it/` nicht.
 - **hreflang** nennt nur die Sprachen, in denen der Artikel wirklich publiziert ist
   (`getArticleLocales()`), zeigt also nie auf die 404-URL.
+- Der **Sprachumschalter** in der Navbar zeigt „IT" ausgegraut und unklickbar
+  (`LocaleSwitcher available={…}`). Ohne das führte er auf jeder Seite blind alle drei
+  Sprachen und landete auf einem 404, sobald eine Übersetzung fehlte.
 
 Auf die fehlende Fassung verweist damit nichts; erreichbar ist sie nur durch Raten. Das ist
 Absicht: eine Weiterleitung würde deutschen Text unter italienischer URL ausliefern und

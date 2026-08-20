@@ -12,7 +12,8 @@
     "label": "Lingua",
     "de": "Deutsch",
     "fr": "Français",
-    "it": "Italiano"
+    "it": "Italiano",
+    "unavailable": "non disponibile"
   },
   "Navbar": {
     "ariaHome": "Pagina iniziale Wingcast",
@@ -43,10 +44,22 @@
     "intro": "Controlli i windgrammi, dai un'occhiata ai modelli meteo, confronti le webcam. 45 minuti dopo hai un sacco di dati — ma ancora nessuna risposta chiara su quale spot sia quello giusto questa settimana.",
     "cardLabel": "Da verificare",
     "cards": [
-      { "topic": "Vento", "note": "Vento di pendio, vento di valle, vento d'altitudine" },
-      { "topic": "Termica", "note": "Innesco, intensità, base" },
-      { "topic": "Sicurezza", "note": "Foehn, fronte, sottovento" },
-      { "topic": "Scelta dello spot", "note": "494 siti di decollo, un giorno" }
+      {
+        "topic": "Vento",
+        "note": "Vento di pendio, vento di valle, vento d'altitudine"
+      },
+      {
+        "topic": "Termica",
+        "note": "Innesco, intensità, base"
+      },
+      {
+        "topic": "Sicurezza",
+        "note": "Foehn, fronte, sottovento"
+      },
+      {
+        "topic": "Scelta dello spot",
+        "note": "494 siti di decollo, un giorno"
+      }
     ],
     "conclusionLead": "Alla fine vuoi vedere in fretta solo una cosa: quale spot vola oggi — e quale no.",
     "conclusionBody": "Wingcast ordina gli spot per giornata, con motivazione in chiaro. Prendi la raccomandazione come punto di partenza, la confronti con le tue fonti e decidi tu."
@@ -79,7 +92,13 @@
       "amber": "Condizionato",
       "red": "Non volabile"
     },
-    "weekdays": ["lun", "mar", "mer", "gio", "ven"],
+    "weekdays": [
+      "lun",
+      "mar",
+      "mer",
+      "gio",
+      "ven"
+    ],
     "previewTitle": "Meteo di volo",
     "previewStand": "Aggiornato 05:42",
     "previewWeekdaysAria": "Giorni della settimana",
@@ -135,9 +154,18 @@
     "headline": "Quello che segnali finisce nel prossimo aggiornamento.",
     "intro": "Wingcast è in beta — alcuni spot mancano, singoli angoli di decollo non sono corretti, di tanto in tanto una funzione si inceppa. Ogni mail viene letta, la maggior parte finisce nel build entro una settimana.",
     "items": [
-      { "tag": "Manca uno spot?", "body": "Bastano nome e regione." },
-      { "tag": "L'angolo non torna?", "body": "Una breve nota, correggiamo." },
-      { "tag": "Bug?", "body": "Cosa è successo + screenshot." }
+      {
+        "tag": "Manca uno spot?",
+        "body": "Bastano nome e regione."
+      },
+      {
+        "tag": "L'angolo non torna?",
+        "body": "Una breve nota, correggiamo."
+      },
+      {
+        "tag": "Bug?",
+        "body": "Cosa è successo + screenshot."
+      }
     ],
     "note": "— Maurin legge ogni mail personalmente."
   },
