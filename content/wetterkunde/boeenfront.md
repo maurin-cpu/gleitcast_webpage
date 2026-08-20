@@ -22,7 +22,6 @@ schema:
   - Article
   - FAQPage
   - BreadcrumbList
-og_bild: /og/wetterkunde-boeenfront.jpg   # ⬜ existiert noch nicht
 video: GustFrontReel
 daten:
   - social/analytics/2026-07-30_boeenfront_swissmetnet.json   # Messwerte

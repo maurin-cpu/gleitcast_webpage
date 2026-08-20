@@ -13,6 +13,8 @@ import { ConsentManager } from "@/components/consent/ConsentManager";
 import { PostHogPageView } from "@/components/analytics/PostHogPageView";
 import { AnalyticsEvents } from "@/components/analytics/AnalyticsEvents";
 import { routing, type Locale } from "@/i18n/routing";
+import { SITE_URL, localeUrl, socialMetadata } from "@/lib/seo";
+import { siteOgImage } from "@/lib/og";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -27,20 +29,12 @@ const inter = Inter({
   display: "swap",
 });
 
-// locale → BCP-47 html lang + OpenGraph locale (Schweizer Varianten).
+// locale → BCP-47 html lang. og:locale und alle URLs kommen aus lib/seo.ts.
 const HTML_LANG: Record<Locale, string> = {
   de: "de-CH",
   fr: "fr-CH",
   it: "it-CH",
 };
-const OG_LOCALE: Record<Locale, string> = {
-  de: "de_CH",
-  fr: "fr_CH",
-  it: "it_CH",
-};
-
-// OG-Image: temporär das App-Dashboard wiederverwendet (1200x630 dedicated TBD).
-const OG_IMAGE = "https://wingcast.ch/screenshot_app_dashboard.png";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -55,7 +49,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
   return {
-    metadataBase: new URL("https://wingcast.ch"),
+    metadataBase: new URL(SITE_URL),
     title: {
       default: t("title"),
       template: "%s · Wingcast",
@@ -65,7 +59,7 @@ export async function generateMetadata({
       .split("|")
       .map((k) => k.trim())
       .filter(Boolean),
-    authors: [{ name: "Maurin", url: "https://wingcast.ch" }],
+    authors: [{ name: "Maurin", url: SITE_URL }],
     creator: "Maurin",
     publisher: "Wingcast",
     icons: {
@@ -73,28 +67,17 @@ export async function generateMetadata({
       shortcut: "/brand/logo.svg",
       apple: "/brand/logo.svg",
     },
-    openGraph: {
-      type: "website",
-      locale: OG_LOCALE[locale as Locale] ?? "de_CH",
-      url: "https://wingcast.ch",
-      siteName: "Wingcast",
+    // Default für alle Seiten, die nichts eigenes setzen. Unterseiten
+    // überschreiben og UND twitter gemeinsam via socialMetadata() — Next merged
+    // pro Top-Level-Feld, ein einzeln überschriebenes openGraph würde diesen
+    // twitter-Block sonst unverändert mitschleppen.
+    ...socialMetadata({
+      locale,
       title: t("title"),
       description: t("description"),
-      images: [
-        {
-          url: OG_IMAGE,
-          width: 2400,
-          height: 1400,
-          alt: t("ogImageAlt"),
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: t("title"),
-      description: t("description"),
-      images: [OG_IMAGE],
-    },
+      url: localeUrl(locale),
+      image: siteOgImage(t("ogImageAlt")),
+    }),
     robots: {
       index: true,
       follow: true,

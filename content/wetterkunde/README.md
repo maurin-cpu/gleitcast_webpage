@@ -20,7 +20,10 @@ Danach ist automatisch erledigt:
 
 - Seite unter `/wetterkunde/<slug>`, verlinkt vom Hub `/wetterkunde`
 - `Article` + `BreadcrumbList` + `FAQPage` als JSON-LD (`lib/schema.ts`)
-- Meta-Title, Meta-Description, Canonical, OpenGraph aus dem Frontmatter
+- Meta-Title, Meta-Description, Canonical, OpenGraph **und Twitter-Tags** aus dem
+  Frontmatter (`lib/seo.ts`, immer im Doppel — sonst erbt die Seite die Werte der
+  Startseite)
+- OG-Vorschaubild, beim Build generiert (s. unten)
 - Eintrag in `sitemap.xml` (Hub + Artikel, `lastModified` aus `stand`)
 - Lesezeit, Teaser für die Hub-Karte, Datum
 
@@ -42,7 +45,7 @@ weder im Hub noch in der Sitemap.
 | `meta_title` | nein | `<title>` (Fallback: `titel`) |
 | `meta_description` | nein | Meta-Description und Schema-`description` |
 | `autor` | nein | Byline (Fallback: Maurin) |
-| `og_bild` | nein | OG-Image-Pfad ab Root, z. B. `/og/wetterkunde-boeenfront.jpg` |
+| `og_bild` | nein | Eigenes OG-Bild statt des generierten, Pfad ab Root — muss in `public/og/` liegen und **exakt 1200×630** sein |
 
 Alle übrigen Schlüssel (`ziel_keyword`, `daten`, `skripte`, `schema`, …) bleiben in der
 Datei stehen — sie dokumentieren die Herkunft und stören nicht.
@@ -57,8 +60,52 @@ Datei stehen — sie dokumentieren die Herkunft und stören nicht.
   nie auf der Seite.
 - **Tabellen** scrollen horizontal in einem eigenen Container — die Seite selbst scrollt nie
   seitwärts.
-- Deutsch ist die einzige Sprache. `<slug>.fr.md` / `<slug>.it.md` werden bewusst ignoriert,
-  bis FR/IT freigegeben ist; `/fr/wetterkunde` und `/it/wetterkunde` geben 404.
+---
+
+## Sprachen
+
+Die Seite läuft in drei Sprachen (`i18n/routing.ts`: `de` als Default ohne Prefix, `fr`
+und `it` mit Prefix). Für die Artikel gilt: **jede Sprachfassung ist eine eigene Datei.**
+
+| Datei | URL | OG-Bild bei Handbetrieb |
+|---|---|---|
+| `<slug>.md` | `/wetterkunde/<slug>` | `public/og/wetterkunde-<slug>.png` |
+| `<slug>.fr.md` | `/fr/wetterkunde/<slug>` | `public/og/wetterkunde-<slug>.fr.png` |
+| `<slug>.it.md` | `/it/wetterkunde/<slug>` | `public/og/wetterkunde-<slug>.it.png` |
+
+Der `slug` ist in allen Fassungen **derselbe** — auch wenn der Titel übersetzt ist. Nur so
+finden hreflang und die Sprachumschaltung zusammengehörige Seiten.
+
+Zur Bildbenennung: der Loader liest den Pfad aus `og_bild` und ist mit dem Dateinamen
+zufrieden, egal wie er lautet. Die Tabelle oben ist trotzdem verbindlich, weil
+`npm run check:og` beide Richtungen dagegen prüft (Bild ohne Artikel, Artikel mit
+bereitliegendem, aber nicht eingetragenem Bild). Ohne Konvention könnte niemand ein
+verwaistes Bild von einem absichtlich anders benannten unterscheiden.
+
+### Wenn eine Übersetzung fehlt
+
+Fehlt `<slug>.it.md`, existiert die italienische Fassung schlicht nicht — es gibt **keine
+Weiterleitung auf die deutsche**. Konkret:
+
+- `/it/wetterkunde/<slug>` gibt **404** (`dynamicParams: false` in
+  `app/[locale]/wetterkunde/[slug]/page.tsx`, der Slug steht gar nicht erst in
+  `generateStaticParams`).
+- Der italienische Hub `/it/wetterkunde` listet den Artikel nicht
+  (`getPublishedArticles("it")`).
+- Die Sitemap führt ihn unter `/it/` nicht.
+- **hreflang** nennt nur die Sprachen, in denen der Artikel wirklich publiziert ist
+  (`getArticleLocales()`), zeigt also nie auf die 404-URL.
+
+Auf die fehlende Fassung verweist damit nichts; erreichbar ist sie nur durch Raten. Das ist
+Absicht: eine Weiterleitung würde deutschen Text unter italienischer URL ausliefern und
+müsste beim Nachliefern der Übersetzung wieder weg.
+
+Ein Handbild darf vor der Übersetzung im Repo liegen. Es bricht nichts — es wird nur nicht
+ausgeliefert, und `npm run check:og` meldet es als Hinweis (kein Fehler), bis die Datei da
+ist.
+
+`status: draft` wirkt **pro Sprachfassung**: eine deutsche Fassung kann live sein, während
+die französische noch Entwurf ist. Für hreflang, Hub und Sitemap zählt nur `published`.
 
 ---
 
@@ -66,9 +113,17 @@ Datei stehen — sie dokumentieren die Herkunft und stören nicht.
 
 Diese drei Dinge hängen nicht am Artikel-Loader:
 
-1. **OG-Bild.** Fehlt es, fällt die Seite auf das Standard-OG-Bild der Site zurück. Für
-   Social-Shares ein eigenes 1200×630 unter `public/og/` ablegen und im Frontmatter
-   eintragen.
+1. **OG-Bild — nichts zu tun.** Jeder Artikel bekommt automatisch ein eigenes
+   Social-Vorschaubild: `app/og/wetterkunde/[locale]/[slug]/route.tsx` baut es beim Build
+   aus Titel, Autor und Stand (next/og, 1200×630, Markenlook). Kein Handbild nötig, in
+   keiner Sprache.
+
+   Wer trotzdem ein eigenes Motiv will: Datei **exakt 1200×630** unter `public/og/`
+   ablegen und als `og_bild` ins Frontmatter eintragen. Zeigt `og_bild` ins Leere, fällt
+   die Seite auf das generierte Bild zurück — und `npm run check:og` bricht den Build ab,
+   damit dieser Fallback nicht unbemerkt zur Dauerlösung wird. Genau daran ist der erste
+   Artikel gescheitert: `og_bild` verwies auf ein nie angelegtes JPG, Facebook zeigte eine
+   graue Fläche.
 2. **llms.txt.** Der Hub steht schon drin. Nach dem ersten Artikel diesen Block in
    `public/llms.txt` ergänzen (Zahlen bereits auf dem korrigierten Stand vom 02.08.2026 —
    NICHT die Zahlen aus der GEO-Analyse übernehmen, die sind aelter als die Faktenpruefung):
@@ -76,7 +131,7 @@ Diese drei Dinge hängen nicht am Artikel-Loader:
    ```
    ## Wetterkunde (eigene Auswertungen)
 
-   - [Boeenfront: wie hoch sie reicht](https://wingcast.ch/wetterkunde/boeenfront):
+   - [Boeenfront: wie hoch sie reicht](https://www.wingcast.ch/wetterkunde/boeenfront):
      Auswertung des Ereignisses vom 30. Juli 2026 — 139 SwissMetNet-Stationen (Messung)
      gegen die ICON-CH1-Prognose fuer 494 Startplaetze.
 

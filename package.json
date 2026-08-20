@@ -4,9 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run check:og && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:i18n": "node scripts/check-i18n.mjs",
+    "check:og": "node scripts/check-og-images.mjs",
+    "check:og:live": "node scripts/check-og-images.mjs --base https://www.wingcast.ch",
+    "check": "npm run check:i18n && npm run check:og"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

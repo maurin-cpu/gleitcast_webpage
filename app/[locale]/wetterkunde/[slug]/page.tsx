@@ -17,20 +17,34 @@ import {
   breadcrumbSchema,
   jsonLdScript,
 } from "@/lib/schema";
-
-const SITE_URL = "https://wingcast.ch";
-
-const HREFLANG: Record<WkLocale, string> = {
-  de: "de-CH",
-  fr: "fr-CH",
-  it: "it-CH",
-};
+import { hreflangOf, localePath, localeUrl, socialMetadata } from "@/lib/seo";
+import { resolveArticleOgImage } from "@/lib/og";
 
 // Default-Locale ohne Prefix, fr/it mit Prefix (localePrefix: "as-needed").
 function prefixed(locale: string, path: string): string {
-  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
-  return `${prefix}${path}`;
+  return localePath(locale, path);
 }
+
+/**
+ * Fehlt eine Übersetzung, gibt es die Sprachfassung schlicht nicht — 404 statt
+ * Weiterleitung auf die deutsche Fassung.
+ *
+ * Begründung: Auf eine fehlende Übersetzung zeigt ohnehin nichts. Der Hub
+ * listet pro Sprache nur `status: published`, die Sitemap ebenso, und hreflang
+ * kommt aus `getArticleLocales()` — also nur aus tatsächlich vorhandenen
+ * Fassungen. `/it/wetterkunde/staubteufel` erreicht man derzeit nur durch
+ * Raten. Eine Weiterleitung auf /wetterkunde/staubteufel würde deutschen Text
+ * unter einer italienischen URL ausliefern; sobald die Übersetzung kommt, wäre
+ * sie wieder zu entfernen. 404 ist die ehrliche Antwort: die Ressource
+ * existiert in dieser Sprache nicht.
+ *
+ * `dynamicParams: false` macht daraus eine strukturelle Zusage statt einer
+ * zufälligen. Ohne das Flag würde Next jede geratene URL erst rendern, um dann
+ * über `notFound()` zu stolpern. Da der Inhalt beim Build aus dem Dateisystem
+ * kommt, kann ohnehin kein Slug auftauchen, den generateStaticParams nicht
+ * kennt — also direkt 404, ohne Render.
+ */
+export const dynamicParams = false;
 
 // Pro Sprache nur die Slugs, für die eine Datei existiert. Entwürfe bauen mit,
 // sind aber noindex (s. unten) und stehen weder im Hub noch in der Sitemap.
@@ -49,13 +63,14 @@ export async function generateMetadata({
   const article = getArticle(slug, locale as WkLocale);
   if (!article) return {};
 
-  const url = `${SITE_URL}${prefixed(locale, `/wetterkunde/${slug}`)}`;
+  const url = localeUrl(locale, `/wetterkunde/${slug}`);
   const isDraft = article.status === "draft";
   const published = getArticleLocales(slug);
 
   return {
     title: article.metaTitle,
     description: article.metaDescription,
+    authors: [{ name: article.autor }],
     alternates: {
       canonical: url,
       // hreflang nur für Sprachen, in denen der Artikel publiziert ist.
@@ -63,8 +78,8 @@ export async function generateMetadata({
         ? {
             languages: Object.fromEntries(
               published.map((l) => [
-                HREFLANG[l],
-                `${SITE_URL}${prefixed(l, `/wetterkunde/${slug}`)}`,
+                hreflangOf(l),
+                localeUrl(l, `/wetterkunde/${slug}`),
               ]),
             ),
           }
@@ -72,18 +87,21 @@ export async function generateMetadata({
     },
     // Entwürfe dürfen nicht in den Index — sie sind nur zur Vorschau erreichbar.
     ...(isDraft ? { robots: { index: false, follow: false } } : {}),
-    openGraph: {
-      type: "article",
-      url,
+    // og:* und twitter:* immer im Doppel — sonst erbt die Seite den
+    // twitter-Block des Layouts und zeigt auf X die Startseite.
+    ...socialMetadata({
+      locale,
       title: article.metaTitle,
       description: article.metaDescription,
-      publishedTime: article.veroeffentlicht,
-      modifiedTime: article.stand,
-      authors: ["Maurin"],
-      ...(article.ogBild
-        ? { images: [{ url: `https://wingcast.ch${article.ogBild}` }] }
-        : {}),
-    },
+      url,
+      type: "article",
+      image: resolveArticleOgImage(article, locale),
+      article: {
+        publishedTime: article.veroeffentlicht,
+        modifiedTime: article.stand,
+        authors: [article.autor],
+      },
+    }),
   };
 }
 
@@ -147,7 +165,8 @@ export default async function WetterkundeArtikel({
               metaDescription: article.metaDescription,
               veroeffentlicht: article.veroeffentlicht,
               stand: article.stand,
-              bild: article.ogBild,
+              // Dasselbe Bild wie in og:image — kein zweiter, womöglich toter Pfad.
+              bildUrl: resolveArticleOgImage(article, locale).url,
             },
             locale,
           ),

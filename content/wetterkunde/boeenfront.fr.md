@@ -22,7 +22,6 @@ schema:
   - Article
   - FAQPage
   - BreadcrumbList
-og_bild: /og/wetterkunde-boeenfront.jpg
 video: GustFrontReel
 uebersetzung_von: "boeenfront.md (Fassung 7, 2026-08-03)"
 daten:

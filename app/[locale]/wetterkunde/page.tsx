@@ -6,13 +6,12 @@ import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { getPublishedArticles, type WkLocale } from "@/lib/wetterkunde";
 import { wetterkundeHubSchema, breadcrumbSchema, jsonLdScript } from "@/lib/schema";
-
-const SITE_URL = "https://wingcast.ch";
+import { SITE_URL, localePath, localeUrl, socialMetadata } from "@/lib/seo";
+import { siteOgImage } from "@/lib/og";
 
 // Default-Locale ohne Prefix, fr/it mit Prefix (localePrefix: "as-needed").
 function prefixed(locale: string, path: string): string {
-  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
-  return `${prefix}${path}`;
+  return localePath(locale, path);
 }
 
 export function generateStaticParams() {
@@ -26,17 +25,27 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Wetterkunde" });
+  const tMeta = await getTranslations({ locale, namespace: "Metadata" });
+  const url = localeUrl(locale, "/wetterkunde");
+
   return {
     title: t("hubMetaTitle"),
     description: t("hubMetaDescription"),
     alternates: {
-      canonical: `${SITE_URL}${prefixed(locale, "/wetterkunde")}`,
+      canonical: url,
       languages: {
         "de-CH": `${SITE_URL}/wetterkunde`,
         "fr-CH": `${SITE_URL}/fr/wetterkunde`,
         "it-CH": `${SITE_URL}/it/wetterkunde`,
       },
     },
+    ...socialMetadata({
+      locale,
+      title: t("hubMetaTitle"),
+      description: t("hubMetaDescription"),
+      url,
+      image: siteOgImage(tMeta("ogImageAlt")),
+    }),
   };
 }
 

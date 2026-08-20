@@ -1,4 +1,5 @@
-const SITE_URL = "https://wingcast.ch";
+import { SITE_URL } from "./seo";
+
 const APP_URL = "https://app.wingcast.ch";
 
 // Letztes inhaltliches Update der Landing — manuell pflegen bei Content-Refreshes.
@@ -59,7 +60,9 @@ export function organizationSchema(locale: string) {
     "@id": `${SITE_URL}/#organization`,
     name: "Wingcast",
     url: SITE_URL,
-    logo: `${SITE_URL}/og-image.png`,
+    // Zeigte bis 20.08.2026 auf /og-image.png — eine Datei, die es nie gab.
+    // scripts/check-og-images.mjs fängt so etwas jetzt vor dem Build ab.
+    logo: `${SITE_URL}/brand/logo.svg`,
     description:
       "KI-Flugwetter-Cast für Schweizer Gleitschirmpiloten — 5-Tage-Fliegbarkeits-Forecast für 494 Startplätze, automatisch sortiert mit Begründung in Klartext.",
     email: "info@wingcast.ch",
@@ -206,7 +209,8 @@ interface ArticleSchemaInput {
   veroeffentlicht: string;
   /** Letzter inhaltlicher Stand, ISO-Datum. */
   stand: string;
-  bild: string | null;
+  /** Absolute URL des OG-Bilds (aus lib/og.ts) — dasselbe Bild wie in og:image. */
+  bildUrl: string;
 }
 
 // Article — ohne das ist ein Pillar für AI-Systeme nur ein Textblock
@@ -228,7 +232,7 @@ export function articleSchema(a: ArticleSchemaInput, locale = "de") {
     author: { "@id": `${SITE_URL}/#maurin` },
     publisher: { "@id": `${SITE_URL}/#organization` },
     isPartOf: { "@id": `${hub}/#webpage` },
-    ...(a.bild ? { image: `${SITE_URL}${a.bild}` } : {}),
+    image: a.bildUrl,
   };
 }
 

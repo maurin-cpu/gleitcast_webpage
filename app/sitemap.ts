@@ -6,7 +6,7 @@ import {
   type WkLocale,
 } from "@/lib/wetterkunde";
 
-const SITE_URL = "https://wingcast.ch";
+import { SITE_URL } from "@/lib/seo";
 
 // Default-Locale ohne Prefix, fr/it mit Prefix (passend zu localePrefix: "as-needed").
 function localized(path: string, locale: string): string {

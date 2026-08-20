@@ -18,6 +18,7 @@ import { Marked } from "marked";
  */
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "wetterkunde");
+const PUBLIC_DIR = path.join(process.cwd(), "public");
 
 export type WkLocale = "de" | "fr" | "it";
 export const WK_LOCALES: readonly WkLocale[] = ["de", "fr", "it"] as const;
@@ -92,6 +93,52 @@ function readingTime(md: string): number {
 }
 
 /**
+ * Ablaufgrafiken mit eigener Zeitleiste als `<object>` einbinden statt als `<img>`.
+ *
+ * Chrome hält die Animationsuhr eines per `<img>` eingebundenen SVG bei t=0 an.
+ * Unsere Ablaufgrafiken arbeiten mit `animation-fill-mode: both`, also steht dann
+ * jede Spur auf ihrer 0-%-Stufe — die Grafik bleibt **leer**, sie bleibt nicht etwa
+ * beim Endbild stehen (im Browser nachgemessen 19.08.2026: `<img>` zeigte nur Himmel
+ * und Boden, `<object>` und Inline liefen). Als `<object>` lädt der Browser das SVG
+ * als eigenes Dokument: die Animation läuft, die SVG-eigenen Klassennamen und
+ * `@keyframes` bleiben von der Seite isoliert, und die `@media`-Abfragen im SVG
+ * beziehen sich weiter auf die Darstellungsgrösse der Grafik — genau wie beim `<img>`,
+ * wofür sie gebaut sind.
+ *
+ * Nur SVG mit eigener Zeitleiste werden umgestellt; alle anderen bleiben `<img>`
+ * (Lazy-Loading, weniger Markup). Der ursprüngliche `<img>` bleibt als Fallback im
+ * `<object>` stehen, falls die Datei fehlt.
+ */
+const SVG_IMG = /<img\b[^>]*\ssrc="(\/[^"]+\.svg)"[^>]*>/g;
+
+function attrOf(tag: string, name: string): string | null {
+  const m = tag.match(new RegExp(`\\s${name}="([^"]*)"`));
+  return m ? m[1] : null;
+}
+
+/** Hat das SVG eine eigene Zeitleiste (CSS-Keyframes oder SMIL)? */
+function isAnimatedSvg(src: string): boolean {
+  const file = path.join(PUBLIC_DIR, src.replace(/^\/+/, ""));
+  if (!fs.existsSync(file)) return false;
+  return /@keyframes|<animate/.test(fs.readFileSync(file, "utf8"));
+}
+
+function embedAnimatedSvgs(html: string): string {
+  return html.replace(SVG_IMG, (tag, src: string) => {
+    if (!isAnimatedSvg(src)) return tag;
+    const alt = (attrOf(tag, "alt") ?? "").replace(/"/g, "&quot;");
+    const w = attrOf(tag, "width") ?? "1600";
+    const h = attrOf(tag, "height") ?? "900";
+    return (
+      `<div class="fig-anim">` +
+      `<object type="image/svg+xml" data="${src}" aria-label="${alt}"` +
+      ` style="aspect-ratio:${w}/${h}">${tag}</object>` +
+      `</div>`
+    );
+  });
+}
+
+/**
  * FAQ für das FAQPage-Schema. Konvention im Artikel:
  *
  *   ## Häufige Fragen   (fr: Questions fréquentes · it: Domande frequenti)
@@ -160,7 +207,7 @@ function parse(slug: string, raw: string): Article {
     ogBild: data.og_bild ? String(data.og_bild).split(/\s+#/)[0].trim() : null,
     teaser: extractTeaser(body),
     lesezeitMinuten: readingTime(body),
-    html: marked.parse(body, { async: false }) as string,
+    html: embedAnimatedSvgs(marked.parse(body, { async: false }) as string),
     faq: extractFaq(md),
   };
 }

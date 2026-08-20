@@ -4,6 +4,8 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { LegalNotice } from "@/components/LegalNotice";
 import { routing } from "@/i18n/routing";
+import { localeUrl, socialMetadata } from "@/lib/seo";
+import { siteOgImage } from "@/lib/og";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -16,7 +18,20 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Legal" });
-  return { title: t("termsTitle") };
+  const tMeta = await getTranslations({ locale, namespace: "Metadata" });
+  const url = localeUrl(locale, "/nutzungsbedingungen");
+  return {
+    title: t("termsTitle"),
+    alternates: { canonical: url },
+    // Ohne eigenen twitter-Block stünde hier der Titel der Startseite.
+    ...socialMetadata({
+      locale,
+      title: t("termsTitle"),
+      description: tMeta("description"),
+      url,
+      image: siteOgImage(tMeta("ogImageAlt")),
+    }),
+  };
 }
 
 export default async function NutzungsbedingungenPage({

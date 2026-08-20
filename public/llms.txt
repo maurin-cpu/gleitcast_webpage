@@ -37,12 +37,12 @@ Die Pipeline ist drei-stufig:
 
 ## Hauptseiten
 
-- [Startseite](https://wingcast.ch/): Ueberblick, Funktionsweise, FAQ
+- [Startseite](https://www.wingcast.ch/): Ueberblick, Funktionsweise, FAQ
 - [App](https://app.wingcast.ch/): Live-Forecast, Spots-Karte, Cast-Konfiguration
-- [Wetterkunde](https://wingcast.ch/wetterkunde): eigene Auswertungen echter Flugtage — Messdaten gegen Modelle gerechnet, Methode und Grenzen offengelegt (nur Deutsch)
-- [Impressum](https://wingcast.ch/impressum)
-- [Datenschutz](https://wingcast.ch/datenschutz)
-- [Nutzungsbedingungen](https://wingcast.ch/nutzungsbedingungen)
+- [Wetterkunde](https://www.wingcast.ch/wetterkunde): eigene Auswertungen echter Flugtage — Messdaten gegen Modelle gerechnet, Methode und Grenzen offengelegt (nur Deutsch)
+- [Impressum](https://www.wingcast.ch/impressum)
+- [Datenschutz](https://www.wingcast.ch/datenschutz)
+- [Nutzungsbedingungen](https://www.wingcast.ch/nutzungsbedingungen)
 
 ## Personas
 
@@ -65,11 +65,11 @@ Maurin, Pilot in Zuerich. Gebaut aus eigenem Schmerzpunkt: Daten-Overload beim S
 
 ## Wetterkunde (eigene Auswertungen)
 
-- [Boeenfront: wie hoch sie reicht](https://wingcast.ch/wetterkunde/boeenfront):
+- [Boeenfront: wie hoch sie reicht](https://www.wingcast.ch/wetterkunde/boeenfront):
   Auswertung des Ereignisses vom 30. Juli 2026 — 139 SwissMetNet-Stationen (Messung)
   gegen die ICON-CH1-Prognose fuer 494 Startplaetze. Auch auf Franzoesisch
-  (https://wingcast.ch/fr/wetterkunde/boeenfront) und Italienisch
-  (https://wingcast.ch/it/wetterkunde/boeenfront).
+  (https://www.wingcast.ch/fr/wetterkunde/boeenfront) und Italienisch
+  (https://www.wingcast.ch/it/wetterkunde/boeenfront).
 
 ## Belegte Einzelbefunde
 
