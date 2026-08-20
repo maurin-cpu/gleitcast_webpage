@@ -27,9 +27,45 @@ export function publicFileExists(urlPath: string): boolean {
 interface ArticleOgInput {
   slug: string;
   titel: string;
+  autor: string;
+  /** Letzter inhaltlicher Stand, ISO-Datum — steht im Bild. */
+  stand: string;
   /** Frontmatter `og_bild` — Pfad ab Root oder null. */
   ogBild: string | null;
 }
+
+/** FNV-1a, 32 Bit. Reicht für Cache-Busting — hier wird nichts abgesichert. */
+function hash(input: string): string {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < input.length; i++) {
+    h ^= input.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return (h >>> 0).toString(36);
+}
+
+/**
+ * Quelltext der Bildvorlage, als Teil des Versions-Tokens.
+ *
+ * Damit ändert sich die Bild-URL automatisch, sobald jemand am Motiv schraubt —
+ * niemand muss daran denken, eine Revisionsnummer hochzuzählen. Genau dieses
+ * Vergessen hätte hier gereicht, damit Facebook dauerhaft die alte Fassung
+ * zeigt. Wird nur beim Build gelesen (alle Artikelseiten sind statisch
+ * vorgerendert); schlägt das fehl, bleibt das Token auf dem Artikelinhalt
+ * stehen, statt den Build zu kippen.
+ */
+const OG_TEMPLATE_REV = (() => {
+  try {
+    return hash(
+      fs.readFileSync(
+        path.join(process.cwd(), "app", "og", "wetterkunde", "[locale]", "[slug]", "route.tsx"),
+        "utf8",
+      ),
+    );
+  } catch {
+    return "0";
+  }
+})();
 
 /**
  * OG-Bild eines Wetterkunde-Artikels, in dieser Reihenfolge:
@@ -64,7 +100,18 @@ export function resolveArticleOgImage(
     return { url: absoluteUrl(article.ogBild), ...OG_SIZE, alt };
   }
 
-  return { url: articleOgImageUrl(locale, article.slug), ...OG_SIZE, alt };
+  // Versions-Token: Bildvorlage + alles, was im Bild steht. Ändert sich eins
+  // davon, ändert sich die URL — sonst hält Facebook das alte Motiv fest
+  // (die Route wird mit `immutable, max-age=31536000` ausgeliefert).
+  const version = hash(
+    `${OG_TEMPLATE_REV}|${article.titel}|${article.autor}|${article.stand}|${sectionLabel}`,
+  );
+
+  return {
+    url: articleOgImageUrl(locale, article.slug, version),
+    ...OG_SIZE,
+    alt,
+  };
 }
 
 /**

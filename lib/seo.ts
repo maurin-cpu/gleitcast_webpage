@@ -97,9 +97,23 @@ export function defaultOgImage(alt: string): OgImage {
  * Build statisch vorgerendert. Bewusst ohne Datei-Endung — der Route-Handler
  * setzt `Content-Type: image/png`, und darauf gehen die Scraper. Der Pfad ist
  * im Middleware-Matcher ausgenommen, sonst würde next-intl ihn locale-routen.
+ *
+ * `version` ist Pflicht, sobald das Bild irgendwo geteilt wird. Vercel liefert
+ * die Route mit `Cache-Control: public, immutable, max-age=31536000` aus — ein
+ * Jahr unveränderlich. Ändert sich das Motiv, ohne dass sich die URL ändert,
+ * behalten Facebook, WhatsApp, LinkedIn und jedes CDN die alten Bytes; genau
+ * daran blieb nach dem Corporate-Design-Umbau die alte dunkle Fassung stehen.
+ * Der Token kommt aus lib/og.ts und deckt Artikelinhalt UND Bildvorlage ab.
+ * Query-Parameter beeinflussen das Routing nicht — ausgeliefert wird weiterhin
+ * die beim Build vorgerenderte Datei.
  */
-export function articleOgImageUrl(locale: string, slug: string): string {
-  return `${SITE_URL}/og/wetterkunde/${locale}/${slug}`;
+export function articleOgImageUrl(
+  locale: string,
+  slug: string,
+  version?: string,
+): string {
+  const url = `${SITE_URL}/og/wetterkunde/${locale}/${slug}`;
+  return version ? `${url}?v=${version}` : url;
 }
 
 // ── Social-Tags ───────────────────────────────────────────────────────────
