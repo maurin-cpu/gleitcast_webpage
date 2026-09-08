@@ -4,6 +4,11 @@ import { ArrowUpRight } from "../ui/Icons";
 import { CookieSettingsLink } from "../consent/CookieSettingsLink";
 import { Link } from "@/i18n/navigation";
 import { PAGE_LAST_UPDATED } from "@/lib/schema";
+import {
+  getPublishedArticles,
+  WK_LOCALES,
+  type WkLocale,
+} from "@/lib/wetterkunde";
 
 const APP_URL = "https://app.wingcast.ch";
 
@@ -29,6 +34,18 @@ export function Footer() {
     { day: "numeric", month: "long", year: "numeric" },
   );
 
+  const wkLocale: WkLocale = WK_LOCALES.includes(locale as WkLocale)
+    ? (locale as WkLocale)
+    : "de";
+  const articleLinks: FooterLink[] = getPublishedArticles(wkLocale).map((a) => ({
+    // Nur der Kopf des Titels bis zum Doppelpunkt/Gedankenstrich — der volle
+    // Titel ist ein ganzer Satz und sprengt die Footer-Spalte. Der Kopf traegt
+    // das Ziel-Keyword und gibt damit den Ankertext, den der Artikel braucht.
+    label: a.titel.split(/[:—]/)[0].trim(),
+    href: `/wetterkunde/${a.slug}`,
+    kind: "internal" as const,
+  }));
+
   // Volle Pfade statt reiner #-Anker: der Footer steht auch auf
   // /wetterkunde-Seiten — dort liefen nackte Anker ins Leere.
   const productLinks: FooterLink[] = [
@@ -37,6 +54,12 @@ export function Footer() {
     { label: t("linkBetaFeedback"), href: "/#feedback", kind: "internal" },
     { label: t("linkFaq"), href: "/#faq", kind: "internal" },
     { label: t("linkWetterkunde"), href: "/wetterkunde", kind: "internal" },
+    // Die Artikel direkt verlinken, nicht nur den Hub: so haengt jeder Pillar
+    // sitewide (also auch an der Startseite) an einem internen Link statt erst
+    // einen Klick tiefer. Ohne das erreichte Google sie nur ueber den Hub und
+    // stufte sie entsprechend niedrig ein. Nur publizierte Fassungen der
+    // aktuellen Sprache — Entwuerfe und fehlende Uebersetzungen bleiben raus.
+    ...articleLinks,
   ];
 
   const appLinks: FooterLink[] = [

@@ -7,6 +7,7 @@ import {
 } from "@/lib/wetterkunde";
 
 import { SITE_URL } from "@/lib/seo";
+import { PAGE_LAST_UPDATED } from "@/lib/schema";
 
 // Default-Locale ohne Prefix, fr/it mit Prefix (passend zu localePrefix: "as-needed").
 function localized(path: string, locale: string): string {
@@ -24,7 +25,13 @@ function languages(path: string): Record<string, string> {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  // Bewusst NICHT `new Date()`: mit der Build-Zeit meldete jeder Deploy alle
+  // Seiten als geaendert, obwohl sich am Inhalt nichts getan hatte. Google
+  // stuft ein lastmod, das bei jedem Crawl neu ist, als unzuverlaessig ein und
+  // ignoriert es dann ganz — genau das kostet Crawl-Prioritaet. Die statischen
+  // Seiten haengen deshalb am gepflegten PAGE_LAST_UPDATED, die Artikel am
+  // `stand` aus ihrem Frontmatter.
+  const lastModified = new Date(PAGE_LAST_UPDATED);
 
   const pages: Array<{
     path: string;
@@ -59,9 +66,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const locale of routing.locales) {
     const articles = getPublishedArticles(locale as WkLocale);
     if (articles.length === 0) continue;
+    // Der Hub aendert sich, wenn ein Artikel dazukommt oder aktualisiert wird —
+    // also das juengste `stand` der gelisteten Artikel, nicht die Build-Zeit.
+    const hubLastModified = new Date(
+      Math.max(...articles.map((a) => new Date(a.stand).getTime())),
+    );
     wetterkunde.push({
       url: localized("/wetterkunde", locale),
-      lastModified,
+      lastModified: hubLastModified,
       changeFrequency: "weekly" as const,
       priority: 0.7,
       alternates: { languages: languages("/wetterkunde") },

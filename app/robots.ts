@@ -24,7 +24,11 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/_next/"],
+        // Nur /api/ sperren. /_next/ stand hier frueher mit drin — damit kam
+        // Googlebot nicht mehr an die JS-/CSS-Chunks und rief die Seiten
+        // unfertig gerendert ab. Google verlangt ausdruecklich Zugriff auf die
+        // Render-Ressourcen; die Chunks selbst landen ohnehin nicht im Index.
+        disallow: ["/api/"],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

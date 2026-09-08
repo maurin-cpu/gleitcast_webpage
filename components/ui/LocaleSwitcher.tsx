@@ -57,6 +57,14 @@ export function LocaleSwitcher({
             href={pathname}
             locale={locale}
             hrefLang={locale}
+            // next-intl setzt bei explizitem `locale` immer das Prefix — auch
+            // fuer die Default-Sprache. Der Link muss so bleiben: er setzt das
+            // NEXT_LOCALE-Cookie, ohne das wirft die Locale-Erkennung einen
+            // franzoesischen Besucher von / sofort wieder auf /fr. Fuer Crawler
+            // ist /de/... aber nur eine 307-Weiterleitung auf die kanonische
+            // Adresse; die Sprachvarianten kennt Google ohnehin ueber hreflang
+            // (Link-Header + Sitemap). Also nicht folgen lassen.
+            {...(locale === routing.defaultLocale && { rel: "nofollow" })}
             aria-current={isActive ? "true" : undefined}
             title={t(locale)}
             className={`focus-ring rounded px-2 py-1 text-xs font-semibold uppercase tracking-wide transition-colors ${
