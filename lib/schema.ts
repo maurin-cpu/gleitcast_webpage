@@ -4,7 +4,7 @@ const APP_URL = "https://app.wingcast.ch";
 
 // Letztes inhaltliches Update der Landing — manuell pflegen bei Content-Refreshes.
 // Wird auch im Footer als sichtbares „Stand"-Datum verwendet.
-export const PAGE_LAST_UPDATED = "2026-05-13";
+export const PAGE_LAST_UPDATED = "2026-09-15";
 
 type Locale = "de" | "fr" | "it";
 
@@ -64,7 +64,7 @@ export function organizationSchema(locale: string) {
     // scripts/check-og-images.mjs fängt so etwas jetzt vor dem Build ab.
     logo: `${SITE_URL}/brand/logo.svg`,
     description:
-      "KI-Flugwetter-Cast für Schweizer Gleitschirmpiloten — 5-Tage-Fliegbarkeits-Forecast für 494 Startplätze, automatisch sortiert mit Begründung in Klartext.",
+      "KI-Flugwetter-Cast für Schweizer Gleitschirmpiloten — 3-Tage-Thermikprognose und Fliegbarkeit für 494 Startplätze, automatisch sortiert mit Begründung in Klartext.",
     email: "info@wingcast.ch",
     founder: { "@id": `${SITE_URL}/#maurin` },
     areaServed: {
@@ -99,7 +99,7 @@ export function softwareApplicationSchema(locale: string) {
     operatingSystem: "Web",
     url: APP_URL,
     description:
-      "KI-bewertetes 5-Tage-Flugwetter für 494 Schweizer Startplätze. Automatische Sortierung nach Fliegbarkeit, Begründung in Klartext, optional E-Mail-Cast (Briefing) an frei wählbaren Wochentagen.",
+      "KI-bewertete 3-Tage-Thermikprognose und Flugwetter für 494 Schweizer Startplätze. Automatische Sortierung nach Fliegbarkeit, Begründung in Klartext, optional E-Mail-Cast (Briefing) an frei wählbaren Wochentagen.",
     inLanguage: inLanguage(locale),
     isAccessibleForFree: true,
     offers: {
@@ -114,7 +114,7 @@ export function softwareApplicationSchema(locale: string) {
       geographicArea: { "@type": "Country", name: "Switzerland" },
     },
     featureList: [
-      "5-Tage-Fliegbarkeits-Forecast",
+      "3-Tage-Thermikprognose und Fliegbarkeits-Forecast",
       "Multi-Modell-Aggregation via Open-Meteo (ICON-CH1, ICON-CH2, ICON-D2, ICON-EU, GFS)",
       "Deterministische Atmosphären-Physik (Parcel-Methode, Inversions-Erkennung, Gust-Decay)",
       "Föhn-Detektion über Druckgradient Nord–Süd plus Höhenwind und Feuchte-Signatur",
@@ -158,9 +158,9 @@ export function webPageSchema(locale: string) {
     "@type": "WebPage",
     "@id": `${localizedUrl(locale)}/#webpage`,
     url: localizedUrl(locale),
-    name: "Wingcast — Gratis KI-Flugwetter & Thermik-Forecast für die Schweiz",
+    name: "Thermikprognose Schweiz & Flugwetter gratis | Wingcast",
     description:
-      "Gratis KI-Flugwetter für 494 Schweizer Startplätze. 5-Tage-Forecast sortiert pro Tag, in Klartext erklärt. Ohne Kreditkarte. Decision Support, du entscheidest.",
+      "Gratis Thermikprognose und Flugwetter für 494 Schweizer Startplätze: 3 Tage, pro Tag sortiert, in Klartext erklärt. Jetzt Spots ansehen – du entscheidest.",
     inLanguage: inLanguage(locale),
     isPartOf: { "@id": `${SITE_URL}/#website` },
     about: { "@id": `${SITE_URL}/#app` },

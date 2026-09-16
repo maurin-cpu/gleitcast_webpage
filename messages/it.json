@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Wingcast — Meteo di volo IA & forecast termica gratis per la Svizzera",
-    "description": "Meteo di volo IA gratis per 494 siti di decollo svizzeri. Forecast a 5 giorni ordinato per giornata, spiegato in chiaro. Senza carta di credito. Decision Support, decidi tu.",
+    "title": "Previsione termica & meteo di volo Svizzera | Wingcast",
+    "description": "Previsione termica e meteo di volo gratis per 494 siti di decollo svizzeri: 3 giorni, ordinati per giornata, spiegati in chiaro. Guarda gli spot – decidi tu.",
     "ogImageAlt": "Dashboard dell'app Wingcast: mappa con tutti i 494 siti di decollo svizzeri, colorati secondo la valutazione IA",
     "keywords": "app meteo parapendio | app meteo parapendio gratis | app parapendio gratuita | meteo parapendio gratis | meteo di volo Svizzera | forecast termica Svizzera | previsione termica Svizzera | previsione vento Svizzera | meteo di volo IA | meteo IA parapendio | forecast termica gratis | previsione termica gratis | meteo siti di decollo Svizzera | siti di decollo parapendio | volabilità Svizzera | allerta foehn parapendio | ICON-CH1 parapendio | free paragliding weather Switzerland | Paragliding Forecast Switzerland"
   },
@@ -26,9 +26,9 @@
   },
   "Hero": {
     "badge": "Beta · esperimento IA per piloti svizzeri",
-    "headlineLine1": "Quale spot vola questa settimana?",
-    "headlineLine2": "Lo vedi a colpo d'occhio.",
-    "subline": "Forecast a 5 giorni per 494 siti di decollo svizzeri — ordinato per giornata, spiegato in chiaro, dai primi voli fino al XC. Gratis, senza carta di credito.",
+    "headlineLine1": "Quale spot vola nei prossimi giorni?",
+    "headlineLine2": "La previsione termica per i siti svizzeri.",
+    "subline": "Previsione a 3 giorni per 494 siti di decollo svizzeri — ordinato per giornata, spiegato in chiaro, dai primi voli fino al XC. Gratis, senza carta di credito.",
     "ctaPrimary": "Guarda gli spot",
     "ctaSecondary": "Guarda il Cast",
     "trustSpots": "<b>494 spot svizzeri</b>",
@@ -62,12 +62,12 @@
       }
     ],
     "conclusionLead": "Alla fine vuoi vedere in fretta solo una cosa: quale spot vola oggi — e quale no.",
-    "conclusionBody": "Wingcast ordina gli spot per giornata, con motivazione in chiaro. Prendi la raccomandazione come punto di partenza, la confronti con le tue fonti e decidi tu."
+    "conclusionBody": "Wingcast ordina gli spot per giornata, con motivazione in chiaro. Prendi la valutazione come punto di partenza, la confronti con le tue fonti e decidi tu."
   },
   "HowItWorks": {
     "kicker": "Dal meteo al Cast",
-    "headline": "Tre passi, nessuna magia.",
-    "intro": "Modelli meteo validati, classica fisica dell'atmosfera, l'IA in cima per la valutazione. Nessuna black box, nessun gioco di prestigio.",
+    "headline": "Come nasce la previsione termica?",
+    "intro": "Wingcast calcola ogni mattina la previsione termica a tre giorni per 494 siti di decollo svizzeri. Prima i modelli meteo e la fisica dell'atmosfera, solo dopo valuta l'IA. Nessuna black box.",
     "steps": [
       {
         "label": "Dati",
@@ -95,9 +95,7 @@
     "weekdays": [
       "lun",
       "mar",
-      "mer",
-      "gio",
-      "ven"
+      "mer"
     ],
     "previewTitle": "Meteo di volo",
     "previewStand": "Aggiornato 05:42",
@@ -145,7 +143,7 @@
       {
         "t": "01:00",
         "title": "Leggi il Cast",
-        "body": "5 giorni, ordinati per volabilità, con motivazione per ogni spot."
+        "body": "3 giorni, ordinati per volabilità, con motivazione per ogni spot."
       }
     ]
   },
@@ -176,7 +174,11 @@
     "items": [
       {
         "q": "Cos'è Wingcast?",
-        "a": "Wingcast è un'app gratuita di meteo di volo IA per piloti di parapendio svizzeri. Aggrega cinque modelli meteo via Open-Meteo (ICON-CH1 con risoluzione di 1 km e ICON-CH2 di 2 km di MeteoSvizzera, oltre a ICON-D2, ICON-EU e GFS), ne calcola la classica fisica dell'atmosfera (base termica, inversioni, rilevamento del foehn, decadimento delle raffiche) in modo deterministico nel codice, e solo a quel punto lascia che l'IA analizzi e valuti sicurezza e idoneità per ogni spot. 494 siti di decollo svizzeri vengono ordinati automaticamente per giornata in base alla volabilità, con in più una motivazione in chiaro — vento, termica, situazione foehn, rischi di sottovento. Invece di rovistare per 45 minuti tra i modelli meteo, in 30 secondi vedi dove si vola oggi o questa settimana — e perché. Registrazione con e-mail e Magic-Link, nessuna carta di credito, nessun contatore di prova. Opzionalmente arriva un Cast via e-mail nei giorni della settimana scelti liberamente alle ore 06:00. Wingcast è Decision Support per i piloti, non Decision Maker — la decisione finale al sito di decollo la prendi tu."
+        "a": "Wingcast è un'app gratuita di meteo di volo IA per piloti di parapendio svizzeri. Aggrega cinque modelli meteo via Open-Meteo (ICON-CH1 con risoluzione di 1 km e ICON-CH2 di 2 km di MeteoSvizzera, oltre a ICON-D2, ICON-EU e GFS), ne calcola la classica fisica dell'atmosfera (base termica, inversioni, rilevamento del foehn, decadimento delle raffiche) in modo deterministico nel codice, e solo a quel punto lascia che l'IA analizzi e valuti sicurezza e idoneità per ogni spot. 494 siti di decollo svizzeri vengono ordinati automaticamente per giornata in base alla volabilità, con in più una motivazione in chiaro — vento, termica, situazione foehn, rischi di sottovento. Invece di rovistare per 45 minuti tra i modelli meteo, in 30 secondi vedi dove si vola oggi o nei prossimi giorni — e perché. Registrazione con e-mail e Magic-Link, nessuna carta di credito, nessun contatore di prova. Opzionalmente arriva un Cast via e-mail nei giorni della settimana scelti liberamente alle ore 06:00. Wingcast è Decision Support per i piloti, non Decision Maker — la decisione finale al sito di decollo la prendi tu."
+      },
+      {
+        "q": "Esiste una previsione termica gratuita per la Svizzera?",
+        "a": "Sì. Wingcast è una previsione termica gratuita per la Svizzera: per 494 siti di decollo calcola ogni mattina con tre giorni di anticipo quando si innesca la termica, a che altezza si trova la base e quanto è forte il vento. Si basa su modelli meteo ad alta risoluzione, tra cui ICON-CH1 con 1 km di risoluzione di MeteoSvizzera. La fisica gira in modo deterministico nel codice: base termica secondo il metodo della particella con riconoscimento dell'inversione, rilevamento del foehn tramite la differenza di pressione Zurigo–Lugano, decadimento delle raffiche sul terreno. Solo su questi valori l'IA valuta ogni spot e scrive la motivazione in chiaro, per esempio: Niesen ore 11–14, vento 8 km/h da sud, base termica circa 2400 m, dalle 14:30 tendenza foehn. Per ogni giornata gli spot sono ordinati per volabilità. Wingcast non sostituisce le tue fonti abituali, ti fa la preselezione – la decisione al sito di decollo la prendi tu. Gratis, senza carta di credito."
       },
       {
         "q": "Quanto costa la registrazione?",
@@ -188,7 +190,7 @@
       },
       {
         "q": "Qual è il vantaggio rispetto alle mie fonti attuali?",
-        "a": "Wingcast non le sostituisce — ti fa la preselezione. Invece di confrontare modelli e webcam per 30-45 minuti, ottieni in 30 secondi una lista ordinata dei migliori spot per i prossimi 5 giorni. La messa a punto la fai come sempre con i tuoi strumenti di fiducia."
+        "a": "Wingcast non le sostituisce — ti fa la preselezione. Invece di confrontare modelli e webcam per 30-45 minuti, ottieni in 30 secondi una lista ordinata dei migliori spot per i prossimi 3 giorni. La messa a punto la fai come sempre con i tuoi strumenti di fiducia."
       },
       {
         "q": "Cos'è il foehn — e perché è pericoloso per i piloti di parapendio?",

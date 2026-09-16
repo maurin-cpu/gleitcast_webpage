@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Wingcast — Gratis KI-Flugwetter & Thermik-Forecast für die Schweiz",
-    "description": "Gratis KI-Flugwetter für 494 Schweizer Startplätze. 5-Tage-Forecast sortiert pro Tag, in Klartext erklärt. Ohne Kreditkarte. Decision Support, du entscheidest.",
+    "title": "Thermikprognose Schweiz & Flugwetter gratis | Wingcast",
+    "description": "Gratis Thermikprognose und Flugwetter für 494 Schweizer Startplätze: 3 Tage, pro Tag sortiert, in Klartext erklärt. Jetzt Spots ansehen – du entscheidest.",
     "ogImageAlt": "Wingcast App-Dashboard: Karte mit allen 494 Schweizer Startplätzen, gefärbt nach KI-Bewertung",
     "keywords": "Gleitschirm Wetter App | Gleitschirm Wetter App gratis | kostenlose Gleitschirm App | Paragliding Wetter kostenlos | Flugwetter Schweiz | Thermik Forecast Schweiz | Thermikprognose Schweiz | Windprognose Schweiz | KI Flugwetter | KI Wetter Gleitschirm | gratis Thermik Forecast | Thermik Vorhersage gratis | Startplatz Wetter Schweiz | Gleitschirm Startplätze | Fliegbarkeit Schweiz | Föhn Warnung Gleitschirm | ICON-CH1 Gleitschirm | free paragliding weather Switzerland | Paragliding Forecast Switzerland"
   },
@@ -26,9 +26,9 @@
   },
   "Hero": {
     "badge": "Beta · KI-Experiment für Schweizer Piloten",
-    "headlineLine1": "Welcher Spot fliegt diese Woche?",
-    "headlineLine2": "Du siehst es auf einen Blick.",
-    "subline": "5-Tage-Forecast für 494 Schweizer Startplätze — sortiert pro Tag, in Klartext erklärt, von ersten Flügen bis XC. Gratis, keine Kreditkarte.",
+    "headlineLine1": "Welcher Spot fliegt in den nächsten Tagen?",
+    "headlineLine2": "Die Thermikprognose für Schweizer Startplätze.",
+    "subline": "3-Tage-Prognose für 494 Schweizer Startplätze — sortiert pro Tag, in Klartext erklärt, von ersten Flügen bis XC. Gratis, keine Kreditkarte.",
     "ctaPrimary": "Spots ansehen",
     "ctaSecondary": "Cast ansehen",
     "trustSpots": "<b>494 Schweizer Spots</b>",
@@ -62,12 +62,12 @@
       }
     ],
     "conclusionLead": "Am Ende willst du nur eines schnell sehen: welcher Spot heute fliegt — und welcher nicht.",
-    "conclusionBody": "Wingcast sortiert die Spots pro Tag, mit Begründung in Klartext. Du nimmst die Empfehlung als Startpunkt, gleichst sie mit deinen Quellen ab und entscheidest selbst."
+    "conclusionBody": "Wingcast sortiert die Spots pro Tag, mit Begründung in Klartext. Du nimmst die Einschätzung als Startpunkt, gleichst sie mit deinen Quellen ab und entscheidest selbst."
   },
   "HowItWorks": {
     "kicker": "Vom Wetter zum Cast",
-    "headline": "Drei Schritte, keine Magie.",
-    "intro": "Validierte Wettermodelle, klassische Atmosphären-Physik, KI obenauf zur Bewertung. Keine Black Box, kein Hokuspokus.",
+    "headline": "Wie entsteht die Thermikprognose?",
+    "intro": "Wingcast rechnet die Thermikprognose für 494 Schweizer Startplätze jeden Morgen drei Tage voraus. Zuerst Wettermodelle und Atmosphären-Physik, erst dann bewertet die KI. Keine Black Box.",
     "steps": [
       {
         "label": "Daten",
@@ -95,9 +95,7 @@
     "weekdays": [
       "Mo",
       "Di",
-      "Mi",
-      "Do",
-      "Fr"
+      "Mi"
     ],
     "previewTitle": "Flugwetter",
     "previewStand": "Stand 05:42",
@@ -145,7 +143,7 @@
       {
         "t": "01:00",
         "title": "Cast lesen",
-        "body": "5 Tage, sortiert nach Fliegbarkeit, mit Begründung pro Spot."
+        "body": "3 Tage, sortiert nach Fliegbarkeit, mit Begründung pro Spot."
       }
     ]
   },
@@ -176,7 +174,11 @@
     "items": [
       {
         "q": "Was ist Wingcast?",
-        "a": "Wingcast ist eine gratis KI-Flugwetter-App für Schweizer Gleitschirmpiloten. Sie aggregiert fünf Wettermodelle via Open-Meteo (ICON-CH1 mit 1 km Auflösung und ICON-CH2 mit 2 km von MeteoSchweiz, dazu ICON-D2, ICON-EU und GFS), rechnet daraus klassische Atmosphären-Physik (Thermikbasis, Inversionen, Föhn-Detektion, Gust-Decay) deterministisch im Code aus, und lässt erst dann die KI Sicherheit und Eignung pro Spot analysieren und bewerten. 494 Schweizer Startplätze werden pro Tag automatisch nach Fliegbarkeit sortiert, dazu kommt eine Begründung in Klartext — Wind, Thermik, Föhn-Lage, Lee-Risiken. Statt 45 Minuten durch Wettermodelle zu wühlen, siehst du in 30 Sekunden, wo es heute oder diese Woche fliegt — und warum. Anmeldung mit E-Mail und Magic-Link, keine Kreditkarte, kein Trial-Counter. Optional kommt ein E-Mail-Cast an frei wählbaren Wochentagen um 06:00 Uhr. Wingcast ist Decision Support für Pilot:innen, kein Decision Maker — die finale Entscheidung am Startplatz triffst du."
+        "a": "Wingcast ist eine gratis KI-Flugwetter-App für Schweizer Gleitschirmpiloten. Sie aggregiert fünf Wettermodelle via Open-Meteo (ICON-CH1 mit 1 km Auflösung und ICON-CH2 mit 2 km von MeteoSchweiz, dazu ICON-D2, ICON-EU und GFS), rechnet daraus klassische Atmosphären-Physik (Thermikbasis, Inversionen, Föhn-Detektion, Gust-Decay) deterministisch im Code aus, und lässt erst dann die KI Sicherheit und Eignung pro Spot analysieren und bewerten. 494 Schweizer Startplätze werden pro Tag automatisch nach Fliegbarkeit sortiert, dazu kommt eine Begründung in Klartext — Wind, Thermik, Föhn-Lage, Lee-Risiken. Statt 45 Minuten durch Wettermodelle zu wühlen, siehst du in 30 Sekunden, wo es heute oder in den nächsten Tagen fliegt — und warum. Anmeldung mit E-Mail und Magic-Link, keine Kreditkarte, kein Trial-Counter. Optional kommt ein E-Mail-Cast an frei wählbaren Wochentagen um 06:00 Uhr. Wingcast ist Decision Support für Pilot:innen, kein Decision Maker — die finale Entscheidung am Startplatz triffst du."
+      },
+      {
+        "q": "Gibt es eine gratis Thermikprognose für die Schweiz?",
+        "a": "Ja. Wingcast ist eine gratis Thermikprognose für die Schweiz: Für 494 Startplätze rechnet sie jeden Morgen drei Tage voraus, wann die Thermik auslöst, wie hoch die Basis liegt und wie stark der Wind weht. Grundlage sind hochaufgelöste Wettermodelle, darunter ICON-CH1 mit 1 km Auflösung von MeteoSchweiz. Die Physik läuft deterministisch im Code: Thermikbasis nach der Parcel-Methode mit Inversions-Erkennung, Föhn-Erkennung über den Druckunterschied Zürich–Lugano, Böen-Abnahme übers Terrain. Erst auf diesen Werten schätzt die KI jeden Spot ein und schreibt die Begründung in Klartext, zum Beispiel: Niesen 11–14 Uhr, Wind 8 km/h Süd, Thermikbasis rund 2400 m, ab 14:30 Föhn-Tendenz. Pro Tag sind die Spots nach Fliegbarkeit sortiert. Wingcast ersetzt deine gewohnten Quellen nicht, sondern macht die Vorauswahl – die Entscheidung am Startplatz triffst du. Gratis, ohne Kreditkarte."
       },
       {
         "q": "Was kostet die Anmeldung?",
@@ -188,7 +190,7 @@
       },
       {
         "q": "Was ist der Vorteil gegenüber meinen aktuellen Quellen?",
-        "a": "Wingcast ersetzt sie nicht — es macht dir die Vorauswahl. Statt 30 bis 45 Minuten Modelle und Webcams zu vergleichen, bekommst du in 30 Sekunden eine sortierte Liste der besten Spots für die kommenden 5 Tage. Die Feinabstimmung machst du wie gewohnt mit deinen vertrauten Tools."
+        "a": "Wingcast ersetzt sie nicht — es macht dir die Vorauswahl. Statt 30 bis 45 Minuten Modelle und Webcams zu vergleichen, bekommst du in 30 Sekunden eine sortierte Liste der besten Spots für die kommenden 3 Tage. Die Feinabstimmung machst du wie gewohnt mit deinen vertrauten Tools."
       },
       {
         "q": "Was ist Föhn — und warum ist er für Gleitschirmflieger gefährlich?",

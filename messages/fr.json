@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Wingcast — Météo de vol IA & prévisions de thermique gratuites pour la Suisse",
-    "description": "Météo de vol IA gratuite pour 494 sites de décollage suisses. Prévisions à 5 jours triées par jour, expliquées en clair. Sans carte de crédit. Decision Support, c'est vous qui décidez.",
+    "title": "Prévision thermique & météo de vol Suisse | Wingcast",
+    "description": "Prévision thermique et météo de vol gratuites pour 494 sites de décollage suisses : 3 jours, triés par jour, expliqués en clair. Voir les spots – vous décidez.",
     "ogImageAlt": "Tableau de bord de l'app Wingcast : carte des 494 sites de décollage suisses, colorés selon l'évaluation IA",
     "keywords": "app météo parapente | app météo parapente gratuite | application parapente gratuite | météo parapente gratuit | météo de vol Suisse | prévisions thermique Suisse | prévision thermique Suisse | prévision du vent Suisse | météo de vol IA | météo IA parapente | prévisions thermique gratuites | prévision de thermique gratuite | météo sites de décollage Suisse | sites de décollage parapente | volabilité Suisse | alerte foehn parapente | ICON-CH1 parapente | free paragliding weather Switzerland | Paragliding Forecast Switzerland"
   },
@@ -26,9 +26,9 @@
   },
   "Hero": {
     "badge": "Bêta · Expérience IA pour les pilotes suisses",
-    "headlineLine1": "Quel spot vole cette semaine ?",
-    "headlineLine2": "Vous le voyez d'un coup d'œil.",
-    "subline": "Prévisions à 5 jours pour 494 sites de décollage suisses — triées par jour, expliquées en clair, des premiers vols jusqu'au cross. Gratuit, sans carte de crédit.",
+    "headlineLine1": "Quel spot vole ces prochains jours ?",
+    "headlineLine2": "La prévision thermique pour les sites suisses.",
+    "subline": "Prévisions à 3 jours pour 494 sites de décollage suisses — triées par jour, expliquées en clair, des premiers vols jusqu'au cross. Gratuit, sans carte de crédit.",
     "ctaPrimary": "Voir les spots",
     "ctaSecondary": "Voir le Cast",
     "trustSpots": "<b>494 spots suisses</b>",
@@ -62,12 +62,12 @@
       }
     ],
     "conclusionLead": "Au final, vous voulez voir une seule chose rapidement : quel spot vole aujourd'hui — et lequel non.",
-    "conclusionBody": "Wingcast trie les spots par jour, avec une justification en clair. Vous prenez la recommandation comme point de départ, vous la comparez à vos sources et vous décidez vous-même."
+    "conclusionBody": "Wingcast trie les spots par jour, avec une justification en clair. Vous prenez l'évaluation comme point de départ, vous la comparez à vos sources et vous décidez vous-même."
   },
   "HowItWorks": {
     "kicker": "De la météo au Cast",
-    "headline": "Trois étapes, sans magie.",
-    "intro": "Des modèles météo validés, de la physique de l'atmosphère classique, l'IA par-dessus pour l'évaluation. Pas de boîte noire, pas de tour de passe-passe.",
+    "headline": "Comment naît la prévision thermique ?",
+    "intro": "Wingcast calcule chaque matin la prévision thermique sur trois jours pour 494 sites de décollage suisses. D'abord les modèles météo et la physique de l'atmosphère, ensuite seulement l'IA évalue. Pas de boîte noire.",
     "steps": [
       {
         "label": "Données",
@@ -95,9 +95,7 @@
     "weekdays": [
       "lun",
       "mar",
-      "mer",
-      "jeu",
-      "ven"
+      "mer"
     ],
     "previewTitle": "Météo de vol",
     "previewStand": "Mis à jour 05:42",
@@ -145,7 +143,7 @@
       {
         "t": "01:00",
         "title": "Lire le Cast",
-        "body": "5 jours, triés selon la volabilité, avec une justification par spot."
+        "body": "3 jours, triés selon la volabilité, avec une justification par spot."
       }
     ]
   },
@@ -176,7 +174,11 @@
     "items": [
       {
         "q": "Qu'est-ce que Wingcast ?",
-        "a": "Wingcast est une app de météo de vol IA gratuite pour les pilotes de parapente suisses. Elle agrège cinq modèles météo via Open-Meteo (ICON-CH1 avec une résolution de 1 km et ICON-CH2 avec 2 km de MétéoSuisse, plus ICON-D2, ICON-EU et GFS), en calcule de manière déterministe dans le code la physique de l'atmosphère classique (plafond thermique, inversions, détection du foehn, atténuation des rafales), et ce n'est qu'ensuite qu'elle laisse l'IA analyser et évaluer la sécurité et la pertinence pour chaque spot. 494 sites de décollage suisses sont automatiquement triés chaque jour selon la volabilité, avec en plus une justification en clair — vent, thermique, situation de foehn, risques de sous le vent. Au lieu de fouiller 45 minutes dans les modèles météo, vous voyez en 30 secondes où ça vole aujourd'hui ou cette semaine — et pourquoi. Inscription par e-mail et Magic-Link, sans carte de crédit, sans compteur d'essai. En option, un Cast par e-mail arrive aux jours de la semaine librement choisis à 06h00. Wingcast est un Decision Support pour les pilotes, pas un Decision Maker — la décision finale au décollage, c'est vous qui la prenez."
+        "a": "Wingcast est une app de météo de vol IA gratuite pour les pilotes de parapente suisses. Elle agrège cinq modèles météo via Open-Meteo (ICON-CH1 avec une résolution de 1 km et ICON-CH2 avec 2 km de MétéoSuisse, plus ICON-D2, ICON-EU et GFS), en calcule de manière déterministe dans le code la physique de l'atmosphère classique (plafond thermique, inversions, détection du foehn, atténuation des rafales), et ce n'est qu'ensuite qu'elle laisse l'IA analyser et évaluer la sécurité et la pertinence pour chaque spot. 494 sites de décollage suisses sont automatiquement triés chaque jour selon la volabilité, avec en plus une justification en clair — vent, thermique, situation de foehn, risques de sous le vent. Au lieu de fouiller 45 minutes dans les modèles météo, vous voyez en 30 secondes où ça vole aujourd'hui ou ces prochains jours — et pourquoi. Inscription par e-mail et Magic-Link, sans carte de crédit, sans compteur d'essai. En option, un Cast par e-mail arrive aux jours de la semaine librement choisis à 06h00. Wingcast est un Decision Support pour les pilotes, pas un Decision Maker — la décision finale au décollage, c'est vous qui la prenez."
+      },
+      {
+        "q": "Existe-t-il une prévision thermique gratuite pour la Suisse ?",
+        "a": "Oui. Wingcast est une prévision thermique gratuite pour la Suisse : pour 494 sites de décollage, elle calcule chaque matin sur trois jours quand la thermique se déclenche, à quelle hauteur se situe le plafond et quelle est la force du vent. Elle s'appuie sur des modèles météo à haute résolution, dont ICON-CH1 à 1 km de MétéoSuisse. La physique tourne de manière déterministe dans le code : plafond thermique selon la méthode de la particule avec détection d'inversion, détection du foehn via l'écart de pression Zurich–Lugano, atténuation des rafales sur le terrain. Ce n'est que sur ces valeurs que l'IA évalue chaque spot et rédige la justification en clair, par exemple : Niesen 11h–14h, vent 8 km/h sud, plafond thermique env. 2400 m, dès 14h30 tendance au foehn. Chaque jour, les spots sont triés selon la volabilité. Wingcast ne remplace pas vos sources habituelles, il fait la présélection – la décision au décollage, c'est vous qui la prenez. Gratuit, sans carte de crédit."
       },
       {
         "q": "Combien coûte l'inscription ?",
@@ -188,7 +190,7 @@
       },
       {
         "q": "Quel est l'avantage par rapport à mes sources actuelles ?",
-        "a": "Wingcast ne les remplace pas — il fait la présélection pour vous. Au lieu de comparer 30 à 45 minutes les modèles et les webcams, vous obtenez en 30 secondes une liste triée des meilleurs spots pour les 5 prochains jours. Le réglage fin, vous le faites comme d'habitude avec vos outils de confiance."
+        "a": "Wingcast ne les remplace pas — il fait la présélection pour vous. Au lieu de comparer 30 à 45 minutes les modèles et les webcams, vous obtenez en 30 secondes une liste triée des meilleurs spots pour les 3 prochains jours. Le réglage fin, vous le faites comme d'habitude avec vos outils de confiance."
       },
       {
         "q": "Qu'est-ce que le foehn — et pourquoi est-il dangereux pour les parapentistes ?",

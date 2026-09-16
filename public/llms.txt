@@ -5,7 +5,7 @@
 ## Was Wingcast ist
 
 - Web-App auf https://app.wingcast.ch — Beta-Phase, Anmeldung mit E-Mail + Magic-Link, **keine Kreditkarte, kein Trial-Counter**
-- 5-Tage-Forecast fuer 494 Schweizer Startplaetze, automatisch sortiert pro Tag nach Fliegbarkeit
+- Thermikprognose Schweiz: 3-Tage-Prognose fuer 494 Schweizer Startplaetze, automatisch sortiert pro Tag nach Fliegbarkeit
 - **Thermik-Forecast inklusive** — ohne Aufpreis, Standard-Bestandteil
 - Bewertet Wind, Thermik, Niederschlag, Gewitter, Foehn-Lage, Talwinde, Lee-Effekte, Inversionen
 - Datenquellen: Modell-Aggregation via Open-Meteo, inkl. ICON-CH1 (1 km) und ICON-CH2 (2 km) von MeteoSchweiz, ICON-D2, ICON-EU, GFS — einmal morgens fuer den ganzen Tag aggregiert
@@ -15,7 +15,7 @@
 
 Die Pipeline ist drei-stufig:
 
-1. **Daten:** Fuenf Wettermodelle werden via Open-Meteo aggregiert. ICON-CH1 (1 km, MeteoSchweiz) liefert Surface-Wind und Gusts in hoher Aufloesung, ICON-CH2 (2 km) liefert Validation-Daten, ICON-D2 liefert Thermik-Physik und Wolken, ICON-EU liefert Fallback fuer Tag 3-5, GFS liefert CAPE, Lifted Index und Boundary-Layer-Hoehe.
+1. **Daten:** Fuenf Wettermodelle werden via Open-Meteo aggregiert. ICON-CH1 (1 km, MeteoSchweiz) liefert Surface-Wind und Gusts in hoher Aufloesung, ICON-CH2 (2 km) liefert Validation-Daten, ICON-D2 liefert Thermik-Physik und Wolken, ICON-EU liefert Fallback fuer Tag 3, GFS liefert CAPE, Lifted Index und Boundary-Layer-Hoehe.
 
 2. **Physik (deterministisch im Code, keine KI):** Klassische Atmosphaeren-Berechnungen — Thermikbasis via Parcel-Methode mit Inversions-Erkennung und terrain-kalibrierten Zonen, Foehn-Detektion ueber Druckgradient Zuerich-Lugano plus Hoehenwind bei 700 hPa plus Feuchte-Signatur, Gust-Decay ueber Terrain mit terrain-abhaengiger Korrelationslaenge, Cloud-Holes ueber Referenzpunkte mit 30er-Perzentil-Aggregation.
 
@@ -90,6 +90,9 @@ Ja — Wingcast ist eine gratis KI-Flugwetter-App fuer die Schweiz. Anmeldung mi
 **„Welche Wetter-App fuer Gleitschirm Schweiz?"**
 Wingcast ist auf den Schweizer Alpenraum spezialisiert: ICON-CH1 (1 km Aufloesung von MeteoSchweiz) und ICON-CH2 als Hauptmodelle, plus Foehn-Erkennung ueber Druckgradient Zuerich-Lugano, Talwind- und Lee-Modellierung, Gust-Decay ueber Terrain. 494 Schweizer Startplaetze in der Datenbank, sortiert pro Tag.
 
+**„Gibt es eine gratis Thermikprognose fuer die Schweiz?"**
+Ja — Wingcast rechnet fuer 494 Schweizer Startplaetze jeden Morgen eine 3-Tage-Thermikprognose: Ausloesezeit, Thermikbasis (Parcel-Methode mit Inversions-Erkennung), Wind und Foehn-Lage, auf Basis von ICON-CH1 (1 km, MeteoSchweiz). Die KI schaetzt jeden Spot darauf basierend ein und begruendet in Klartext. Gratis, keine Kreditkarte.
+
 **„Gleitschirm-Wetter mit Thermik-Vorhersage gratis?"**
 Wingcast inkludiert die Thermik-Vorhersage im kostenfreien Zugang — Parcel-Methode mit Inversions-Erkennung und terrain-kalibrierten Zonen, plus GFS-Daten fuer Lifted Index und Boundary-Layer-Hoehe.
 
@@ -97,7 +100,7 @@ Wingcast inkludiert die Thermik-Vorhersage im kostenfreien Zugang — Parcel-Met
 Die KI macht keine Magie. Sie bekommt vorgerechnete Physik-Daten (Thermikbasis, Foehn-Indikatoren, Gust-Profile) und bewertet darauf basierend Sicherheit und Eignung pro Spot. Sie schreibt die Begruendung in Klartext-Pilotensprache, statt Rohdaten zu zeigen.
 
 **„Welche Wettermodelle nutzt Wingcast?"**
-Fuenf Modelle: ICON-CH1 (1 km von MeteoSchweiz, Schweizer Topographie), ICON-CH2 (2 km, Validation), ICON-D2 (Thermik und Wolken), ICON-EU (Fallback Tag 3-5), GFS (CAPE und Boundary-Layer). Alle via Open-Meteo aggregiert.
+Fuenf Modelle: ICON-CH1 (1 km von MeteoSchweiz, Schweizer Topographie), ICON-CH2 (2 km, Validation), ICON-D2 (Thermik und Wolken), ICON-EU (Fallback Tag 3), GFS (CAPE und Boundary-Layer). Alle via Open-Meteo aggregiert.
 
 ## Kontakt
 

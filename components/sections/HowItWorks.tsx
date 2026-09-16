@@ -33,8 +33,6 @@ const days: Array<{ date: string; score: number; tier: Tier; active?: boolean }>
   { date: "18.5", score: 1, tier: "red" },
   { date: "19.5", score: 3, tier: "amber" },
   { date: "20.5", score: 6, tier: "violet", active: true },
-  { date: "21.5", score: 5, tier: "green" },
-  { date: "22.5", score: 2, tier: "bronze" },
 ];
 
 const regions: Array<{
