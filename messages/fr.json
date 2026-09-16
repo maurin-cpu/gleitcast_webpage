@@ -216,7 +216,7 @@
       },
       {
         "q": "Qu'advient-il de mes données ?",
-        "a": "Nous enregistrons votre e-mail et les régions choisies. Notre outil de statistiques PostHog ne se charge qu'avec votre consentement — sans accord, pas de tracking. Aucune transmission à des annonceurs. Désinscription à tout moment en un clic."
+        "a": "Nous enregistrons votre e-mail et les régions choisies. Sur ce site, notre outil de statistiques PostHog ne se charge qu'avec votre consentement. Dans l'app, nous mesurons sans cookie quelles fonctions sont utilisées — détails dans la politique de confidentialité. Aucune transmission à des annonceurs. Désinscription à tout moment en un clic."
       }
     ]
   },

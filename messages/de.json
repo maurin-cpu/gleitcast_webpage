@@ -216,7 +216,7 @@
       },
       {
         "q": "Was passiert mit meinen Daten?",
-        "a": "Wir speichern deine E-Mail und die gewählten Regionen. Das Statistik-Tool PostHog lädt nur, wenn du zustimmst — ohne Einwilligung kein Tracking. Keine Weitergabe an Werbetreibende. Abmeldung jederzeit mit einem Klick."
+        "a": "Wir speichern deine E-Mail und die gewählten Regionen. Auf dieser Webseite lädt das Statistik-Tool PostHog nur, wenn du zustimmst. In der App messen wir ohne Cookie, welche Funktionen genutzt werden — Details in der Datenschutzerklärung. Keine Weitergabe an Werbetreibende. Abmeldung jederzeit mit einem Klick."
       }
     ]
   },

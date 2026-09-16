@@ -100,6 +100,12 @@ export default async function DatenschutzPage({
                   <strong>Feedback-Beiträge</strong> &mdash; sofern du das
                   Feedback-Formular ausfüllst (rein freiwillig).
                 </li>
+                <li>
+                  <strong>Nutzungsdaten der App</strong> &mdash; aufgerufene Seiten,
+                  Klicks, Browser- und Gerätetyp sowie der aus der IP-Adresse
+                  abgeleitete ungefähre Ort. Bist du eingeloggt, sind sie mit
+                  deiner E-Mail-Adresse verknüpft. Details siehe Punkt 8.
+                </li>
               </ul>
               <p className="mt-3">
                 Wir verlangen <strong>keine Adresse, keinen Vor- oder Nachnamen,
@@ -114,6 +120,7 @@ export default async function DatenschutzPage({
                 <li>Personalisierung des Briefings (deine Regionen, dein Skill-Level)</li>
                 <li>Sicherheit: Schutz vor automatisierten Login-Versuchen</li>
                 <li>Verbesserung des Produkts (auf Basis von freiwilligem Feedback)</li>
+                <li>Verstehen, welche Funktionen der App genutzt werden (Nutzungsmessung)</li>
               </ul>
               <p className="mt-3">
                 <strong>Wir senden keine Werbung.</strong> Du erhältst ausschliesslich
@@ -156,9 +163,10 @@ export default async function DatenschutzPage({
                 </li>
                 <li>
                   <strong>PostHog</strong> (EU-Cloud, Frankfurt) &mdash; Statistik
-                  und Reichweitenmessung der Webseite,{" "}
-                  <strong>ausschliesslich mit deiner Einwilligung</strong>. Details
-                  und Widerruf siehe Punkt 8.
+                  und Reichweitenmessung der Webseite{" "}
+                  <strong>nur mit deiner Einwilligung</strong> sowie
+                  Nutzungsmessung der App ohne Cookie. Details, Widerruf und
+                  Widerspruch siehe Punkt 8.
                 </li>
               </ul>
             </Section>
@@ -169,7 +177,10 @@ export default async function DatenschutzPage({
                 Abs. 1) bzw. auf der Vertragserfüllung (Briefing-Versand auf
                 deine Bestellung). Du kannst die Einwilligung jederzeit
                 widerrufen, indem du dich vom Briefing abmeldest oder deinen
-                Account löschst.
+                Account löschst. Die Nutzungsmessung in der App stützt sich auf
+                unser berechtigtes Interesse, Wingcast zu verbessern (revDSG
+                Art. 31 Abs. 1; im EU-Raum Art. 6 Abs. 1 lit. f DSGVO) &mdash;
+                Widerspruch siehe Punkt 8.
               </p>
             </Section>
 
@@ -228,7 +239,7 @@ export default async function DatenschutzPage({
                 selbst setzt ohne deine Zustimmung keine Cookies.
               </p>
               <p className="mt-3">
-                <strong>Statistik &amp; Analyse (nur mit deiner Einwilligung):</strong>{" "}
+                <strong>Webseite &ndash; Statistik &amp; Analyse (nur mit deiner Einwilligung):</strong>{" "}
                 Zur Verbesserung der Seite nutzen wir – erst nach deiner aktiven
                 Zustimmung über den Cookie-Banner – folgende Dienste:
               </p>
@@ -246,8 +257,34 @@ export default async function DatenschutzPage({
                 Art. 6 / Art. 31; im EU-Raum Art. 6 Abs. 1 lit. a DSGVO). Du kannst
                 sie jederzeit ohne Nachteil verweigern oder später widerrufen
                 &mdash; über den Link <strong>„Cookie-Einstellungen"</strong> im
-                Footer. Bis zur Einwilligung wird kein Tracking-Cookie gesetzt und
-                kein Tracking-Dienst geladen.
+                Footer. Bis zur Einwilligung wird auf der Webseite kein
+                Tracking-Cookie gesetzt und kein Tracking-Dienst geladen.
+              </p>
+              <p className="mt-3">
+                <strong>App &ndash; Nutzungsmessung (ohne Cookie):</strong>{" "}
+                In der App (app.wingcast.ch) messen wir mit <strong>PostHog</strong>{" "}
+                (EU-Cloud, Frankfurt), welche Seiten und Funktionen genutzt
+                werden. Dazu legt PostHog eine zufällige Kennung im
+                Sitzungsspeicher (sessionStorage) deines Browsers ab. Sie gilt
+                nur für den geöffneten Tab und wird beim Schliessen gelöscht. Es
+                wird <strong>kein Cookie</strong> gesetzt, du wirst bei einem
+                späteren Besuch <strong>nicht wiedererkannt</strong>, und es gibt
+                keine Bildschirmaufzeichnung. Bist du eingeloggt, verknüpfen wir
+                die Nutzung mit deiner E-Mail-Adresse, damit wir sehen, wie das
+                Briefing genutzt wird. Keine Übermittlung in die USA, keine
+                Weitergabe an Werbetreibende.
+              </p>
+              <p className="mt-3">
+                Rechtsgrundlage ist unser <strong>berechtigtes Interesse</strong>{" "}
+                an der Verbesserung von Wingcast (revDSG Art. 31 Abs. 1; im
+                EU-Raum Art. 6 Abs. 1 lit. f DSGVO). Du kannst jederzeit{" "}
+                <strong>widersprechen</strong>: per E-Mail an{" "}
+                <a className="text-sky-700 underline" href="mailto:info@wingcast.ch">
+                  info@wingcast.ch
+                </a>{" "}
+                &mdash; wir löschen dann die mit deinem Account verknüpften
+                Nutzungsdaten &mdash; oder indem du einen Tracker-Blocker in
+                deinem Browser verwendest.
               </p>
             </Section>
 
