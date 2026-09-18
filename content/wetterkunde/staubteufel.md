@@ -2,9 +2,9 @@
 titel: "Dust Devils beim Gleitschirmfliegen: woran du einen Dusty-Tag erkennst"
 slug: staubteufel
 ziel_url: /wetterkunde/staubteufel
-ziel_keyword: "staubteufel gleitschirm"
+ziel_keyword: "dust devil gleitschirm"
 neben_keywords:
-  - "dust devil gleitschirm"
+  - "staubteufel gleitschirm"
   - "dust devil schweiz"
   - "thermikwirbel startplatz"
   - "kleintrombe"
@@ -16,9 +16,9 @@ sprache: de-CH
 status: published
 veroeffentlicht: 2026-08-20
 autor: "Maurin (Founder & Pilot, Wingcast)"
-stand: 2026-08-20
-meta_title: "Staubteufel beim Gleitschirmfliegen – Dusty-Tage erkennen"
-meta_description: "Keine Prognose zeigt einen Dust Devil. Ob heute ein Dusty-Tag ist, lässt sich aber rechnen: 490 Schweizer Startplätze, 74 Messstationen, ein Sommer."
+stand: 2026-09-18
+meta_title: "Dust Devil beim Gleitschirmfliegen – Dusty-Tage erkennen"
+meta_description: "Keine Prognose zeigt einen Dust Devil (Staubteufel). Ob heute ein Dusty-Tag ist, lässt sich aber rechnen: 490 Schweizer Startplätze, 74 Messstationen, ein Sommer."
 schema:
   - Article
   - FAQPage
@@ -26,8 +26,10 @@ schema:
 og_bild: /og/wetterkunde-staubteufel.png   # ✅ kopiert 20.08. aus assets/og-staubteufel.png
 video: /wetterkunde/staubteufel-entstehung.mp4   # Remotion-Video (Abb. 1); E7-Reel separat offen
 # Sprachregel: im Fliesstext heisst er durchgehend „Dust Devil". „Staubteufel"
-# steht bewusst im Titel-Tag, in der Definition und im Slug — das ist das
-# Suchwort, das Piloten eintippen. Siehe Log 16.08.2026.
+# bleibt in der Definition und im Slug. Im Titel-Tag stand es bis 18.09.2026 —
+# die Search Console zeigte dann: Piloten suchen „dust devil gleitschirm"
+# (Position 3), für „staubteufel" gab es keine einzige Impression. Deshalb
+# führt der Meta-Title jetzt mit „Dust Devil". Siehe Marketing-Log 16.08. + 18.09.2026.
 # Aufbau folgt bewusst published/boeenfront.md (Referenz des Users, 16.08. +
 # Review 17.08.): Lead · Grundlagen · Kernbefund · Praxis · Fazit (Pilot-Take-
 # aways am Ende der inhaltlichen Strecke) · Grenzen · FAQ · Quellen · Wingcast
