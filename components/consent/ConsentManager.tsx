@@ -3,11 +3,11 @@
 /**
  * ConsentManager — orchestriert Zustimmung ↔ Tracking.
  *
- * - Liest gespeicherten Consent (falls vorhanden) und lädt PostHog nur,
- *   wenn analytics === "granted".
+ * - Liest gespeicherten Consent (falls vorhanden) und lädt PostHog nur bei
+ *   analytics === "granted", den Meta Pixel nur bei marketing === "granted".
  * - Zeigt den Banner, solange keine gültige Entscheidung existiert.
  * - Reagiert auf den Footer-Link „Cookie-Einstellungen" (Custom-Event).
- * - Widerruf schaltet laufendes Tracking ab (PostHog opt-out).
+ * - Widerruf schaltet laufendes Tracking ab (PostHog opt-out, fbq revoke).
  *
  * Wird in app/layout.tsx einmalig am Ende des <body> eingehängt.
  */
@@ -18,9 +18,10 @@ import {
   OPEN_SETTINGS_EVENT,
   readConsent,
   writeConsent,
-  type ConsentChoice,
+  type ConsentChoices,
   type ConsentState,
 } from "@/lib/consent";
+import { revokeMetaPixel, startMetaPixel } from "@/components/analytics/metaPixel";
 import { ConsentBanner } from "./ConsentBanner";
 
 // Modul-weiter Guard: PostHog wird pro Seitenladung höchstens einmal
@@ -28,8 +29,8 @@ import { ConsentBanner } from "./ConsentBanner";
 let phStarted = false;
 
 // Lokale Entwicklung erzeugt sonst Rausch-Events (eigene Domain-Einträge in
-// PostHog). Auf localhost/127.0.0.1 wird deshalb gar kein Analytics geladen
-// — das verhindert Tracking an der Quelle.
+// PostHog / Meta). Auf localhost/127.0.0.1 wird deshalb gar kein Tracking
+// geladen — das verhindert Tracking an der Quelle.
 function isLocalhost() {
   if (typeof window === "undefined") return false;
   const h = window.location.hostname;
@@ -59,21 +60,26 @@ async function startPostHog(key: string, host: string, uiHost: string) {
   posthog.capture("$pageview");
 }
 
-async function applyConsent(analytics: ConsentChoice) {
-  const { posthogKey, posthogHost, posthogUiHost } = analyticsEnv;
+async function applyConsent(choices: ConsentChoices) {
+  const { posthogKey, posthogHost, posthogUiHost, metaPixelId } = analyticsEnv;
 
   // Auf localhost: Consent respektieren, aber niemals Tracking laden.
   if (isLocalhost()) return;
 
-  if (analytics === "granted") {
+  // Statistik — PostHog.
+  if (choices.analytics === "granted") {
     if (posthogKey) await startPostHog(posthogKey, posthogHost, posthogUiHost);
-    return;
-  }
-
-  // Widerruf: bereits laufendes Tracking abschalten.
-  if (phStarted) {
+  } else if (phStarted) {
+    // Widerruf: bereits laufendes Tracking abschalten.
     const posthog = (await import("posthog-js")).default;
     posthog.opt_out_capturing();
+  }
+
+  // Marketing — Meta Pixel.
+  if (choices.marketing === "granted") {
+    if (metaPixelId) startMetaPixel(metaPixelId);
+  } else {
+    revokeMetaPixel();
   }
 }
 
@@ -96,11 +102,11 @@ export function ConsentManager() {
   // Tracking an gespeicherten Zustand angleichen.
   useEffect(() => {
     if (!state) return;
-    void applyConsent(state.analytics);
+    void applyConsent(state);
   }, [state]);
 
-  const decide = useCallback((analytics: ConsentChoice) => {
-    setState(writeConsent(analytics));
+  const decide = useCallback((choices: ConsentChoices) => {
+    setState(writeConsent(choices));
     setSettingsOpen(false);
   }, []);
 
@@ -113,8 +119,14 @@ export function ConsentManager() {
     <ConsentBanner
       mode={showBanner ? "banner" : "settings"}
       analyticsDefault={state?.analytics === "granted"}
+      marketingDefault={state?.marketing === "granted"}
       closable={!showBanner}
-      onDecide={(analytics) => decide(analytics ? "granted" : "denied")}
+      onDecide={(c) =>
+        decide({
+          analytics: c.analytics ? "granted" : "denied",
+          marketing: c.marketing ? "granted" : "denied",
+        })
+      }
       onClose={() => setSettingsOpen(false)}
     />
   );

@@ -168,6 +168,15 @@ export default async function DatenschutzPage({
                   Nutzungsmessung der App ohne Cookie. Details, Widerruf und
                   Widerspruch siehe Punkt 8.
                 </li>
+                <li>
+                  <strong>Meta Platforms Ireland Ltd.</strong> (Irland) /{" "}
+                  <strong>Meta Platforms, Inc.</strong> (USA) &mdash; Meta Pixel
+                  zur Messung unserer Facebook- und Instagram-Anzeigen auf der
+                  Webseite <strong>nur mit deiner Einwilligung</strong>.{" "}
+                  <strong>Übermittlung in die USA (Drittstaat)</strong> auf Basis
+                  des EU-U.S. Data Privacy Framework bzw. der
+                  EU-Standardvertragsklauseln. Details und Widerruf siehe Punkt 8.
+                </li>
               </ul>
             </Section>
 
@@ -239,9 +248,10 @@ export default async function DatenschutzPage({
                 selbst setzt ohne deine Zustimmung keine Cookies.
               </p>
               <p className="mt-3">
-                <strong>Webseite &ndash; Statistik &amp; Analyse (nur mit deiner Einwilligung):</strong>{" "}
-                Zur Verbesserung der Seite nutzen wir – erst nach deiner aktiven
-                Zustimmung über den Cookie-Banner – folgende Dienste:
+                <strong>Webseite &ndash; Statistik &amp; Analyse und Marketing (nur mit deiner Einwilligung):</strong>{" "}
+                Zur Verbesserung der Seite und zur Messung unserer Werbung nutzen
+                wir – erst nach deiner aktiven Zustimmung über den Cookie-Banner,
+                je Kategorie einzeln wählbar – folgende Dienste:
               </p>
               <ul className="mt-3 list-disc space-y-3 pl-6">
                 <li>
@@ -249,7 +259,33 @@ export default async function DatenschutzPage({
                   Frankfurt) &mdash; anonymisierte Reichweiten- und Produkt-Analyse
                   (z. B. welche Abschnitte genutzt werden). Ohne deine Einwilligung
                   wird kein Analytics-Script geladen. Datenverarbeitung in der EU
-                  &mdash; keine Übermittlung in die USA.
+                  &mdash; keine Übermittlung in die USA. Kategorie
+                  „Statistik &amp; Analyse".
+                </li>
+                <li>
+                  <strong>Meta Pixel</strong> (Meta Platforms Ireland Ltd.,
+                  Irland; Meta Platforms, Inc., USA) &mdash; misst, ob Besucher
+                  über unsere Facebook- oder Instagram-Anzeigen auf die Seite
+                  kommen und welche Seiten sie aufrufen, damit wir die Wirkung der
+                  Anzeigen beurteilen können. Der Pixel setzt das Cookie{" "}
+                  <code>_fbp</code> (Laufzeit 90 Tage) und übermittelt an Meta
+                  u. a. IP-Adresse, Browser-Informationen, besuchte URL und
+                  Zeitpunkt. Bist du bei Facebook oder Instagram eingeloggt, kann
+                  Meta den Besuch deinem Konto zuordnen. Meta verarbeitet diese
+                  Daten auch für eigene Zwecke als eigenständiger
+                  Verantwortlicher; Details in der{" "}
+                  <a
+                    className="text-sky-700 underline"
+                    href="https://www.facebook.com/privacy/policy/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Datenschutzrichtlinie von Meta
+                  </a>
+                  . <strong>Übermittlung in die USA (Drittstaat)</strong> auf
+                  Basis des EU-U.S. Data Privacy Framework bzw. der
+                  EU-Standardvertragsklauseln. Ohne deine Einwilligung wird das
+                  Pixel-Script nicht geladen. Kategorie „Marketing".
                 </li>
               </ul>
               <p className="mt-3">

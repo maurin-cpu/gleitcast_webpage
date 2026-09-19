@@ -2,7 +2,8 @@
 
 /**
  * Sendet bei jeder client-seitigen Navigation (z. B. Sprachwechsel DE→FR oder
- * interne Links) einen $pageview an PostHog.
+ * interne Links) einen $pageview an PostHog — und einen PageView an den Meta
+ * Pixel, falls dieser (Marketing-Consent) läuft.
  *
  * Den ERSTEN Pageview übernimmt der ConsentManager direkt nach posthog.init()
  * — diese Komponente ergänzt nur die Folgenavigationen. Der allererste
@@ -15,6 +16,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
+import { trackMetaPageView } from "./metaPixel";
 
 export function PostHogPageView() {
   const pathname = usePathname();
@@ -26,6 +28,7 @@ export function PostHogPageView() {
       skipInitial.current = false;
       return;
     }
+    trackMetaPageView();
     void import("posthog-js").then(({ default: posthog }) => {
       if (posthog.__loaded) {
         posthog.capture("$pageview");

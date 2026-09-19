@@ -1,17 +1,20 @@
 /**
  * Consent-Kern — DSGVO / revDSG.
  *
- * Prinzip: Opt-in. PostHog lädt NIE vor aktiver Zustimmung.
+ * Prinzip: Opt-in. Kein Tracking-Dienst lädt vor aktiver Zustimmung.
  * „Notwendig" (Session-Login der App) ist keine abwählbare Kategorie und
- * wird hier nicht gespeichert — es gibt nur eine optionale Kategorie:
- * Statistik/Analyse (PostHog).
+ * wird hier nicht gespeichert — es gibt zwei optionale Kategorien:
+ *  - analytics  Statistik/Analyse (PostHog, EU)
+ *  - marketing  Werbung/Conversion-Messung (Meta Pixel, USA)
  *
  * Wird der Banner inhaltlich erweitert (neue Kategorie, neuer Dienst, neuer
  * Drittstaaten-Transfer), CONSENT_VERSION erhöhen → alte Zustimmung verfällt,
  * Nutzer werden erneut gefragt. Das ist die rechtlich saubere Variante.
+ *
+ * Version 2 (2026-09-19): Kategorie „Marketing" (Meta Pixel) ergänzt.
  */
 
-export const CONSENT_VERSION = 1;
+export const CONSENT_VERSION = 2;
 export const CONSENT_STORAGE_KEY = "wingcast.consent";
 
 /** Footer-Link „Cookie-Einstellungen" feuert dieses Event → Panel öffnet erneut. */
@@ -19,13 +22,23 @@ export const OPEN_SETTINGS_EVENT = "wingcast:open-consent";
 
 export type ConsentChoice = "granted" | "denied";
 
-export type ConsentState = {
+/** Die abwählbaren Kategorien — was der Nutzer im Banner entscheidet. */
+export type ConsentChoices = {
+  /** PostHog. */
+  analytics: ConsentChoice;
+  /** Meta Pixel. */
+  marketing: ConsentChoice;
+};
+
+export type ConsentState = ConsentChoices & {
   version: number;
   /** Zeitpunkt des Entscheids (Nachweis-Pflicht). ISO-String. */
   decidedAt: string;
-  /** PostHog. */
-  analytics: ConsentChoice;
 };
+
+function isChoice(v: unknown): v is ConsentChoice {
+  return v === "granted" || v === "denied";
+}
 
 export function readConsent(): ConsentState | null {
   if (typeof window === "undefined") return null;
@@ -35,7 +48,7 @@ export function readConsent(): ConsentState | null {
     const parsed = JSON.parse(raw) as ConsentState;
     // Versionssprung ⇒ Zustimmung gilt als ungültig, neu fragen.
     if (parsed.version !== CONSENT_VERSION) return null;
-    if (parsed.analytics !== "granted" && parsed.analytics !== "denied") {
+    if (!isChoice(parsed.analytics) || !isChoice(parsed.marketing)) {
       return null;
     }
     return parsed;
@@ -44,11 +57,12 @@ export function readConsent(): ConsentState | null {
   }
 }
 
-export function writeConsent(analytics: ConsentChoice): ConsentState {
+export function writeConsent(choices: ConsentChoices): ConsentState {
   const state: ConsentState = {
     version: CONSENT_VERSION,
     decidedAt: new Date().toISOString(),
-    analytics,
+    analytics: choices.analytics,
+    marketing: choices.marketing,
   };
   try {
     window.localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(state));
@@ -74,4 +88,6 @@ export const analyticsEnv = {
   posthogHost: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "/ingest",
   // UI-Host für „View recording/session"-Links — bleibt die echte EU-Domain.
   posthogUiHost: "https://eu.posthog.com",
+  // Meta Pixel (Facebook/Instagram Ads) — Pixel-ID aus dem Events Manager.
+  metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID,
 };

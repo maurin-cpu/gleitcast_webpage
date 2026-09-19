@@ -6,7 +6,7 @@
  * Rechtlich kritische Eigenschaften (bewusst so gebaut):
  *  - „Alle akzeptieren" und „Ablehnen" sind auf der ersten Ebene gleich
  *    prominent (gleiche Größe/Position, kein verstecktes Ablehnen).
- *  - Statistik-Kategorie ist standardmäßig AUS (kein Pre-Tick).
+ *  - Statistik- und Marketing-Kategorie sind standardmäßig AUS (kein Pre-Tick).
  *  - Kein Cookie-Wall: der Dialog blockiert die Seite nicht (aria-modal=false),
  *    Ablehnen ist ohne Nachteil möglich.
  *  - Verweis auf die Datenschutzerklärung.
@@ -19,17 +19,19 @@ import { Link } from "@/i18n/navigation";
 
 type Props = {
   mode: "banner" | "settings";
-  /** Vorbelegung des Statistik-Toggles (im Settings-Modus = aktueller Stand). */
+  /** Vorbelegung der Toggles (im Settings-Modus = aktueller Stand). */
   analyticsDefault: boolean;
+  marketingDefault: boolean;
   /** Im Settings-Modus schließbar (Nutzer hat schon entschieden). */
   closable: boolean;
-  onDecide: (analytics: boolean) => void;
+  onDecide: (choices: { analytics: boolean; marketing: boolean }) => void;
   onClose: () => void;
 };
 
 export function ConsentBanner({
   mode,
   analyticsDefault,
+  marketingDefault,
   closable,
   onDecide,
   onClose,
@@ -37,6 +39,7 @@ export function ConsentBanner({
   const t = useTranslations("Consent");
   const [details, setDetails] = useState(mode === "settings");
   const [analytics, setAnalytics] = useState(analyticsDefault);
+  const [marketing, setMarketing] = useState(marketingDefault);
   const headingRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -104,6 +107,13 @@ export function ConsentBanner({
                   disabled={false}
                   onToggle={() => setAnalytics((v) => !v)}
                 />
+                <CategoryRow
+                  title={t("marketingTitle")}
+                  body={t("marketingBody")}
+                  checked={marketing}
+                  disabled={false}
+                  onToggle={() => setMarketing((v) => !v)}
+                />
               </div>
             )}
           </div>
@@ -113,7 +123,7 @@ export function ConsentBanner({
               <Button
                 variant="primary"
                 size="md"
-                onClick={() => onDecide(analytics)}
+                onClick={() => onDecide({ analytics, marketing })}
                 className="w-full"
               >
                 {t("save")}
@@ -123,7 +133,7 @@ export function ConsentBanner({
                 <Button
                   variant="primary"
                   size="md"
-                  onClick={() => onDecide(true)}
+                  onClick={() => onDecide({ analytics: true, marketing: true })}
                   className="w-full"
                 >
                   {t("acceptAll")}
@@ -131,7 +141,7 @@ export function ConsentBanner({
                 <Button
                   variant="secondary"
                   size="md"
-                  onClick={() => onDecide(false)}
+                  onClick={() => onDecide({ analytics: false, marketing: false })}
                   className="w-full"
                 >
                   {t("reject")}

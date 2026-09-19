@@ -218,7 +218,7 @@
       },
       {
         "q": "Was passiert mit meinen Daten?",
-        "a": "Wir speichern deine E-Mail und die gewählten Regionen. Auf dieser Webseite lädt das Statistik-Tool PostHog nur, wenn du zustimmst. In der App messen wir ohne Cookie, welche Funktionen genutzt werden — Details in der Datenschutzerklärung. Keine Weitergabe an Werbetreibende. Abmeldung jederzeit mit einem Klick."
+        "a": "Wir speichern deine E-Mail und die gewählten Regionen. Auf dieser Webseite laden das Statistik-Tool PostHog und der Meta Pixel nur, wenn du zustimmst. In der App messen wir ohne Cookie, welche Funktionen genutzt werden — Details in der Datenschutzerklärung. Deine E-Mail geben wir nicht an Werbetreibende weiter. Abmeldung jederzeit mit einem Klick."
       }
     ]
   },
@@ -251,11 +251,13 @@
   },
   "Consent": {
     "title": "Datenschutz — deine Wahl",
-    "desc": "Wir nutzen optional das <b>Statistik-Tool</b> PostHog (EU-Server), um zu verstehen, wie die Seite genutzt wird, und Wingcast zu verbessern. Es lädt <b>erst nach deiner Zustimmung</b>. Notwendige Funktionen brauchen kein Tracking. Du kannst jederzeit über „Cookie-Einstellungen“ im Footer widerrufen. Details in der <link>Datenschutzerklärung</link>.",
+    "desc": "Wir nutzen optional das <b>Statistik-Tool</b> PostHog (EU-Server), um zu verstehen, wie die Seite genutzt wird, und den <b>Meta Pixel</b> (Facebook/Instagram, USA), um die Wirkung unserer Werbung zu messen. Beides lädt <b>erst nach deiner Zustimmung</b>. Notwendige Funktionen brauchen kein Tracking. Du kannst jederzeit über „Cookie-Einstellungen“ im Footer widerrufen. Details in der <link>Datenschutzerklärung</link>.",
     "necessaryTitle": "Notwendig",
     "necessaryBody": "Für den Betrieb erforderlich. Auf dieser Seite kein Cookie; in der App ein Login-Session-Cookie. Immer aktiv.",
     "analyticsTitle": "Statistik & Analyse",
     "analyticsBody": "PostHog (EU-Cloud, Frankfurt). Anonymisierte Nutzungsmessung. Keine Datenübertragung in die USA.",
+    "marketingTitle": "Marketing",
+    "marketingBody": "Meta Pixel (Meta Platforms, USA). Misst, ob Besucher über Facebook/Instagram-Anzeigen kommen. Datenübertragung in die USA.",
     "save": "Auswahl speichern",
     "acceptAll": "Alle akzeptieren",
     "reject": "Ablehnen",

@@ -218,7 +218,7 @@
       },
       {
         "q": "Cosa succede ai miei dati?",
-        "a": "Salviamo la tua e-mail e le regioni scelte. Su questo sito il nostro strumento di statistica PostHog si carica solo con il tuo consenso. Nell'app misuriamo senza cookie quali funzioni vengono usate — dettagli nell'informativa sulla privacy. Nessuna cessione a inserzionisti. Disiscrizione in qualsiasi momento con un clic."
+        "a": "Salviamo la tua e-mail e le regioni scelte. Su questo sito lo strumento di statistica PostHog e il pixel Meta si caricano solo con il tuo consenso. Nell'app misuriamo senza cookie quali funzioni vengono usate — dettagli nell'informativa sulla privacy. La tua e-mail non viene mai ceduta a inserzionisti. Disiscrizione in qualsiasi momento con un clic."
       }
     ]
   },
@@ -251,11 +251,13 @@
   },
   "Consent": {
     "title": "Privacy — la tua scelta",
-    "desc": "Utilizziamo opzionalmente lo <b>strumento di statistica</b> PostHog (server UE) per capire come viene usato il sito e migliorare Wingcast. Questo si carica <b>solo dopo il tuo consenso</b>. Le funzioni necessarie non richiedono tracciamento. Puoi revocare in qualsiasi momento tramite «Impostazioni cookie» nel footer. Dettagli nell'<link>informativa sulla privacy</link>.",
+    "desc": "Utilizziamo opzionalmente lo <b>strumento di statistica</b> PostHog (server UE) per capire come viene usato il sito, e il <b>pixel Meta</b> (Facebook/Instagram, USA) per misurare l'effetto delle nostre inserzioni. Entrambi si caricano <b>solo dopo il tuo consenso</b>. Le funzioni necessarie non richiedono tracciamento. Puoi revocare in qualsiasi momento tramite «Impostazioni cookie» nel footer. Dettagli nell'<link>informativa sulla privacy</link>.",
     "necessaryTitle": "Necessari",
     "necessaryBody": "Richiesti per il funzionamento. Su questo sito nessun cookie; nell'app un cookie di sessione di login. Sempre attivi.",
     "analyticsTitle": "Statistica & analisi",
     "analyticsBody": "PostHog (cloud UE, Francoforte). Misurazione anonimizzata dell'utilizzo. Nessun trasferimento di dati negli USA.",
+    "marketingTitle": "Marketing",
+    "marketingBody": "Pixel Meta (Meta Platforms, USA). Misura se i visitatori arrivano da inserzioni Facebook/Instagram. Trasferimento di dati negli USA.",
     "save": "Salva la selezione",
     "acceptAll": "Accetta tutti",
     "reject": "Rifiuta",
