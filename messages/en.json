@@ -1,0 +1,294 @@
+{
+  "Metadata": {
+    "title": "Thermal forecast Switzerland & free flying weather | Wingcast",
+    "description": "Free thermal forecast and flying weather for 494 Swiss launch sites: 3 days, ranked per day, explained in plain language. View the spots – you decide.",
+    "ogImageAlt": "Wingcast app dashboard: map showing all 494 Swiss launch sites, coloured by AI rating",
+    "keywords": "paragliding weather app | free paragliding weather app | free paragliding app | paragliding weather free | flying weather Switzerland | thermal forecast Switzerland | thermal prediction Switzerland | wind forecast Switzerland | AI flying weather | AI weather paragliding | free thermal forecast | free thermal prediction | launch site weather Switzerland | paragliding launch sites | flyability Switzerland | foehn warning paragliding | ICON-CH1 paragliding | free paragliding weather Switzerland | Paragliding Forecast Switzerland"
+  },
+  "Layout": {
+    "skipToContent": "Skip to main content"
+  },
+  "LocaleSwitcher": {
+    "label": "Language",
+    "de": "Deutsch",
+    "fr": "Français",
+    "it": "Italiano",
+    "en": "English",
+    "unavailable": "not available"
+  },
+  "Navbar": {
+    "ariaHome": "Wingcast home page",
+    "ariaNav": "Main navigation",
+    "howItWorks": "How it works",
+    "cast": "Cast",
+    "faq": "FAQ",
+    "wetterkunde": "Weather science",
+    "toApp": "To the app"
+  },
+  "Hero": {
+    "badge": "Beta · AI experiment for Swiss pilots",
+    "headlineLine1": "Which spot is flyable over the next few days?",
+    "headlineLine2": "The thermal forecast for Swiss launch sites.",
+    "subline": "3-day forecast for 494 Swiss launch sites — ranked per day, explained in plain language, from first flights to XC. Free, no credit card.",
+    "ctaPrimary": "View spots",
+    "ctaSecondary": "View the Cast",
+    "trustSpots": "<b>494 Swiss spots</b>",
+    "trustModels": "<b>5 weather models</b> aggregated",
+    "trustAi": "<b>AI rates</b>, physics calculates",
+    "screenshotAlt": "Wingcast app dashboard: chat adviser on the left, map with all 494 Swiss launch sites on the right, coloured by rating",
+    "figcaption": "Live in the app · 494 launch sites, coloured by rating"
+  },
+  "Problem": {
+    "kicker": "Sound familiar?",
+    "headlineLine1": "Saturday, 6:30 a.m.",
+    "headlineLine2": "Where should today's flight be?",
+    "intro": "You check windgrams, you look at weather models, you compare webcams. 45 minutes later you have plenty of data — but still no clear answer as to which spot is the right one this week.",
+    "cardLabel": "To check",
+    "cards": [
+      {
+        "topic": "Wind",
+        "note": "Slope wind, valley wind, upper wind"
+      },
+      {
+        "topic": "Thermals",
+        "note": "Trigger time, strength, cloud base"
+      },
+      {
+        "topic": "Safety",
+        "note": "Foehn, front, lee"
+      },
+      {
+        "topic": "Spot choice",
+        "note": "494 launch sites, one day"
+      }
+    ],
+    "conclusionLead": "In the end you only want to see one thing quickly: which spot is flyable today — and which is not.",
+    "conclusionBody": "Wingcast ranks the spots per day, with the reasoning in plain language. You take the assessment as a starting point, compare it with your own sources and decide for yourself."
+  },
+  "HowItWorks": {
+    "kicker": "From weather to Cast",
+    "headline": "How is the thermal forecast produced?",
+    "intro": "Every morning Wingcast calculates the thermal forecast three days ahead for 494 Swiss launch sites. Weather models and atmospheric physics first, only then does the AI rate. No black box.",
+    "steps": [
+      {
+        "label": "Data",
+        "title": "Read in weather models",
+        "body": "ICON-CH1 (1 km) and ICON-CH2 (2 km) from MeteoSwiss, ICON-D2, ICON-EU and GFS — aggregated once each morning via Open-Meteo, for the whole day."
+      },
+      {
+        "label": "Physics",
+        "title": "Compute the atmosphere",
+        "body": "Thermal cloud base (parcel method with inversion detection), foehn detection (north–south pressure gradient, upper wind, humidity signature), gust decay over the terrain, cloud holes — deterministic in code, without AI."
+      },
+      {
+        "label": "AI",
+        "title": "Analyse and rate",
+        "body": "On the basis of the computed physics, the AI analyses and rates safety and suitability for each spot. The reasoning comes in plain language — wind, thermals, time window."
+      }
+    ],
+    "tiers": {
+      "violet": "Legendary",
+      "green": "Flyable",
+      "bronze": "Sled ride",
+      "amber": "Conditional",
+      "red": "Not flyable"
+    },
+    "weekdays": [
+      "Mon",
+      "Tue",
+      "Wed"
+    ],
+    "previewTitle": "Flying weather",
+    "previewStand": "Updated 05:42",
+    "previewWeekdaysAria": "Weekdays",
+    "previewActiveDay": "Wednesday, 20 May",
+    "previewSpotCount": "308 spots",
+    "regions": {
+      "berner-oberland": "Bernese Oberland",
+      "zentralschweiz": "Central Switzerland"
+    },
+    "tags": {
+      "top-week": "Top of the week",
+      "thermik-strong": "Strong thermals",
+      "foehn-tendency": "Foehn tendency"
+    },
+    "figcaption": "<b>Niesen, 11:00–14:00</b> — wind 8 km/h south, thermal base ~2400 m. From 14:30 southerly foehn tendency → lee. High confidence (3/3 models agree).",
+    "exampleNote": "Example data — real values in the app at <link>app.wingcast.ch</link>."
+  },
+  "Trust": {
+    "kicker": "Who builds this",
+    "founderAlt": "Maurin, founder of Wingcast",
+    "headline": "One pilot. One data problem. One experiment.",
+    "paragraph1": "I fly myself, and doing the morning spot check I often ended up with too much data in my head — windgrams, models, webcams, valley winds, inversions. Processing all of that at once is hard.",
+    "paragraph2": "Wingcast is my attempt to put AI to sensible use there. No miracle promises, just a tool that helps you find suitable spots faster. Whether you have 15 or 400 flights: the AI turns the raw data into plain language instead of leaving you alone with hPa values. <b>Decision support, not decision maker.</b> The decision at the launch site is yours.",
+    "signature": "— Maurin",
+    "emailSuffix": "— write to me directly, every mail gets read."
+  },
+  "Subscribe": {
+    "kicker": "Get started · about 60 seconds",
+    "headline": "Magic link, regions, off you go.",
+    "intro": "Sign-up runs on <b>app.wingcast.ch</b>. We store only your email address and the regions you choose — nothing else.",
+    "cta": "Create account",
+    "stepLabel": "Step {n}",
+    "steps": [
+      {
+        "t": "00:00",
+        "title": "Enter email",
+        "body": "The magic link arrives immediately. No password, no credit card."
+      },
+      {
+        "t": "00:30",
+        "title": "Choose regions",
+        "body": "e.g. Bernese Oberland, Valais, Eastern Switzerland. Changeable at any time."
+      },
+      {
+        "t": "01:00",
+        "title": "Read the Cast",
+        "body": "3 days, ranked by flyability, with reasoning for each spot."
+      }
+    ]
+  },
+  "Feedback": {
+    "kicker": "Beta · build along",
+    "headline": "What you report goes into the next update.",
+    "intro": "Wingcast is beta — some spots are missing, individual launch directions are wrong, now and then a function plays up. Every mail gets read, and most of it lands in the build within a week.",
+    "items": [
+      {
+        "tag": "Spot missing?",
+        "body": "Name and region is enough."
+      },
+      {
+        "tag": "Launch direction wrong?",
+        "body": "A short note, we'll correct it."
+      },
+      {
+        "tag": "Bug?",
+        "body": "What happened + a screenshot."
+      }
+    ],
+    "note": "— Maurin reads every mail personally."
+  },
+  "Faq": {
+    "kicker": "FAQ",
+    "headline": "What pilots often ask.",
+    "intro": "Your question not listed? Write to <link>info@wingcast.ch</link> — the answer comes from Maurin.",
+    "items": [
+      {
+        "q": "What is Wingcast?",
+        "a": "Wingcast is a free AI flying-weather app for Swiss paraglider pilots. It aggregates five weather models via Open-Meteo (ICON-CH1 at 1 km resolution and ICON-CH2 at 2 km from MeteoSwiss, plus ICON-D2, ICON-EU and GFS), computes classic atmospheric physics from them deterministically in code (thermal base, inversions, foehn detection, gust decay), and only then lets the AI analyse and rate safety and suitability for each spot. 494 Swiss launch sites are ranked automatically by flyability for each day, together with reasoning in plain language — wind, thermals, foehn situation, lee risks. Instead of digging through weather models for 45 minutes, you see in 30 seconds where it is flyable today or over the next few days — and why. Sign-up by email and magic link, no credit card, no trial counter. Optionally an email Cast arrives at 06:00 on the weekdays you choose. Wingcast is decision support for pilots, not a decision maker — the final decision at the launch site is yours."
+      },
+      {
+        "q": "Is there a free thermal forecast for Switzerland?",
+        "a": "Yes. Wingcast is a free thermal forecast for Switzerland: for 494 launch sites it calculates three days ahead every morning when the thermals trigger, how high the base sits and how strong the wind blows. The basis is high-resolution weather models, among them ICON-CH1 at 1 km resolution from MeteoSwiss. The physics runs deterministically in code: thermal base by the parcel method with inversion detection, foehn detection via the pressure difference Zurich–Lugano, gust decay over the terrain. Only on top of these values does the AI assess each spot and write the reasoning in plain language, for example: Niesen 11:00–14:00, wind 8 km/h south, thermal base around 2400 m, foehn tendency from 14:30. For each day the spots are ranked by flyability. Wingcast does not replace your usual sources, it makes the pre-selection – the decision at the launch site is yours. Free, no credit card."
+      },
+      {
+        "q": "What does signing up cost?",
+        "a": "Currently nothing. The forecast for regions, the spot rating for each of the 494 launch sites and the weekly briefing are accessible without a credit card and without a trial counter — you only have to sign up. If anything changes about the model, we'll say so openly before we switch."
+      },
+      {
+        "q": "What doesn't work yet in the beta?",
+        "a": "Honest answer: quite a bit. Wingcast is beta — individual launch sites are still missing from the data set, the stored launch direction may not be entirely right at some spots, and occasionally there are functional bugs or outages. We work on it continuously and prioritise according to what the beta community reports. Missing a spot, a launch direction that doesn't fit, a function that plays up? Write to us at info@wingcast.ch — a short note is enough, every report helps."
+      },
+      {
+        "q": "What is the advantage over my current sources?",
+        "a": "Wingcast doesn't replace them — it makes the pre-selection for you. Instead of comparing models and webcams for 30 to 45 minutes, you get a ranked list of the best spots for the coming 3 days in 30 seconds. The fine-tuning you do as usual with the tools you trust."
+      },
+      {
+        "q": "What is foehn — and why is it dangerous for paraglider pilots?",
+        "a": "Foehn is a warm, dry downslope wind that forms when air is forced over a mountain ridge, drops its precipitation on the windward side and sinks down warmed on the lee side. For pilots foehn means: high wind speeds aloft, strong turbulence in the lee of the mountains, rapid weather changes. Wingcast detects foehn situations via the pressure gradient between Zurich and Lugano, combined with the upper wind at 700 hPa and the humidity signature — the same indicators MeteoSwiss uses for its foehn warnings. When foehn is active, affected spots are automatically downgraded, with a note in plain language. More background: meteoschweiz.admin.ch/wetter/wetterphaenomene/foehn."
+      },
+      {
+        "q": "Do I learn something while using it?",
+        "a": "Yes. Every rating comes with reasoning in plain language — for example: Niesen conditional today, because foehn tendency from 14:00 → lee risk, safe slot 11:00–13:30. Over the weeks you recognise the patterns yourself — when foehn arrives, how inversions slow the thermals, where lee is to be expected. We don't want to replace your understanding of the weather, we want to speed it up."
+      },
+      {
+        "q": "How accurate is the forecast — and what does the AI actually do?",
+        "a": "We aggregate five weather models via Open-Meteo: ICON-CH1 (1 km) and ICON-CH2 (2 km) from MeteoSwiss for Swiss topography, plus ICON-D2, ICON-EU and GFS for large-scale situations and longer horizons. Classic atmospheric calculations run on this data deterministically in code: thermal base via the parcel method with inversion detection and terrain-calibrated zones, foehn detection via the north–south pressure gradient plus upper wind and humidity signature, gust decay over the terrain, cloud holes via reference points. Only on this data basis does the AI analyse and rate safety and suitability for each spot — it evaluates the computed physics and writes the reasoning. No magic, no hocus-pocus. In uncertain conditions we are deliberately conservative. We don't promise perfection."
+      },
+      {
+        "q": "What happens after signing up?",
+        "a": "You choose your regions in the app, confirm your email address and have immediate access to the forecast and the map. If you want the briefing, you set in the app which weekdays it should arrive on — the first email then follows on the next day you chose, at 06:00."
+      },
+      {
+        "q": "Does this work on my iPhone?",
+        "a": "Yes. The app runs straight in the browser, and the briefing is compatible with all mail clients. Apple Mail and Gmail support the interactive weekday tabs in full."
+      },
+      {
+        "q": "Who is behind Wingcast?",
+        "a": "Maurin, a pilot from Zurich. Doing my own spot check I often couldn't see the wood for the data — windgrams, models, webcams, valley winds. Wingcast is my experiment: can AI help to process these volumes of data so that a clear basis for a decision ends up on the table? That is exactly what I'm testing right now — together with the beta community."
+      },
+      {
+        "q": "What happens to my data?",
+        "a": "We store your email address and the regions you choose. On this website the statistics tool PostHog and the Meta Pixel load only if you consent. In the app we measure without a cookie which functions are used — details in the privacy policy. We do not pass your email address on to advertisers. Unsubscribe at any time with one click."
+      }
+    ]
+  },
+  "Footer": {
+    "tagline": "AI flying-weather Cast for Swiss paraglider pilots — so you know faster where to go this week.",
+    "toApp": "To the live app",
+    "colProduct": "Product",
+    "colApp": "App",
+    "colLegal": "Legal",
+    "linkHowItWorks": "How it works",
+    "linkCastPreview": "Cast preview",
+    "linkBetaFeedback": "Beta feedback",
+    "linkFaq": "FAQ",
+    "linkWetterkunde": "Weather science",
+    "linkLiveDashboard": "Live dashboard",
+    "linkCast": "Cast",
+    "linkSpotsMap": "Spots map",
+    "linkImpressum": "Imprint",
+    "linkChat": "Chat",
+    "linkTerms": "Terms of use",
+    "linkPrivacy": "Privacy",
+    "linkContact": "Contact",
+    "cookieSettings": "Cookie settings",
+    "copyright": "© {year} Wingcast · Made in Switzerland · <time>Updated {date}</time>",
+    "weatherCredit": "Weather data via <ometeo>Open-Meteo</ometeo> · ICON-CH1 (1 km) and ICON-CH2 (2 km) from <meteoswiss>MeteoSwiss</meteoswiss>, ICON-D2, ICON-EU, <gfs>GFS</gfs>"
+  },
+  "Cta": {
+    "viewSpots": "View spots",
+    "ariaViewSpots": "View spots in the Wingcast app"
+  },
+  "Consent": {
+    "title": "Data protection — your choice",
+    "desc": "We optionally use the <b>statistics tool</b> PostHog (EU servers) to understand how the site is used, and the <b>Meta Pixel</b> (Facebook/Instagram, USA) to measure the effect of our advertising. Both load <b>only after your consent</b>. Necessary functions require no tracking. You can withdraw your consent at any time via “Cookie settings” in the footer. Details in the <link>privacy policy</link>.",
+    "necessaryTitle": "Necessary",
+    "necessaryBody": "Required for operation. No cookie on this site; in the app a login session cookie. Always active.",
+    "analyticsTitle": "Statistics & analysis",
+    "analyticsBody": "PostHog (EU cloud, Frankfurt). Anonymised usage measurement. No data transfer to the USA.",
+    "marketingTitle": "Marketing",
+    "marketingBody": "Meta Pixel (Meta Platforms, USA). Measures whether visitors arrive via Facebook/Instagram ads. Data transfer to the USA.",
+    "save": "Save selection",
+    "acceptAll": "Accept all",
+    "reject": "Reject",
+    "settings": "Settings",
+    "less": "Show less",
+    "close": "Close"
+  },
+  "Confirm": {
+    "metaTitle": "Sign-up confirmed",
+    "headline": "You're in.",
+    "body": "In the app you choose regions and weekdays — the first mail then arrives on the next day you chose, at 06:00. The forecast and the map you can use right away.",
+    "cta": "To the Wingcast app"
+  },
+  "Legal": {
+    "impressumTitle": "Imprint",
+    "privacyTitle": "Privacy",
+    "termsTitle": "Terms of use",
+    "onlyGermanNotice": "These legal texts are currently available in German only. The German version is binding."
+  },
+  "Wetterkunde": {
+    "eyebrow": "Weather science",
+    "hubTitle": "Weather science for paraglider pilots",
+    "hubIntro": "Analyses of real flying days in Switzerland — recalculated against measurements and models, with the method disclosed. Not a textbook, but what was measurable on one specific day.",
+    "hubMetaTitle": "Weather science — flying-weather analyses from Switzerland",
+    "hubMetaDescription": "Analyses of real flying days: measurements from MeteoSwiss calculated against weather models, method and limits disclosed. For paraglider pilots in Switzerland.",
+    "empty": "The weather-science articles appear here as soon as they are published.",
+    "meta": "{minuten} min read · updated {stand}",
+    "stand": "Updated {stand}",
+    "lesezeit": "{minuten} min read",
+    "breadcrumbLabel": "Breadcrumb navigation",
+    "draftNotice": "Draft — not yet published. This page is excluded from search engines."
+  }
+}

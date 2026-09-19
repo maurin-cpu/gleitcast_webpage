@@ -1,5 +1,7 @@
 # Wingcast
 
+> Sprachen: Deutsch (wingcast.ch), Franzoesisch (/fr), Italienisch (/it), Englisch (/en) — Englisch richtet sich an internationale Piloten, die in der Schweiz fliegen.
+
 > Gratis KI-Flugwetter-App fuer Schweizer Gleitschirmpiloten. Aggregiert fuenf Wettermodelle (ICON-CH1, ICON-CH2, ICON-D2, ICON-EU, GFS) via Open-Meteo, rechnet darauf deterministische Atmosphaeren-Physik (Thermikbasis via Parcel-Methode, Foehn-Detektion via Druckgradient Nord-Sued, Gust-Decay, Inversion, Cloud-Holes) und laesst eine KI darauf basierend Sicherheit und Eignung pro Spot bewerten. 494 Schweizer Startplaetze, automatisch sortiert pro Tag, Begruendung in Klartext. Dauerhaft gratis, keine Kreditkarte. Decision Support, kein Decision Maker.
 
 ## Was Wingcast ist
@@ -39,7 +41,7 @@ Die Pipeline ist drei-stufig:
 
 - [Startseite](https://www.wingcast.ch/): Ueberblick, Funktionsweise, FAQ
 - [App](https://app.wingcast.ch/): Live-Forecast, Spots-Karte, Cast-Konfiguration
-- [Wetterkunde](https://www.wingcast.ch/wetterkunde): eigene Auswertungen echter Flugtage — Messdaten gegen Modelle gerechnet, Methode und Grenzen offengelegt (nur Deutsch)
+- [Wetterkunde](https://www.wingcast.ch/wetterkunde): eigene Auswertungen echter Flugtage — Messdaten gegen Modelle gerechnet, Methode und Grenzen offengelegt (Deutsch, Franzoesisch, Italienisch, Englisch)
 - [Impressum](https://www.wingcast.ch/impressum)
 - [Datenschutz](https://www.wingcast.ch/datenschutz)
 - [Nutzungsbedingungen](https://www.wingcast.ch/nutzungsbedingungen)
@@ -68,8 +70,9 @@ Maurin, Pilot in Zuerich. Gebaut aus eigenem Schmerzpunkt: Daten-Overload beim S
 - [Boeenfront: wie hoch sie reicht](https://www.wingcast.ch/wetterkunde/boeenfront):
   Auswertung des Ereignisses vom 30. Juli 2026 — 139 SwissMetNet-Stationen (Messung)
   gegen die ICON-CH1-Prognose fuer 494 Startplaetze. Auch auf Franzoesisch
-  (https://www.wingcast.ch/fr/wetterkunde/boeenfront) und Italienisch
-  (https://www.wingcast.ch/it/wetterkunde/boeenfront).
+  (https://www.wingcast.ch/fr/wetterkunde/boeenfront), Italienisch
+  (https://www.wingcast.ch/it/wetterkunde/boeenfront) und Englisch
+  (https://www.wingcast.ch/en/wetterkunde/boeenfront).
 
 ## Belegte Einzelbefunde
 

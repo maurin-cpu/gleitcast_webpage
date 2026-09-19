@@ -34,6 +34,7 @@ const HTML_LANG: Record<Locale, string> = {
   de: "de-CH",
   fr: "fr-CH",
   it: "it-CH",
+  en: "en",
 };
 
 export function generateStaticParams() {

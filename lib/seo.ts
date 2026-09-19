@@ -23,12 +23,18 @@ export const HREFLANG: Record<Locale, string> = {
   de: "de-CH",
   fr: "fr-CH",
   it: "it-CH",
+  // Englisch ohne Laenderbezug: die Fassung richtet sich an Piloten aus aller
+  // Welt, die in der Schweiz fliegen — nicht an ein englischsprachiges Land.
+  en: "en",
 };
 
 export const OG_LOCALE: Record<Locale, string> = {
   de: "de_CH",
   fr: "fr_CH",
   it: "it_CH",
+  // og:locale verlangt sprache_LAND — en_GB, weil die Fassung britisches
+  // Englisch ist.
+  en: "en_GB",
 };
 
 export function hreflangOf(locale: string): string {
@@ -39,7 +45,7 @@ export function ogLocaleOf(locale: string): string {
   return OG_LOCALE[locale as Locale] ?? OG_LOCALE[routing.defaultLocale];
 }
 
-/** Default-Locale ohne Prefix, fr/it mit Prefix (localePrefix: "as-needed"). */
+/** Default-Locale ohne Prefix, fr/it/en mit Prefix (localePrefix: "as-needed"). */
 export function localePath(locale: string, path = ""): string {
   const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
   return `${prefix}${path}` || "/";
@@ -48,6 +54,29 @@ export function localePath(locale: string, path = ""): string {
 /** Absolute URL auf dem kanonischen Host. */
 export function absoluteUrl(path: string): string {
   return path.startsWith("http") ? path : `${SITE_URL}${path}`;
+}
+
+/**
+ * hreflang-Alternates für den `alternates.languages`-Block der Seiten-Metadaten.
+ *
+ * Bewusst aus `routing.locales` abgeleitet statt je Seite aufgezählt: beim
+ * Ergänzen von Englisch standen in page.tsx und wetterkunde/page.tsx feste
+ * Dreierlisten, die die neue Sprache stillschweigend aus den hreflang-Angaben
+ * gelassen hätten — Google hätte /en dann nie als Sprachvariante erkannt.
+ *
+ * `absolute` steuert die Schreibweise: die Startseite nutzt relative Pfade
+ * (Next setzt `metadataBase` davor), der Wetterkunde-Hub absolute URLs.
+ */
+export function alternateLanguages(
+  path = "",
+  { absolute = false }: { absolute?: boolean } = {},
+): Record<string, string> {
+  const href = (locale: string) =>
+    absolute ? localeUrl(locale, path) : localePath(locale, path);
+  return Object.fromEntries([
+    ...routing.locales.map((locale) => [hreflangOf(locale), href(locale)]),
+    ["x-default", href(routing.defaultLocale)],
+  ]);
 }
 
 /** Absolute, lokalisierte Seiten-URL — für canonical, og:url und hreflang. */

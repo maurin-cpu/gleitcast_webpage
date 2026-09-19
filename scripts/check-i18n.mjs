@@ -1,4 +1,4 @@
-// i18n-Paritätscheck: fr.json / it.json müssen exakt dieselbe Key-Struktur,
+// i18n-Paritätscheck: fr.json / it.json / en.json müssen exakt dieselbe Key-Struktur,
 // Array-Längen und Tags/Platzhalter wie de.json (Quelle) haben.
 // Aufruf:  node scripts/check-i18n.mjs   (Exit 1 bei Abweichung)
 import { readFileSync } from "node:fs";
@@ -8,7 +8,11 @@ import { dirname, join } from "node:path";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..", "messages");
 const load = (f) => JSON.parse(readFileSync(join(root, f), "utf8"));
 const de = load("de.json");
-const targets = { fr: load("fr.json"), it: load("it.json") };
+const targets = {
+  fr: load("fr.json"),
+  it: load("it.json"),
+  en: load("en.json"),
+};
 
 // Strukturierte Key-Liste inkl. Array-Längen (z. B. "Faq.items[5]")
 const keys = (o, p = "") =>

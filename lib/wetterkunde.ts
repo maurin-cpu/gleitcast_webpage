@@ -7,7 +7,7 @@ import { Marked } from "marked";
  * Wetterkunde — Pillar-Artikel aus Markdown.
  *
  * Ablage: content/wetterkunde/<slug>.md (Deutsch, führende Fassung) plus
- * <slug>.fr.md / <slug>.it.md für die Übersetzungen. Ein Artikel geht live,
+ * <slug>.fr.md / <slug>.it.md / <slug>.en.md für die Übersetzungen. Ein Artikel geht live,
  * sobald die Datei dort liegt UND im Frontmatter `status: published` steht.
  * `status: draft` wird lokal gerendert (Vorschau unter /wetterkunde/<slug>),
  * erscheint aber weder im Hub noch in der Sitemap und ist auf noindex.
@@ -20,8 +20,8 @@ import { Marked } from "marked";
 const CONTENT_DIR = path.join(process.cwd(), "content", "wetterkunde");
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 
-export type WkLocale = "de" | "fr" | "it";
-export const WK_LOCALES: readonly WkLocale[] = ["de", "fr", "it"] as const;
+export type WkLocale = "de" | "fr" | "it" | "en";
+export const WK_LOCALES: readonly WkLocale[] = ["de", "fr", "it", "en"] as const;
 
 function fileNameFor(slug: string, locale: WkLocale): string {
   return locale === "de" ? `${slug}.md` : `${slug}.${locale}.md`;
@@ -220,7 +220,7 @@ export function getAllArticles(locale: WkLocale = "de"): Article[] {
     .readdirSync(CONTENT_DIR)
     .filter((f) => {
       if (f === "README.md") return false;
-      if (locale === "de") return f.endsWith(".md") && !/\.(fr|it)\.md$/.test(f);
+      if (locale === "de") return f.endsWith(".md") && !/\.(fr|it|en)\.md$/.test(f);
       return f.endsWith(`.${locale}.md`);
     })
     .map((f) => f.replace(suffix, ""))

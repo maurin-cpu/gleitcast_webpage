@@ -6,22 +6,23 @@ import {
   type WkLocale,
 } from "@/lib/wetterkunde";
 
-import { SITE_URL } from "@/lib/seo";
+import { SITE_URL, hreflangOf } from "@/lib/seo";
 import { PAGE_LAST_UPDATED } from "@/lib/schema";
 
-// Default-Locale ohne Prefix, fr/it mit Prefix (passend zu localePrefix: "as-needed").
+// Default-Locale ohne Prefix, die uebrigen mit Prefix (passend zu localePrefix: "as-needed").
 function localized(path: string, locale: string): string {
   const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
   return `${SITE_URL}${prefix}${path}`;
 }
 
-// hreflang-Alternates pro Eintrag (de-CH / fr-CH / it-CH).
+// hreflang-Alternates pro Eintrag (de-CH / fr-CH / it-CH / en). Bewusst aus
+// routing.locales abgeleitet statt aufgezaehlt: beim Ergaenzen von Englisch
+// stand hier eine feste Liste, die die neue Sprache stillschweigend aus der
+// Sitemap gelassen haette.
 function languages(path: string): Record<string, string> {
-  return {
-    "de-CH": localized(path, "de"),
-    "fr-CH": localized(path, "fr"),
-    "it-CH": localized(path, "it"),
-  };
+  return Object.fromEntries(
+    routing.locales.map((locale) => [hreflangOf(locale), localized(path, locale)]),
+  );
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -57,11 +58,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Wetterkunde pro Sprache: Hub in allen Locales, Artikel nur dort, wo eine
   // publizierte Fassung existiert — hreflang entsprechend. Entwürfe
   // (status != published) bleiben draussen — sie sind zusätzlich auf noindex.
-  const hreflang: Record<WkLocale, string> = {
-    de: "de-CH",
-    fr: "fr-CH",
-    it: "it-CH",
-  };
   const wetterkunde: MetadataRoute.Sitemap = [];
   for (const locale of routing.locales) {
     const articles = getPublishedArticles(locale as WkLocale);
@@ -90,7 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
               alternates: {
                 languages: Object.fromEntries(
                   locs.map((l) => [
-                    hreflang[l],
+                    hreflangOf(l),
                     localized(`/wetterkunde/${a.slug}`, l),
                   ]),
                 ),

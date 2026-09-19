@@ -1,4 +1,4 @@
-import { SITE_URL } from "./seo";
+import { SITE_URL, hreflangOf } from "./seo";
 
 const APP_URL = "https://app.wingcast.ch";
 
@@ -6,17 +6,9 @@ const APP_URL = "https://app.wingcast.ch";
 // Wird auch im Footer als sichtbares „Stand"-Datum verwendet.
 export const PAGE_LAST_UPDATED = "2026-09-15";
 
-type Locale = "de" | "fr" | "it";
-
-const IN_LANGUAGE: Record<Locale, string> = {
-  de: "de-CH",
-  fr: "fr-CH",
-  it: "it-CH",
-};
-
-function inLanguage(locale: string): string {
-  return IN_LANGUAGE[locale as Locale] ?? "de-CH";
-}
+// inLanguage für JSON-LD kommt aus derselben Quelle wie die hreflang-Angaben —
+// eine zweite Locale-Liste hier hätte Englisch als de-CH ausgezeichnet.
+const inLanguage = hreflangOf;
 
 // Locale-spezifische URL der Landing (Default-Locale ohne Prefix).
 function localizedUrl(locale: string): string {

@@ -6,7 +6,12 @@ import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { getPublishedArticles, type WkLocale } from "@/lib/wetterkunde";
 import { wetterkundeHubSchema, breadcrumbSchema, jsonLdScript } from "@/lib/schema";
-import { SITE_URL, localePath, localeUrl, socialMetadata } from "@/lib/seo";
+import {
+  alternateLanguages,
+  localePath,
+  localeUrl,
+  socialMetadata,
+} from "@/lib/seo";
 import { siteOgImage } from "@/lib/og";
 
 // Default-Locale ohne Prefix, fr/it mit Prefix (localePrefix: "as-needed").
@@ -33,11 +38,7 @@ export async function generateMetadata({
     description: t("hubMetaDescription"),
     alternates: {
       canonical: url,
-      languages: {
-        "de-CH": `${SITE_URL}/wetterkunde`,
-        "fr-CH": `${SITE_URL}/fr/wetterkunde`,
-        "it-CH": `${SITE_URL}/it/wetterkunde`,
-      },
+      languages: alternateLanguages("/wetterkunde", { absolute: true }),
     },
     ...socialMetadata({
       locale,

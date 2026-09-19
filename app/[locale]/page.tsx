@@ -17,6 +17,7 @@ import {
   webPageSchema,
   jsonLdScript,
 } from "@/lib/schema";
+import { alternateLanguages } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
 
 export function generateStaticParams() {
@@ -32,12 +33,7 @@ export async function generateMetadata({
   return {
     alternates: {
       canonical: locale === "de" ? "/" : `/${locale}`,
-      languages: {
-        "de-CH": "/",
-        "fr-CH": "/fr",
-        "it-CH": "/it",
-        "x-default": "/",
-      },
+      languages: alternateLanguages(),
     },
   };
 }
