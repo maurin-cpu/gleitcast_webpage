@@ -286,6 +286,14 @@ export default async function DatenschutzPage({
                   Basis des EU-U.S. Data Privacy Framework bzw. der
                   EU-Standardvertragsklauseln. Ohne deine Einwilligung wird das
                   Pixel-Script nicht geladen. Kategorie „Marketing".
+                  Neben dem Seitenaufruf übermitteln wir zwei Ereignisse: den
+                  Klick auf einen Link zur App („Lead") und in der App
+                  (app.wingcast.ch) den ersten erfolgreichen Login eines neuen
+                  Kontos („CompleteRegistration"), jeweils ohne E-Mail-Adresse
+                  oder andere Kontodaten. Deine Wahl geben wir dazu im Cookie{" "}
+                  <code>wc_consent_marketing</code> (Laufzeit 180 Tage) an die
+                  App weiter; die App lädt das Pixel nur, wenn dieses Cookie
+                  deine Zustimmung enthält.
                 </li>
               </ul>
               <p className="mt-3">

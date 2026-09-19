@@ -19,6 +19,7 @@
  */
 
 import { useEffect } from "react";
+import { trackMetaEvent } from "./metaPixel";
 
 const APP_HOST = "app.wingcast.ch";
 
@@ -46,6 +47,9 @@ export function AnalyticsEvents() {
           host = "";
         }
         if (host === APP_HOST) {
+          // Meta: Standard-Event "Lead" = Absicht, die App zu öffnen. Die
+          // eigentliche Conversion (CompleteRegistration) feuert in der App.
+          trackMetaEvent("Lead", { content_name: "app_open", location: path() });
           void loadedPosthog().then((p) =>
             p?.capture("app_open_clicked", {
               link_text: link.innerText?.trim().slice(0, 60) || null,

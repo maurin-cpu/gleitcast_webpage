@@ -8,6 +8,17 @@
  *
  * Widerruf: fbq('consent','revoke') stoppt alle weiteren Sendungen, das
  * Script selbst bleibt im Speicher (lässt sich nicht entladen).
+ *
+ * Conversion-Trichter (Events Manager → Anzeigen auf Conversions optimieren):
+ *   PageView              jede Seite (hier)
+ *   Lead                  Klick auf einen Link zur App (AnalyticsEvents.tsx)
+ *   CompleteRegistration  erster Login eines neuen Kontos — feuert in der App
+ *                         (app.wingcast.ch, templates/base.html im flychat-Repo)
+ *
+ * Damit die App den Pixel laden darf, gibt die Zustimmung hier ein Cookie auf
+ * die Hauptdomain (.wingcast.ch) weiter — die App hat keinen eigenen Banner
+ * und liest nur dieses Cookie. Attribution zwischen beiden Hosts läuft über
+ * die Meta-Cookies _fbp/_fbc, die fbevents.js ebenfalls auf .wingcast.ch setzt.
  */
 
 type Fbq = {
@@ -28,11 +39,25 @@ declare global {
 
 const SRC = "https://connect.facebook.net/en_US/fbevents.js";
 
+/** Consent-Weitergabe an app.wingcast.ch: "1" = Marketing erlaubt, "0" = nicht. */
+const CONSENT_COOKIE = "wc_consent_marketing";
+const CONSENT_COOKIE_DAYS = 180;
+
 let started = false;
+
+function writeConsentCookie(value: "0" | "1") {
+  const host = window.location.hostname;
+  const domain = host.endsWith("wingcast.ch") ? "; Domain=.wingcast.ch" : "";
+  const secure = window.location.protocol === "https:" ? "; Secure" : "";
+  document.cookie =
+    `${CONSENT_COOKIE}=${value}; Max-Age=${CONSENT_COOKIE_DAYS * 86400}` +
+    `; Path=/; SameSite=Lax${domain}${secure}`;
+}
 
 /** Lädt fbevents.js (einmalig) und sendet den initialen PageView. */
 export function startMetaPixel(pixelId: string) {
   if (typeof window === "undefined") return;
+  writeConsentCookie("1");
 
   if (started) {
     // Nutzer hat Marketing wieder eingeschaltet → Sendungen freigeben.
@@ -64,8 +89,10 @@ export function startMetaPixel(pixelId: string) {
   window.fbq("track", "PageView");
 }
 
-/** Widerruf: keine weiteren Events an Meta. */
+/** Widerruf: keine weiteren Events an Meta — auch nicht in der App. */
 export function revokeMetaPixel() {
+  if (typeof window === "undefined") return;
+  writeConsentCookie("0");
   if (!started) return;
   window.fbq?.("consent", "revoke");
 }
@@ -74,4 +101,13 @@ export function revokeMetaPixel() {
 export function trackMetaPageView() {
   if (!started) return;
   window.fbq?.("track", "PageView");
+}
+
+/** Standard-Event (z. B. "Lead") — nur wenn Pixel läuft. */
+export function trackMetaEvent(
+  name: string,
+  params?: Record<string, string | number | boolean | null>,
+) {
+  if (!started) return;
+  window.fbq?.("track", name, params ?? {});
 }
