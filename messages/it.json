@@ -86,34 +86,55 @@
         "body": "Sulla base della fisica calcolata, l'IA analizza e valuta sicurezza e idoneità per ogni spot. La motivazione arriva in chiaro — vento, termica, finestra temporale."
       }
     ],
-    "tiers": {
-      "violet": "Leggendario",
-      "green": "Volabile",
-      "bronze": "Planata",
-      "amber": "Condizionato",
-      "red": "Non volabile"
-    },
     "weekdays": [
       "lun",
       "mar",
       "mer"
     ],
-    "previewTitle": "Meteo di volo",
+    "previewTitle": "Briefing",
     "previewStand": "Aggiornato 05:42",
     "previewWeekdaysAria": "Giorni della settimana",
-    "previewActiveDay": "Mercoledì, 20 maggio",
-    "previewSpotCount": "308 spot",
-    "regions": {
-      "berner-oberland": "Oberland bernese",
-      "zentralschweiz": "Svizzera centrale"
+    "figcaption": "<b>Ogni blocco legge la situazione come un pilota:</b> prima l'attesa dalla situazione generale, poi i dati di previsione a confronto, poi il verdetto come etichetta.",
+    "exampleNote": "Dati di esempio — valori reali nell'app su <link>app.wingcast.ch</link>.",
+    "verdicts": {
+      "safe": "Sicuro",
+      "caution": "Attenzione",
+      "unsafe": "Non sicuro"
     },
-    "tags": {
-      "top-week": "Top della settimana",
-      "thermik-strong": "Termica forte",
-      "foehn-tendency": "Tendenza foehn"
+    "flyable": "volabili",
+    "chainTitle": "Catena di analisi",
+    "blocks": {
+      "lage": "Situazione",
+      "front": "Fronti",
+      "foehn": "Favonio / Bise",
+      "wind": "Vento in quota",
+      "stab": "Stabilità",
+      "thermik": "Termiche / base",
+      "sonne": "Sole / nuvole",
+      "modelle": "Modelli"
     },
-    "figcaption": "<b>Niesen, ore 11–14</b> — vento 8 km/h da sud, base termica ~2400 m. Dalle 14:30 tendenza foehn da sud → sottovento. Confidenza alta (3/3 modelli concordi).",
-    "exampleNote": "Dati di esempio — valori reali nell'app su <link>app.wingcast.ch</link>."
+    "pills": {
+      "front_none": "nessun fronte",
+      "foehn_off": "nessun favonio",
+      "wind_match": "regionale come la media",
+      "stab_labile": "in parte instabile",
+      "th_good": "buona salita",
+      "sun_match": "come atteso",
+      "md_partial": "un punto aperto"
+    },
+    "lageRegime": "alta pressione · in aumento",
+    "labelExpectation": "Attesa",
+    "labelData": "Dati",
+    "labelVerdict": "Verdetto",
+    "expectationText": "Alta pressione → subsidenza, base limitata",
+    "chips": {
+      "base": "Base 2600 m",
+      "climb": "Salita 2,4 m/s",
+      "sun": "Sole ore 10–16 80 %"
+    },
+    "verdictText": "<b>Esattamente ciò che mostrano i dati</b> — la subsidenza sotto l'alta pressione limita la base, la salita resta vigorosa.",
+    "warningsTitle": "Avvisi Svizzera",
+    "warningPill": "temporali dalle 16"
   },
   "Subscribe": {
     "kicker": "Iniziare · circa 60 secondi",

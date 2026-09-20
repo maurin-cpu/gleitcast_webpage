@@ -86,34 +86,55 @@
         "body": "Sur la base de la physique calculée, l'IA analyse et évalue la sécurité et la pertinence pour chaque spot. La justification arrive en clair — vent, thermique, fenêtre horaire."
       }
     ],
-    "tiers": {
-      "violet": "Légendaire",
-      "green": "Volable",
-      "bronze": "Plané",
-      "amber": "Sous conditions",
-      "red": "Non volable"
-    },
     "weekdays": [
       "lun",
       "mar",
       "mer"
     ],
-    "previewTitle": "Météo de vol",
+    "previewTitle": "Briefing",
     "previewStand": "Mis à jour 05:42",
     "previewWeekdaysAria": "Jours de la semaine",
-    "previewActiveDay": "Mercredi 20 mai",
-    "previewSpotCount": "308 spots",
-    "regions": {
-      "berner-oberland": "Oberland bernois",
-      "zentralschweiz": "Suisse centrale"
+    "figcaption": "<b>Chaque bloc lit la situation comme un pilote :</b> d'abord l'attente issue de la situation générale, puis les données de prévision en regard, puis le verdict sous forme de pastille.",
+    "exampleNote": "Données d'exemple — valeurs réelles dans l'app sur <link>app.wingcast.ch</link>.",
+    "verdicts": {
+      "safe": "Sûr",
+      "caution": "Prudence",
+      "unsafe": "Pas sûr"
     },
-    "tags": {
-      "top-week": "Top de la semaine",
-      "thermik-strong": "Thermique forte",
-      "foehn-tendency": "Tendance au foehn"
+    "flyable": "volables",
+    "chainTitle": "Chaîne d'analyse",
+    "blocks": {
+      "lage": "Situation",
+      "front": "Fronts",
+      "foehn": "Foehn / Bise",
+      "wind": "Vent d'altitude",
+      "stab": "Stabilité",
+      "thermik": "Thermiques / plafond",
+      "sonne": "Soleil / nuages",
+      "modelle": "Modèles"
     },
-    "figcaption": "<b>Niesen, 11h–14h</b> — Vent 8 km/h sud, plafond thermique ~2400 m. Dès 14h30 tendance au foehn du sud → sous le vent. Confiance élevée (3/3 modèles concordants).",
-    "exampleNote": "Données d'exemple — valeurs réelles dans l'app sur <link>app.wingcast.ch</link>."
+    "pills": {
+      "front_none": "pas de front",
+      "foehn_off": "pas de foehn",
+      "wind_match": "régional comme la moyenne",
+      "stab_labile": "en partie instable",
+      "th_good": "bonne montée",
+      "sun_match": "comme attendu",
+      "md_partial": "un point ouvert"
+    },
+    "lageRegime": "anticyclone · en hausse",
+    "labelExpectation": "Attente",
+    "labelData": "Données",
+    "labelVerdict": "Verdict",
+    "expectationText": "Anticyclone → subsidence, plafond limité",
+    "chips": {
+      "base": "Plafond 2600 m",
+      "climb": "Montée 2,4 m/s",
+      "sun": "Soleil 10h–16h 80 %"
+    },
+    "verdictText": "<b>C'est exactement ce que montrent les données</b> — la subsidence sous l'anticyclone plafonne la base, la montée reste soutenue.",
+    "warningsTitle": "Avertissements Suisse",
+    "warningPill": "orages dès 16h"
   },
   "Subscribe": {
     "kicker": "Se lancer · env. 60 secondes",

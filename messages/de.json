@@ -86,34 +86,55 @@
         "body": "Auf Basis der berechneten Physik analysiert und bewertet die KI Sicherheit und Eignung pro Spot. Die Begründung kommt in Klartext — Wind, Thermik, Zeitfenster."
       }
     ],
-    "tiers": {
-      "violet": "Legendär",
-      "green": "Fliegbar",
-      "bronze": "Abgleiter",
-      "amber": "Bedingt",
-      "red": "Nicht fliegbar"
-    },
     "weekdays": [
       "Mo",
       "Di",
       "Mi"
     ],
-    "previewTitle": "Flugwetter",
+    "previewTitle": "Briefing",
     "previewStand": "Stand 05:42",
     "previewWeekdaysAria": "Wochentage",
-    "previewActiveDay": "Mittwoch, 20. Mai",
-    "previewSpotCount": "308 Spots",
-    "regions": {
-      "berner-oberland": "Berner Oberland",
-      "zentralschweiz": "Zentralschweiz"
+    "figcaption": "<b>Jeder Block liest die Lage wie ein Pilot:</b> zuerst die Erwartung aus der Grosswetterlage, dann die Prognosedaten dagegen, dann das Urteil als Pille.",
+    "exampleNote": "Beispieldaten — echte Werte in der App auf <link>app.wingcast.ch</link>.",
+    "verdicts": {
+      "safe": "Sicher",
+      "caution": "Vorsicht",
+      "unsafe": "Nicht sicher"
     },
-    "tags": {
-      "top-week": "Top der Woche",
-      "thermik-strong": "Thermik stark",
-      "foehn-tendency": "Föhn-Tendenz"
+    "flyable": "fliegbar",
+    "chainTitle": "Analyse-Kette",
+    "blocks": {
+      "lage": "Lage",
+      "front": "Fronten",
+      "foehn": "Föhn / Bise",
+      "wind": "Höhenwind",
+      "stab": "Labilität",
+      "thermik": "Thermik / Basis",
+      "sonne": "Sonne / Bewölkung",
+      "modelle": "Modelle"
     },
-    "figcaption": "<b>Niesen, 11–14 Uhr</b> — Wind 8 km/h Süd, Thermikbasis ~2400 m. Ab 14:30 Süd-Föhn-Tendenz → Lee. Konfidenz hoch (3/3 Modelle einig).",
-    "exampleNote": "Beispieldaten — echte Werte in der App auf <link>app.wingcast.ch</link>."
+    "pills": {
+      "front_none": "keine Front",
+      "foehn_off": "kein Föhn",
+      "wind_match": "regional wie im Mittel",
+      "stab_labile": "teils labil",
+      "th_good": "gutes Steigen",
+      "sun_match": "wie erwartet",
+      "md_partial": "ein offener Punkt"
+    },
+    "lageRegime": "Hoch · steigend",
+    "labelExpectation": "Erwartung",
+    "labelData": "Daten",
+    "labelVerdict": "Urteil",
+    "expectationText": "Hoch → Absinken, gedeckelte Basis",
+    "chips": {
+      "base": "Basis 2600 m",
+      "climb": "Steigen 2.4 m/s",
+      "sun": "Sonne 10–16 Uhr 80 %"
+    },
+    "verdictText": "<b>Genau das zeigen die Daten</b> — Absinken im Hoch deckelt die Basis, das Steigen bleibt kräftig.",
+    "warningsTitle": "Warnungen Schweiz",
+    "warningPill": "Gewitter ab 16 Uhr"
   },
   "Subscribe": {
     "kicker": "Loslegen · ca. 60 Sekunden",

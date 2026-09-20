@@ -1,63 +1,104 @@
 import { useTranslations } from "next-intl";
-import {
-  TierLegendaryIcon,
-  TierFlyableIcon,
-  TierGlideIcon,
-  TierConditionalIcon,
-  TierUnflyableIcon,
-} from "../ui/Icons";
-import type { ComponentType, SVGProps } from "react";
 
-type Tier = "violet" | "green" | "bronze" | "amber" | "red";
+/**
+ * Rechte Spalte = Mockup der App-Seite `/briefing` (Stand 19.09.2026):
+ * Wochenstreifen (Einstufung, Bodendruck, Höhenwind, fliegbare Spots) und
+ * darunter die Analyse-Kette — acht Blöcke plus Warnungen, je Block eine
+ * Status-Pille. Ein Block ist aufgeklappt und zeigt das Prinzip
+ * Erwartung → Daten → Urteil. Referenz: flychat/docs/BRIEFING.md §3/§4/§8.
+ */
 
-// Nur Styling + Icon pro Stufe — die Labels kommen lokalisiert aus den Messages.
-const tierStyle: Record<
-  Tier,
-  {
-    text: string;
-    bg: string;
-    border: string;
-    Icon: ComponentType<SVGProps<SVGSVGElement>>;
-  }
-> = {
-  violet: { text: "text-flyViolet", bg: "bg-flyViolet/10", border: "border-flyViolet/30", Icon: TierLegendaryIcon },
-  green:  { text: "text-flyGreen",  bg: "bg-flyGreen/10",  border: "border-flyGreen/30",  Icon: TierFlyableIcon },
-  bronze: { text: "text-flyBronze", bg: "bg-flyBronze/10", border: "border-flyBronze/30", Icon: TierGlideIcon },
-  amber:  { text: "text-flyAmber",  bg: "bg-flyAmber/10",  border: "border-flyAmber/30",  Icon: TierConditionalIcon },
-  red:    { text: "text-flyRed",    bg: "bg-flyRed/10",    border: "border-flyRed/30",    Icon: TierUnflyableIcon },
+type Verdict = "safe" | "caution" | "unsafe";
+type Status = "ok" | "info" | "warn";
+
+// Einstufung im Wochenstreifen (Safe / Caution / Not safe).
+const verdictStyle: Record<Verdict, string> = {
+  safe:    "border-flyGreen/30 bg-flyGreen/10 text-flyGreen",
+  caution: "border-flyAmber/30 bg-flyAmber/10 text-flyAmber",
+  unsafe:  "border-flyRed/30   bg-flyRed/10   text-flyRed",
 };
 
-// Strukturelle Demo-Daten (Scores, Winde, Daten) — sprachneutral. Labels/Namen
-// werden über die `tiers`/`regions`/`tags`-Keys lokalisiert aufgelöst.
-const days: Array<{ date: string; score: number; tier: Tier; active?: boolean }> = [
-  { date: "18.5", score: 1, tier: "red" },
-  { date: "19.5", score: 3, tier: "amber" },
-  { date: "20.5", score: 6, tier: "violet", active: true },
+// Status-Pillen der Kette: grün = passt, blau = Hinweis, orange = Abweichung.
+// Die Farbe trägt nie allein die Bedeutung — jede Pille hat ihr Wort.
+const statusStyle: Record<Status, { pill: string; dot: string }> = {
+  ok:   { pill: "border-flyGreen/30 bg-flyGreen/10 text-flyGreen", dot: "bg-flyGreen" },
+  info: { pill: "border-sky-200 bg-sky-50 text-sky-700",           dot: "bg-sky-600" },
+  warn: { pill: "border-flyAmber/30 bg-flyAmber/10 text-flyAmber", dot: "bg-flyAmber" },
+};
+
+// Strukturelle Demo-Daten (Druck, Wind, Zählungen) — sprachneutral.
+// Labels und Pillen-Wörter kommen lokalisiert aus den Messages.
+const days: Array<{
+  date: string;
+  verdict: Verdict;
+  pressure: number;
+  windDeg: number;     // meteorologisch: woher der Wind kommt
+  windSector: string;
+  windKmh: number;
+  flyable: number;
+  active?: boolean;
+}> = [
+  { date: "22.9", verdict: "safe",    pressure: 1016, windDeg: 225, windSector: "SW", windKmh: 25, flyable: 148 },
+  { date: "23.9", verdict: "caution", pressure: 1024, windDeg: 315, windSector: "NW", windKmh: 15, flyable: 212, active: true },
+  { date: "24.9", verdict: "unsafe",  pressure: 1009, windDeg: 180, windSector: "S",  windKmh: 45, flyable: 31 },
 ];
 
-const regions: Array<{
-  key: string;
-  score: number;
-  spots: Array<{ name: string; tier: Tier; tags: string[]; wind: string; score: number }>;
-}> = [
-  {
-    key: "berner-oberland",
-    score: 6,
-    spots: [
-      { name: "Niesen",      tier: "violet", tags: ["top-week"],        wind: "8 km/h S",   score: 6 },
-      { name: "Niederhorn",  tier: "violet", tags: ["thermik-strong"], wind: "10 km/h SO", score: 6 },
-      { name: "Beatenberg",  tier: "green",  tags: [],                 wind: "12 km/h SO", score: 5 },
-    ],
-  },
-  {
-    key: "zentralschweiz",
-    score: 4,
-    spots: [
-      { name: "Stanserhorn", tier: "green",  tags: [],                 wind: "14 km/h S",  score: 4 },
-      { name: "Klewenalp",   tier: "amber",  tags: ["foehn-tendency"], wind: "18 km/h S",  score: 3 },
-    ],
-  },
+// Block 1 (Lage) trägt statt Pille „Druck · Regime · Tendenz".
+const chain: Array<{ key: string; status?: Status; pill?: string; expanded?: boolean }> = [
+  { key: "lage" },
+  { key: "front",   status: "ok",   pill: "front_none" },
+  { key: "foehn",   status: "ok",   pill: "foehn_off" },
+  { key: "wind",    status: "ok",   pill: "wind_match" },
+  { key: "stab",    status: "info", pill: "stab_labile" },
+  { key: "thermik", status: "ok",   pill: "th_good", expanded: true },
+  { key: "sonne",   status: "ok",   pill: "sun_match" },
+  { key: "modelle", status: "info", pill: "md_partial" },
 ];
+
+function WindArrow({ deg, className }: { deg: number; className?: string }) {
+  // Pfeil zeigt, wohin der Wind weht; Grundform zeigt nach Norden.
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+      className={className}
+      style={{ transform: `rotate(${(deg + 180) % 360}deg)` }}
+    >
+      <path
+        d="M8 2.5v11M8 2.5 4.8 5.7M8 2.5l3.2 3.2"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function Chevron({ open }: { open?: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+      className={`h-3.5 w-3.5 shrink-0 text-slate-400 transition-transform ${open ? "rotate-180" : ""}`}
+    >
+      <path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function StatusPill({ status, children }: { status: Status; children: React.ReactNode }) {
+  const s = statusStyle[status];
+  return (
+    <span
+      className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-2 py-0.5 text-[10px] font-semibold leading-tight sm:text-[11px] ${s.pill}`}
+    >
+      <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${s.dot}`} />
+      {children}
+    </span>
+  );
+}
 
 export function HowItWorks() {
   const t = useTranslations("HowItWorks");
@@ -113,7 +154,7 @@ export function HowItWorks() {
             </ol>
           </div>
 
-          {/* Right: cast preview — angelehnt an die echte App */}
+          {/* Right: Briefing-Vorschau — angelehnt an die App-Seite /briefing */}
           <div id="preview" className="scroll-mt-24">
             <figure className="overflow-hidden rounded-card border border-slate-200 bg-white">
               {/* App-Header-Leiste */}
@@ -126,123 +167,135 @@ export function HowItWorks() {
                 </p>
               </header>
 
-              {/* Day-Tabs Reihe */}
+              {/* Wochenstreifen: Tages-Tabs mit Einstufung, Druck, Höhenwind, fliegbare Spots */}
               <div
                 className="flex gap-1.5 border-b border-slate-200 px-3 py-3 sm:gap-2 sm:px-4"
                 role="tablist"
                 aria-label={t("previewWeekdaysAria")}
               >
-                {days.map((d, i) => {
-                  const ts = tierStyle[d.tier];
-                  return (
-                    <div
-                      key={d.date}
-                      role="tab"
-                      aria-selected={d.active}
-                      className={`flex flex-1 flex-col items-center gap-0.5 rounded-lg border px-1 py-2 ${
-                        d.active
-                          ? "border-sky-700 bg-sky-700 text-white"
-                          : "border-slate-200 bg-white text-slate-700"
-                      }`}
+                {days.map((d, i) => (
+                  <div
+                    key={d.date}
+                    role="tab"
+                    aria-selected={d.active}
+                    className={`flex flex-1 flex-col items-center gap-1 rounded-lg border px-1 py-2 ${
+                      d.active
+                        ? "border-sky-700 bg-sky-50 ring-1 ring-sky-700"
+                        : "border-slate-200 bg-white"
+                    }`}
+                  >
+                    <span className="text-[10px] font-semibold uppercase tracking-wide text-slate-500">
+                      {weekdays[i]}{" "}
+                      <span className="font-normal normal-case tabular-nums">{d.date}</span>
+                    </span>
+                    <span
+                      className={`rounded-full border px-1.5 py-0.5 text-[10px] font-semibold leading-tight ${verdictStyle[d.verdict]}`}
                     >
-                      <span className={`text-[10px] font-semibold uppercase tracking-wide ${d.active ? "text-sky-100" : "text-slate-500"}`}>
-                        {weekdays[i]}
-                      </span>
-                      <span className={`text-[11px] tabular-nums ${d.active ? "text-sky-100" : "text-slate-500"}`}>
-                        {d.date}
-                      </span>
-                      <span
-                        className={`mt-0.5 text-base font-bold tabular-nums ${
-                          d.active ? "text-white" : ts.text
-                        }`}
-                      >
-                        {d.score}
-                      </span>
-                    </div>
-                  );
-                })}
+                      {t(`verdicts.${d.verdict}`)}
+                    </span>
+                    <span className="font-mono text-[11px] tabular-nums text-slate-700">
+                      {d.pressure} hPa
+                    </span>
+                    <span className="inline-flex items-center gap-1 font-mono text-[11px] tabular-nums text-slate-700">
+                      <WindArrow deg={d.windDeg} className="h-3.5 w-3.5 text-sky-700" />
+                      {d.windSector} {d.windKmh}
+                    </span>
+                    <span className="text-[10px] tabular-nums text-slate-500">
+                      {d.flyable} {t("flyable")}
+                    </span>
+                  </div>
+                ))}
               </div>
 
-              {/* Detail-Header für aktiven Tag */}
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-2 border-b border-slate-200 px-5 py-3">
-                <p className="text-base font-bold tracking-tight text-slate-900">
-                  {t("previewActiveDay")}
+              {/* Analyse-Kette: eine Zeile je Block, Status-Pille rechts, ein Block aufgeklappt */}
+              <div className="flex items-center justify-between border-b border-slate-200 bg-slate-50 px-5 py-2">
+                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-slate-700">
+                  {t("chainTitle")}
                 </p>
-                <span
-                  className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-[11px] font-semibold ${tierStyle.violet.bg} ${tierStyle.violet.border} ${tierStyle.violet.text}`}
-                >
-                  <TierLegendaryIcon className="h-3.5 w-3.5" />
-                  {t("tiers.violet")}
-                </span>
-                <span className="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-[11px] font-medium text-slate-600">
-                  {t("previewSpotCount")}
-                </span>
               </div>
 
-              {/* Regions-Sektionen mit Spot-Zeilen */}
-              <div>
-                {regions.map((r) => {
-                  const rTier: Tier =
-                    r.score >= 6 ? "violet" :
-                    r.score >= 4 ? "green" :
-                    r.score >= 3 ? "amber" :
-                    r.score >= 2 ? "bronze" : "red";
-                  const rt = tierStyle[rTier];
-                  return (
-                    <div key={r.key}>
-                      <div className="flex items-center justify-between border-b border-slate-200 bg-slate-50 px-5 py-2">
-                        <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-slate-700">
-                          {t(`regions.${r.key}`)}
-                        </p>
-                        <span className={`font-mono text-sm font-bold tabular-nums ${rt.text}`}>
-                          {r.score}
+              <ul className="divide-y divide-slate-100">
+                {chain.map((row, i) => (
+                  <li key={row.key} className="px-5">
+                    <div className="flex items-center justify-between gap-3 py-2.5">
+                      <div className="flex min-w-0 items-center gap-3">
+                        <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-slate-100 text-[10px] font-bold tabular-nums text-slate-700">
+                          {i + 1}
+                        </span>
+                        <span className="truncate text-sm font-semibold text-slate-900">
+                          {t(`blocks.${row.key}`)}
                         </span>
                       </div>
-
-                      <ul className="divide-y divide-slate-100">
-                        {r.spots.map((s) => {
-                          const st = tierStyle[s.tier];
-                          const STIcon = st.Icon;
-                          return (
-                            <li
-                              key={s.name}
-                              className="flex items-center justify-between gap-3 px-5 py-3"
-                            >
-                              <div className="min-w-0 flex-1">
-                                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                                  <span className="text-sm font-semibold text-slate-900">
-                                    {s.name}
-                                  </span>
-                                  <span
-                                    className={`inline-flex items-center gap-1 rounded-full border px-1.5 py-0.5 text-[10px] font-semibold ${st.bg} ${st.border} ${st.text}`}
-                                  >
-                                    <STIcon className="h-3 w-3" />
-                                    {t(`tiers.${s.tier}`)}
-                                  </span>
-                                  {s.tags.map((tag) => (
-                                    <span
-                                      key={tag}
-                                      className="rounded-full bg-slate-100 px-1.5 py-0.5 text-[10px] font-medium text-slate-600"
-                                    >
-                                      {t(`tags.${tag}`)}
-                                    </span>
-                                  ))}
-                                </div>
-                                <p className="mt-1 font-mono text-[11px] tabular-nums text-slate-500">
-                                  {s.wind}
-                                </p>
-                              </div>
-                              <span className={`shrink-0 font-mono text-base font-bold tabular-nums ${st.text}`}>
-                                {s.score}
-                              </span>
-                            </li>
-                          );
-                        })}
-                      </ul>
+                      <div className="flex shrink-0 items-center gap-2">
+                        {row.status && row.pill ? (
+                          <StatusPill status={row.status}>{t(`pills.${row.pill}`)}</StatusPill>
+                        ) : (
+                          <span className="font-mono text-[11px] tabular-nums text-slate-600">
+                            1024 hPa · {t("lageRegime")}
+                          </span>
+                        )}
+                        <Chevron open={row.expanded} />
+                      </div>
                     </div>
-                  );
-                })}
-              </div>
+
+                    {row.expanded && (
+                      <div className="mb-3 rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-3">
+                        <dl className="space-y-2 text-[12px] leading-[1.5]">
+                          <div className="grid grid-cols-[auto_1fr] gap-x-3">
+                            <dt className="text-[10px] font-semibold uppercase tracking-wide text-slate-500">
+                              {t("labelExpectation")}
+                            </dt>
+                            <dd className="text-slate-700">{t("expectationText")}</dd>
+                          </div>
+                          <div className="grid grid-cols-[auto_1fr] gap-x-3">
+                            <dt className="text-[10px] font-semibold uppercase tracking-wide text-slate-500">
+                              {t("labelData")}
+                            </dt>
+                            <dd className="flex flex-wrap gap-1.5">
+                              {(["base", "climb", "sun"] as const).map((c) => (
+                                <span
+                                  key={c}
+                                  className="rounded-full border border-slate-200 bg-white px-2 py-0.5 font-mono text-[11px] tabular-nums text-slate-700"
+                                >
+                                  {t(`chips.${c}`)}
+                                </span>
+                              ))}
+                            </dd>
+                          </div>
+                          <div className="grid grid-cols-[auto_1fr] gap-x-3">
+                            <dt className="text-[10px] font-semibold uppercase tracking-wide text-slate-500">
+                              {t("labelVerdict")}
+                            </dt>
+                            <dd className="text-slate-700">
+                              {t.rich("verdictText", {
+                                b: (chunks) => (
+                                  <span className="font-semibold text-slate-900">{chunks}</span>
+                                ),
+                              })}
+                            </dd>
+                          </div>
+                        </dl>
+                      </div>
+                    )}
+                  </li>
+                ))}
+
+                {/* Warnungen Schweiz — eigene Zeile unter der Kette */}
+                <li className="flex items-center justify-between gap-3 px-5 py-2.5">
+                  <div className="flex min-w-0 items-center gap-3">
+                    <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-flyAmber/10 text-[10px] font-bold text-flyAmber">
+                      !
+                    </span>
+                    <span className="truncate text-sm font-semibold text-slate-900">
+                      {t("warningsTitle")}
+                    </span>
+                  </div>
+                  <div className="flex shrink-0 items-center gap-2">
+                    <StatusPill status="warn">{t("warningPill")}</StatusPill>
+                    <Chevron />
+                  </div>
+                </li>
+              </ul>
 
               <figcaption className="border-t border-slate-200 bg-slate-50 px-5 py-3 text-[12px] leading-[1.55] text-slate-600">
                 {t.rich("figcaption", {

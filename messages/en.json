@@ -86,34 +86,55 @@
         "body": "On the basis of the computed physics, the AI analyses and rates safety and suitability for each spot. The reasoning comes in plain language — wind, thermals, time window."
       }
     ],
-    "tiers": {
-      "violet": "Legendary",
-      "green": "Flyable",
-      "bronze": "Sled ride",
-      "amber": "Conditional",
-      "red": "Not flyable"
-    },
     "weekdays": [
       "Mon",
       "Tue",
       "Wed"
     ],
-    "previewTitle": "Flying weather",
+    "previewTitle": "Briefing",
     "previewStand": "Updated 05:42",
     "previewWeekdaysAria": "Weekdays",
-    "previewActiveDay": "Wednesday, 20 May",
-    "previewSpotCount": "308 spots",
-    "regions": {
-      "berner-oberland": "Bernese Oberland",
-      "zentralschweiz": "Central Switzerland"
+    "figcaption": "<b>Each block reads the situation like a pilot:</b> the expectation from the synoptic pattern first, then the forecast data against it, then the verdict as a pill.",
+    "exampleNote": "Example data — real values in the app at <link>app.wingcast.ch</link>.",
+    "verdicts": {
+      "safe": "Safe",
+      "caution": "Caution",
+      "unsafe": "Not safe"
     },
-    "tags": {
-      "top-week": "Top of the week",
-      "thermik-strong": "Strong thermals",
-      "foehn-tendency": "Foehn tendency"
+    "flyable": "flyable",
+    "chainTitle": "Analysis chain",
+    "blocks": {
+      "lage": "Situation",
+      "front": "Fronts",
+      "foehn": "Foehn / Bise",
+      "wind": "Upper wind",
+      "stab": "Stability",
+      "thermik": "Thermals / cloud base",
+      "sonne": "Sun / cloud",
+      "modelle": "Models"
     },
-    "figcaption": "<b>Niesen, 11:00–14:00</b> — wind 8 km/h south, thermal base ~2400 m. From 14:30 southerly foehn tendency → lee. High confidence (3/3 models agree).",
-    "exampleNote": "Example data — real values in the app at <link>app.wingcast.ch</link>."
+    "pills": {
+      "front_none": "no front",
+      "foehn_off": "no foehn",
+      "wind_match": "regionally as average",
+      "stab_labile": "partly unstable",
+      "th_good": "good climbs",
+      "sun_match": "as expected",
+      "md_partial": "one open point"
+    },
+    "lageRegime": "high · rising",
+    "labelExpectation": "Expectation",
+    "labelData": "Data",
+    "labelVerdict": "Verdict",
+    "expectationText": "High → subsidence, capped base",
+    "chips": {
+      "base": "Base 2600 m",
+      "climb": "Climb 2.4 m/s",
+      "sun": "Sun 10–16h 80 %"
+    },
+    "verdictText": "<b>Exactly what the data show</b> — subsidence under the high caps the base, climbs stay strong.",
+    "warningsTitle": "Warnings Switzerland",
+    "warningPill": "thunderstorms from 16:00"
   },
   "Subscribe": {
     "kicker": "Get started · about 60 seconds",
