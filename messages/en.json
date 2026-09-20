@@ -115,15 +115,6 @@
     "figcaption": "<b>Niesen, 11:00–14:00</b> — wind 8 km/h south, thermal base ~2400 m. From 14:30 southerly foehn tendency → lee. High confidence (3/3 models agree).",
     "exampleNote": "Example data — real values in the app at <link>app.wingcast.ch</link>."
   },
-  "Trust": {
-    "kicker": "Who builds this",
-    "founderAlt": "Maurin, founder of Wingcast",
-    "headline": "One pilot. One data problem. One experiment.",
-    "paragraph1": "I fly myself, and doing the morning spot check I often ended up with too much data in my head — windgrams, models, webcams, valley winds, inversions. Processing all of that at once is hard.",
-    "paragraph2": "Wingcast is my attempt to put AI to sensible use there. No miracle promises, just a tool that helps you find suitable spots faster. Whether you have 15 or 400 flights: the AI turns the raw data into plain language instead of leaving you alone with hPa values. <b>Decision support, not decision maker.</b> The decision at the launch site is yours.",
-    "signature": "— Maurin",
-    "emailSuffix": "— write to me directly, every mail gets read."
-  },
   "Subscribe": {
     "kicker": "Get started · about 60 seconds",
     "headline": "Magic link, regions, off you go.",
@@ -166,12 +157,12 @@
         "body": "What happened + a screenshot."
       }
     ],
-    "note": "— Maurin reads every mail personally."
+    "note": "— Every mail is read personally."
   },
   "Faq": {
     "kicker": "FAQ",
     "headline": "What pilots often ask.",
-    "intro": "Your question not listed? Write to <link>info@wingcast.ch</link> — the answer comes from Maurin.",
+    "intro": "Your question not listed? Write to <link>info@wingcast.ch</link> — the answer comes directly from us.",
     "items": [
       {
         "q": "What is Wingcast?",
@@ -215,7 +206,7 @@
       },
       {
         "q": "Who is behind Wingcast?",
-        "a": "Maurin, a pilot from Zurich. Doing my own spot check I often couldn't see the wood for the data — windgrams, models, webcams, valley winds. Wingcast is my experiment: can AI help to process these volumes of data so that a clear basis for a decision ends up on the table? That is exactly what I'm testing right now — together with the beta community."
+        "a": "A paraglider pilot from Zurich. Doing my own spot check I often couldn't see the wood for the data — windgrams, models, webcams, valley winds. Wingcast is my experiment: can AI help to process these volumes of data so that a clear basis for a decision ends up on the table? That is exactly what I'm testing right now — together with the beta community."
       },
       {
         "q": "What happens to my data?",

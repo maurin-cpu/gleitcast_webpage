@@ -5,7 +5,6 @@ import { FloatingAppCTA } from "@/components/FloatingAppCTA";
 import { Hero } from "@/components/sections/Hero";
 import { Problem } from "@/components/sections/Problem";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { Trust } from "@/components/sections/Trust";
 import { SubscribeForm } from "@/components/sections/SubscribeForm";
 import { FAQ } from "@/components/sections/FAQ";
 import { BetaFeedback } from "@/components/sections/BetaFeedback";
@@ -56,7 +55,6 @@ export default async function Page({
         <Hero />
         <Problem />
         <HowItWorks />
-        <Trust />
         <SubscribeForm />
         <FAQ />
         <BetaFeedback />

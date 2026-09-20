@@ -115,15 +115,6 @@
     "figcaption": "<b>Niesen, 11–14 Uhr</b> — Wind 8 km/h Süd, Thermikbasis ~2400 m. Ab 14:30 Süd-Föhn-Tendenz → Lee. Konfidenz hoch (3/3 Modelle einig).",
     "exampleNote": "Beispieldaten — echte Werte in der App auf <link>app.wingcast.ch</link>."
   },
-  "Trust": {
-    "kicker": "Wer das baut",
-    "founderAlt": "Maurin, Gründer von Wingcast",
-    "headline": "Ein Pilot. Ein Daten-Problem. Ein Experiment.",
-    "paragraph1": "Ich flieg selber, und beim Spot-Check am Morgen hatte ich am Schluss oft zu viele Daten im Kopf — Windgramme, Modelle, Webcams, Talwinde, Inversionen. Alles gleichzeitig zu verarbeiten ist schwierig.",
-    "paragraph2": "Wingcast ist mein Versuch, da KI sinnvoll einzusetzen. Kein Heilsversprechen, einfach ein Werkzeug, das hilft, geeignete Spots schneller zu finden. Egal ob 15 oder 400 Flüge: die KI macht dir aus den Rohdaten Klartext, statt dass du mit hPa-Werten allein dastehst. <b>Decision Support, kein Decision Maker.</b> Die Entscheidung am Startplatz triffst du.",
-    "signature": "— Maurin",
-    "emailSuffix": "— schreib mir direkt, jede Mail wird gelesen."
-  },
   "Subscribe": {
     "kicker": "Loslegen · ca. 60 Sekunden",
     "headline": "Magic-Link, Regionen, los.",
@@ -166,12 +157,12 @@
         "body": "Was passiert ist + Screenshot."
       }
     ],
-    "note": "— Maurin liest jede Mail persönlich."
+    "note": "— Jede Mail wird persönlich gelesen."
   },
   "Faq": {
     "kicker": "FAQ",
     "headline": "Was Pilot:innen oft fragen.",
-    "intro": "Steht deine Frage nicht dabei? Schreib an <link>info@wingcast.ch</link> — Antwort kommt von Maurin.",
+    "intro": "Steht deine Frage nicht dabei? Schreib an <link>info@wingcast.ch</link> — die Antwort kommt direkt von uns.",
     "items": [
       {
         "q": "Was ist Wingcast?",
@@ -215,7 +206,7 @@
       },
       {
         "q": "Wer steckt hinter Wingcast?",
-        "a": "Maurin, Pilot aus Zürich. Beim eigenen Spot-Check fand ich oft den Wald vor lauter Daten nicht — Windgramme, Modelle, Webcams, Talwinde. Wingcast ist mein Experiment: Kann KI helfen, diese Datenmengen so aufzubereiten, dass am Ende eine klare Entscheidungsgrundlage auf dem Tisch liegt? Genau das prüfe ich gerade — gemeinsam mit der Beta-Community."
+        "a": "Ein Gleitschirmpilot aus Zürich. Beim eigenen Spot-Check fand ich oft den Wald vor lauter Daten nicht — Windgramme, Modelle, Webcams, Talwinde. Wingcast ist mein Experiment: Kann KI helfen, diese Datenmengen so aufzubereiten, dass am Ende eine klare Entscheidungsgrundlage auf dem Tisch liegt? Genau das prüfe ich gerade — gemeinsam mit der Beta-Community."
       },
       {
         "q": "Was passiert mit meinen Daten?",

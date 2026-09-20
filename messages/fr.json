@@ -115,15 +115,6 @@
     "figcaption": "<b>Niesen, 11h–14h</b> — Vent 8 km/h sud, plafond thermique ~2400 m. Dès 14h30 tendance au foehn du sud → sous le vent. Confiance élevée (3/3 modèles concordants).",
     "exampleNote": "Données d'exemple — valeurs réelles dans l'app sur <link>app.wingcast.ch</link>."
   },
-  "Trust": {
-    "kicker": "Qui construit ça",
-    "founderAlt": "Maurin, fondateur de Wingcast",
-    "headline": "Un pilote. Un problème de données. Une expérience.",
-    "paragraph1": "Je vole moi-même, et lors du check des spots le matin, j'avais souvent trop de données en tête à la fin — windgrammes, modèles, webcams, vents de vallée, inversions. Traiter tout ça en même temps, c'est difficile.",
-    "paragraph2": "Wingcast est ma tentative d'y employer l'IA de manière utile. Pas une promesse miracle, simplement un outil qui aide à trouver plus vite les spots adaptés. Que vous ayez 15 ou 400 vols : l'IA vous transforme les données brutes en clair, au lieu de vous laisser seul face aux valeurs en hPa. <b>Decision Support, pas Decision Maker.</b> La décision au décollage, c'est vous qui la prenez.",
-    "signature": "— Maurin",
-    "emailSuffix": "— écrivez-moi directement, chaque mail est lu."
-  },
   "Subscribe": {
     "kicker": "Se lancer · env. 60 secondes",
     "headline": "Magic-Link, régions, c'est parti.",
@@ -166,12 +157,12 @@
         "body": "Ce qui s'est passé + une capture d'écran."
       }
     ],
-    "note": "— Maurin lit chaque mail personnellement."
+    "note": "— Chaque mail est lu personnellement."
   },
   "Faq": {
     "kicker": "FAQ",
     "headline": "Ce que les pilotes demandent souvent.",
-    "intro": "Votre question n'y figure pas ? Écrivez à <link>info@wingcast.ch</link> — la réponse vient de Maurin.",
+    "intro": "Votre question n'y figure pas ? Écrivez à <link>info@wingcast.ch</link> — la réponse vient directement de nous.",
     "items": [
       {
         "q": "Qu'est-ce que Wingcast ?",
@@ -215,7 +206,7 @@
       },
       {
         "q": "Qui se cache derrière Wingcast ?",
-        "a": "Maurin, pilote de Zurich. Lors de mon propre check des spots, je ne voyais souvent plus la forêt cachée par les données — windgrammes, modèles, webcams, vents de vallée. Wingcast est mon expérience : l'IA peut-elle aider à préparer ces masses de données pour qu'au final une base de décision claire soit posée sur la table ? C'est exactement ce que je teste en ce moment — avec la communauté bêta."
+        "a": "Un pilote de parapente de Zurich. Lors de mon propre check des spots, je ne voyais souvent plus la forêt cachée par les données — windgrammes, modèles, webcams, vents de vallée. Wingcast est mon expérience : l'IA peut-elle aider à préparer ces masses de données pour qu'au final une base de décision claire soit posée sur la table ? C'est exactement ce que je teste en ce moment — avec la communauté bêta."
       },
       {
         "q": "Qu'advient-il de mes données ?",
