@@ -74,6 +74,34 @@ Maurin, Pilot in Zuerich. Gebaut aus eigenem Schmerzpunkt: Daten-Overload beim S
   (https://www.wingcast.ch/it/wetterkunde/boeenfront) und Englisch
   (https://www.wingcast.ch/en/wetterkunde/boeenfront).
 
+## MCP-Server (Daten fuer KI-Assistenten)
+
+- Endpoint: https://app.wingcast.ch/mcp — offener MCP-Server ueber Streamable HTTP,
+  ohne Login, Token oder OAuth. Zwoelf Werkzeuge: data_status, list_regions, overview,
+  day_table, search_spots, find_spots_near, spot_series, spot_detail, spot_meteogram,
+  spot_altitude_wind, foehn, spot_info.
+- Umfang: 494 Schweizer Startplaetze, 3 Tage, Flugstunden 06-17 Uhr. Rohdaten und
+  deterministische Kennzahlen — der Server bewertet nichts und gibt keine Flugempfehlung.
+- Abo beim KI-Anbieter: In Claude reicht ein Gratiskonto (dort genau ein eigener
+  Connector; Pro/Max/Team/Enterprise mehrere). In ChatGPT braucht es ein bezahltes Abo
+  (Plus, Pro, Business, Enterprise oder Edu) und den eingeschalteten Entwicklermodus.
+  In der Gemini-App braucht es kein Abo, aber die Funktion (Einstellungen > Connected
+  Apps > Custom apps) gibt es vorerst nur fuer volljaehrige Nutzer in den USA mit
+  privatem Google-Konto und eingeschalteter Aktivitaetsspeicherung.
+- Haeufige Stolpersteine: In ChatGPT fehlt der Connector-Schalter, wenn der
+  Entwicklermodus aus ist, das Konto gratis ist oder die Administration ihn
+  gesperrt hat. In Gemini fehlt "Custom apps" ausserhalb der USA, mit Arbeits- oder
+  Schulkonto oder bei abgeschalteter Aktivitaetsspeicherung.
+  In Claude-Gratiskonten ist nur ein Connector erlaubt. In Team-
+  und Enterprise-Konten muss der Inhaber den Connector zuerst freigeben. Die
+  Umkreissuche nach Reisezeit braucht einen Routing-Dienst und meldet Ausfaelle,
+  statt Fahrzeiten zu raten. Kontakt bei Problemen: info@wingcast.ch
+- Anleitung: [Flugwetter im KI-Chat: Wingcast mit Claude oder ChatGPT verbinden]
+  (https://www.wingcast.ch/wetterkunde/mcp) — Beispielfragen und Einrichtung.
+  Auch auf Franzoesisch (https://www.wingcast.ch/fr/wetterkunde/mcp), Italienisch
+  (https://www.wingcast.ch/it/wetterkunde/mcp) und Englisch
+  (https://www.wingcast.ch/en/wetterkunde/mcp).
+
 ## Belegte Einzelbefunde
 
 - Boeenfront 30.07.2026: 45 von 139 SwissMetNet-Stationen zeigten die vollstaendige

@@ -118,6 +118,21 @@
   .prose-wingcast table {
     @apply my-2 block w-full overflow-x-auto whitespace-nowrap border-collapse text-left text-base tabular-nums;
   }
+  /* Zwei- bis dreispaltige Fliesstext-Tabellen (Begriff → Erklärung) brechen um,
+     statt seitwärts zu scrollen — sonst steht der halbe Satz ausserhalb der
+     Spalte und muss Zeile für Zeile herangeschoben werden. Den Container setzt
+     der Artikel-Loader nach Spaltenzahl (`markProseTables`). Unter 20 rem
+     scrollt die Tabelle weiterhin in ihrem Kasten, nie die Seite. */
+  .prose-wingcast .table-prose {
+    @apply my-2 w-full overflow-x-auto;
+  }
+  .prose-wingcast .table-prose table {
+    @apply my-0 table w-full min-w-[20rem] whitespace-normal;
+  }
+  .prose-wingcast .table-prose td:first-child,
+  .prose-wingcast .table-prose th:first-child {
+    @apply whitespace-nowrap;
+  }
   .prose-wingcast th {
     @apply border-b-2 border-slate-300 px-3 py-2 text-sm font-bold uppercase tracking-wide text-slate-500;
   }
@@ -162,6 +177,137 @@
   }
   .prose-wingcast .fig-wide figcaption {
     @apply m-0 border-t border-slate-200 px-6 py-4 text-sm leading-[1.55] text-slate-500;
+  }
+
+  /* ---------------------------------------------------------------
+     Nachgebautes Chatfenster und Einrichtungs-Schritte.
+     Bewusst echtes HTML statt SVG: Beide zeigen vor allem Text. Als
+     Bild skaliert der auf dem Handy mit der Grafik herunter (900 px
+     Grafik auf 343 px Viewport = Faktor 0,38, aus 15 px werden 6 px)
+     und ist unlesbar. Als HTML bricht er um, waechst mit der
+     Schriftgroesse des Nutzers, ist markierbar — die Adresse laesst
+     sich kopieren — und Screenreader lesen Struktur statt eines
+     langen alt-Textes. Ausserdem entfaellt je Sprache eine Bilddatei.
+     Farben: nur Sky + Ink. Amber/Gruen/Rot sind laut MASTER §2.1
+     dem 5-Tier-Rating vorbehalten und haben hier nichts zu suchen.
+     --------------------------------------------------------------- */
+  .prose-wingcast .chat-window {
+    @apply mx-4 my-5 overflow-hidden rounded-card border border-slate-200 bg-slate-50 sm:mx-6;
+  }
+  .prose-wingcast .chat-bar {
+    @apply m-0 flex items-center gap-2 border-b border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-500;
+  }
+  .prose-wingcast .chat-bar::before {
+    content: "";
+    @apply mr-1 h-2.5 w-2.5 shrink-0 rounded-full bg-slate-300;
+    box-shadow:
+      1rem 0 0 theme("colors.slate.300"),
+      2rem 0 0 theme("colors.slate.300");
+    margin-right: 2.6rem;
+  }
+  .prose-wingcast .chat-body {
+    @apply flex flex-col gap-3 p-4 sm:p-5;
+  }
+  .prose-wingcast .chat-ask {
+    @apply m-0 max-w-[34rem] self-end rounded-card rounded-br-sm border border-sky-100 bg-sky-50 px-4 py-3 text-base leading-[1.5] text-slate-900;
+  }
+  .prose-wingcast .chat-tool {
+    @apply m-0 inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1.5 font-mono text-[0.8125rem] leading-none text-slate-600;
+  }
+  .prose-wingcast .chat-tool::before {
+    content: "";
+    @apply h-2 w-2 shrink-0 rounded-full bg-sky-700;
+  }
+  .prose-wingcast .chat-reply {
+    @apply max-w-[44rem] rounded-card rounded-bl-sm border border-slate-200 bg-white px-4 py-4 sm:px-5;
+  }
+  .prose-wingcast .chat-reply > p {
+    @apply my-0 text-base leading-[1.55] text-slate-800;
+  }
+  .prose-wingcast .chat-reply > p + p {
+    @apply mt-3;
+  }
+  .prose-wingcast .chat-data {
+    @apply my-3 list-none space-y-1 p-0;
+  }
+  .prose-wingcast .chat-data li {
+    @apply m-0 flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded bg-slate-50 px-3 py-2;
+  }
+  .prose-wingcast .chat-data b {
+    @apply min-w-[8.5rem] text-[0.9375rem] font-bold text-slate-900;
+  }
+  .prose-wingcast .chat-data span {
+    @apply font-mono text-[0.8125rem] tabular-nums text-slate-600;
+  }
+  .prose-wingcast .chat-data .v-key {
+    @apply font-semibold text-sky-800;
+  }
+  .prose-wingcast .chat-data .v-strong {
+    @apply font-semibold text-slate-900;
+  }
+  .prose-wingcast .chat-foot {
+    @apply mt-4 border-t border-slate-200 pt-3 text-[0.8125rem] leading-[1.5] text-slate-500;
+  }
+  .prose-wingcast .chat-reply > p.chat-foot {
+    @apply text-[0.8125rem] text-slate-500;
+  }
+
+  .prose-wingcast .setup {
+    @apply mx-4 my-5 sm:mx-6;
+  }
+  .prose-wingcast .setup-address {
+    @apply mb-4 rounded-card border border-sky-100 bg-sky-50 px-5 py-4;
+  }
+  .prose-wingcast .setup-address p {
+    @apply m-0 text-sm font-bold text-sky-900;
+  }
+  .prose-wingcast .setup-address code {
+    @apply mt-1 block break-all bg-transparent px-0 text-lg font-bold text-sky-900;
+  }
+  .prose-wingcast .setup-cols {
+    @apply grid gap-4;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  }
+  .prose-wingcast .setup-col {
+    @apply rounded-card border border-slate-200 bg-slate-50 px-5 py-5;
+  }
+  .prose-wingcast .setup-col h4 {
+    @apply m-0 text-lg font-bold tracking-[-0.01em] text-slate-900;
+  }
+  .prose-wingcast .setup-plan {
+    @apply m-0 mt-3 inline-block rounded-full px-3 py-1.5 text-[0.8125rem] font-bold;
+  }
+  .prose-wingcast .setup-plan.is-free {
+    @apply bg-sky-100 text-sky-900;
+  }
+  .prose-wingcast .setup-plan.is-paid {
+    @apply bg-slate-200 text-slate-800;
+  }
+  /* Dritter Zustand: nicht „kostet etwas", sondern „gibt es hier noch nicht".
+     Als Outline statt Fläche, damit er sich von den beiden anderen abhebt,
+     ohne eine vierte Farbe einzuführen (MASTER §2.1: nur Sky + Ink). */
+  .prose-wingcast .setup-plan.is-limited {
+    @apply border border-slate-300 bg-white text-slate-700;
+  }
+  .prose-wingcast .setup-col ol {
+    @apply my-4 list-none space-y-3 p-0;
+  }
+  .prose-wingcast .setup-col ol li {
+    @apply relative m-0 min-h-[1.75rem] pl-10 text-base leading-[1.4] text-slate-900;
+    counter-increment: setup-step;
+  }
+  .prose-wingcast .setup-col ol li::before {
+    content: counter(setup-step);
+    @apply absolute left-0 top-0 flex h-7 w-7 items-center justify-center rounded-full bg-sky-700 text-sm font-bold text-white;
+  }
+  .prose-wingcast .setup-col ol {
+    counter-reset: setup-step;
+  }
+  .prose-wingcast .setup-col ol li span {
+    @apply mt-0.5 block text-sm font-normal text-slate-600;
+  }
+  .prose-wingcast .setup-note {
+    @apply m-0 text-sm leading-[1.5] text-slate-600;
   }
 }
 

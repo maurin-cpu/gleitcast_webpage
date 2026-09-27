@@ -139,15 +139,42 @@ function embedAnimatedSvgs(html: string): string {
 }
 
 /**
+ * Schmale Tabellen dürfen umbrechen statt seitwärts zu scrollen.
+ *
+ * Datentabellen stehen global auf `whitespace-nowrap` in einem eigenen
+ * Scroll-Container — richtig für die Böenfront-Tabellen mit bis zu acht
+ * Zahlenspalten, die umbrochen unlesbar würden. Eine zweispaltige
+ * Fliesstext-Tabelle (Begriff → Erklärung) verliert dabei aber: der Satz wird
+ * am Spaltenrand abgeschnitten und muss Zeile für Zeile herangescrollt werden.
+ *
+ * Unterschieden wird an der Spaltenzahl — bis drei Spalten gilt eine Tabelle
+ * als Fliesstext und kommt in `.table-prose`, ab vier bleibt es beim Scrollen.
+ *
+ * Der Scroll-Container bleibt auch hier stehen: Unterhalb der Mindestbreite
+ * (20 rem) scrollt dann die Tabelle in ihrem Kasten und nicht die Seite.
+ */
+const TABLE_TAG = /<table>([\s\S]*?)<\/table>/g;
+
+function markProseTables(html: string): string {
+  return html.replace(TABLE_TAG, (whole, inner: string) => {
+    const head = inner.split("</thead>")[0] ?? "";
+    const columns = (head.match(/<th[\s>]/g) ?? []).length;
+    if (columns === 0 || columns > 3) return whole;
+    return `<div class="table-prose"><table>${inner}</table></div>`;
+  });
+}
+
+/**
  * FAQ für das FAQPage-Schema. Konvention im Artikel:
  *
- *   ## Häufige Fragen   (fr: Questions fréquentes · it: Domande frequenti)
+ *   ## Häufige Fragen   (fr: Questions fréquentes · it: Domande frequenti ·
+ *                        en: Frequently asked questions)
  *   **Frage?**
  *   Antwort in einer Zeile.
  */
 function extractFaq(md: string): Array<{ q: string; a: string }> {
   const section = md.split(
-    /^##\s+(?:Häufige Fragen|Questions fréquentes|Domande frequenti)\s*$/m,
+    /^##\s+(?:Häufige Fragen|Questions fréquentes|Domande frequenti|Frequently asked questions)\s*$/m,
   )[1];
   if (!section) return [];
   const body = section.split(/^##\s+/m)[0];
@@ -207,7 +234,9 @@ function parse(slug: string, raw: string): Article {
     ogBild: data.og_bild ? String(data.og_bild).split(/\s+#/)[0].trim() : null,
     teaser: extractTeaser(body),
     lesezeitMinuten: readingTime(body),
-    html: embedAnimatedSvgs(marked.parse(body, { async: false }) as string),
+    html: markProseTables(
+      embedAnimatedSvgs(marked.parse(body, { async: false }) as string),
+    ),
     faq: extractFaq(md),
   };
 }
