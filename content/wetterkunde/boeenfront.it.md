@@ -16,8 +16,8 @@ status: published
 veroeffentlicht: 2026-08-03
 autor: "Maurin (Founder & Pilot, Wingcast)"
 stand: 2026-08-03
-meta_title: "Fronte di raffiche: fino a che quota arriva? Misure contro previsione | Wingcast"
-meta_description: "Il 30 luglio 2026 un fronte di raffiche secco ha attraversato la Svizzera. Abbiamo analizzato 139 stazioni SwissMetNet e le abbiamo confrontate con la previsione ICON-CH1: sopra i 2'000 m circa il fronte era quasi introvabile — molto più piatto di quanto lo mostrasse il modello."
+meta_title: "Fronte di raffiche in parapendio: fino a che quota arriva?"
+meta_description: "Fino a che quota arriva un fronte di raffiche? Il 30 luglio 2026 abbiamo confrontato 139 stazioni svizzere con la previsione. Sopra i 2'000 m era quasi introvabile."
 schema:
   - Article
   - FAQPage
@@ -290,6 +290,8 @@ Lo mostra — ma non necessariamente alla quota giusta. Il 30 luglio la previsio
 ## Come Wingcast usa tutto questo
 
 Wingcast legge ogni mattina i modelli meteo per tutti i 494 siti di decollo svizzeri e scrive in chiaro cosa significano per il tuo decollo. Questa analisi è un esempio di come trattiamo la nostra base di dati: ricalcolare, verificare contro le misure e nominare lo scarto invece di ometterlo. Wingcast è **decision support** — noi forniamo dati e valutazione, la decisione la prendi tu.
+
+→ [Previsione termica Svizzera: oggi, domani e dopodomani per ogni decollo](/it)
 
 <!-- Traduzione italiana della Fassung 7 tedesca (2026-08-03). La versione
      tedesca è quella di riferimento; le citazioni DWD [1]-[5] sono tradotte

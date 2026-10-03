@@ -17,7 +17,7 @@ status: published
 veroeffentlicht: 2026-08-20
 autor: "Maurin (Founder & Pilot, Wingcast)"
 stand: 2026-09-18
-meta_title: "Dust Devil beim Gleitschirmfliegen – Dusty-Tage erkennen"
+meta_title: "Dust Devil beim Gleitschirmfliegen: Dusty-Tage erkennen"
 meta_description: "Keine Prognose zeigt einen Dust Devil (Staubteufel). Ob heute ein Dusty-Tag ist, lässt sich aber rechnen: 490 Schweizer Startplätze, 74 Messstationen, ein Sommer."
 schema:
   - Article
@@ -372,6 +372,7 @@ Deshalb bleibt es bei dem, was wir überall sagen: **Physik rechnet, du entschei
 
 → [Wie eine Böenfront gemessen aussieht — und was das Modell dazu sagte](/wetterkunde/boeenfront)
 → [Alle Wetterkunde-Themen](/wetterkunde)
+→ [Thermikprognose Schweiz: heute, morgen und übermorgen für jeden Startplatz](/)
 → [Wingcast kostenlos öffnen und deinen Spot prüfen](https://app.wingcast.ch/?utm_source=blog&utm_medium=wetterkunde&utm_campaign=staubteufel)
 
 *Stand: 17. August 2026 · Autor: Maurin, Founder & Pilot bei Wingcast. Dieser Text ist Wetterkunde, keine Flugfreigabe. Die Bedingungen prüfst und entscheidest du selbst.*

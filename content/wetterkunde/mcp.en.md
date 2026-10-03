@@ -16,7 +16,7 @@ status: published
 veroeffentlicht: 2026-09-27
 autor: "Maurin (Founder & Pilot, Wingcast)"
 stand: 2026-09-27
-meta_title: "Flight weather in your AI chat — Wingcast with Claude, ChatGPT, Gemini"
+meta_title: "Flight weather in your AI chat: Wingcast with Claude, ChatGPT, Gemini"
 meta_description: "Connect Wingcast to your AI chat and ask about the flying weather at 494 Swiss launch sites in ordinary conversation. Setup takes a minute and costs nothing."
 schema:
   - Article

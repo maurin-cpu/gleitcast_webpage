@@ -16,8 +16,8 @@ status: published
 veroeffentlicht: 2026-08-03
 autor: "Maurin (Founder & Pilot, Wingcast)"
 stand: 2026-08-03
-meta_title: "Böenfront: wie hoch sie reicht – Messung gegen Prognose | Wingcast"
-meta_description: "Am 30. Juli 2026 lief eine trockene Böenfront über die Schweiz. Wir haben 139 SwissMetNet-Stationen ausgewertet und der ICON-CH1-Prognose gegenübergestellt: Oberhalb von rund 2'000 m war die Front kaum noch nachweisbar — deutlich flacher, als das Modell sie zeigte."
+meta_title: "Böenfront beim Gleitschirmfliegen: wie hoch reicht sie?"
+meta_description: "Wie hoch reicht eine Böenfront? Am 30. Juli 2026 haben wir 139 Schweizer Messstationen gegen die Prognose gelegt. Über 2'000 m war die Front kaum noch messbar."
 schema:
   - Article
   - FAQPage
@@ -289,6 +289,8 @@ Sie zeigt sie an — aber nicht unbedingt in der richtigen Höhe. Am 30. Juli sa
 ## Wie Wingcast damit umgeht
 
 Wingcast liest die Wettermodelle jeden Morgen für alle 494 Schweizer Startplätze und schreibt in Klartext, was sie für deinen Startplatz bedeuten. Diese Auswertung ist ein Beispiel dafür, wie wir mit unserer eigenen Datengrundlage umgehen: nachrechnen, gegen Messungen prüfen und die Abweichung benennen, statt sie wegzulassen. Wingcast ist **Decision Support** — wir liefern Daten und Einschätzung, die Entscheidung triffst du.
+
+→ [Thermikprognose Schweiz: heute, morgen und übermorgen für jeden Startplatz](/)
 
 ---
 

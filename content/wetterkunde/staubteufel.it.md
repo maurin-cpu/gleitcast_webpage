@@ -17,7 +17,7 @@ status: published
 veroeffentlicht: 2026-08-20
 autor: "Maurin (Founder & Pilot, Wingcast)"
 stand: 2026-08-20
-meta_title: "Dust devil in parapendio – riconoscere le giornate a rischio"
+meta_title: "Dust devil in parapendio: riconoscere le giornate a rischio"
 meta_description: "Nessuna previsione mostra un dust devil. Ma si può calcolare se oggi è una giornata a rischio: 490 decolli svizzeri, 74 stazioni di misura, un'estate."
 schema:
   - Article
@@ -353,6 +353,7 @@ Per questo restiamo a ciò che diciamo ovunque: **la fisica calcola, tu decidi.*
 
 → [Come appare un fronte di raffiche misurato — e cosa ne diceva il modello](/it/wetterkunde/boeenfront)
 → [Tutti i temi di meteorologia](/it/wetterkunde)
+→ [Previsione termica Svizzera: oggi, domani e dopodomani per ogni decollo](/it)
 → [Apri Wingcast gratuitamente e controlla il tuo spot](https://app.wingcast.ch/?utm_source=blog&utm_medium=wetterkunde&utm_campaign=staubteufel)
 
 *Stato: 20 agosto 2026 · Autore: Maurin, Founder & Pilot di Wingcast. Questo testo è meteorologia, non un'autorizzazione al volo. Le condizioni le verifichi e decidi tu.*

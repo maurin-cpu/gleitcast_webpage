@@ -16,7 +16,7 @@ status: published
 veroeffentlicht: 2026-09-27
 autor: "Maurin (fondateur et pilote, Wingcast)"
 stand: 2026-09-27
-meta_title: "La météo de vol dans ton chat IA — Claude, ChatGPT ou Gemini"
+meta_title: "La météo de vol dans ton chat IA : Claude, ChatGPT ou Gemini"
 meta_description: "Relie Wingcast à ton chat IA et demande la météo de vol de 494 décollages suisses dans une conversation normale. L'installation prend une minute et ne coûte rien."
 schema:
   - Article

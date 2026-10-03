@@ -17,7 +17,7 @@ status: published
 veroeffentlicht: 2026-08-20
 autor: "Maurin (Founder & Pilot, Wingcast)"
 stand: 2026-08-20
-meta_title: "Dust devils en parapente – reconnaître les jours à risque"
+meta_title: "Dust devils en parapente : reconnaître les jours à risque"
 meta_description: "Aucune prévision ne montre un dust devil. Mais on peut calculer si c'est un jour à risque : 490 sites suisses, 74 stations de mesure, un été."
 schema:
   - Article
@@ -352,6 +352,7 @@ C'est pourquoi nous en restons à ce que nous disons partout : **la physique cal
 
 → [À quoi ressemble un front de rafales mesuré — et ce qu'en disait le modèle](/fr/wetterkunde/boeenfront)
 → [Tous les sujets de météorologie](/fr/wetterkunde)
+→ [Prévision thermique Suisse : aujourd'hui, demain et après-demain pour chaque décollage](/fr)
 → [Ouvrir Wingcast gratuitement et vérifier ton spot](https://app.wingcast.ch/?utm_source=blog&utm_medium=wetterkunde&utm_campaign=staubteufel)
 
 *État : 20 août 2026 · Auteur : Maurin, Founder & Pilot chez Wingcast. Ce texte est de la météorologie, pas une autorisation de vol. Les conditions, tu les vérifies et tu décides toi-même.*
