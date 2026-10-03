@@ -4,7 +4,7 @@ const APP_URL = "https://app.wingcast.ch";
 
 // Letztes inhaltliches Update der Landing — manuell pflegen bei Content-Refreshes.
 // Wird auch im Footer als sichtbares „Stand"-Datum verwendet.
-export const PAGE_LAST_UPDATED = "2026-09-15";
+export const PAGE_LAST_UPDATED = "2026-10-03";
 
 // inLanguage für JSON-LD kommt aus derselben Quelle wie die hreflang-Angaben —
 // eine zweite Locale-Liste hier hätte Englisch als de-CH ausgezeichnet.
