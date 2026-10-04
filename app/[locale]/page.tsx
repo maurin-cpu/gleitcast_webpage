@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { FloatingAppCTA } from "@/components/FloatingAppCTA";
 import { Hero } from "@/components/sections/Hero";
 import { Problem } from "@/components/sections/Problem";
+import { BriefingToday } from "@/components/sections/BriefingToday";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { SubscribeForm } from "@/components/sections/SubscribeForm";
 import { FAQ } from "@/components/sections/FAQ";
@@ -18,6 +19,8 @@ import {
 } from "@/lib/schema";
 import { alternateLanguages } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
+
+export const revalidate = 3600;
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -53,6 +56,7 @@ export default async function Page({
       <Navbar />
       <main id="main">
         <Hero />
+        <BriefingToday locale={locale} />
         <Problem />
         <HowItWorks />
         <SubscribeForm />

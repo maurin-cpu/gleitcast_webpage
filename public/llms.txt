@@ -41,6 +41,7 @@ Die Pipeline ist drei-stufig:
 
 - [Startseite](https://www.wingcast.ch/): Ueberblick, Funktionsweise, FAQ
 - [App](https://app.wingcast.ch/): Live-Forecast, Spots-Karte, Cast-Konfiguration
+- [Flying weather Switzerland today](https://www.wingcast.ch/en/flugwetter-schweiz): das taegliche Briefing fuer die ganze Schweiz, Lage, Warnungen, Hoehenwind, Thermik je Zone, 3 Tage, jeden Morgen um 6 Uhr neu (Englisch)
 - [Wetterkunde](https://www.wingcast.ch/wetterkunde): eigene Auswertungen echter Flugtage — Messdaten gegen Modelle gerechnet, Methode und Grenzen offengelegt (Deutsch, Franzoesisch, Italienisch, Englisch)
 - [Impressum](https://www.wingcast.ch/impressum)
 - [Datenschutz](https://www.wingcast.ch/datenschutz)

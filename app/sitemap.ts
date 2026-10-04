@@ -55,6 +55,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
+  // Öffentliches Briefing, nur Englisch (siehe app/[locale]/flugwetter-schweiz).
+  // Der Inhalt wechselt täglich, deshalb hier bewusst das Tagesdatum und nicht
+  // PAGE_LAST_UPDATED — die Seite ist wirklich jeden Tag anders.
+  const briefing: MetadataRoute.Sitemap = [
+    {
+      url: localized("/flugwetter-schweiz", "en"),
+      lastModified: new Date(new Date().toISOString().slice(0, 10)),
+      changeFrequency: "daily" as const,
+      priority: 0.9,
+    },
+  ];
+
   // Wetterkunde pro Sprache: Hub in allen Locales, Artikel nur dort, wo eine
   // publizierte Fassung existiert — hreflang entsprechend. Entwürfe
   // (status != published) bleiben draussen — sie sind zusätzlich auf noindex.
@@ -97,5 +109,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  return [...localized3, ...wetterkunde];
+  return [...localized3, ...briefing, ...wetterkunde];
 }
