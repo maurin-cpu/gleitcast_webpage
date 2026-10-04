@@ -18,6 +18,7 @@ import {
   TierConditionalIcon,
   TierUnflyableIcon,
 } from "@/components/ui/Icons";
+import { STRINGS, isBriefingLocale } from "@/components/briefing/strings";
 
 type Icon = ComponentType<SVGProps<SVGSVGElement>>;
 
@@ -43,9 +44,13 @@ const STEP_ICON: Record<string, Icon> = {
   modelle: BarChart3,
 };
 
+function tx(locale: string) {
+  return STRINGS[isBriefingLocale(locale) ? locale : "en"];
+}
+
 export function formatDay(date: string, locale: string, short = false) {
   return new Date(`${date}T12:00:00`).toLocaleDateString(
-    locale === "de" ? "de-CH" : locale === "en" ? "en-GB" : locale,
+    tx(locale).dateLocale,
     short
       ? { weekday: "short", day: "numeric", month: "short" }
       : { weekday: "long", day: "numeric", month: "long" },
@@ -69,8 +74,9 @@ export function TierBadge({ day }: { day: BriefingDay }) {
 // im HTML, damit Google und KI-Chats den ganzen Text lesen. Farbige Oberkante
 // je Band, damit die Woche auf einen Blick lesbar ist.
 export function DayStrip({ days, locale }: { days: BriefingDay[]; locale: string }) {
+  const t = tx(locale);
   return (
-    <nav aria-label="Days" className="grid grid-cols-3 gap-3">
+    <nav aria-label={t.days} className="grid grid-cols-3 gap-3">
       {days.map((d, i) => {
         const b = BAND[d.band];
         return (
@@ -83,7 +89,7 @@ export function DayStrip({ days, locale }: { days: BriefingDay[]; locale: string
           >
             {b && <b.Icon className={`h-7 w-7 ${b.text}`} aria-hidden="true" />}
             <span className="text-base font-semibold text-slate-900">
-              {i === 0 ? "Today" : formatDay(d.date, locale, true)}
+              {i === 0 ? t.today : formatDay(d.date, locale, true)}
             </span>
             <span className={`text-sm font-semibold ${b?.text ?? "text-slate-700"}`}>
               {d.status}
@@ -95,20 +101,21 @@ export function DayStrip({ days, locale }: { days: BriefingDay[]; locale: string
   );
 }
 
-function facts(day: BriefingDay) {
+function facts(day: BriefingDay, locale: string) {
+  const t = tx(locale);
   return [
-    day.thermik?.base && { k: "Base", v: day.thermik.base },
-    day.thermik?.climb && { k: "Climb", v: day.thermik.climb },
+    day.thermik?.base && { k: t.base, v: day.thermik.base },
+    day.thermik?.climb && { k: t.climb, v: day.thermik.climb },
     day.windSector && {
-      k: "Upper wind",
+      k: t.upperWind,
       v: `${day.windArrow} ${day.windSector} ${day.windStrength}`.trim(),
     },
-    day.pressure && { k: "Pressure", v: day.pressure },
+    day.pressure && { k: t.pressure, v: day.pressure },
   ].filter(Boolean) as Array<{ k: string; v: string }>;
 }
 
-export function KeyFacts({ day }: { day: BriefingDay }) {
-  const f = facts(day);
+export function KeyFacts({ day, locale }: { day: BriefingDay; locale: string }) {
+  const f = facts(day, locale);
   if (f.length === 0) return null;
   return (
     <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -162,7 +169,7 @@ export function DayHeroCard({
         </p>
       )}
       <div className="mt-6">
-        <KeyFacts day={day} />
+        <KeyFacts day={day} locale={locale} />
       </div>
     </div>
   );

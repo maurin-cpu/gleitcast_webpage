@@ -1,14 +1,14 @@
-// Öffentliches Schweiz-Briefing: holt die Analyse-Kette aus der App und gibt
-// nur die Textfelder weiter, die öffentlich stehen dürfen (Whitelist).
-// Fällt die App aus oder ist der Stand zu alt, kommt `null` zurück, und die
-// Seiten zeigen ihren festen Teil statt eines leeren Blocks.
-//
-// Prototyp: liest vorerst /api/briefing. Im Ausbau zeigt das auf den schmalen
-// Endpunkt /api/public/briefing (Plan: flychat/docs/pläne/PLAN_briefing_webseite.md).
+// Öffentliches Schweiz-Briefing: holt die schlanke JSON aus der App
+// (flychat GET /api/public/briefing?lang=de|en, vom Scheduler nach dem
+// Morgenlauf abgelegt) und bringt sie in die Form der Komponenten.
+// Fällt die App aus, antwortet sie 503 oder ist der Stand älter als 18 h,
+// kommt `null` zurück, und die Seiten zeigen ihren festen Teil.
+// Plan: flychat/docs/pläne/PLAN_briefing_webseite.md
+
+import { isBriefingLocale } from "@/components/briefing/strings";
 
 const API_URL = process.env.WINGCAST_API_URL ?? "https://app.wingcast.ch";
 const MAX_AGE_HOURS = 18;
-const PUBLIC_DAYS = 3;
 
 export type BriefingFact = { k: string; v: string; level?: string };
 export type BriefingZone = { name: string; a: string; b: string; c?: string };
@@ -17,7 +17,7 @@ export type BriefingStep = {
   label: string;
   text: string;
   status: string;       // ok | info | warn
-  statusLabel: string;  // "data fit the pattern", "different than expected"
+  statusLabel: string;  // "Daten passen zur Lage", "anders als erwartet"
   facts: BriefingFact[];
   zones: { cols: string[]; rows: BriefingZone[] } | null;
   caveat: string;       // Gewitter-Hinweis, nur bei Stabilität
@@ -73,7 +73,7 @@ function toFacts(raw: unknown): BriefingFact[] {
   return raw
     .filter((f): f is Raw => !!f && typeof f === "object")
     .map((f) => ({ k: s(f.k), v: s(f.v), level: s(f.level) || undefined }))
-    .filter((f) => f.v && f.v !== "\u2014");
+    .filter((f) => f.v && f.v !== "—");
 }
 
 // Zonentabellen von Sonne (Sonne / Wolken tief / Wolken hoch) und Thermik
@@ -142,15 +142,17 @@ function toDay(date: string, entry: Raw, labels: Raw): BriefingDay | null {
   };
 }
 
-export async function getBriefing(): Promise<Briefing | null> {
+export async function getBriefing(locale: string): Promise<Briefing | null> {
+  if (!isBriefingLocale(locale)) return null;
   try {
-    const res = await fetch(`${API_URL}/api/briefing`, {
+    const res = await fetch(`${API_URL}/api/public/briefing?lang=${locale}`, {
       next: { revalidate: 3600, tags: ["briefing"] },
     });
     if (!res.ok) return null;
-    const data = (await res.json()) as Raw;
-    const a = data?.analyse;
-    if (!a?.by_date || !Array.isArray(a.dates)) return null;
+    const a = (await res.json()) as Raw;
+    if (!a?.available || !a.by_date || !Array.isArray(a.dates)) return null;
+    // Sprache muss zur Seite passen: keine englischen Sätze unter deutschen Titeln.
+    if (s(a.lang) !== locale) return null;
 
     const generatedAt = s(a.generated_at);
     const ageHours = (Date.now() - new Date(generatedAt).getTime()) / 36e5;
@@ -158,7 +160,6 @@ export async function getBriefing(): Promise<Briefing | null> {
 
     const labels = a.labels ?? {};
     const days = (a.dates as string[])
-      .slice(0, PUBLIC_DAYS)
       .map((d) => toDay(d, a.by_date[d], labels))
       .filter((d): d is BriefingDay => d !== null);
     if (days.length === 0) return null;

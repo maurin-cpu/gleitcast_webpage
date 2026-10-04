@@ -55,17 +55,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  // Öffentliches Briefing, nur Englisch (siehe app/[locale]/flugwetter-schweiz).
+  // Öffentliches Briefing in den Sprachen, die flychat erzeugt (DE, EN).
   // Der Inhalt wechselt täglich, deshalb hier bewusst das Tagesdatum und nicht
   // PAGE_LAST_UPDATED — die Seite ist wirklich jeden Tag anders.
-  const briefing: MetadataRoute.Sitemap = [
-    {
-      url: localized("/flugwetter-schweiz", "en"),
-      lastModified: new Date(new Date().toISOString().slice(0, 10)),
-      changeFrequency: "daily" as const,
-      priority: 0.9,
-    },
-  ];
+  const briefingLocales = ["de", "en"];
+  const briefingAlternates = Object.fromEntries(
+    briefingLocales.map((l) => [hreflangOf(l), localized("/flugwetter-schweiz", l)]),
+  );
+  const briefing: MetadataRoute.Sitemap = briefingLocales.map((l) => ({
+    url: localized("/flugwetter-schweiz", l),
+    lastModified: new Date(new Date().toISOString().slice(0, 10)),
+    changeFrequency: "daily" as const,
+    priority: 0.9,
+    alternates: { languages: briefingAlternates },
+  }));
 
   // Wetterkunde pro Sprache: Hub in allen Locales, Artikel nur dort, wo eine
   // publizierte Fassung existiert — hreflang entsprechend. Entwürfe
