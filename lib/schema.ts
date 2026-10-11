@@ -203,6 +203,8 @@ interface ArticleSchemaInput {
   stand: string;
   /** Absolute URL des OG-Bilds (aus lib/og.ts) — dasselbe Bild wie in og:image. */
   bildUrl: string;
+  /** Byline aus dem Frontmatter. Ohne „Maurin" zeichnet die Organisation als Autor. */
+  autor?: string;
 }
 
 // Article — ohne das ist ein Pillar für AI-Systeme nur ein Textblock
@@ -221,7 +223,10 @@ export function articleSchema(a: ArticleSchemaInput, locale = "de") {
     inLanguage: inLanguage(locale),
     datePublished: a.veroeffentlicht,
     dateModified: a.stand,
-    author: { "@id": `${SITE_URL}/#maurin` },
+    author:
+      a.autor && !a.autor.startsWith("Maurin")
+        ? { "@id": `${SITE_URL}/#organization` }
+        : { "@id": `${SITE_URL}/#maurin` },
     publisher: { "@id": `${SITE_URL}/#organization` },
     isPartOf: { "@id": `${hub}/#webpage` },
     image: a.bildUrl,

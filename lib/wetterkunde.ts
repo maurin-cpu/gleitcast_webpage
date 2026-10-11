@@ -227,7 +227,7 @@ function parse(slug: string, raw: string): Article {
     metaTitle: String(data.meta_title ?? titel),
     metaDescription: String(data.meta_description ?? ""),
     status: toStatus(data.status),
-    autor: String(data.autor ?? "Maurin (Founder & Pilot, Wingcast)"),
+    autor: String(data.autor ?? "Wingcast"),
     stand,
     veroeffentlicht: toIsoDate(data.veroeffentlicht ?? data.stand),
     zielKeyword: String(data.ziel_keyword ?? ""),

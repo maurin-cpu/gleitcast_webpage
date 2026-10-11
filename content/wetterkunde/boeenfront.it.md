@@ -14,7 +14,7 @@ hub: /wetterkunde
 sprache: it-CH
 status: published
 veroeffentlicht: 2026-08-03
-autor: "Maurin (Founder & Pilot, Wingcast)"
+autor: "Wingcast"
 stand: 2026-08-03
 meta_title: "Fronte di raffiche in parapendio: fino a che quota arriva?"
 meta_description: "Fino a che quota arriva un fronte di raffiche? Il 30 luglio 2026 abbiamo confrontato 139 stazioni svizzere con la previsione. Sopra i 2'000 m era quasi introvabile."
@@ -291,6 +291,7 @@ Lo mostra — ma non necessariamente alla quota giusta. Il 30 luglio la previsio
 
 Wingcast legge ogni mattina i modelli meteo per tutti i 494 siti di decollo svizzeri e scrive in chiaro cosa significano per il tuo decollo. Questa analisi è un esempio di come trattiamo la nostra base di dati: ricalcolare, verificare contro le misure e nominare lo scarto invece di ometterlo. Wingcast è **decision support** — noi forniamo dati e valutazione, la decisione la prendi tu.
 
+→ [Riconoscere il favonio: perché 4 hPa non bastano](/it/wetterkunde/foehn)
 → [Previsione termica Svizzera: oggi, domani e dopodomani per ogni decollo](/it)
 
 <!-- Traduzione italiana della Fassung 7 tedesca (2026-08-03). La versione

@@ -60,8 +60,8 @@ export async function generateMetadata({
       .split("|")
       .map((k) => k.trim())
       .filter(Boolean),
-    authors: [{ name: "Maurin", url: SITE_URL }],
-    creator: "Maurin",
+    authors: [{ name: "Wingcast", url: SITE_URL }],
+    creator: "Wingcast",
     publisher: "Wingcast",
     icons: {
       icon: [{ url: "/brand/logo.svg", type: "image/svg+xml" }],

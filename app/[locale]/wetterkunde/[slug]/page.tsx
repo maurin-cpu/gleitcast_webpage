@@ -170,6 +170,7 @@ export default async function WetterkundeArtikel({
               metaDescription: article.metaDescription,
               veroeffentlicht: article.veroeffentlicht,
               stand: article.stand,
+              autor: article.autor,
               // Dasselbe Bild wie in og:image — kein zweiter, womöglich toter Pfad.
               bildUrl: resolveArticleOgImage(article, locale, t("eyebrow")).url,
             },

@@ -15,7 +15,7 @@ hub: /wetterkunde
 sprache: fr-CH
 status: published
 veroeffentlicht: 2026-08-20
-autor: "Maurin (Founder & Pilot, Wingcast)"
+autor: "Wingcast"
 stand: 2026-08-20
 meta_title: "Dust devils en parapente : reconnaître les jours à risque"
 meta_description: "Aucune prévision ne montre un dust devil. Mais on peut calculer si c'est un jour à risque : 490 sites suisses, 74 stations de mesure, un été."
@@ -351,11 +351,12 @@ Mais l'analyse montre aussi à quel point il faut être prudent avec cela. Un cr
 C'est pourquoi nous en restons à ce que nous disons partout : **la physique calcule, tu décides.** Les données te disent si tu dois être particulièrement attentif aujourd'hui. Si le tourbillon court en ce moment vers ton décollage, tu le vois au bruissement dans les arbres, à la manche à air, à l'herbe dans l'air — et à rien d'autre.
 
 → [À quoi ressemble un front de rafales mesuré — et ce qu'en disait le modèle](/fr/wetterkunde/boeenfront)
+→ [Reconnaître le foehn : pourquoi 4 hPa ne suffisent pas](/fr/wetterkunde/foehn)
 → [Tous les sujets de météorologie](/fr/wetterkunde)
 → [Prévision thermique Suisse : aujourd'hui, demain et après-demain pour chaque décollage](/fr)
 → [Ouvrir Wingcast gratuitement et vérifier ton spot](https://app.wingcast.ch/?utm_source=blog&utm_medium=wetterkunde&utm_campaign=staubteufel)
 
-*État : 20 août 2026 · Auteur : Maurin, Founder & Pilot chez Wingcast. Ce texte est de la météorologie, pas une autorisation de vol. Les conditions, tu les vérifies et tu décides toi-même.*
+*État : 20 août 2026 · Auteur : Wingcast. Ce texte est de la météorologie, pas une autorisation de vol. Les conditions, tu les vérifies et tu décides toi-même.*
 
 <!-- Traduction française de la version allemande (2026-08-20). La version
      allemande est la version de référence ; les citations DHV/DWD/FSVL sont

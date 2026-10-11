@@ -14,7 +14,7 @@ hub: /wetterkunde
 sprache: de-CH
 status: published
 veroeffentlicht: 2026-09-27
-autor: "Maurin (Founder & Pilot, Wingcast)"
+autor: "Wingcast"
 stand: 2026-09-27
 meta_title: "Flugwetter im KI-Chat: Wingcast mit Claude, ChatGPT, Gemini"
 meta_description: "Schliess Wingcast an deinen KI-Chat an und frag das Flugwetter für 494 Schweizer Startplätze im normalen Gespräch ab. Einrichten dauert eine Minute und kostet nichts."

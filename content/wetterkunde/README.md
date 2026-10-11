@@ -44,7 +44,7 @@ weder im Hub noch in der Sitemap.
 | `veroeffentlicht` | nein | `datePublished` (Fallback: `stand`) |
 | `meta_title` | nein | `<title>` (Fallback: `titel`) |
 | `meta_description` | nein | Meta-Description und Schema-`description` |
-| `autor` | nein | Byline (Fallback: Maurin) |
+| `autor` | nein | Byline (Fallback: Wingcast) |
 | `og_bild` | nein | Eigenes OG-Bild statt des generierten, Pfad ab Root — muss in `public/og/` liegen und **exakt 1200×630** sein |
 
 Alle übrigen Schlüssel (`ziel_keyword`, `daten`, `skripte`, `schema`, …) bleiben in der

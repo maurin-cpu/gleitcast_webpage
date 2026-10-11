@@ -14,7 +14,7 @@ hub: /wetterkunde
 sprache: it-CH
 status: published
 veroeffentlicht: 2026-09-27
-autor: "Maurin (fondatore e pilota, Wingcast)"
+autor: "Wingcast"
 stand: 2026-09-27
 meta_title: "Il meteo di volo nella chat IA: Claude, ChatGPT o Gemini"
 meta_description: "Collega Wingcast alla tua chat IA e chiedi il meteo di volo di 494 decolli svizzeri in una conversazione normale. L'installazione richiede un minuto e non costa nulla."

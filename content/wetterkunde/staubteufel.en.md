@@ -15,7 +15,7 @@ hub: /wetterkunde
 sprache: en
 status: published
 veroeffentlicht: 2026-08-20
-autor: "Maurin (Founder & Pilot, Wingcast)"
+autor: "Wingcast"
 stand: 2026-09-18
 meta_title: "Dust devils in paragliding: spotting the risky days"
 meta_description: "No forecast shows a dust devil. But whether today is a dusty day can be calculated: 490 Swiss launch sites, 74 measuring stations, one summer."
@@ -352,11 +352,12 @@ But the analysis also shows how careful you have to be with that. An established
 That is why we stick to what we say everywhere: **physics calculates, you decide.** The data tell you whether you should be especially attentive today. Whether the vortex is running towards your launch site right now, you see from the rushing in the trees, from the windsock, from the grass in the air — and from nothing else.
 
 → [What a gust front looks like when measured — and what the model said about it](/en/wetterkunde/boeenfront)
+→ [Recognizing foehn: why 4 hPa is not enough](/en/wetterkunde/foehn)
 → [All meteorology topics](/en/wetterkunde)
 → [Thermal forecast Switzerland: today, tomorrow and the day after for every launch site](/en)
 → [Open Wingcast for free and check your spot](https://app.wingcast.ch/?utm_source=blog&utm_medium=wetterkunde&utm_campaign=staubteufel)
 
-*As of: 17 August 2026 · Author: Maurin, Founder & Pilot at Wingcast. This text is meteorology, not a clearance to fly. You check the conditions and decide for yourself.*
+*As of: 17 August 2026 · Author: Wingcast. This text is meteorology, not a clearance to fly. You check the conditions and decide for yourself.*
 
 <!-- English translation of the German version (2026-09-18). The German version
      is the reference version; the DHV/DWD/SHV quotations are translated by us,

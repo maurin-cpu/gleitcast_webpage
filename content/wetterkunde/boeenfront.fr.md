@@ -14,7 +14,7 @@ hub: /wetterkunde
 sprache: fr-CH
 status: published
 veroeffentlicht: 2026-08-03
-autor: "Maurin (Founder & Pilot, Wingcast)"
+autor: "Wingcast"
 stand: 2026-08-03
 meta_title: "Front de rafales en parapente : jusqu'où monte-t-il ?"
 meta_description: "Jusqu'où monte un front de rafales ? Le 30 juillet 2026, nous avons comparé 139 stations suisses à la prévision. Au-dessus de 2'000 m, il était presque introuvable."
@@ -291,6 +291,7 @@ Elle le montre — mais pas forcément à la bonne altitude. Le 30 juillet, la p
 
 Wingcast lit chaque matin les modèles météo pour les 494 sites de décollage suisses et écrit en clair ce qu'ils signifient pour ton site. Cette analyse est un exemple de la façon dont nous traitons notre propre base de données : recalculer, confronter aux mesures et nommer l'écart au lieu de l'omettre. Wingcast est un **outil d'aide à la décision** — nous livrons les données et l'évaluation, la décision t'appartient.
 
+→ [Reconnaître le foehn : pourquoi 4 hPa ne suffisent pas](/fr/wetterkunde/foehn)
 → [Prévision thermique Suisse : aujourd'hui, demain et après-demain pour chaque décollage](/fr)
 
 <!-- Traduction française de la Fassung 7 allemande (2026-08-03). La version

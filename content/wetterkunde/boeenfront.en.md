@@ -14,7 +14,7 @@ hub: /wetterkunde
 sprache: en
 status: published
 veroeffentlicht: 2026-08-03
-autor: "Maurin (Founder & Pilot, Wingcast)"
+autor: "Wingcast"
 stand: 2026-08-03
 meta_title: "Gust front in paragliding: how high does it reach?"
 meta_description: "How high does a gust front reach? On 30 July 2026 we checked 139 Swiss stations against the forecast. Above 2'000 m the front was barely measurable."
@@ -291,6 +291,7 @@ It does show it — but not necessarily at the right altitude. On 30 July the IC
 
 Wingcast reads the weather models every morning for all 494 Swiss launch sites and writes in plain language what they mean for your launch site. This analysis is an example of how we handle our own data basis: recalculate, check against measurements and name the discrepancy instead of leaving it out. Wingcast is **decision support** — we deliver data and assessment, you make the decision.
 
+→ [Recognizing foehn: why 4 hPa is not enough](/en/wetterkunde/foehn)
 → [Thermal forecast Switzerland: today, tomorrow and the day after for every launch site](/en)
 
 <!-- English translation of the German Fassung 7 (2026-08-03). The German version

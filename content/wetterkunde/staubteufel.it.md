@@ -15,7 +15,7 @@ hub: /wetterkunde
 sprache: it-CH
 status: published
 veroeffentlicht: 2026-08-20
-autor: "Maurin (Founder & Pilot, Wingcast)"
+autor: "Wingcast"
 stand: 2026-08-20
 meta_title: "Dust devil in parapendio: riconoscere le giornate a rischio"
 meta_description: "Nessuna previsione mostra un dust devil. Ma si può calcolare se oggi è una giornata a rischio: 490 decolli svizzeri, 74 stazioni di misura, un'estate."
@@ -352,11 +352,12 @@ Ma l'analisi mostra anche quanta prudenza ci vuole. Un criterio consolidato dell
 Per questo restiamo a ciò che diciamo ovunque: **la fisica calcola, tu decidi.** I dati ti dicono se oggi devi essere particolarmente attento. Se il vortice sta correndo verso il tuo decollo lo vedi dal fruscio negli alberi, dalla manica a vento, dall'erba nell'aria — e da nient'altro.
 
 → [Come appare un fronte di raffiche misurato — e cosa ne diceva il modello](/it/wetterkunde/boeenfront)
+→ [Riconoscere il favonio: perché 4 hPa non bastano](/it/wetterkunde/foehn)
 → [Tutti i temi di meteorologia](/it/wetterkunde)
 → [Previsione termica Svizzera: oggi, domani e dopodomani per ogni decollo](/it)
 → [Apri Wingcast gratuitamente e controlla il tuo spot](https://app.wingcast.ch/?utm_source=blog&utm_medium=wetterkunde&utm_campaign=staubteufel)
 
-*Stato: 20 agosto 2026 · Autore: Maurin, Founder & Pilot di Wingcast. Questo testo è meteorologia, non un'autorizzazione al volo. Le condizioni le verifichi e decidi tu.*
+*Stato: 20 agosto 2026 · Autore: Wingcast. Questo testo è meteorologia, non un'autorizzazione al volo. Le condizioni le verifichi e decidi tu.*
 
 <!-- Traduzione italiana della versione tedesca (2026-08-20). La versione
      tedesca è quella di riferimento; le citazioni DHV/DWD/FSVL sono

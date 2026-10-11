@@ -14,7 +14,7 @@ hub: /wetterkunde
 sprache: de-CH
 status: published
 veroeffentlicht: 2026-08-03
-autor: "Maurin (Founder & Pilot, Wingcast)"
+autor: "Wingcast"
 stand: 2026-08-03
 meta_title: "Böenfront beim Gleitschirmfliegen: wie hoch reicht sie?"
 meta_description: "Wie hoch reicht eine Böenfront? Am 30. Juli 2026 haben wir 139 Schweizer Messstationen gegen die Prognose gelegt. Über 2'000 m war die Front kaum noch messbar."
@@ -290,6 +290,7 @@ Sie zeigt sie an — aber nicht unbedingt in der richtigen Höhe. Am 30. Juli sa
 
 Wingcast liest die Wettermodelle jeden Morgen für alle 494 Schweizer Startplätze und schreibt in Klartext, was sie für deinen Startplatz bedeuten. Diese Auswertung ist ein Beispiel dafür, wie wir mit unserer eigenen Datengrundlage umgehen: nachrechnen, gegen Messungen prüfen und die Abweichung benennen, statt sie wegzulassen. Wingcast ist **Decision Support** — wir liefern Daten und Einschätzung, die Entscheidung triffst du.
 
+→ [Föhn erkennen: warum 4 hPa nicht reichen und was 20 Föhntäler messen](/wetterkunde/foehn)
 → [Thermikprognose Schweiz: heute, morgen und übermorgen für jeden Startplatz](/)
 
 ---
@@ -347,5 +348,5 @@ OFFEN:
 - OG-Bild /og/wetterkunde-boeenfront.jpg existiert noch nicht
 - FR/IT-Übersetzung (Artikel vorerst DE-only)
 - Reel-Einbettung, sobald GustFrontReel korrigiert und gepostet ist
-- Interne Links auf /wetterkunde/foehn, sobald der Föhn-Pillar live ist
+- Interne Links auf /wetterkunde/foehn: erledigt 11.10.2026 (Föhn-Pillar live)
 -->

@@ -74,6 +74,17 @@ Maurin, Pilot in Zuerich. Gebaut aus eigenem Schmerzpunkt: Daten-Overload beim S
   (https://www.wingcast.ch/fr/wetterkunde/boeenfront), Italienisch
   (https://www.wingcast.ch/it/wetterkunde/boeenfront) und Englisch
   (https://www.wingcast.ch/en/wetterkunde/boeenfront).
+- [Foehn beim Gleitschirmfliegen: warum 4 hPa nicht reichen](https://www.wingcast.ch/wetterkunde/foehn):
+  Amtlicher Foehnindex von MeteoSchweiz an 20 Schweizer Foehntaelern 2020 bis 2025 gegen den
+  Druckunterschied Lugano minus Zuerich ausgewertet, dazu ein Foehnfall (26. bis 28.08.2026)
+  Stunde fuer Stunde gegen ICON-CH1 und ICON-CH2. Befunde: Bei 4 bis 6 hPa wehte in Altdorf nur
+  in 10 % der Zeit Foehn am Talboden; in Andeer fielen 39 %, in Davos 33 %, in Visp 30 % aller
+  Foehnstunden unter 4 hPa. Die Modelle trafen die Windrichtung in 92 bis 96 % der Foehnstunden,
+  die Boeen lagen im Median knapp 8 km/h zu tief. Der Druckunterschied allein zeigt also nur,
+  dass eine Foehnlage moeglich ist; Wingcast kombiniert ihn deshalb mit Hoehenwind und Feuchte.
+  Auch auf Franzoesisch (https://www.wingcast.ch/fr/wetterkunde/foehn), Italienisch
+  (https://www.wingcast.ch/it/wetterkunde/foehn) und Englisch
+  (https://www.wingcast.ch/en/wetterkunde/foehn).
 
 ## MCP-Server (Daten fuer KI-Assistenten)
 
