@@ -215,6 +215,8 @@ const STATUS: Record<string, { Icon: Icon; cls: string }> = {
   ok: { Icon: CircleCheck, cls: "text-flyGreen" },
   info: { Icon: Info, cls: "text-sky-700" },
   warn: { Icon: TriangleAlert, cls: "text-flyAmber" },
+  // neutral = beschreibt nur, keine Entwarnung (Föhn-Block an ruhigen Tagen)
+  neutral: { Icon: Info, cls: "text-slate-500" },
 };
 
 // Status je Schritt wie in der Mail: Farbe + Icon + Text (color-not-only).
@@ -328,6 +330,19 @@ export function BriefingDayCard({
                   </div>
                   <p className="mt-1 text-base leading-relaxed text-slate-700">{st.text}</p>
                   <Facts facts={st.facts} />
+                  {st.reading && (
+                    <p className="mt-3 text-base leading-relaxed text-slate-700">{st.reading}</p>
+                  )}
+                  {st.legend && (
+                    <p className="mt-2 text-sm leading-relaxed text-slate-500">{st.legend}</p>
+                  )}
+                  {st.guide && (
+                    <p className="mt-2 text-sm">
+                      <a href={st.guide.url} className="text-sky-700 underline underline-offset-2">
+                        → {st.guide.label}
+                      </a>
+                    </p>
+                  )}
                   {st.caveat && (
                     <p className="mt-3 flex items-start gap-1.5 text-sm font-medium text-flyAmber">
                       <TriangleAlert className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />

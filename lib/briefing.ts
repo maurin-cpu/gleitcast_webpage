@@ -16,11 +16,14 @@ export type BriefingStep = {
   key: string;
   label: string;
   text: string;
-  status: string;       // ok | info | warn
+  status: string;       // ok | info | warn | neutral
   statusLabel: string;  // "Daten passen zur Lage", "anders als erwartet"
   facts: BriefingFact[];
   zones: { cols: string[]; rows: BriefingZone[] } | null;
   caveat: string;       // Gewitter-Hinweis, nur bei Stabilität
+  reading: string;      // Föhn: Einordnung (fester Satz je Datenlage)
+  legend: string;       // Föhn: wann ein Tal zählt
+  guide: { label: string; url: string } | null;  // Föhn: Lesehilfe (Blog)
 };
 
 export type BriefingWarning = { label: string; text: string; severity: string };
@@ -107,6 +110,9 @@ function toStep(st: (typeof STEP_ORDER)[number], chain: Raw, labels: Raw): Brief
     facts: toFacts(v.facts),
     zones: toZones(st.key, v.num),
     caveat: st.key === "stab" && v.labile ? s(labels.thunder_caveat) : "",
+    reading: s(v.reading),
+    legend: s(v.legend),
+    guide: v.guide && s(v.guide.url) ? { label: s(v.guide.label), url: s(v.guide.url) } : null,
   };
 }
 
