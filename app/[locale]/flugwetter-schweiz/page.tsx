@@ -82,9 +82,6 @@ export default async function FlugwetterSchweiz({
             {t.h1}
           </h1>
           <p className="mt-4 text-lg text-slate-600">{t.intro}</p>
-          <div className="mt-6">
-            <NoticeBox locale={locale} />
-          </div>
 
           {briefing ? (
             <>
@@ -112,6 +109,11 @@ export default async function FlugwetterSchweiz({
 
           <div className="mt-14">
             <AppCta locale={locale} medium="briefing" placement="unten" />
+          </div>
+
+          {/* Hinweis am Schluss (User 24.10.), oben steht „Automatisch erzeugt" im Intro. */}
+          <div className="mt-10">
+            <NoticeBox locale={locale} />
           </div>
 
           <p className="mt-10 text-sm text-slate-500">{t.disclaimer}</p>
