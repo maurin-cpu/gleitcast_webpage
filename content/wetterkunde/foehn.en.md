@@ -353,6 +353,7 @@ Wingcast reads the weather models every morning for the Swiss launch sites and d
 
 → [What a gust front looks like when measured, and what the model said about it](/en/wetterkunde/boeenfront)
 → [Dust devils: how to spot a dusty day](/en/wetterkunde/staubteufel)
+→ [Flying weather Switzerland today: situation, warnings and thermals for the next three days](/en/flugwetter-schweiz)
 → [All meteorology topics](/en/wetterkunde)
 → [Open Wingcast for free and check your spot](https://app.wingcast.ch/?utm_source=blog&utm_medium=wetterkunde&utm_campaign=foehn)
 

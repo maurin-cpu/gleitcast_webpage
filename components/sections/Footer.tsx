@@ -9,6 +9,7 @@ import {
   WK_LOCALES,
   type WkLocale,
 } from "@/lib/wetterkunde";
+import { STRINGS, isBriefingLocale } from "../briefing/strings";
 
 const APP_URL = "https://app.wingcast.ch";
 
@@ -49,6 +50,10 @@ export function Footer() {
   // Volle Pfade statt reiner #-Anker: der Footer steht auch auf
   // /wetterkunde-Seiten — dort liefen nackte Anker ins Leere.
   const productLinks: FooterLink[] = [
+    // Öffentliches Briefing sitewide verlinken (nur DE/EN, FR/IT gibt es nicht).
+    ...(isBriefingLocale(locale)
+      ? [{ label: STRINGS[locale].navLabel, href: "/flugwetter-schweiz", kind: "internal" as const }]
+      : []),
     { label: t("linkHowItWorks"), href: "/#solution", kind: "internal" },
     { label: t("linkCastPreview"), href: "/#preview", kind: "internal" },
     { label: t("linkBetaFeedback"), href: "/#feedback", kind: "internal" },

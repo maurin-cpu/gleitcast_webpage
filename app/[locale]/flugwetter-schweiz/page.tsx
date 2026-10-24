@@ -3,10 +3,9 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/sections/Footer";
-import { BriefingDayCard, DayStrip } from "@/components/briefing/BriefingDayCard";
+import { DayLiteCard, NoticeBox, liteDay } from "@/components/briefing/BriefingDayCard";
+import { AppCta } from "@/components/briefing/AppCta";
 import { BRIEFING_LOCALES, STRINGS, isBriefingLocale } from "@/components/briefing/strings";
-import { LinkButton } from "@/components/ui/Button";
-import { ArrowUpRight } from "@/components/ui/Icons";
 import { getBriefing } from "@/lib/briefing";
 import { absoluteUrl, defaultOgImage, hreflangOf, localePath, socialMetadata } from "@/lib/seo";
 
@@ -83,22 +82,22 @@ export default async function FlugwetterSchweiz({
             {t.h1}
           </h1>
           <p className="mt-4 text-lg text-slate-600">{t.intro}</p>
+          <div className="mt-6">
+            <NoticeBox locale={locale} />
+          </div>
 
           {briefing ? (
             <>
               <p className="mt-4 text-sm font-medium tabular-nums text-slate-600">
                 {t.updated} {stand}
               </p>
-              <div className="mt-8">
-                <DayStrip days={briefing.days} locale={locale} />
-              </div>
-              <div className="mt-12 space-y-12">
+              {/* Abgeschwächt (24.10.): keine Einstufung, keine Warnungen, keine Kette. */}
+              <div className="mt-8 space-y-8">
                 {briefing.days.map((day, i) => (
-                  <BriefingDayCard
+                  <DayLiteCard
                     key={day.date}
-                    day={day}
+                    day={liteDay(day)}
                     locale={locale}
-                    warningsTitle={briefing.warningsTitle}
                     kicker={kickers[i] ?? ""}
                   />
                 ))}
@@ -111,20 +110,8 @@ export default async function FlugwetterSchweiz({
             </p>
           )}
 
-          <div className="mt-14 rounded-card border border-slate-200 bg-white p-6">
-            <p className="font-semibold text-slate-900">{t.ctaTitle}</p>
-            <p className="mt-1 text-slate-700">{t.ctaText}</p>
-            <LinkButton
-              href="https://app.wingcast.ch/?utm_source=website&utm_medium=briefing&utm_campaign=flugwetter-schweiz"
-              target="_blank"
-              rel="noopener"
-              variant="primary"
-              size="lg"
-              className="mt-4"
-            >
-              {t.ctaButton}
-              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-            </LinkButton>
+          <div className="mt-14">
+            <AppCta locale={locale} medium="briefing" placement="unten" />
           </div>
 
           <p className="mt-10 text-sm text-slate-500">{t.disclaimer}</p>

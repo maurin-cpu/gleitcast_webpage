@@ -292,6 +292,7 @@ Wingcast liest die Wettermodelle jeden Morgen für alle 494 Schweizer Startplät
 
 → [Föhn erkennen: warum 4 hPa nicht reichen und was 20 Föhntäler messen](/wetterkunde/foehn)
 → [Thermikprognose Schweiz: heute, morgen und übermorgen für jeden Startplatz](/)
+→ [Flugwetter Schweiz heute: Lage, Warnungen und Thermik für die nächsten drei Tage](/flugwetter-schweiz)
 
 ---
 

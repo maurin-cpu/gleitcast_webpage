@@ -1,11 +1,12 @@
 import { Link } from "@/i18n/navigation";
 import { getBriefing } from "@/lib/briefing";
-import { DayHeroCard, DayStrip, WarningsBlock, formatDay } from "@/components/briefing/BriefingDayCard";
+import { DayLiteCard, formatDay, liteDay } from "@/components/briefing/BriefingDayCard";
 import { STRINGS, isBriefingLocale } from "@/components/briefing/strings";
 import { ArrowRight } from "@/components/ui/Icons";
+import { AppCta } from "@/components/briefing/AppCta";
 
-// Startseiten-Block „Thermikprognose Schweiz": Kopfkarte mit Einstufung und
-// Zahlen, Warnungen, Tagesstreifen. Nur in den Sprachen, die flychat erzeugt
+// Startseiten-Block „Thermikprognose Schweiz": seit 24.10. abgeschwächt,
+// nur Wetterlage und Modellwerte von heute. Nur in den Sprachen, die flychat erzeugt
 // (DE, EN). Ohne Daten wird nichts gezeigt, die Startseite bleibt wie bisher.
 export async function BriefingToday({ locale }: { locale: string }) {
   if (!isBriefingLocale(locale)) return null;
@@ -25,20 +26,13 @@ export async function BriefingToday({ locale }: { locale: string }) {
           <h2 id="briefing-headline" className="sr-only">
             {t.kicker}, {formatDay(today.date, locale)}
           </h2>
-          <DayHeroCard
-            day={today}
+          {/* Abgeschwächt (24.10.): nur Wetterlage und Modellwerte von heute. */}
+          <DayLiteCard
+            day={liteDay(today)}
             locale={locale}
             kicker={t.kicker}
             title={`${t.today}, ${formatDay(today.date, locale)}`}
           />
-
-          <div className="mt-4">
-            <WarningsBlock day={today} title={briefing.warningsTitle} />
-          </div>
-
-          <div className="mt-4">
-            <DayStrip days={briefing.days} locale={locale} />
-          </div>
 
           <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
             <Link
@@ -57,6 +51,10 @@ export async function BriefingToday({ locale }: { locale: string }) {
               , {t.updatedEveryMorning}
             </p>
           </div>
+          <div className="mt-4">
+            <AppCta locale={locale} medium="briefing-start" placement="startseite" />
+          </div>
+          <p className="mt-3 text-sm text-slate-500">{t.disclaimer}</p>
         </div>
       </div>
     </section>

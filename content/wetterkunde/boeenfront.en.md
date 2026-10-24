@@ -293,6 +293,7 @@ Wingcast reads the weather models every morning for all 494 Swiss launch sites a
 
 → [Recognizing foehn: why 4 hPa is not enough](/en/wetterkunde/foehn)
 → [Thermal forecast Switzerland: today, tomorrow and the day after for every launch site](/en)
+→ [Flying weather Switzerland today: situation, warnings and thermals for the next three days](/en/flugwetter-schweiz)
 
 <!-- English translation of the German Fassung 7 (2026-08-03). The German version
      is the reference version; the DWD quotations [1]-[5] are translated by us,

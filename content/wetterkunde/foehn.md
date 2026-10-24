@@ -354,6 +354,7 @@ Wingcast liest die Wettermodelle jeden Morgen für die Schweizer Startplätze un
 
 → [Wie eine Böenfront gemessen aussieht, und was das Modell dazu sagte](/wetterkunde/boeenfront)
 → [Staubteufel: wie du einen Dusty-Tag erkennst](/wetterkunde/staubteufel)
+→ [Flugwetter Schweiz heute: Lage, Warnungen und Thermik für die nächsten drei Tage](/flugwetter-schweiz)
 → [Alle Wetterkunde-Themen](/wetterkunde)
 → [Wingcast kostenlos öffnen und deinen Spot prüfen](https://app.wingcast.ch/?utm_source=blog&utm_medium=wetterkunde&utm_campaign=foehn)
 

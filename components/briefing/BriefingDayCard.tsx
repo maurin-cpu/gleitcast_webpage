@@ -361,3 +361,77 @@ export function BriefingDayCard({
     </section>
   );
 }
+
+// Nur die Felder, die die abgeschwächte Karte zeigt. Einstufung, Warnungen und
+// Kette werden vorher entfernt, damit sie auch nicht im Seitenquelltext stehen.
+export function liteDay(day: BriefingDay): BriefingDay {
+  return {
+    ...day,
+    status: "",
+    tier: "",
+    situation: "",
+    band: "",
+    dayHint: "",
+    hazardsActive: [],
+    warnings: [],
+    noHazardText: "",
+    steps: [],
+  };
+}
+
+// Abgeschwächte Fassung für die öffentliche Seite (User 24.10., Haftung):
+// keine Einstufung, keine Bandfarbe, keine Warnungen, keine Kette mit
+// Status, kein Satz der KI. Nur Datum, Wetterlage aus Textbausteinen und
+// die Modellwerte.
+export function DayLiteCard({
+  day,
+  locale,
+  kicker,
+  title,
+}: {
+  day: BriefingDay;
+  locale: string;
+  kicker: string;
+  title?: string;
+}) {
+  const t = tx(locale);
+  return (
+    <section
+      id={`tag-${day.date}`}
+      className="scroll-mt-24 rounded-card border border-slate-200 bg-white p-6 sm:p-8"
+      aria-labelledby={`h-${day.date}`}
+    >
+      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700">{kicker}</p>
+      <h2
+        id={`h-${day.date}`}
+        className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+      >
+        {title ?? formatDay(day.date, locale)}
+      </h2>
+      {day.lage && (
+        <p className="mt-4 max-w-reading text-lg leading-[1.6] text-slate-700">{day.lage}</p>
+      )}
+      {facts(day, locale).length > 0 && (
+        <>
+          <p className="mt-6 text-sm font-medium text-slate-600">{t.modelValues}</p>
+          <div className="mt-2">
+            <KeyFacts day={day} locale={locale} />
+          </div>
+        </>
+      )}
+    </section>
+  );
+}
+
+export function NoticeBox({ locale }: { locale: string }) {
+  const t = tx(locale);
+  return (
+    <div className="flex gap-3 rounded-card border border-slate-300 bg-white p-5">
+      <Info className="mt-0.5 h-5 w-5 shrink-0 text-slate-600" aria-hidden="true" />
+      <div>
+        <p className="font-semibold text-slate-900">{t.noticeTitle}</p>
+        <p className="mt-1 text-base leading-relaxed text-slate-700">{t.notice}</p>
+      </div>
+    </div>
+  );
+}

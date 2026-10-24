@@ -10,6 +10,8 @@ export function isBriefingLocale(locale: string): locale is BriefingLocale {
 }
 
 type Strings = {
+  // Navbar- und Footer-Link auf diese Seite (nur DE/EN, darum nicht in messages/*.json).
+  navLabel: string;
   metaTitle: string;
   metaDescription: string;
   ogAlt: string;
@@ -32,24 +34,29 @@ type Strings = {
   ctaText: string;
   ctaButton: string;
   disclaimer: string;
+  // Abgeschwächte Fassung (24.10.): Hinweis oben, Überschrift über den Zahlen.
+  noticeTitle: string;
+  notice: string;
+  modelValues: string;
   dateLocale: string;
 };
 
 export const STRINGS: Record<BriefingLocale, Strings> = {
   de: {
-    metaTitle: "Flugwetter Schweiz heute: Thermik, Wind und Warnungen für Gleitschirm",
+    navLabel: "Flugwetter heute",
+    metaTitle: "Flugwetter Schweiz heute: Thermik und Wind aus den Wettermodellen",
     metaDescription:
-      "Das Wingcast-Briefing für die ganze Schweiz: Lage, Warnungen, Höhenwind und Thermik für heute und die nächsten zwei Tage. Jeden Morgen um 6 Uhr neu.",
+      "Was die Wettermodelle für die Schweiz rechnen: Wetterlage, Wolkenbasis, Steigen und Höhenwind für drei Tage. Automatisch erzeugt, jeden Morgen um 6 Uhr neu.",
     ogAlt: "Wingcast-Briefing für die Schweiz",
     h1: "Flugwetter Schweiz heute",
-    intro: "Thermik, Wind und Warnungen für Gleitschirmpiloten. Jeden Morgen um 6 Uhr neu gerechnet.",
+    intro: "Was die Wettermodelle heute und in den nächsten zwei Tagen für die Schweiz rechnen. Automatisch erzeugt, jeden Morgen um 6 Uhr neu.",
     updated: "Stand",
     updatedEveryMorning: "jeden Morgen neu",
     today: "Heute",
     tomorrow: "Morgen",
     dayAfter: "Übermorgen",
     kicker: "Thermikprognose Schweiz",
-    readFull: "Ganzes Briefing lesen",
+    readFull: "Modellwerte für drei Tage",
     base: "Basis",
     climb: "Steigen",
     upperWind: "Höhenwind",
@@ -57,27 +64,32 @@ export const STRINGS: Record<BriefingLocale, Strings> = {
     days: "Tage",
     unavailable:
       "Das Briefing von heute ist gerade nicht verfügbar. In der App siehst du die Prognose für jeden Startplatz.",
-    ctaTitle: "Welcher Startplatz passt heute?",
-    ctaText: "Die App rechnet dieselbe Analyse für jeden Startplatz, mit Fenster, Wind und Basis.",
-    ctaButton: "Startplätze ansehen",
+    ctaTitle: "Mehr Details für deinen Startplatz",
+    ctaText: "Hier siehst du die Werte für die ganze Schweiz. In der App bekommst du sie für jeden Startplatz einzeln, Stunde für Stunde: Wind am Start und in der Höhe, Thermik und Wolkenbasis. Gratis, ohne Kreditkarte.",
+    ctaButton: "Details in der App ansehen",
     disclaimer:
-      "Prognose, keine Flugfreigabe. Wingcast ist Entscheidungshilfe. Die Bedingungen prüfst du vor Ort, und du entscheidest.",
+      "Automatisch erzeugte Prognose aus Wettermodellen, ohne Gewähr. Keine Flugwetterberatung, keine Warnung, keine Flugempfehlung. Ob und wo du fliegst, entscheidest du allein.",
+    noticeTitle: "Keine Flugwetterberatung",
+    notice:
+      "Diese Seite zeigt automatisch erzeugte Modellwerte für die ganze Schweiz. Sie bewertet keine Startplätze, warnt nicht und empfiehlt keinen Flug. Modelle liegen oft daneben, besonders bei Wind und Föhn. Für deine Entscheidung zählen die Prognosen von MeteoSchweiz, die aktuellen Messwerte und deine Beurteilung vor Ort.",
+    modelValues: "Modellwerte Schweiz",
     dateLocale: "de-CH",
   },
   en: {
-    metaTitle: "Flying weather Switzerland today: thermals, wind and warnings",
+    navLabel: "Flying weather today",
+    metaTitle: "Flying weather Switzerland today: thermals and wind from the weather models",
     metaDescription:
-      "The Wingcast briefing for all of Switzerland: situation, warnings, upper wind and thermals for today and the next two days. Fresh every morning at 6.",
+      "What the weather models compute for Switzerland: weather situation, cloud base, climb and upper wind for three days. Generated automatically, fresh every morning at 6.",
     ogAlt: "Wingcast briefing for Switzerland",
     h1: "Flying weather Switzerland today",
-    intro: "Thermals, wind and warnings for paraglider pilots. Recalculated every morning at 6.",
+    intro: "What the weather models compute for Switzerland today and the next two days. Generated automatically, fresh every morning at 6.",
     updated: "Updated",
     updatedEveryMorning: "fresh every morning",
     today: "Today",
     tomorrow: "Tomorrow",
     dayAfter: "Day after tomorrow",
     kicker: "Thermal forecast Switzerland",
-    readFull: "Read the full briefing",
+    readFull: "Model values for three days",
     base: "Base",
     climb: "Climb",
     upperWind: "Upper wind",
@@ -85,11 +97,15 @@ export const STRINGS: Record<BriefingLocale, Strings> = {
     days: "Days",
     unavailable:
       "Today's briefing is not available right now. The app shows the forecast for every launch site.",
-    ctaTitle: "Which launch site fits today?",
-    ctaText: "The app runs the same analysis for every launch site, with window, wind and cloud base.",
-    ctaButton: "View launch sites",
+    ctaTitle: "More detail for your launch site",
+    ctaText: "This page shows the values for all of Switzerland. The app gives them for each launch site, hour by hour: wind at launch and aloft, thermals and cloud base. Free, no credit card.",
+    ctaButton: "See the details in the app",
     disclaimer:
-      "A forecast, not a flight clearance. Wingcast is decision support. You check the conditions on site and you decide.",
+      "Forecast generated automatically from weather models, without guarantee. Not a flight weather briefing, not a warning, not a recommendation to fly. Whether and where you fly is your decision alone.",
+    noticeTitle: "Not a flight weather briefing",
+    notice:
+      "This page shows model values generated automatically for all of Switzerland. It does not rate launch sites, does not warn and does not recommend flying. Models are often wrong, especially for wind and foehn. For your decision, rely on the MeteoSwiss forecasts, current measurements and your own assessment on site.",
+    modelValues: "Model values Switzerland",
     dateLocale: "en-GB",
   },
 };

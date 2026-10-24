@@ -10,8 +10,12 @@ import { SITE_URL, hreflangOf } from "@/lib/seo";
 import { PAGE_LAST_UPDATED } from "@/lib/schema";
 
 // Default-Locale ohne Prefix, die uebrigen mit Prefix (passend zu localePrefix: "as-needed").
+// Startseite: "/" fuer die Default-Locale, sonst "/fr" ohne Schraegstrich, wie der
+// Canonical. Mit "/fr/" meldete die GSC „Alternative Seite mit richtigem
+// kanonischen Tag" (URL-Pruefung 24.10.).
 function localized(path: string, locale: string): string {
   const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+  if (path === "/" && prefix) return `${SITE_URL}${prefix}`;
   return `${SITE_URL}${prefix}${path}`;
 }
 

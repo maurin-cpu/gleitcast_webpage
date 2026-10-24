@@ -374,6 +374,7 @@ Deshalb bleibt es bei dem, was wir überall sagen: **Physik rechnet, du entschei
 → [Föhn erkennen: warum 4 hPa nicht reichen und was 20 Föhntäler messen](/wetterkunde/foehn)
 → [Alle Wetterkunde-Themen](/wetterkunde)
 → [Thermikprognose Schweiz: heute, morgen und übermorgen für jeden Startplatz](/)
+→ [Flugwetter Schweiz heute: Lage, Warnungen und Thermik für die nächsten drei Tage](/flugwetter-schweiz)
 → [Wingcast kostenlos öffnen und deinen Spot prüfen](https://app.wingcast.ch/?utm_source=blog&utm_medium=wetterkunde&utm_campaign=staubteufel)
 
 *Stand: 17. August 2026 · Autor: Wingcast. Dieser Text ist Wetterkunde, keine Flugfreigabe. Die Bedingungen prüfst und entscheidest du selbst.*

@@ -355,6 +355,7 @@ That is why we stick to what we say everywhere: **physics calculates, you decide
 → [Recognizing foehn: why 4 hPa is not enough](/en/wetterkunde/foehn)
 → [All meteorology topics](/en/wetterkunde)
 → [Thermal forecast Switzerland: today, tomorrow and the day after for every launch site](/en)
+→ [Flying weather Switzerland today: situation, warnings and thermals for the next three days](/en/flugwetter-schweiz)
 → [Open Wingcast for free and check your spot](https://app.wingcast.ch/?utm_source=blog&utm_medium=wetterkunde&utm_campaign=staubteufel)
 
 *As of: 17 August 2026 · Author: Wingcast. This text is meteorology, not a clearance to fly. You check the conditions and decide for yourself.*

@@ -1,9 +1,10 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LinkButton } from "./ui/Button";
 import { Logo } from "./ui/Logo";
 import { LocaleSwitcher } from "./ui/LocaleSwitcher";
 import { ArrowUpRight } from "./ui/Icons";
+import { STRINGS, isBriefingLocale } from "./briefing/strings";
 
 const APP_URL = "https://app.wingcast.ch";
 
@@ -17,6 +18,7 @@ export function Navbar({
   availableLocales?: readonly string[];
 } = {}) {
   const t = useTranslations("Navbar");
+  const locale = useLocale();
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white">
@@ -35,6 +37,15 @@ export function Navbar({
           className="hidden items-center gap-1 md:flex"
           aria-label={t("ariaNav")}
         >
+          {/* Öffentliches Briefing, nur in den Sprachen, die es gibt (DE/EN). */}
+          {isBriefingLocale(locale) && (
+            <Link
+              href="/flugwetter-schweiz"
+              className="focus-ring rounded-md px-4 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700"
+            >
+              {STRINGS[locale].navLabel}
+            </Link>
+          )}
           <Link
             href="/#solution"
             className="focus-ring rounded-md px-4 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700"

@@ -38,6 +38,9 @@ export type BriefingDay = {
   windSector: string;
   windStrength: string;
   situation: string;
+  // Wetterlage aus festen Textbausteinen (flychat `lg_between`, `lg_pressure`),
+  // ohne KI und ohne Aussage zum Fliegen. Für die öffentliche Seite.
+  lage: string;
   dayHint: string;
   hazardsActive: string[];
   warnings: BriefingWarning[];
@@ -116,6 +119,17 @@ function toStep(st: (typeof STEP_ORDER)[number], chain: Raw, labels: Raw): Brief
   };
 }
 
+// Die ersten zwei Sätze von `lage.fazit`: Druckzentren/Strömung/Luftmasse und
+// Drucktendenz. Der dritte Satz vergleicht mit den Modellen und bleibt weg.
+function lageText(chain: Raw): string {
+  const fazit = s(chain.lage?.fazit);
+  return fazit
+    .split(/(?<=\.)\s+/)
+    .slice(0, 2)
+    .join(" ")
+    .replace(/\s+—\s+/g, ": ");
+}
+
 function toDay(date: string, entry: Raw, labels: Raw): BriefingDay | null {
   const chain = entry?.chain;
   if (!chain) return null;
@@ -131,8 +145,10 @@ function toDay(date: string, entry: Raw, labels: Raw): BriefingDay | null {
     pressure: s(tile.pressure_hpa),
     windArrow: s(tile.wind_arrow),
     windSector: s(tile.wind_sector),
-    windStrength: s(tile.wind_strength),
+    // Die App liefert die Windklasse ohne Umlaut („kraeftig").
+    windStrength: s(tile.wind_strength).replace("ae", "ä").replace("ue", "ü"),
     situation: s(chain.situation),
+    lage: lageText(chain),
     dayHint: s(chain.day_hint),
     hazardsActive: (w.checks ?? [])
       .filter((c: Raw) => c.active)
