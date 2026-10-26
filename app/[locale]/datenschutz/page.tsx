@@ -92,9 +92,12 @@ export default async function DatenschutzPage({
                   Keine Profilbildung.
                 </li>
                 <li>
-                  <strong>Chat-Eingaben</strong> &mdash; sofern du den Chat-Berater
-                  in der App nutzt. Werden zur Beantwortung an Anthropic (siehe
-                  Punkt 4) übermittelt.
+                  <strong>Chat-Eingaben und Antworten</strong> &mdash; sofern du den
+                  Chat-Berater in der App nutzt. Deine Fragen werden zur Beantwortung
+                  an DeepSeek (siehe Punkt 4) übermittelt. Der Verlauf wird auf unserem
+                  Server gespeichert, damit du ihn beim nächsten Besuch wieder siehst
+                  (Speicherdauer siehe Punkt 6). Gib im Chat keine persönlichen Angaben
+                  ein, die du nicht teilen möchtest.
                 </li>
                 <li>
                   <strong>Feedback-Beiträge</strong> &mdash; sofern du das
@@ -151,15 +154,24 @@ export default async function DatenschutzPage({
                   Daten, nur anonyme Geo-Koordinaten der Spots.
                 </li>
                 <li>
-                  <strong>Anthropic, PBC</strong> (USA) &mdash; KI-Modell{" "}
-                  <em>Claude</em> für den Chat-Berater. Wenn du den Chat nutzt,
-                  werden deine Eingaben an Anthropic übermittelt und dort{" "}
-                  verarbeitet.{" "}
-                  <strong>Übermittlung in die USA (Drittstaat)</strong> auf Basis
-                  der EU-Standardvertragsklauseln (Standard Contractual Clauses,
-                  Module 2). Anthropic speichert die Daten gemäss eigener Policy
-                  bis zu 30 Tage zur Missbrauchsprüfung und nutzt sie nicht für
-                  Modell-Training.
+                  <strong>DeepSeek</strong> (Hangzhou DeepSeek Artificial
+                  Intelligence Co., Ltd., China) &mdash; KI-Modell für den
+                  Chat-Berater. Wenn du den Chat nutzt, werden deine Fragen
+                  zusammen mit den Wetterdaten an DeepSeek übermittelt und dort
+                  verarbeitet. Deine E-Mail-Adresse wird nicht mitgeschickt.{" "}
+                  <strong>Übermittlung nach China (Drittstaat)</strong>: Für China
+                  besteht kein von der Schweiz oder der EU anerkanntes
+                  angemessenes Datenschutzniveau. Mit der Nutzung des Chats
+                  willigst du in diese Übermittlung ein. Wer das nicht möchte,
+                  nutzt Wingcast ohne Chat; Briefing, Karte und Startplatz-Daten
+                  funktionieren unabhängig davon. Die weitere Verarbeitung durch
+                  DeepSeek richtet sich nach deren Datenschutzbestimmungen.
+                </li>
+                <li>
+                  <strong>OpenStreetMap-Dienste</strong> (Nominatim und Valhalla,
+                  FOSSGIS e.V., Deutschland) &mdash; Ortssuche und
+                  Fahrzeitberechnung im Chat. Übermittelt wird nur der Ortsname,
+                  den du im Chat nennst, keine personenbezogenen Daten.
                 </li>
                 <li>
                   <strong>PostHog</strong> (EU-Cloud, Frankfurt) &mdash; Statistik
@@ -202,8 +214,9 @@ export default async function DatenschutzPage({
                 <li>Login-Token: max. 30 Minuten oder bis zur Verwendung</li>
                 <li>Login-IP-Logs: max. 24 Stunden (nur für Rate-Limiting)</li>
                 <li>
-                  Chat-Eingaben: nicht bei uns gespeichert; bei Anthropic gemäss
-                  deren Policy (max. 30 Tage)
+                  Chat-Verlauf: auf unserem Server, bis du in der App &bdquo;Neuer
+                  Chat&ldquo; wählst oder dein Konto löschst; dann wird er
+                  gelöscht. Bei DeepSeek gemäss deren Bestimmungen
                 </li>
               </ul>
             </Section>
