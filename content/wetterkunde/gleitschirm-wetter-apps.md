@@ -32,6 +32,14 @@ Wir haben fünf Wetter-Dienste geprüft, die speziell für Gleitschirmpiloten ge
 
 Wingcast ist unser eigenes Produkt, das sagen wir offen. Findest du einen Fehler, schreib uns an info@wingcast.ch, wir korrigieren ihn.
 
+## Was Wingcast anders macht: die Voranalyse
+
+Wingcast ist für **die Voranalyse** da. Die meisten Apps zeigen die einzelnen Faktoren, Wind an einem Ort, Thermik an einem anderen, Föhn in einer dritten Ansicht, und du setzt sie selbst zu einem Bild zusammen. Wingcast nimmt dir diesen Schritt ab: Für jeden Schweizer Startplatz beurteilt es Wind, Böen, Föhn, Gewitter, Regen und Thermik zusammen und fasst sie zu einem **Gesamturteil** zusammen, mit der Flugqualität als Zahl und den Warnhinweisen als Farbe. Dazu kommt jeden Morgen ein Briefing, das die Lage in Worten erklärt.
+
+Ein solches Gesamturteil je Startplatz haben wir bei keinem der fünf anderen Dienste dokumentiert gefunden. Burnair zeigt die Faktoren einzeln: Wind und Böen je Startplatz, die Thermik je Region [2][3]. Paraglidable schätzt eine Flugwahrscheinlichkeit, ohne Gefahren wie Föhn oder Gewitter auszuweisen [17]. Eine tägliche Mail mit der Lage bietet keiner, Burnair meldet sich mit Alarmen, wenn ein Messwert eine Schwelle überschreitet [7].
+
+Für alles, was nach der Voranalyse kommt, sind die anderen Apps die passenden Werkzeuge.
+
 ## Die Apps im Einzelnen
 
 ### Burnair
@@ -78,14 +86,6 @@ Die Grundlage sind die Modelle von MeteoSchweiz (ICON-CH1 und ICON-CH2) und weit
 - **Gut für:** den ersten Überblick am Morgen, Warnhinweise und Flugqualität je Startplatz, Föhn in den Schweizer Tälern.
 - **Weniger geeignet für:** die Feinplanung danach: Ausland, Routen, Live-Werte und Soundings (Details unten).
 
-## Was Wingcast anders macht: die Voranalyse
-
-Wingcast ist für **die Voranalyse** da. Die meisten Apps zeigen die einzelnen Faktoren, Wind an einem Ort, Thermik an einem anderen, Föhn in einer dritten Ansicht, und du setzt sie selbst zu einem Bild zusammen. Wingcast nimmt dir diesen Schritt ab: Für jeden Schweizer Startplatz beurteilt es Wind, Böen, Föhn, Gewitter, Regen und Thermik zusammen und fasst sie zu einem **Gesamturteil** zusammen, mit der Flugqualität als Zahl und den Warnhinweisen als Farbe. Dazu kommt jeden Morgen ein Briefing, das die Lage in Worten erklärt.
-
-Ein solches Gesamturteil je Startplatz haben wir bei keinem der fünf anderen Dienste dokumentiert gefunden. Burnair zeigt die Faktoren einzeln: Wind und Böen je Startplatz, die Thermik je Region [2][3]. Paraglidable schätzt eine Flugwahrscheinlichkeit, ohne Gefahren wie Föhn oder Gewitter auszuweisen [17]. Eine tägliche Mail mit der Lage bietet keiner, Burnair meldet sich mit Alarmen, wenn ein Messwert eine Schwelle überschreitet [7].
-
-Für alles, was nach der Voranalyse kommt, sind die anderen Apps die passenden Werkzeuge.
-
 ## Wo Wingcast nicht reicht
 
 - **Nur die Schweiz.** Für Flüge im Ausland sind Burnair, XC Therm, Meteo-Parapente oder Paraglidable die Wahl.
@@ -98,13 +98,13 @@ Für alles, was nach der Voranalyse kommt, sind die anderen Apps die passenden W
 
 ## Häufige Fragen
 
-**Welche App ist die beste für Gleitschirmflieger in der Schweiz?**
+**Welche App ist die beste für Gleitschirmflieger in der Schweiz?**  
 Keine allein. Jede App hat ihren Schwerpunkt, wie die Matrix oben zeigt. Welche Prognose an einem bestimmten Tag näher an der Wirklichkeit liegt, hängt von der Wetterlage ab. Deshalb lohnt es sich, zwei Quellen nebeneinander zu lesen.
 
-**Brauche ich Wingcast, wenn ich schon Burnair oder XC Therm nutze?**
+**Brauche ich Wingcast, wenn ich schon Burnair oder XC Therm nutze?**  
 Wingcast ersetzt sie nicht. Es macht die Voranalyse: Am Morgen siehst du, welche Startplätze sich für einen genaueren Blick lohnen. Die Feinplanung machst du weiter mit deinen gewohnten Werkzeugen.
 
-**Welche Gleitschirm-Apps nutzen die Modelle von MeteoSchweiz?**
+**Welche Gleitschirm-Apps nutzen die Modelle von MeteoSchweiz?**  
 Laut ihren Angaben Burnair (umschaltbar in den Wetterprognosen), XC Therm für die Windkarten und Wingcast [8][10]. MeteoSchweiz rechnet die Modelle ICON-CH1 und ICON-CH2 selbst [19].
 
 ---
@@ -113,25 +113,25 @@ Stand: 31. Oktober 2026, geprüft am 26. und 31. Oktober. Alle Angaben zu andere
 
 ## Quellen
 
-[1] Burnair, [4D-Startplatzprognosen für alle Startplätze](https://www.burnair.ch/2022/09/13/smarte-4d-startplatzprognosen-fuer-alle-startplaetze/) und [Startplatzprognosen europaweit](https://www.burnair.ch/aktuelles/)
-[2] Burnair, [Erweiterte 4D-Startplatzprognose](https://www.burnair.ch/2024/04/09/erweiterte-4d-startplatz-prognose-2/)
-[3] Burnair Hilfe, [Thermikprognose](https://help.burnair.cloud/hc/de/articles/360017954777) und [4D-Thermik-Prognosen](https://www.burnair.ch/2024/03/12/4d-thermik-prognosen/)
-[4] Burnair Hilfe, [Potenzielle Flugdistanz](https://help.burnair.cloud/hc/de/articles/21153410206749) und [4D-Streckenprognose](https://www.burnair.ch/2023/02/18/4d-streckenprognose/)
-[5] Burnair Hilfe, [Previtemp und Emagramm](https://help.burnair.cloud/hc/de/articles/20347225002397) und [Höhenwind](https://help.burnair.cloud/hc/de/articles/360018354078)
-[6] Burnair, [Druckdifferenzen live](https://www.burnair.ch/2019/12/13/ab-sofort-werden-auf-der-burnair-map-unter-der-ansicht-live-wetter-auch-die-aktuellen-druck-differenzen-angezeigt/) und [Abo-Übersicht](https://www.burnair.ch/abouebersicht/)
-[7] Burnair, [Wind-Alarm](https://www.burnair.ch/2024/05/30/wind-alarm/) und [Wind-Alarm für Südföhn](https://www.burnair.ch/2024/06/14/wind-alarm-suedfoehn/)
-[8] Burnair Hilfe, [Wettermodelle](https://help.burnair.cloud/hc/de/articles/30352127464221)
-[9] XC Therm, [Startseite](https://xctherm.com/en/welcome)
-[10] XC Therm, [FAQ](https://xctherm.com/en/faq)
-[11] SoaringMeteo, [Startseite](https://soaringmeteo.org)
-[12] SoaringMeteo, [Quellcode](https://github.com/soaringmeteo/soaringmeteo)
-[13] Meteo-Parapente, [Das Modell](https://portal.meteo-parapente.com/about/model/)
-[14] Meteo-Parapente, [Datenquellen](https://portal.meteo-parapente.com/about/data-sources/)
-[15] Meteo-Parapente, [Handbuch](https://portal.meteo-parapente.com/help/user-manual/)
-[16] Meteo-Parapente, [App Store](https://apps.apple.com/de/app/meteo-parapente/id1255974302) und [Google Play](https://play.google.com/store/apps/details?id=com.meteo_parapente)
-[17] Paraglidable, [Startseite](https://paraglidable.com)
-[18] Paraglidable, [Quellcode](https://github.com/AntoineMeler/Paraglidable)
-[19] MeteoSchweiz, [ICON-Prognosesysteme](https://www.meteoswiss.admin.ch/weather/warning-and-forecasting-systems/icon-forecasting-systems.html)
-[20] Burnair, [burnair Map: Funktionen](https://www.burnair.ch/portfolio-item/burnair-map/)
+- **[1]** Burnair, [4D-Startplatzprognosen für alle Startplätze](https://www.burnair.ch/2022/09/13/smarte-4d-startplatzprognosen-fuer-alle-startplaetze/) und [Startplatzprognosen europaweit](https://www.burnair.ch/aktuelles/)
+- **[2]** Burnair, [Erweiterte 4D-Startplatzprognose](https://www.burnair.ch/2024/04/09/erweiterte-4d-startplatz-prognose-2/)
+- **[3]** Burnair Hilfe, [Thermikprognose](https://help.burnair.cloud/hc/de/articles/360017954777) und [4D-Thermik-Prognosen](https://www.burnair.ch/2024/03/12/4d-thermik-prognosen/)
+- **[4]** Burnair Hilfe, [Potenzielle Flugdistanz](https://help.burnair.cloud/hc/de/articles/21153410206749) und [4D-Streckenprognose](https://www.burnair.ch/2023/02/18/4d-streckenprognose/)
+- **[5]** Burnair Hilfe, [Previtemp und Emagramm](https://help.burnair.cloud/hc/de/articles/20347225002397) und [Höhenwind](https://help.burnair.cloud/hc/de/articles/360018354078)
+- **[6]** Burnair, [Druckdifferenzen live](https://www.burnair.ch/2019/12/13/ab-sofort-werden-auf-der-burnair-map-unter-der-ansicht-live-wetter-auch-die-aktuellen-druck-differenzen-angezeigt/) und [Abo-Übersicht](https://www.burnair.ch/abouebersicht/)
+- **[7]** Burnair, [Wind-Alarm](https://www.burnair.ch/2024/05/30/wind-alarm/) und [Wind-Alarm für Südföhn](https://www.burnair.ch/2024/06/14/wind-alarm-suedfoehn/)
+- **[8]** Burnair Hilfe, [Wettermodelle](https://help.burnair.cloud/hc/de/articles/30352127464221)
+- **[9]** XC Therm, [Startseite](https://xctherm.com/en/welcome)
+- **[10]** XC Therm, [FAQ](https://xctherm.com/en/faq)
+- **[11]** SoaringMeteo, [Startseite](https://soaringmeteo.org)
+- **[12]** SoaringMeteo, [Quellcode](https://github.com/soaringmeteo/soaringmeteo)
+- **[13]** Meteo-Parapente, [Das Modell](https://portal.meteo-parapente.com/about/model/)
+- **[14]** Meteo-Parapente, [Datenquellen](https://portal.meteo-parapente.com/about/data-sources/)
+- **[15]** Meteo-Parapente, [Handbuch](https://portal.meteo-parapente.com/help/user-manual/)
+- **[16]** Meteo-Parapente, [App Store](https://apps.apple.com/de/app/meteo-parapente/id1255974302) und [Google Play](https://play.google.com/store/apps/details?id=com.meteo_parapente)
+- **[17]** Paraglidable, [Startseite](https://paraglidable.com)
+- **[18]** Paraglidable, [Quellcode](https://github.com/AntoineMeler/Paraglidable)
+- **[19]** MeteoSchweiz, [ICON-Prognosesysteme](https://www.meteoswiss.admin.ch/weather/warning-and-forecasting-systems/icon-forecasting-systems.html)
+- **[20]** Burnair, [burnair Map: Funktionen](https://www.burnair.ch/portfolio-item/burnair-map/)
 
 [Wingcast kostenlos öffnen](https://app.wingcast.ch/?utm_source=blog&utm_medium=wetterkunde&utm_campaign=gleitschirm-wetter-apps)

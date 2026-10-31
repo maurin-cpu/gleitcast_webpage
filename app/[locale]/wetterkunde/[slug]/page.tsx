@@ -19,11 +19,12 @@ import {
 } from "@/lib/schema";
 import { hreflangOf, localePath, localeUrl, socialMetadata } from "@/lib/seo";
 import { resolveArticleOgImage } from "@/lib/og";
-import { AppVergleich } from "@/components/vergleich/AppVergleich";
+import { AppVergleich, AppWofuer } from "@/components/vergleich/AppVergleich";
 
-// Artikel mit eigener Grafik: Der Marker ist die Überschrift direkt nach der Grafik.
+// Artikel mit eigenen Grafiken: je Grafik die Überschrift, vor der sie eingesetzt wird.
 const VERGLEICH_SLUG = "gleitschirm-wetter-apps";
-const VERGLEICH_MARKER = "<h2>Die Apps im Einzelnen</h2>";
+const VERGLEICH_MARKER = "<h2>Was Wingcast anders macht: die Voranalyse</h2>";
+const WOFUER_MARKER = "<h2>Häufige Fragen</h2>";
 
 // Default-Locale ohne Prefix, fr/it mit Prefix (localePrefix: "as-needed").
 function prefixed(locale: string, path: string): string {
@@ -157,19 +158,23 @@ export default async function WetterkundeArtikel({
             <span>{t("lesezeit", { minuten: article.lesezeitMinuten })}</span>
           </p>
 
-          {/* Vergleichsgrafik sitzt vor den Einzelbeschreibungen (Tabelle bewusst ersetzt). */}
-          {article.slug === VERGLEICH_SLUG && article.html.includes(VERGLEICH_MARKER) ? (
-            <>
-              <div
-                className="prose-wingcast mt-10"
-                dangerouslySetInnerHTML={{ __html: article.html.split(VERGLEICH_MARKER)[0] }}
-              />
-              <AppVergleich />
-              <div
-                className="prose-wingcast"
-                dangerouslySetInnerHTML={{ __html: VERGLEICH_MARKER + article.html.split(VERGLEICH_MARKER)[1] }}
-              />
-            </>
+          {/* Vergleich: Matrix vor der Voranalyse, „Welche App wofür?" vor den Fragen. */}
+          {article.slug === VERGLEICH_SLUG &&
+          article.html.includes(VERGLEICH_MARKER) &&
+          article.html.includes(WOFUER_MARKER) ? (
+            (() => {
+              const [teil1, rest] = article.html.split(VERGLEICH_MARKER);
+              const [teil2, teil3] = rest.split(WOFUER_MARKER);
+              return (
+                <>
+                  <div className="prose-wingcast mt-10" dangerouslySetInnerHTML={{ __html: teil1 }} />
+                  <AppVergleich />
+                  <div className="prose-wingcast" dangerouslySetInnerHTML={{ __html: VERGLEICH_MARKER + teil2 }} />
+                  <AppWofuer />
+                  <div className="prose-wingcast" dangerouslySetInnerHTML={{ __html: WOFUER_MARKER + teil3 }} />
+                </>
+              );
+            })()
           ) : (
             <div
               className="prose-wingcast mt-10"

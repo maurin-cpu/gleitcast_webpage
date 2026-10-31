@@ -176,11 +176,10 @@ const APPS: App[] = [
 ];
 
 const WOFUER: Array<{ frage: string; apps: string[] }> = [
-  { frage: "Wie gut und wie riskant ist der Tag an meinen Startplätzen? (Voranalyse)", apps: ["Wingcast"] },
-  { frage: "Wo bin ich im Luftraum, wer fliegt gerade?", apps: ["Burnair"] },
-  { frage: "Was macht der Wind am Start?", apps: ["Burnair"] },
+  { frage: "Wo lohnt sich heute ein genauerer Blick?", apps: ["Wingcast"] },
   { frage: "Wie weit komme ich auf Strecke?", apps: ["Burnair", "XC Therm", "Meteo-Parapente", "Paraglidable"] },
   { frage: "Wie sieht das Höhenprofil aus?", apps: ["Meteo-Parapente", "SoaringMeteo", "Burnair"] },
+  { frage: "Was ist am Start los: Wind, Luftraum, wer fliegt?", apps: ["Burnair"] },
   { frage: "Wie ist es im Ausland?", apps: ["Burnair", "XC Therm", "Meteo-Parapente", "Paraglidable"] },
   { frage: "Wie sieht es in zehn Tagen aus?", apps: ["Paraglidable"] },
 ];
@@ -250,7 +249,7 @@ function MerkmalKarte({ index }: { index: number }) {
         ))}
       </ul>
       {rest.length > 0 && (
-        <p className="mt-auto border-t border-slate-100 pt-3 text-xs leading-snug text-slate-500">
+        <p className="mt-4 border-t border-slate-100 pt-3 text-xs leading-snug text-slate-500">
           <span className="mr-1.5 inline-block align-middle"><Punkt status="unbelegt" /></span>
           Nein oder nicht belegt: {rest.join(", ")}
         </p>
@@ -395,26 +394,31 @@ export function AppVergleich() {
           Was genau steckt hinter jedem Punkt?
           <span aria-hidden="true" className="text-sky-700 transition-transform group-open:rotate-45">+</span>
         </summary>
-        <div className="grid gap-4 border-t border-slate-100 p-4 sm:grid-cols-2 sm:p-5">
+        <div className="grid items-start gap-4 border-t border-slate-100 p-4 sm:grid-cols-2 sm:p-5">
           {GRUPPEN.flatMap((g) => g.indizes).map((i) => (
             <MerkmalKarte key={i} index={i} />
           ))}
         </div>
       </details>
 
-      <h3 className="mt-14 text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">Welche App wofür?</h3>
+    </section>
+  );
+}
+
+/** „Welche App wofür?" als eigener Block, eingesetzt vor den häufigen Fragen. */
+export function AppWofuer() {
+  return (
+    <section aria-labelledby="wofuer-headline" className="my-12">
+      <h2 id="wofuer-headline" className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+        Welche App wofür?
+      </h2>
       <div className="mt-5 grid gap-4 sm:grid-cols-2">
         {WOFUER.map((w) => (
           <div key={w.frage} className="rounded-2xl border border-slate-200 bg-white p-5">
             <p className="font-semibold text-slate-900">{w.frage}</p>
             <ul className="mt-3 flex flex-wrap gap-2">
               {w.apps.map((x) => (
-                <li
-                  key={x}
-                  className={`rounded-full px-3 py-1 text-sm font-medium ${
-                    "bg-slate-100 text-slate-700"
-                  }`}
-                >
+                <li key={x} className="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
                   {x}
                 </li>
               ))}
