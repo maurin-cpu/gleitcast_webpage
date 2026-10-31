@@ -36,7 +36,7 @@ Wingcast ist unser eigenes Produkt, das sagen wir offen. Findest du einen Fehler
 
 Wingcast ist für **die Voranalyse** da. Bei den meisten Apps stehen Wind, Thermik und Gefahren wie Föhn oder Gewitter in verschiedenen Ansichten, und du fügst sie selbst zu einem Bild zusammen. Wingcast nimmt dir diesen Schritt ab: Für jeden Schweizer Startplatz beurteilt es Wind, Böen, Föhn, Gewitter, Regen und Thermik zusammen und fasst sie zu einem **Gesamturteil** zusammen, mit der Flugqualität als Zahl und den Warnhinweisen als Farbe. Dazu kommt jeden Morgen ein Briefing, das die Lage in Worten erklärt. Das Gesamturteil ist eine automatische Einschätzung aus Prognosedaten, keine Flugfreigabe; ob und wo du fliegst, entscheidest du vor Ort.
 
-Ein solches Gesamturteil je Startplatz haben wir bei keinem der fünf anderen Dienste dokumentiert gefunden. Burnair färbt Startplätze nach Wind und Böen; ein Urteil aus mehreren Faktoren wie Thermik, Wind, Basis und Gewitter gibt es dort je Thermikregion, nicht je Startplatz [2][3]. XC Therm und SoaringMeteo verdichten Thermik und Wind zu einer Flugdistanz oder Thermikqualität, ohne Föhn und Regen [10][11]. Paraglidable schätzt eine Flugwahrscheinlichkeit; einzelne Gefahren wie Föhn oder Gewitter sind dort nicht dokumentiert [17]. Eine tägliche Mail mit der Lage bietet keiner, Burnair meldet sich mit Alarmen, wenn ein Messwert eine Schwelle überschreitet [7].
+Ein solches Gesamturteil je Startplatz haben wir bei keinem der fünf anderen Dienste dokumentiert gefunden. Burnair färbt Startplätze nach Wind und Böen; ein Urteil aus mehreren Faktoren wie Thermik, Wind, Basis und Gewitter gibt es dort je Thermikregion, nicht je Startplatz [[2]](https://www.burnair.ch/2024/04/09/erweiterte-4d-startplatz-prognose-2/)[[3]](https://help.burnair.cloud/hc/de/articles/360017954777). XC Therm und SoaringMeteo verdichten Thermik und Wind zu einer Flugdistanz oder Thermikqualität, ohne Föhn und Regen [[10]](https://xctherm.com/en/faq)[[11]](https://soaringmeteo.org). Paraglidable schätzt eine Flugwahrscheinlichkeit; einzelne Gefahren wie Föhn oder Gewitter sind dort nicht dokumentiert [[17]](https://paraglidable.com). Eine tägliche Mail mit der Lage bietet keiner, Burnair meldet sich mit Alarmen, wenn ein Messwert eine Schwelle überschreitet [[7]](https://www.burnair.ch/2024/05/30/wind-alarm/).
 
 Für alles, was nach der Voranalyse kommt, sind die anderen Apps die passenden Werkzeuge.
 
@@ -44,35 +44,35 @@ Für alles, was nach der Voranalyse kommt, sind die anderen Apps die passenden W
 
 ### Burnair
 
-Ein Schweizer Dienst rund um Startplatz, Thermik, Strecke und Live-Werte. Burnair rechnet eine Prognose für über 5'000 Start- und Landeplätze in Europa, fünf Tage voraus, und färbt sie nach Wind und Böen ein [1][2]. Für über 650 Thermikregionen gibt es Steigwerte, Wolkenbasis und Inversionen, und jede Region bekommt je halbe Stunde eine Farbe aus Thermik, Wind, Basis und Bewölkung [3]. Dazu kommen eine potenzielle Flugdistanz je Region, die Burnair selbst als oft nicht verlässlich bezeichnet, ein XC-Planer und eine Streckenprognose [4]. Ein Emagramm für jeden Punkt, Wind auf vielen Höhen, Druckdifferenzen für den Föhn, Live-Wind aus über 15'000 Stationen, Webcams, Live-Tracking, Lufträume mit NOTAM und DABS sowie ein Flugbuch runden das Angebot ab [5][6][7][20]. Als Modelle nennt Burnair ICON-D2, ICON-EU und ICON-CH1/CH2 [8].
+Ein Schweizer Dienst rund um Startplatz, Thermik, Strecke und Live-Werte. Burnair rechnet eine Prognose für über 5'000 Start- und Landeplätze in Europa, fünf Tage voraus, und färbt sie nach Wind und Böen ein [[1]](https://www.burnair.ch/2022/09/13/smarte-4d-startplatzprognosen-fuer-alle-startplaetze/)[[2]](https://www.burnair.ch/2024/04/09/erweiterte-4d-startplatz-prognose-2/). Für über 650 Thermikregionen gibt es Steigwerte, Wolkenbasis und Inversionen, und jede Region bekommt je halbe Stunde eine Farbe aus Thermik, Wind, Basis und Bewölkung [[3]](https://help.burnair.cloud/hc/de/articles/360017954777). Dazu kommen eine potenzielle Flugdistanz je Region, die Burnair selbst als oft nicht verlässlich bezeichnet, ein XC-Planer und eine Streckenprognose [[4]](https://help.burnair.cloud/hc/de/articles/21153410206749). Ein Emagramm für jeden Punkt, Wind auf vielen Höhen, Druckdifferenzen für den Föhn, Live-Wind aus über 15'000 Stationen, Webcams, Live-Tracking, Lufträume mit NOTAM und DABS sowie ein Flugbuch runden das Angebot ab [[5]](https://help.burnair.cloud/hc/de/articles/20347225002397)[[6]](https://www.burnair.ch/2019/12/13/ab-sofort-werden-auf-der-burnair-map-unter-der-ansicht-live-wetter-auch-die-aktuellen-druck-differenzen-angezeigt/)[[7]](https://www.burnair.ch/2024/05/30/wind-alarm/)[[20]](https://www.burnair.ch/portfolio-item/burnair-map/). Als Modelle nennt Burnair ICON-D2, ICON-EU und ICON-CH1/CH2 [[8]](https://help.burnair.cloud/hc/de/articles/30352127464221).
 
 - **Gut für:** Startplatz, Thermik, Strecke, Live-Werte, Föhn und Lufträume.
-- **Weniger geeignet für:** einen Text zum Tag oder eine tägliche Zusammenfassung. Burnair arbeitet mit Farben, Zahlen und Alarmen, die auslösen, wenn ein Wert eine Schwelle überschreitet [7].
+- **Weniger geeignet für:** einen Text zum Tag oder eine tägliche Zusammenfassung. Burnair arbeitet mit Farben, Zahlen und Alarmen, die auslösen, wenn ein Wert eine Schwelle überschreitet [[7]](https://www.burnair.ch/2024/05/30/wind-alarm/).
 
 ### XC Therm
 
-Ein Werkzeug für Streckenflieger. XC Therm rechnet die Thermik für 1'354 Regionen in Europa mit dem Verfahren Regtherm, das früher beim Deutschen Wetterdienst lief, fünf Tage voraus [9][10]. Für jede Region schätzt es eine mögliche Flugdistanz aus Arbeitshöhe, Steigen und Wind. Windkarten gibt es auf 14 Höhen, für die Alpen auch mit ICON-CH1 und ICON-CH2, dazu Hinweise auf Gewitter und Regen in der Detailprognose [9][10]. Die Auswertung lässt sich nach Fluggerät und Pilotenniveau einstellen, ein Archiv reicht bis 2012 zurück, und seit Dezember 2025 gibt es eine Wellenprognose für die Alpen [9][10][21].
+Ein Werkzeug für Streckenflieger. XC Therm rechnet die Thermik für 1'354 Regionen in Europa mit dem Verfahren Regtherm, das früher beim Deutschen Wetterdienst lief, fünf Tage voraus [[9]](https://xctherm.com/en/welcome)[[10]](https://xctherm.com/en/faq). Für jede Region schätzt es eine mögliche Flugdistanz aus Arbeitshöhe, Steigen und Wind. Windkarten gibt es auf 14 Höhen, für die Alpen auch mit ICON-CH1 und ICON-CH2, dazu Hinweise auf Gewitter und Regen in der Detailprognose [[9]](https://xctherm.com/en/welcome)[[10]](https://xctherm.com/en/faq). Die Auswertung lässt sich nach Fluggerät und Pilotenniveau einstellen, ein Archiv reicht bis 2012 zurück, und seit Dezember 2025 gibt es eine Wellenprognose für die Alpen [[9]](https://xctherm.com/en/welcome)[[10]](https://xctherm.com/en/faq)[[21]](https://xctherm.com/en/wave-forecast).
 
 - **Gut für:** Streckenplanung, Steigen und Wolken je Region, Windkarten in vielen Höhen, Wellenflug, Rückblick auf frühere Tage.
-- **Weniger geeignet für:** einzelne Startplätze und Wind- oder Föhnwarnungen, die XC Therm laut eigener Angabe bewusst nicht ausgibt. Föhn, Talwind und Regen fliessen nicht in die Distanz ein [10].
+- **Weniger geeignet für:** einzelne Startplätze und Wind- oder Föhnwarnungen, die XC Therm laut eigener Angabe bewusst nicht ausgibt. Föhn, Talwind und Regen fliessen nicht in die Distanz ein [[10]](https://xctherm.com/en/faq).
 
 ### SoaringMeteo
 
-Ein gemeinnütziges Projekt aus der Schweiz, finanziert durch Spenden, mit eigenen WRF-Läufen in 2 km Auflösung für die Alpen und GFS für die ganze Welt [11][12]. Für jeden Kartenpunkt gibt es Meteogramm und Sounding, auf der Karte eine Thermikqualität von 0 bis 100 %. Dazu kommen Lernunterlagen, unter anderem zur Schweizer Theorieprüfung [11].
+Ein gemeinnütziges Projekt aus der Schweiz, finanziert durch Spenden, mit eigenen WRF-Läufen in 2 km Auflösung für die Alpen und GFS für die ganze Welt [[11]](https://soaringmeteo.org)[[12]](https://github.com/soaringmeteo/soaringmeteo). Für jeden Kartenpunkt gibt es Meteogramm und Sounding, auf der Karte eine Thermikqualität von 0 bis 100 %. Dazu kommen Lernunterlagen, unter anderem zur Schweizer Theorieprüfung [[11]](https://soaringmeteo.org).
 
 - **Gut für:** Thermik und Sounding für einen beliebigen Punkt, Lernen.
 - **Weniger geeignet für:** Startplätze, Föhn und Live-Werte, die dort nicht dokumentiert sind.
 
 ### Meteo-Parapente
 
-Ein Europa-Dienst mit eigenem Wettermodell in 2,5 km Auflösung, bis fünf Tage voraus [13][14]. Stark sind die Darstellungen in der Höhe: Thermikstärke, Grenzschicht und Wind in 250-Meter-Stufen, Windgramm und Sounding für jeden gewählten Ort [15]. Die Startplätze stammen von ParaglidingEarth [14]. Die App enthält zudem einen XC-Planer für Strecken [16].
+Ein Europa-Dienst mit eigenem Wettermodell in 2,5 km Auflösung, bis fünf Tage voraus [[13]](https://portal.meteo-parapente.com/about/model/)[[14]](https://portal.meteo-parapente.com/about/data-sources/). Stark sind die Darstellungen in der Höhe: Thermikstärke, Grenzschicht und Wind in 250-Meter-Stufen, Windgramm und Sounding für jeden gewählten Ort [[15]](https://portal.meteo-parapente.com/help/user-manual/). Die Startplätze stammen von ParaglidingEarth [[14]](https://portal.meteo-parapente.com/about/data-sources/). Die App enthält zudem einen XC-Planer für Strecken [[16]](https://apps.apple.com/de/app/meteo-parapente/id1255974302).
 
 - **Gut für:** das Höhenprofil über einem Ort, ein zweites, unabhängiges Modell, Streckenplanung.
 - **Weniger geeignet für:** eine automatische Einordnung der Tage, die dort nicht dokumentiert ist.
 
 ### Paraglidable
 
-Ein offenes Projekt, das aus Wettermodellen und gemeldeten Flügen schätzt, wie wahrscheinlich geflogen wird, auch auf Strecke, für Kartenzellen und für benannte Startplätze [17][18]. Laut eigener Angabe beruht die Schätzung auf rund 2 Millionen gemeldeten Flügen [17]. Die Karte reicht zehn Tage weit und deckt Europa ab.
+Ein offenes Projekt, das aus Wettermodellen und gemeldeten Flügen schätzt, wie wahrscheinlich geflogen wird, auch auf Strecke, für Kartenzellen und für benannte Startplätze [[17]](https://paraglidable.com)[[18]](https://github.com/AntoineMeler/Paraglidable). Laut eigener Angabe beruht die Schätzung auf rund 2 Millionen gemeldeten Flügen [[17]](https://paraglidable.com). Die Karte reicht zehn Tage weit und deckt Europa ab.
 
 - **Gut für:** einen schnellen Überblick über viele Tage und ganz Europa.
 - **Weniger geeignet für:** Thermik- oder Windwerte im Detail, die dort nicht dokumentiert sind. Die Oberfläche ist englisch.
@@ -105,7 +105,7 @@ Keine allein. Jede App hat ihren Schwerpunkt, wie die Matrix oben zeigt. Welche 
 Wingcast ersetzt sie nicht. Es macht die Voranalyse: Am Morgen siehst du, welche Startplätze sich für einen genaueren Blick lohnen. Die Feinplanung machst du weiter mit deinen gewohnten Werkzeugen.
 
 **Welche Gleitschirm-Apps nutzen die Modelle von MeteoSchweiz?**  
-Laut ihren Angaben Burnair (umschaltbar in den Wetterprognosen), XC Therm für die Windkarten und Wingcast [8][10]. MeteoSchweiz rechnet die Modelle ICON-CH1 und ICON-CH2 selbst [19].
+Laut ihren Angaben Burnair (umschaltbar in den Wetterprognosen), XC Therm für die Windkarten und Wingcast [[8]](https://help.burnair.cloud/hc/de/articles/30352127464221)[[10]](https://xctherm.com/en/faq). MeteoSchweiz rechnet die Modelle ICON-CH1 und ICON-CH2 selbst [[19]](https://www.meteoswiss.admin.ch/weather/warning-and-forecasting-systems/icon-forecasting-systems.html).
 
 ---
 
