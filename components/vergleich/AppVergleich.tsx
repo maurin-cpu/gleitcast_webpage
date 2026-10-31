@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 // Grafischer Vergleich der Flugwetter-Apps (Artikel gleitschirm-wetter-apps).
 // Bewusst ohne Tabelle: Karten und Farbpunkte brechen auf dem Handy in eine
 // Spalte um, damit nie seitlich gescrollt werden muss. Jeder Status hat zusätzlich
@@ -21,14 +23,26 @@ type App = {
 
 const MERKMAL_LABELS = [
   "Prognose je Startplatz",
-  "Einordnung nach Werten",
-  "Text in Klartext",
-  "Tägliche Mail",
+  "Thermik und Steigwerte",
+  "Sounding oder Emagramm",
+  "Höhenwind",
   "Föhn",
-  "Thermik und Höhe",
   "Streckenplanung",
-  "Live-Messwerte",
+  "Live-Wind und Webcams",
+  "Live-Tracking",
+  "Lufträume",
+  "Flugqualität und Gefahren je Startplatz",
+  "Morgenbriefing mit Erklärung",
 ] as const;
+
+// Gruppen der Matrix (Indizes in MERKMAL_LABELS). Ehrlich gewichtet: Planung und
+// Flugtag zeigen, wo andere Apps mehr bieten; die Voranalyse ist der eine Punkt,
+// den Wingcast anders macht (User 31.10.).
+const GRUPPEN: Array<{ titel: string; indizes: number[] }> = [
+  { titel: "Planung", indizes: [0, 1, 2, 3, 4, 5] },
+  { titel: "Am Flugtag", indizes: [6, 7, 8] },
+  { titel: "Voranalyse", indizes: [9, 10] },
+];
 
 const APPS: App[] = [
   {
@@ -40,13 +54,16 @@ const APPS: App[] = [
     sprachen: "8 Sprachen",
     merkmale: [
       { label: MERKMAL_LABELS[0], status: "ja", detail: "über 5'000 Plätze, 5 Tage" },
-      { label: MERKMAL_LABELS[1], status: "ja", detail: "Regionen nach Thermik, Startplätze nach Wind" },
-      { label: MERKMAL_LABELS[2], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[3], status: "nein", detail: "Alarme bei Schwellenwerten" },
+      { label: MERKMAL_LABELS[1], status: "ja", detail: "654 Thermikregionen, Steigwerte, Basis" },
+      { label: MERKMAL_LABELS[2], status: "ja", detail: "Emagramm an jedem Punkt" },
+      { label: MERKMAL_LABELS[3], status: "ja", detail: "10 m bis 4000 m" },
       { label: MERKMAL_LABELS[4], status: "ja", detail: "Druckdifferenz live und Prognose, Alarm" },
-      { label: MERKMAL_LABELS[5], status: "ja", detail: "Steigen, Basis, Emagramm" },
-      { label: MERKMAL_LABELS[6], status: "ja", detail: "Flugdistanz, XC-Planer" },
-      { label: MERKMAL_LABELS[7], status: "ja", detail: "über 15'000 Stationen, Webcams" },
+      { label: MERKMAL_LABELS[5], status: "ja", detail: "Flugdistanz, XC-Planer, Streckenprognose" },
+      { label: MERKMAL_LABELS[6], status: "ja", detail: "über 15'000 Stationen, Webcams" },
+      { label: MERKMAL_LABELS[7], status: "ja", detail: "App, Skytraxx, Flymaster und weitere" },
+      { label: MERKMAL_LABELS[8], status: "ja", detail: "Lufträume mit NOTAM und DABS" },
+      { label: MERKMAL_LABELS[9], status: "teils", detail: "Startplätze nach Wind, Thermik je Region" },
+      { label: MERKMAL_LABELS[10], status: "nein", detail: "Alarme bei Schwellenwerten" },
     ],
   },
   {
@@ -58,13 +75,16 @@ const APPS: App[] = [
     sprachen: "DE, EN, FR, IT",
     merkmale: [
       { label: MERKMAL_LABELS[0], status: "nein", detail: "Regionen und Raster" },
-      { label: MERKMAL_LABELS[1], status: "ja", detail: "mögliche Flugdistanz" },
-      { label: MERKMAL_LABELS[2], status: "teils", detail: "Textansicht je Region" },
-      { label: MERKMAL_LABELS[3], status: "nein", detail: "Gewitterhinweise in der Prognose" },
+      { label: MERKMAL_LABELS[1], status: "ja", detail: "Steigen, Wolken je Region" },
+      { label: MERKMAL_LABELS[2], status: "unbelegt", detail: "" },
+      { label: MERKMAL_LABELS[3], status: "ja", detail: "Windkarten auf 14 Höhen" },
       { label: MERKMAL_LABELS[4], status: "teils", detail: "in den Windkarten erkennbar" },
-      { label: MERKMAL_LABELS[5], status: "ja", detail: "Steigen, Wolken, Wind auf 14 Höhen" },
-      { label: MERKMAL_LABELS[6], status: "ja", detail: "Flugdistanz, Flugplaner" },
+      { label: MERKMAL_LABELS[5], status: "ja", detail: "Flugdistanz, Flugplaner" },
+      { label: MERKMAL_LABELS[6], status: "unbelegt", detail: "" },
       { label: MERKMAL_LABELS[7], status: "unbelegt", detail: "" },
+      { label: MERKMAL_LABELS[8], status: "unbelegt", detail: "" },
+      { label: MERKMAL_LABELS[9], status: "teils", detail: "Flugdistanz je Region" },
+      { label: MERKMAL_LABELS[10], status: "nein", detail: "Textansicht je Region, keine Mail" },
     ],
   },
   {
@@ -76,13 +96,16 @@ const APPS: App[] = [
     sprachen: "8 Sprachen",
     merkmale: [
       { label: MERKMAL_LABELS[0], status: "nein", detail: "beliebiger Kartenpunkt" },
-      { label: MERKMAL_LABELS[1], status: "ja", detail: "Thermikqualität 0 bis 100" },
-      { label: MERKMAL_LABELS[2], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[3], status: "unbelegt", detail: "" },
+      { label: MERKMAL_LABELS[1], status: "ja", detail: "Steigen, Thermikqualität" },
+      { label: MERKMAL_LABELS[2], status: "ja", detail: "Sounding an jedem Punkt" },
+      { label: MERKMAL_LABELS[3], status: "ja", detail: "bis 4000 m" },
       { label: MERKMAL_LABELS[4], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[5], status: "ja", detail: "Emagramm, Steigen" },
+      { label: MERKMAL_LABELS[5], status: "unbelegt", detail: "" },
       { label: MERKMAL_LABELS[6], status: "unbelegt", detail: "" },
       { label: MERKMAL_LABELS[7], status: "unbelegt", detail: "" },
+      { label: MERKMAL_LABELS[8], status: "unbelegt", detail: "" },
+      { label: MERKMAL_LABELS[9], status: "teils", detail: "Thermikqualität auf der Karte" },
+      { label: MERKMAL_LABELS[10], status: "unbelegt", detail: "" },
     ],
   },
   {
@@ -94,13 +117,16 @@ const APPS: App[] = [
     sprachen: "17 Sprachen (App)",
     merkmale: [
       { label: MERKMAL_LABELS[0], status: "teils", detail: "Orte von ParaglidingEarth" },
-      { label: MERKMAL_LABELS[1], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[2], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[3], status: "unbelegt", detail: "" },
+      { label: MERKMAL_LABELS[1], status: "ja", detail: "Thermikstärke, Grenzschicht" },
+      { label: MERKMAL_LABELS[2], status: "ja", detail: "Sounding, Windgramm" },
+      { label: MERKMAL_LABELS[3], status: "ja", detail: "250-m-Stufen" },
       { label: MERKMAL_LABELS[4], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[5], status: "ja", detail: "Windgramm, Sounding" },
-      { label: MERKMAL_LABELS[6], status: "ja", detail: "XC-Planer" },
+      { label: MERKMAL_LABELS[5], status: "ja", detail: "XC-Planer" },
+      { label: MERKMAL_LABELS[6], status: "unbelegt", detail: "" },
       { label: MERKMAL_LABELS[7], status: "unbelegt", detail: "" },
+      { label: MERKMAL_LABELS[8], status: "unbelegt", detail: "" },
+      { label: MERKMAL_LABELS[9], status: "unbelegt", detail: "" },
+      { label: MERKMAL_LABELS[10], status: "unbelegt", detail: "" },
     ],
   },
   {
@@ -112,38 +138,45 @@ const APPS: App[] = [
     sprachen: "EN",
     merkmale: [
       { label: MERKMAL_LABELS[0], status: "ja", detail: "benannte Startplätze" },
-      { label: MERKMAL_LABELS[1], status: "ja", detail: "Wahrscheinlichkeit" },
+      { label: MERKMAL_LABELS[1], status: "unbelegt", detail: "" },
       { label: MERKMAL_LABELS[2], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[3], status: "nein", detail: "" },
+      { label: MERKMAL_LABELS[3], status: "unbelegt", detail: "" },
       { label: MERKMAL_LABELS[4], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[5], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[6], status: "teils", detail: "Wahrscheinlichkeit für Strecke" },
-      { label: MERKMAL_LABELS[7], status: "nein", detail: "" },
+      { label: MERKMAL_LABELS[5], status: "teils", detail: "Wahrscheinlichkeit für Strecke" },
+      { label: MERKMAL_LABELS[6], status: "nein", detail: "" },
+      { label: MERKMAL_LABELS[7], status: "unbelegt", detail: "" },
+      { label: MERKMAL_LABELS[8], status: "unbelegt", detail: "" },
+      { label: MERKMAL_LABELS[9], status: "teils", detail: "eine Flugwahrscheinlichkeit, Gefahren nicht getrennt" },
+      { label: MERKMAL_LABELS[10], status: "nein", detail: "" },
     ],
   },
   {
     name: "Wingcast",
     gebiet: "Schweiz",
     reichweite: 1,
-    fokus: "Karte: wo es heute passt, plus Morgenmail",
+    fokus: "Voranalyse: Flugqualität und Gefahren",
     plattform: "Web-App, Mail",
     sprachen: "DE, EN",
     eigene: true,
     merkmale: [
-      { label: MERKMAL_LABELS[0], status: "ja", detail: "Karte aller Schweizer Startplätze, 3 Tage" },
-      { label: MERKMAL_LABELS[1], status: "ja", detail: "Warnhinweise und Flugqualität 1 bis 5 getrennt" },
-      { label: MERKMAL_LABELS[2], status: "ja", detail: "Begründung je Startplatz" },
-      { label: MERKMAL_LABELS[3], status: "ja", detail: "06:00, Regionen wählbar" },
+      { label: MERKMAL_LABELS[0], status: "ja", detail: "alle Schweizer Startplätze, 3 Tage" },
+      { label: MERKMAL_LABELS[1], status: "ja", detail: "Steigen, Basis" },
+      { label: MERKMAL_LABELS[2], status: "nein", detail: "" },
+      { label: MERKMAL_LABELS[3], status: "ja", detail: "Start bis 3000 m darüber" },
       { label: MERKMAL_LABELS[4], status: "ja", detail: "Talstationen und Druck" },
-      { label: MERKMAL_LABELS[5], status: "ja", detail: "Basis, Höhenwind" },
-      { label: MERKMAL_LABELS[6], status: "teils", detail: "Streckenflug-Rating je Startplatz" },
-      { label: MERKMAL_LABELS[7], status: "nein", detail: "nicht in der Anzeige" },
+      { label: MERKMAL_LABELS[5], status: "teils", detail: "Streckenflug-Rating, keine Route" },
+      { label: MERKMAL_LABELS[6], status: "nein", detail: "" },
+      { label: MERKMAL_LABELS[7], status: "nein", detail: "" },
+      { label: MERKMAL_LABELS[8], status: "nein", detail: "" },
+      { label: MERKMAL_LABELS[9], status: "ja", detail: "Flugqualität 1 bis 5 und Gefahren aus 8 Aspekten" },
+      { label: MERKMAL_LABELS[10], status: "ja", detail: "06:00, Regionen wählbar" },
     ],
   },
 ];
 
 const WOFUER: Array<{ frage: string; apps: string[] }> = [
-  { frage: "Wo lohnt sich heute ein genauerer Blick? (Voranalyse)", apps: ["Wingcast"] },
+  { frage: "Wie gut und wie riskant ist der Tag an meinen Startplätzen? (Voranalyse)", apps: ["Wingcast"] },
+  { frage: "Wo bin ich im Luftraum, wer fliegt gerade?", apps: ["Burnair"] },
   { frage: "Was macht der Wind am Start?", apps: ["Burnair"] },
   { frage: "Wie weit komme ich auf Strecke?", apps: ["Burnair", "XC Therm", "Meteo-Parapente", "Paraglidable"] },
   { frage: "Wie sieht das Höhenprofil aus?", apps: ["Meteo-Parapente", "SoaringMeteo", "Burnair"] },
@@ -173,13 +206,16 @@ const WORT: Record<Status, string> = {
 // Kurze Erklärung je Merkmal, in derselben Reihenfolge wie MERKMAL_LABELS.
 const MERKMAL_TEXT = [
   "Vorhersage für einen bestimmten Startplatz, nicht nur ein Kartenraster.",
-  "Die App sortiert oder färbt Tage, Regionen oder Startplätze automatisch.",
-  "Ein Text, der beschreibt, was die Werte zeigen.",
-  "Die Lage kommt jeden Morgen von selbst, ohne dass du nachschaust.",
+  "Steigwerte, Wolkenbasis oder Thermikkarten.",
+  "Vertikales Profil der Atmosphäre über einem Ort.",
+  "Wind in mehreren Höhen.",
   "Eigene Angaben zum Föhn.",
-  "Thermik, Wolkenbasis, Höhenwind oder Sounding.",
   "Distanz schätzen oder eine Route planen.",
-  "Gemessene Werte von Stationen, nicht nur Prognose.",
+  "Gemessener Wind von Stationen und Bilder von Webcams.",
+  "Andere Piloten live auf der Karte.",
+  "Lufträume und Sperrgebiete auf der Karte.",
+  "Für jeden Startplatz eine Einschätzung, wie gut sich der Tag eignet und welche Gefahren die Daten zeigen.",
+  "Jeden Morgen eine Mail, die die Lage in Worten erklärt.",
 ];
 
 /** Karte je Merkmal: wer es hat (ja), wer teilweise, wer nicht oder unbelegt. */
@@ -257,7 +293,8 @@ function ZeilenKopf({ children }: { children: React.ReactNode }) {
   return (
     <th
       scope="row"
-      className="border-t border-slate-100 py-2.5 pr-2 text-left text-[13px] font-medium leading-tight text-slate-800 sm:text-sm"
+      lang="de"
+      className="hyphens-auto border-t border-slate-100 py-2.5 pr-2 text-left text-[13px] font-medium leading-tight text-slate-800 sm:text-sm"
     >
       {children}
     </th>
@@ -329,13 +366,26 @@ export function AppVergleich() {
                 <PunktZelle key={a.name} app={a} status={KOPF[a.name].app} detail={KOPF[a.name].appDetail} />
               ))}
             </tr>
-            {MERKMAL_LABELS.map((label, i) => (
-              <tr key={label}>
-                <ZeilenKopf>{label}</ZeilenKopf>
-                {APPS.map((a) => (
-                  <PunktZelle key={a.name} app={a} status={a.merkmale[i].status} detail={a.merkmale[i].detail} />
+            {GRUPPEN.map((g) => (
+              <Fragment key={g.titel}>
+                <tr>
+                  <th
+                    colSpan={APPS.length + 1}
+                    scope="colgroup"
+                    className="pb-1 pt-6 text-left text-xs font-semibold uppercase tracking-wider text-sky-700"
+                  >
+                    {g.titel}
+                  </th>
+                </tr>
+                {g.indizes.map((i) => (
+                  <tr key={MERKMAL_LABELS[i]}>
+                    <ZeilenKopf>{MERKMAL_LABELS[i]}</ZeilenKopf>
+                    {APPS.map((a) => (
+                      <PunktZelle key={a.name} app={a} status={a.merkmale[i].status} detail={a.merkmale[i].detail} />
+                    ))}
+                  </tr>
                 ))}
-              </tr>
+              </Fragment>
             ))}
           </tbody>
         </table>
