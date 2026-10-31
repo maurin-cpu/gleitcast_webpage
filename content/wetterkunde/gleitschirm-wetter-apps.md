@@ -24,7 +24,7 @@ schema:
 
 # Gleitschirm-Wetter-Apps im Vergleich: was welche App kann
 
-> **TL;DR:** Es gibt nicht die beste Gleitschirm-Wetter-App, sondern Werkzeuge für verschiedene Fragen. **Burnair** ist die umfassendste: Startplätze, Thermik, Strecke, Live-Werte und Föhn in einer App. **XC Therm** ist auf Thermik und Strecke spezialisiert, **SoaringMeteo** auf Thermik und Sounding für jeden Punkt, **Meteo-Parapente** auf das Höhenprofil mit eigenem Modell, **Paraglidable** auf eine Flugwahrscheinlichkeit für zehn Tage. **Wingcast** zeigt auf einer Karte aller Schweizer Startplätze auf einen Blick, wo es laut Prognose passt und wo Warnhinweise bestehen, und schickt dir jeden Morgen die Lage für deine Regionen. Die Grafik unten zeigt, was jede App dokumentiert.
+> **TL;DR:** Es gibt nicht die beste Gleitschirm-Wetter-App, sondern Werkzeuge für verschiedene Fragen. **Burnair** ist die umfassendste: Startplätze, Thermik, Strecke, Live-Werte und Föhn in einer App. **XC Therm** ist auf Thermik und Strecke spezialisiert, **SoaringMeteo** auf Thermik und Sounding für jeden Punkt, **Meteo-Parapente** auf das Höhenprofil mit eigenem Modell, **Paraglidable** auf eine Flugwahrscheinlichkeit für zehn Tage. **Wingcast** macht den Schritt davor: eine Voranalyse aller Schweizer Startplätze, damit du siehst, wo sich ein genauerer Blick lohnt. Die Grafik unten zeigt, was jede App dokumentiert.
 
 ## Wie wir verglichen haben
 
@@ -57,36 +57,36 @@ Ein gemeinnütziges Projekt aus der Schweiz, finanziert durch Spenden, mit eigen
 
 ### Meteo-Parapente
 
-Ein Europa-Dienst mit eigenem Wettermodell in 2,5 km Auflösung, bis fünf Tage voraus, das laut Anbieter mit KI an ein Globalmodell angeglichen wird [13][14]. Stark sind die Darstellungen in der Höhe: Thermikstärke, Grenzschicht und Wind in 250-Meter-Stufen, Windgramm und Sounding für jeden gewählten Ort [15]. Die Startplätze stammen von ParaglidingEarth [14]. Die App enthält zudem einen XC-Planer für Strecken [16].
+Ein Europa-Dienst mit eigenem Wettermodell in 2,5 km Auflösung, bis fünf Tage voraus [13][14]. Stark sind die Darstellungen in der Höhe: Thermikstärke, Grenzschicht und Wind in 250-Meter-Stufen, Windgramm und Sounding für jeden gewählten Ort [15]. Die Startplätze stammen von ParaglidingEarth [14]. Die App enthält zudem einen XC-Planer für Strecken [16].
 
 - **Gut für:** das Höhenprofil über einem Ort, ein zweites, unabhängiges Modell, Streckenplanung.
 - **Weniger geeignet für:** eine automatische Einordnung der Tage, die nicht dokumentiert ist. Die iOS-App wurde laut App Store zuletzt 2019 aktualisiert [16].
 
 ### Paraglidable
 
-Ein offenes Projekt, das mit einem neuronalen Netz aus Wettermodellen schätzt, wie wahrscheinlich geflogen wird, auch auf Strecke, für Kartenzellen und für benannte Startplätze [17][18]. Laut eigener Angabe ist das Netz mit rund 2 Millionen gemeldeten Flügen trainiert [17]. Die Karte reicht zehn Tage weit und deckt Europa ab.
+Ein offenes Projekt, das aus Wettermodellen und gemeldeten Flügen schätzt, wie wahrscheinlich geflogen wird, auch auf Strecke, für Kartenzellen und für benannte Startplätze [17][18]. Laut eigener Angabe beruht die Schätzung auf rund 2 Millionen gemeldeten Flügen [17]. Die Karte reicht zehn Tage weit und deckt Europa ab.
 
 - **Gut für:** einen schnellen Überblick über viele Tage und ganz Europa.
 - **Weniger geeignet für:** Thermik- oder Windwerte im Detail. Die Oberfläche ist nur englisch.
 
 ### Wingcast
 
-Wingcast besteht aus zwei Teilen: einer App und einer Morgenmail. Die App zeigt alle Schweizer Startplätze auf einer Karte, für heute, morgen und übermorgen. Jede Markierung zeigt zwei Dinge getrennt: Die **Farbe** sagt, ob es Warnhinweise gibt, zusammengefasst aus acht Aspekten wie Bodenwind, Böen, Höhenwind, Föhn, Regen und Gewitter. Dabei zählt der schwächste Aspekt. Die **Zahl** von 1 bis 5 beschreibt die Flugqualität, vom Abgleiter bis zum Streckenflugtag. Dazu kommen ein Streckenflug-Rating pro Startplatz und ein Text in Klartext, der die Einordnung begründet. Die Morgenmail bringt dir jeden Morgen um 6 Uhr die Lage für die Regionen und Wochentage, die du gewählt hast.
+Wingcast macht eine **Voranalyse**: Bevor du in die Details gehst, hat Wingcast alle Schweizer Startplätze für heute, morgen und übermorgen eingeordnet. Die App zeigt das auf einer Karte. Jede Markierung zeigt zwei Dinge getrennt: Die **Farbe** sagt, ob es Warnhinweise gibt, zusammengefasst aus acht Aspekten wie Bodenwind, Böen, Höhenwind, Föhn, Regen und Gewitter. Die **Zahl** von 1 bis 5 beschreibt die Flugqualität, vom Abgleiter bis zum Streckenflugtag. Ein kurzer Text begründet die Einordnung. Die Morgenmail bringt dir die Voranalyse jeden Morgen um 6 Uhr für die Regionen und Wochentage, die du gewählt hast.
 
-Die Grundlage sind die Modelle von MeteoSchweiz (ICON-CH1 und ICON-CH2) und weitere Modelle. Thermikbasis, Höhenwind, Föhn und Regen berechnet der Code. Harte Grenzen wie Föhndurchbruch oder Gewitter setzen den Startplatz auf schwere Warnhinweise, auch wenn der Rest gut aussieht. Die App nennt ihre bekannten Grenzen offen, etwa beim Föhn in inneralpinen Tälern. Ob und wo du fliegst, entscheidest du selbst.
+Die Grundlage sind die Modelle von MeteoSchweiz (ICON-CH1 und ICON-CH2) und weitere Modelle. Thermikbasis, Höhenwind, Föhn und Regen berechnet der Code. Die App nennt ihre bekannten Grenzen offen, etwa beim Föhn in inneralpinen Tälern. Ob und wo du fliegst, entscheidest du selbst.
 
-- **Gut für:** auf einen Blick sehen, wo es in der Schweiz passt, Warnhinweise und Flugqualität getrennt, Föhn in den Schweizer Tälern, die Lage am Morgen ohne Suchen.
-- **Weniger geeignet für:** Flüge im Ausland, Routenplanung, Live-Werte und Soundings (Details unten).
+- **Gut für:** den ersten Überblick am Morgen, Warnhinweise und Flugqualität je Startplatz, Föhn in den Schweizer Tälern.
+- **Weniger geeignet für:** die Feinplanung danach: Ausland, Routen, Live-Werte und Soundings (Details unten).
 
-## Wo Wingcast anders ist
+## Was Wingcast anders macht: die Voranalyse
 
-Bei keinem der fünf anderen Dienste haben wir diese drei Dinge dokumentiert gefunden:
+Die anderen Apps sind Werkzeuge, mit denen du die Daten selbst liest. Wingcast ersetzt sie nicht, sondern macht den Schritt davor: Es sieht für dich alle Schweizer Startplätze durch und zeigt, wo sich ein genauerer Blick lohnt. Diese Voranalyse haben wir bei keinem der fünf anderen Dienste dokumentiert gefunden. Sie besteht aus drei Teilen:
 
-1. **Warnhinweise und Flugqualität getrennt, für jeden Startplatz.** Eine Farbe für die Warnhinweise aus acht Aspekten, eine Zahl für die Flugqualität. Burnair färbt Startplätze nach Wind und Böen und bewertet die Thermik je Region [2][3]. Paraglidable gibt pro Startplatz eine einzige Wahrscheinlichkeit an [17].
-2. **Ein Text in Klartext für jeden Startplatz.** Nicht nur Farben oder Zahlen, sondern ein Text, der begründet, was Wind, Thermik und Föhn an diesem Startplatz zeigen. XC Therm bietet eine Textansicht, aber je Region [9].
-3. **Die Lage kommt zu dir.** Eine tägliche Mail mit der Lage für deine Regionen. Burnair bietet Alarme, wenn ein Messwert eine Schwelle überschreitet, aber keine tägliche Zusammenfassung [7].
+1. **Jeder Startplatz ist eingeordnet,** mit Warnhinweisen und Flugqualität getrennt. Burnair färbt Startplätze nach Wind und Böen und bewertet die Thermik je Region [2][3], Paraglidable schätzt eine Flugwahrscheinlichkeit [17].
+2. **Jede Einordnung ist begründet,** in einem kurzen Text je Startplatz. XC Therm bietet eine Textansicht je Region [9].
+3. **Die Voranalyse kommt zu dir,** jeden Morgen als Mail. Burnair bietet Alarme, wenn ein Messwert eine Schwelle überschreitet [7].
 
-Bei Föhn ist Wingcast nicht allein: Burnair zeigt Druckdifferenzen live und als Prognose und bietet einen Föhn-Alarm [6][7].
+Für die Feinplanung danach sind die anderen Apps oft die bessere Wahl, wie die Liste unten zeigt.
 
 ## Wo Wingcast nicht reicht
 
@@ -104,13 +104,10 @@ Bei Föhn ist Wingcast nicht allein: Burnair zeigt Druckdifferenzen live und als
 Keine allein. Burnair deckt am meisten ab, die anderen sind in einzelnen Bereichen spezialisiert. Welche Prognose an einem bestimmten Tag näher an der Wirklichkeit liegt, hängt von der Wetterlage ab. Deshalb lohnt es sich, zwei Quellen nebeneinander zu lesen.
 
 **Brauche ich Wingcast, wenn ich schon Burnair oder XC Therm nutze?**
-Wingcast ersetzt sie nicht. Es zeigt dir auf einen Blick, wo es in der Schweiz passt, mit Warnhinweisen und Flugqualität getrennt, und schickt dir am Morgen die Lage für deine Regionen. Die Feinplanung machst du weiter mit deinen gewohnten Werkzeugen.
+Wingcast ersetzt sie nicht. Es macht die Voranalyse: Am Morgen siehst du, welche Startplätze sich für einen genaueren Blick lohnen. Die Feinplanung machst du weiter mit deinen gewohnten Werkzeugen.
 
 **Welche Gleitschirm-Apps nutzen die Modelle von MeteoSchweiz?**
 Laut ihren Angaben Burnair (umschaltbar in den Wetterprognosen), XC Therm für die Windkarten und Wingcast [8][10]. MeteoSchweiz rechnet die Modelle ICON-CH1 und ICON-CH2 selbst [19].
-
-**Gibt es eine Gleitschirm-Wetter-App mit künstlicher Intelligenz?**
-Paraglidable schätzt die Flugwahrscheinlichkeit mit einem neuronalen Netz [17]. Meteo-Parapente gleicht sein Modell laut eigener Angabe mit KI an ein Globalmodell an [13]. Wingcast formuliert die Texte je Startplatz aus den gerechneten Werten.
 
 ---
 

@@ -28,30 +28,9 @@ const MERKMAL_LABELS = [
   "Thermik und Höhe",
   "Streckenplanung",
   "Live-Messwerte",
-  "KI",
 ] as const;
 
 const APPS: App[] = [
-  {
-    name: "Wingcast",
-    gebiet: "Schweiz",
-    reichweite: 1,
-    fokus: "Karte: wo es heute passt, plus Morgenmail",
-    plattform: "Web-App, Mail",
-    sprachen: "DE, EN",
-    eigene: true,
-    merkmale: [
-      { label: MERKMAL_LABELS[0], status: "ja", detail: "Karte aller Schweizer Startplätze, 3 Tage" },
-      { label: MERKMAL_LABELS[1], status: "ja", detail: "Warnhinweise und Flugqualität 1 bis 5 getrennt" },
-      { label: MERKMAL_LABELS[2], status: "ja", detail: "Begründung je Startplatz" },
-      { label: MERKMAL_LABELS[3], status: "ja", detail: "06:00, Regionen wählbar" },
-      { label: MERKMAL_LABELS[4], status: "ja", detail: "Talstationen und Druck" },
-      { label: MERKMAL_LABELS[5], status: "ja", detail: "Basis, Höhenwind" },
-      { label: MERKMAL_LABELS[6], status: "teils", detail: "Streckenflug-Rating je Startplatz" },
-      { label: MERKMAL_LABELS[7], status: "nein", detail: "nicht in der Anzeige" },
-      { label: MERKMAL_LABELS[8], status: "ja", detail: "Texte; ChatGPT und Claude" },
-    ],
-  },
   {
     name: "Burnair",
     gebiet: "Europa",
@@ -68,7 +47,6 @@ const APPS: App[] = [
       { label: MERKMAL_LABELS[5], status: "ja", detail: "Steigen, Basis, Emagramm" },
       { label: MERKMAL_LABELS[6], status: "ja", detail: "Flugdistanz, XC-Planer" },
       { label: MERKMAL_LABELS[7], status: "ja", detail: "über 15'000 Stationen, Webcams" },
-      { label: MERKMAL_LABELS[8], status: "unbelegt", detail: "" },
     ],
   },
   {
@@ -87,7 +65,6 @@ const APPS: App[] = [
       { label: MERKMAL_LABELS[5], status: "ja", detail: "Steigen, Wolken, Wind auf 14 Höhen" },
       { label: MERKMAL_LABELS[6], status: "ja", detail: "Flugdistanz, Flugplaner" },
       { label: MERKMAL_LABELS[7], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[8], status: "unbelegt", detail: "" },
     ],
   },
   {
@@ -106,7 +83,6 @@ const APPS: App[] = [
       { label: MERKMAL_LABELS[5], status: "ja", detail: "Emagramm, Steigen" },
       { label: MERKMAL_LABELS[6], status: "unbelegt", detail: "" },
       { label: MERKMAL_LABELS[7], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[8], status: "unbelegt", detail: "" },
     ],
   },
   {
@@ -125,7 +101,6 @@ const APPS: App[] = [
       { label: MERKMAL_LABELS[5], status: "ja", detail: "Windgramm, Sounding" },
       { label: MERKMAL_LABELS[6], status: "ja", detail: "XC-Planer" },
       { label: MERKMAL_LABELS[7], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[8], status: "teils", detail: "KI im Modell" },
     ],
   },
   {
@@ -144,14 +119,31 @@ const APPS: App[] = [
       { label: MERKMAL_LABELS[5], status: "unbelegt", detail: "" },
       { label: MERKMAL_LABELS[6], status: "teils", detail: "Wahrscheinlichkeit für Strecke" },
       { label: MERKMAL_LABELS[7], status: "nein", detail: "" },
-      { label: MERKMAL_LABELS[8], status: "ja", detail: "neuronales Netz" },
+    ],
+  },
+  {
+    name: "Wingcast",
+    gebiet: "Schweiz",
+    reichweite: 1,
+    fokus: "Karte: wo es heute passt, plus Morgenmail",
+    plattform: "Web-App, Mail",
+    sprachen: "DE, EN",
+    eigene: true,
+    merkmale: [
+      { label: MERKMAL_LABELS[0], status: "ja", detail: "Karte aller Schweizer Startplätze, 3 Tage" },
+      { label: MERKMAL_LABELS[1], status: "ja", detail: "Warnhinweise und Flugqualität 1 bis 5 getrennt" },
+      { label: MERKMAL_LABELS[2], status: "ja", detail: "Begründung je Startplatz" },
+      { label: MERKMAL_LABELS[3], status: "ja", detail: "06:00, Regionen wählbar" },
+      { label: MERKMAL_LABELS[4], status: "ja", detail: "Talstationen und Druck" },
+      { label: MERKMAL_LABELS[5], status: "ja", detail: "Basis, Höhenwind" },
+      { label: MERKMAL_LABELS[6], status: "teils", detail: "Streckenflug-Rating je Startplatz" },
+      { label: MERKMAL_LABELS[7], status: "nein", detail: "nicht in der Anzeige" },
     ],
   },
 ];
 
 const WOFUER: Array<{ frage: string; apps: string[] }> = [
-  { frage: "Wo passt es heute in der Schweiz, auf einen Blick?", apps: ["Wingcast", "Paraglidable"] },
-  { frage: "Wie ist die Lage heute in meinen Regionen?", apps: ["Wingcast"] },
+  { frage: "Wo lohnt sich heute ein genauerer Blick? (Voranalyse)", apps: ["Wingcast"] },
   { frage: "Was macht der Wind am Start?", apps: ["Burnair"] },
   { frage: "Wie weit komme ich auf Strecke?", apps: ["Burnair", "XC Therm", "Meteo-Parapente", "Paraglidable"] },
   { frage: "Wie sieht das Höhenprofil aus?", apps: ["Meteo-Parapente", "SoaringMeteo", "Burnair"] },
@@ -188,7 +180,6 @@ const MERKMAL_TEXT = [
   "Thermik, Wolkenbasis, Höhenwind oder Sounding.",
   "Distanz schätzen oder eine Route planen.",
   "Gemessene Werte von Stationen, nicht nur Prognose.",
-  "Ein KI-Modell in der Prognose, KI-Texte oder eine Anbindung an Chat-Assistenten.",
 ];
 
 /** Karte je Merkmal: wer es hat (ja), wer teilweise, wer nicht oder unbelegt. */
@@ -209,7 +200,7 @@ function MerkmalKarte({ index }: { index: number }) {
           <li key={app.name} className="flex items-start gap-2.5">
             <span className="mt-1"><Punkt status={m.status} /></span>
             <span className="text-sm leading-snug">
-              <span className={`font-semibold ${app.eigene ? "text-sky-700" : "text-slate-900"}`}>
+              <span className={`font-semibold text-slate-900`}>
                 {app.name}
               </span>
               <span className="text-slate-500">
@@ -244,7 +235,7 @@ const KOPF: Record<string, { gebiet: string; tage: string; app: Status; appDetai
 
 function Zelle({ app, children }: { app: App; children: React.ReactNode }) {
   return (
-    <td className={`border-t border-slate-100 px-0.5 py-2.5 text-center ${app.eigene ? "bg-sky-50" : ""}`}>
+    <td className={`border-t border-slate-100 px-0.5 py-2.5 text-center `}>
       {children}
     </td>
   );
@@ -304,12 +295,10 @@ export function AppVergleich() {
                 <th
                   key={a.name}
                   scope="col"
-                  className={`h-32 px-0.5 pb-2 align-bottom ${a.eigene ? "rounded-t-xl bg-sky-50" : ""}`}
+                  className={`h-32 px-0.5 pb-2 align-bottom `}
                 >
                   <span
-                    className={`mx-auto block rotate-180 whitespace-nowrap text-xs font-bold [writing-mode:vertical-rl] sm:text-sm ${
-                      a.eigene ? "text-sky-700" : "text-slate-800"
-                    }`}
+                    className={`mx-auto block rotate-180 whitespace-nowrap text-xs font-bold [writing-mode:vertical-rl] sm:text-sm text-slate-800`}
                   >
                     {a.name}
                   </span>
@@ -378,7 +367,7 @@ export function AppVergleich() {
                 <li
                   key={x}
                   className={`rounded-full px-3 py-1 text-sm font-medium ${
-                    x === "Wingcast" ? "bg-sky-600 text-white" : "bg-slate-100 text-slate-700"
+                    "bg-slate-100 text-slate-700"
                   }`}
                 >
                   {x}
