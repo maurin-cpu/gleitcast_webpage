@@ -35,13 +35,14 @@ const MERKMAL_LABELS = [
   "Morgenbriefing mit Erklärung",
 ] as const;
 
-// Gruppen der Matrix (Indizes in MERKMAL_LABELS). Ehrlich gewichtet: Planung und
+// Gruppen der Matrix (Indizes in MERKMAL_LABELS), in der Reihenfolge des Ablaufs:
+// erst Voranalyse, dann Planung, dann Flugtag (User 31.10.). Ehrlich gewichtet: Planung und
 // Flugtag zeigen, wo andere Apps mehr bieten; die Voranalyse ist der eine Punkt,
 // den Wingcast anders macht (User 31.10.).
 const GRUPPEN: Array<{ titel: string; indizes: number[] }> = [
+  { titel: "Voranalyse", indizes: [9, 10] },
   { titel: "Planung", indizes: [0, 1, 2, 3, 4, 5] },
   { titel: "Am Flugtag", indizes: [6, 7, 8] },
-  { titel: "Voranalyse", indizes: [9, 10] },
 ];
 
 const APPS: App[] = [
@@ -401,7 +402,7 @@ export function AppVergleich() {
           <span aria-hidden="true" className="text-sky-700 transition-transform group-open:rotate-45">+</span>
         </summary>
         <div className="grid gap-4 border-t border-slate-100 p-4 sm:grid-cols-2 sm:p-5">
-          {MERKMAL_LABELS.map((_, i) => (
+          {GRUPPEN.flatMap((g) => g.indizes).map((i) => (
             <MerkmalKarte key={i} index={i} />
           ))}
         </div>
