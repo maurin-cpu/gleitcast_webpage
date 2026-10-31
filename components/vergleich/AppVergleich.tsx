@@ -259,15 +259,15 @@ function MerkmalKarte({ index }: { index: number }) {
   );
 }
 
-// Kopfzeilen der Matrix: Gebiet, Tage voraus, eigene App im Store.
+// Kopfzeilen der Matrix: Gebiet und Tage voraus.
 // Belege: 1-planung/analysen/2026-10-26_konkurrenz-flugwetter-apps.md
-const KOPF: Record<string, { gebiet: string; tage: string; app: Status; appDetail: string }> = {
-  Wingcast: { gebiet: "CH", tage: "3", app: "nein", appDetail: "Web-App im Browser" },
-  Burnair: { gebiet: "EU", tage: "5", app: "ja", appDetail: "iOS und Android" },
-  "XC Therm": { gebiet: "EU", tage: "5", app: "nein", appDetail: "Web-App, nicht im Store" },
-  SoaringMeteo: { gebiet: "Welt", tage: "7", app: "nein", appDetail: "Web, installierbar" },
-  "Meteo-Parapente": { gebiet: "EU", tage: "5", app: "ja", appDetail: "iOS (2019) und Android" },
-  Paraglidable: { gebiet: "EU", tage: "10", app: "teils", appDetail: "nur Android" },
+const KOPF: Record<string, { gebiet: string; tage: string }> = {
+  Wingcast: { gebiet: "CH", tage: "3" },
+  Burnair: { gebiet: "EU", tage: "5" },
+  "XC Therm": { gebiet: "EU", tage: "5" },
+  SoaringMeteo: { gebiet: "Welt", tage: "7" },
+  "Meteo-Parapente": { gebiet: "EU", tage: "5" },
+  Paraglidable: { gebiet: "EU", tage: "10" },
 };
 
 function Zelle({ app, children }: { app: App; children: React.ReactNode }) {
@@ -359,12 +359,6 @@ export function AppVergleich() {
                 <Zelle key={a.name} app={a}>
                   <span className="text-xs font-semibold tabular-nums text-slate-700">{KOPF[a.name].tage}</span>
                 </Zelle>
-              ))}
-            </tr>
-            <tr>
-              <ZeilenKopf>App im Store</ZeilenKopf>
-              {APPS.map((a) => (
-                <PunktZelle key={a.name} app={a} status={KOPF[a.name].app} detail={KOPF[a.name].appDetail} />
               ))}
             </tr>
             {GRUPPEN.map((g) => (
