@@ -19,6 +19,11 @@ import {
 } from "@/lib/schema";
 import { hreflangOf, localePath, localeUrl, socialMetadata } from "@/lib/seo";
 import { resolveArticleOgImage } from "@/lib/og";
+import { AppVergleich } from "@/components/vergleich/AppVergleich";
+
+// Artikel mit eigener Grafik: Der Marker ist die Überschrift direkt nach der Grafik.
+const VERGLEICH_SLUG = "gleitschirm-wetter-apps";
+const VERGLEICH_MARKER = "<h2>Die Apps im Einzelnen</h2>";
 
 // Default-Locale ohne Prefix, fr/it mit Prefix (localePrefix: "as-needed").
 function prefixed(locale: string, path: string): string {
@@ -152,10 +157,25 @@ export default async function WetterkundeArtikel({
             <span>{t("lesezeit", { minuten: article.lesezeitMinuten })}</span>
           </p>
 
-          <div
-            className="prose-wingcast mt-10"
-            dangerouslySetInnerHTML={{ __html: article.html }}
-          />
+          {/* Vergleichsgrafik sitzt vor den Einzelbeschreibungen (Tabelle bewusst ersetzt). */}
+          {article.slug === VERGLEICH_SLUG && article.html.includes(VERGLEICH_MARKER) ? (
+            <>
+              <div
+                className="prose-wingcast mt-10"
+                dangerouslySetInnerHTML={{ __html: article.html.split(VERGLEICH_MARKER)[0] }}
+              />
+              <AppVergleich />
+              <div
+                className="prose-wingcast"
+                dangerouslySetInnerHTML={{ __html: VERGLEICH_MARKER + article.html.split(VERGLEICH_MARKER)[1] }}
+              />
+            </>
+          ) : (
+            <div
+              className="prose-wingcast mt-10"
+              dangerouslySetInnerHTML={{ __html: article.html }}
+            />
+          )}
         </article>
       </main>
       <Footer />

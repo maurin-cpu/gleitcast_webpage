@@ -24,27 +24,13 @@ schema:
 
 # Gleitschirm-Wetter-Apps im Vergleich: was welche App kann
 
-> **TL;DR:** Es gibt nicht die beste Flugwetter-App, sondern Werkzeuge für verschiedene Fragen. **XC Therm** und **SoaringMeteo** sind auf Thermik und Strecke gebaut, **Burnair** auf Wind am Startplatz und Live-Messwerte, **Meteoblue** und **Meteo-Parapente** auf Soundings und Modellvergleich, **Paraglidable** auf eine Flugwahrscheinlichkeit in ganz Europa, **Windy** auf die Weltkarte. **Wingcast** schickt dir jeden Morgen die Lage für deine Regionen und begründet die Schweizer Startplätze in Klartext. Die Übersicht unten zeigt, was jede App dokumentiert, und wo sie nicht reicht.
+> **TL;DR:** Es gibt nicht die beste Flugwetter-App, sondern Werkzeuge für verschiedene Fragen. **XC Therm** und **SoaringMeteo** sind auf Thermik und Strecke gebaut, **Burnair** auf Wind am Startplatz und Live-Messwerte, **Meteoblue** und **Meteo-Parapente** auf Soundings und Modellvergleich, **Paraglidable** auf eine Flugwahrscheinlichkeit in ganz Europa, **Windy** auf die Weltkarte. **Wingcast** schickt dir jeden Morgen die Lage für deine Regionen und begründet die Schweizer Startplätze in Klartext. Die Grafik unten zeigt, was jede App dokumentiert, und wo sie nicht reicht.
 
 ## Wie wir verglichen haben
 
 Wir haben acht verbreitete Flugwetter-Dienste am 26. Oktober 2026 auf ihren offiziellen Seiten, Hilfeseiten und App-Store-Einträgen geprüft. Ausgewählt haben wir sie nach Suchnachfrage und Verbreitung in der Gleitschirmszene. Verglichen wird nur, was dort **dokumentiert** ist. Ein Feld mit „nicht belegt" heisst: auf keiner offiziellen Quelle zu finden, nicht: die App kann es sicher nicht. Den Preis lassen wir bewusst weg. Ebenso bewerten wir nicht, welche Prognose genauer ist, das lässt sich nur mit Messungen über viele Tage zeigen.
 
 Wingcast ist unser eigenes Produkt, das sagen wir offen. Findest du einen Fehler in dieser Seite, schreib uns an info@wingcast.ch, wir korrigieren ihn.
-
-## Die Übersicht
-
-| App | Gebiet | Prognose je Startplatz | Einordnung | Text in Klartext | Tägliche Mail |
-|---|---|---|---|---|---|
-| Burnair | Europa | ja | nach Wind und Böen | nicht belegt | nein |
-| XC Therm | Europa, 1'354 Regionen | nein, Regionen und Raster | mögliche Flugdistanz je Region | Textdarstellung, Herkunft offen | nein (keine Warnungen) |
-| SoaringMeteo | Alpen, weltweit | nein, beliebiger Kartenpunkt | Thermikqualität 0 bis 100 % | nicht belegt | nicht belegt |
-| Meteo-Parapente | Europa | nicht belegt, Orte wählbar | nicht belegt | nicht belegt | nicht belegt |
-| Paraglidable | Europa | nein, Raster und eigene Punkte | Flugwahrscheinlichkeit | nicht belegt | nicht belegt |
-| Windy | weltweit | Kartenpunkt | nicht belegt | nicht belegt | Alarme für Favoriten |
-| Meteoblue | weltweit | Ort oder Koordinate | Soaring-Index | nicht belegt | nur allgemeine Warnungen |
-| MeteoSchweiz | Schweiz | nicht belegt | nicht belegt | Wetterbericht nach Region | nein, Warnungen als Push |
-| **Wingcast** | Schweiz | ja | je Startplatz | je Startplatz | ja, 6 Uhr |
 
 ## Die Apps im Einzelnen
 
@@ -104,16 +90,6 @@ Die Föhn-Auswertung für die Föhntäler der Schweiz ist ebenfalls ein Merkmal.
 - **Keine Live-Messwerte in der Anzeige.** Für den Wind am Start jetzt sind Burnair, Windy oder MeteoSchweiz die richtige Wahl.
 - **Deutsch und Englisch.** Französisch und Italienisch gibt es in der App noch nicht.
 - **Beta.** Einzelne Startplätze fehlen noch, und es gibt Fehler.
-
-## Welche App wofür?
-
-| Deine Frage | Passende Apps |
-|---|---|
-| Was zeigen die Modelle für meine Region, und welche Startplätze fallen auf? | Wingcast |
-| Wie weit komme ich auf Strecke? | XC Therm, SoaringMeteo, Paraglidable |
-| Was macht der Wind jetzt am Start? | Burnair, Windy, MeteoSchweiz |
-| Wie sieht das Sounding aus? | Meteoblue, Meteo-Parapente, SoaringMeteo |
-| Wie ist das Wetter im Ausland? | Windy, Meteoblue, Meteo-Parapente |
 
 ## Häufige Fragen
 
