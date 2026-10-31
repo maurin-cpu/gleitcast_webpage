@@ -51,9 +51,9 @@ Ein Schweizer Dienst rund um Startplatz, Thermik, Strecke und Live-Werte. Burnai
 
 ### XC Therm
 
-Ein Werkzeug für Streckenflieger. XC Therm rechnet die Thermik für 1'354 Regionen in Europa mit dem Verfahren Regtherm, das früher beim Deutschen Wetterdienst lief, fünf Tage voraus [9][10]. Für jede Region schätzt es eine mögliche Flugdistanz aus Arbeitshöhe, Steigen und Wind. Windkarten gibt es auf 14 Höhen, für die Alpen auch mit ICON-CH1 und ICON-CH2, dazu Hinweise auf Gewitter und Regen in der Detailprognose [9][10].
+Ein Werkzeug für Streckenflieger. XC Therm rechnet die Thermik für 1'354 Regionen in Europa mit dem Verfahren Regtherm, das früher beim Deutschen Wetterdienst lief, fünf Tage voraus [9][10]. Für jede Region schätzt es eine mögliche Flugdistanz aus Arbeitshöhe, Steigen und Wind. Windkarten gibt es auf 14 Höhen, für die Alpen auch mit ICON-CH1 und ICON-CH2, dazu Hinweise auf Gewitter und Regen in der Detailprognose [9][10]. Die Auswertung lässt sich nach Fluggerät und Pilotenniveau einstellen, ein Archiv reicht bis 2012 zurück, und seit Dezember 2025 gibt es eine Wellenprognose für die Alpen [9][10][21].
 
-- **Gut für:** Streckenplanung, Steigen und Wolken je Region, Windkarten in vielen Höhen.
+- **Gut für:** Streckenplanung, Steigen und Wolken je Region, Windkarten in vielen Höhen, Wellenflug, Rückblick auf frühere Tage.
 - **Weniger geeignet für:** einzelne Startplätze und Wind- oder Föhnwarnungen, die XC Therm laut eigener Angabe bewusst nicht ausgibt. Föhn, Talwind und Regen fliessen nicht in die Distanz ein [10].
 
 ### SoaringMeteo
@@ -133,5 +133,6 @@ Stand: 31. Oktober 2026, geprüft am 26. und 31. Oktober. Alle Angaben zu andere
 - **[18]** Paraglidable, [Quellcode](https://github.com/AntoineMeler/Paraglidable)
 - **[19]** MeteoSchweiz, [ICON-Prognosesysteme](https://www.meteoswiss.admin.ch/weather/warning-and-forecasting-systems/icon-forecasting-systems.html)
 - **[20]** Burnair, [burnair Map: Funktionen](https://www.burnair.ch/portfolio-item/burnair-map/)
+- **[21]** XC Therm, [Wellenprognose](https://xctherm.com/en/wave-forecast)
 
 [Wingcast kostenlos öffnen](https://app.wingcast.ch/?utm_source=blog&utm_medium=wetterkunde&utm_campaign=gleitschirm-wetter-apps)
