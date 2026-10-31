@@ -19,8 +19,6 @@ type App = {
   merkmale: Merkmal[];
 };
 
-const REICHWEITE = ["Schweiz", "Alpen", "Europa", "weltweit"];
-
 const MERKMAL_LABELS = [
   "Prognose je Startplatz",
   "Einordnung nach Werten",
@@ -179,18 +177,6 @@ const WORT: Record<Status, string> = {
   unbelegt: "nicht belegt",
 };
 
-function Reichweite({ stufe }: { stufe: 1 | 2 | 3 | 4 }) {
-  return (
-    <div className="flex items-center gap-1" aria-hidden="true">
-      {[1, 2, 3, 4].map((i) => (
-        <span
-          key={i}
-          className={`h-2 w-4 rounded-full sm:w-6 ${i <= stufe ? "bg-sky-500" : "bg-slate-200"}`}
-        />
-      ))}
-    </div>
-  );
-}
 
 // Kurze Erklärung je Merkmal, in derselben Reihenfolge wie MERKMAL_LABELS.
 const MERKMAL_TEXT = [
@@ -204,27 +190,6 @@ const MERKMAL_TEXT = [
   "Gemessene Werte von Stationen, nicht nur Prognose.",
   "Ein KI-Modell in der Prognose, KI-Texte oder eine Anbindung an Chat-Assistenten.",
 ];
-
-/** Kompakte Kachel je App: Name, Schwerpunkt, Gebiet. */
-function AppKachel({ app }: { app: App }) {
-  return (
-    <div
-      className={`rounded-xl border p-4 ${
-        app.eigene ? "border-sky-500 bg-sky-50" : "border-slate-200 bg-white"
-      }`}
-    >
-      <p className={`font-bold ${app.eigene ? "text-sky-800" : "text-slate-900"}`}>{app.name}</p>
-      <p className="mt-0.5 text-sm leading-snug text-slate-600">{app.fokus}</p>
-      <div className="mt-3 flex items-center justify-between gap-2">
-        <span className="text-xs font-medium text-slate-500">{app.gebiet}</span>
-        <Reichweite stufe={app.reichweite} />
-      </div>
-      <p className="mt-2 text-xs leading-snug text-slate-500">
-        {app.plattform} · {app.sprachen}
-      </p>
-    </div>
-  );
-}
 
 /** Karte je Merkmal: wer es hat (ja), wer teilweise, wer nicht oder unbelegt. */
 function MerkmalKarte({ index }: { index: number }) {
@@ -266,32 +231,142 @@ function MerkmalKarte({ index }: { index: number }) {
   );
 }
 
+// Kopfzeilen der Matrix: Gebiet, Tage voraus, eigene App im Store.
+// Belege: 1-planung/analysen/2026-10-26_konkurrenz-flugwetter-apps.md
+const KOPF: Record<string, { gebiet: string; tage: string; app: Status; appDetail: string }> = {
+  Wingcast: { gebiet: "CH", tage: "3", app: "nein", appDetail: "Web-App im Browser" },
+  Burnair: { gebiet: "EU", tage: "5", app: "ja", appDetail: "iOS und Android" },
+  "XC Therm": { gebiet: "EU", tage: "5", app: "nein", appDetail: "Web-App, nicht im Store" },
+  SoaringMeteo: { gebiet: "Welt", tage: "7", app: "nein", appDetail: "Web, installierbar" },
+  "Meteo-Parapente": { gebiet: "EU", tage: "5", app: "ja", appDetail: "iOS (2019) und Android" },
+  Paraglidable: { gebiet: "EU", tage: "10", app: "teils", appDetail: "nur Android" },
+};
+
+function Zelle({ app, children }: { app: App; children: React.ReactNode }) {
+  return (
+    <td className={`border-t border-slate-100 px-0.5 py-2.5 text-center ${app.eigene ? "bg-sky-50" : ""}`}>
+      {children}
+    </td>
+  );
+}
+
+function PunktZelle({ app, status, detail }: { app: App; status: Status; detail: string }) {
+  const text = `${app.name}: ${WORT[status]}${detail ? `, ${detail}` : ""}`;
+  return (
+    <Zelle app={app}>
+      <span title={text} className="inline-flex justify-center">
+        <Punkt status={status} />
+      </span>
+      <span className="sr-only">{text}</span>
+    </Zelle>
+  );
+}
+
+function ZeilenKopf({ children }: { children: React.ReactNode }) {
+  return (
+    <th
+      scope="row"
+      className="border-t border-slate-100 py-2.5 pr-2 text-left text-[13px] font-medium leading-tight text-slate-800 sm:text-sm"
+    >
+      {children}
+    </th>
+  );
+}
+
 export function AppVergleich() {
   return (
     <section aria-labelledby="vergleich-headline" className="my-12">
       <h2 id="vergleich-headline" className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-        Die Apps auf einen Blick
+        Der Vergleich auf einen Blick
       </h2>
-      <p className="mt-2 text-base text-slate-600">
-        Schwerpunkt und Gebiet. Der Balken zeigt die Reichweite: {REICHWEITE.join(", ")}.
-      </p>
-      <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
-        {APPS.map((app) => (
-          <AppKachel key={app.name} app={app} />
-        ))}
-      </div>
-
-      <h3 className="mt-14 text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">Wer kann was?</h3>
       <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-700">
         <span className="inline-flex items-center gap-2"><Punkt status="ja" />ja</span>
         <span className="inline-flex items-center gap-2"><Punkt status="teils" />teilweise</span>
-        <span className="inline-flex items-center gap-2"><Punkt status="unbelegt" />nein oder nicht belegt</span>
+        <span className="inline-flex items-center gap-2"><Punkt status="nein" />nein</span>
+        <span className="inline-flex items-center gap-2"><Punkt status="unbelegt" />nicht belegt</span>
       </div>
-      <div className="mt-5 grid gap-4 sm:grid-cols-2">
-        {MERKMAL_LABELS.map((_, i) => (
-          <MerkmalKarte key={i} index={i} />
-        ))}
+
+      <div className="mt-5 rounded-2xl border border-slate-200 bg-white px-3 pb-2 sm:px-5">
+        <table className="w-full table-fixed border-separate border-spacing-0">
+          <caption className="sr-only">
+            Vergleich der Gleitschirm-Wetter-Apps nach Gebiet, Prognosetagen und Funktionen
+          </caption>
+          <colgroup>
+            <col className="w-[38%] sm:w-[34%]" />
+            {APPS.map((a) => (
+              <col key={a.name} />
+            ))}
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col" className="sr-only">Merkmal</th>
+              {APPS.map((a) => (
+                <th
+                  key={a.name}
+                  scope="col"
+                  className={`h-32 px-0.5 pb-2 align-bottom ${a.eigene ? "rounded-t-xl bg-sky-50" : ""}`}
+                >
+                  <span
+                    className={`mx-auto block rotate-180 whitespace-nowrap text-xs font-bold [writing-mode:vertical-rl] sm:text-sm ${
+                      a.eigene ? "text-sky-700" : "text-slate-800"
+                    }`}
+                  >
+                    {a.name}
+                  </span>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <ZeilenKopf>Gebiet</ZeilenKopf>
+              {APPS.map((a) => (
+                <Zelle key={a.name} app={a}>
+                  <span className="text-xs font-semibold text-slate-700">{KOPF[a.name].gebiet}</span>
+                </Zelle>
+              ))}
+            </tr>
+            <tr>
+              <ZeilenKopf>Tage voraus</ZeilenKopf>
+              {APPS.map((a) => (
+                <Zelle key={a.name} app={a}>
+                  <span className="text-xs font-semibold tabular-nums text-slate-700">{KOPF[a.name].tage}</span>
+                </Zelle>
+              ))}
+            </tr>
+            <tr>
+              <ZeilenKopf>App im Store</ZeilenKopf>
+              {APPS.map((a) => (
+                <PunktZelle key={a.name} app={a} status={KOPF[a.name].app} detail={KOPF[a.name].appDetail} />
+              ))}
+            </tr>
+            {MERKMAL_LABELS.map((label, i) => (
+              <tr key={label}>
+                <ZeilenKopf>{label}</ZeilenKopf>
+                {APPS.map((a) => (
+                  <PunktZelle key={a.name} app={a} status={a.merkmale[i].status} detail={a.merkmale[i].detail} />
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
+      <p className="mt-2 text-xs text-slate-500">
+        Gebiet: CH = Schweiz, EU = Europa, Welt = weltweit. „Nicht belegt" heisst: auf den offiziellen Seiten
+        nicht zu finden.
+      </p>
+
+      <details className="group mt-6 rounded-2xl border border-slate-200 bg-white">
+        <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 font-semibold text-slate-900 [&::-webkit-details-marker]:hidden">
+          Was genau steckt hinter jedem Punkt?
+          <span aria-hidden="true" className="text-sky-700 transition-transform group-open:rotate-45">+</span>
+        </summary>
+        <div className="grid gap-4 border-t border-slate-100 p-4 sm:grid-cols-2 sm:p-5">
+          {MERKMAL_LABELS.map((_, i) => (
+            <MerkmalKarte key={i} index={i} />
+          ))}
+        </div>
+      </details>
 
       <h3 className="mt-14 text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">Welche App wofür?</h3>
       <div className="mt-5 grid gap-4 sm:grid-cols-2">
@@ -299,14 +374,14 @@ export function AppVergleich() {
           <div key={w.frage} className="rounded-2xl border border-slate-200 bg-white p-5">
             <p className="font-semibold text-slate-900">{w.frage}</p>
             <ul className="mt-3 flex flex-wrap gap-2">
-              {w.apps.map((a) => (
+              {w.apps.map((x) => (
                 <li
-                  key={a}
+                  key={x}
                   className={`rounded-full px-3 py-1 text-sm font-medium ${
-                    a === "Wingcast" ? "bg-sky-600 text-white" : "bg-slate-100 text-slate-700"
+                    x === "Wingcast" ? "bg-sky-600 text-white" : "bg-slate-100 text-slate-700"
                   }`}
                 >
-                  {a}
+                  {x}
                 </li>
               ))}
             </ul>
