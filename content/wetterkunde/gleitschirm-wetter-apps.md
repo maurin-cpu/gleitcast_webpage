@@ -90,7 +90,7 @@ Die Grundlage sind die Modelle von MeteoSchweiz (ICON-CH1 und ICON-CH2) und weit
 
 - **Nur die Schweiz.** Für Flüge im Ausland sind Burnair, XC Therm, Meteo-Parapente oder Paraglidable die Wahl.
 - **Drei Tage.** Burnair, XC Therm und Meteo-Parapente rechnen fünf Tage, Paraglidable zehn.
-- **Keine Routenplanung.** Wingcast schätzt das Streckenpotenzial je Startplatz, plant aber keine Route und keine Distanz. Dafür sind Burnair, XC Therm und Meteo-Parapente gebaut.
+- **Keine Streckenplanung.** Dafür sind Burnair, XC Therm und Meteo-Parapente gebaut.
 - **Keine Soundings und keine Thermikkarten.** Dafür sind Burnair, SoaringMeteo, Meteo-Parapente und XC Therm da.
 - **Nichts für den Flugtag selbst.** Live-Wind, Webcams, Live-Tracking und Lufträume bietet Burnair, Wingcast nicht.
 - **Deutsch und Englisch.** Französisch und Italienisch gibt es in der App noch nicht.

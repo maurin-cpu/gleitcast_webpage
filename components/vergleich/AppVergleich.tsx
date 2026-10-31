@@ -165,7 +165,7 @@ const APPS: App[] = [
       { label: MERKMAL_LABELS[2], status: "nein", detail: "" },
       { label: MERKMAL_LABELS[3], status: "ja", detail: "Start bis 3000 m darüber" },
       { label: MERKMAL_LABELS[4], status: "ja", detail: "Föhntäler und Druckdifferenz" },
-      { label: MERKMAL_LABELS[5], status: "teils", detail: "Streckenflug-Rating, keine Route" },
+      { label: MERKMAL_LABELS[5], status: "nein", detail: "" },
       { label: MERKMAL_LABELS[6], status: "nein", detail: "" },
       { label: MERKMAL_LABELS[7], status: "nein", detail: "" },
       { label: MERKMAL_LABELS[8], status: "nein", detail: "" },
