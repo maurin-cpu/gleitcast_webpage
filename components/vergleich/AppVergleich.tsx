@@ -38,18 +38,18 @@ const APPS: App[] = [
     name: "Wingcast",
     gebiet: "Schweiz",
     reichweite: 1,
-    fokus: "Lage für die eigenen Regionen",
-    plattform: "Web, Mail",
+    fokus: "Karte: wo es heute passt, plus Morgenmail",
+    plattform: "Web-App, Mail",
     sprachen: "DE, EN",
     eigene: true,
     merkmale: [
-      { label: MERKMAL_LABELS[0], status: "ja", detail: "Schweizer Startplätze, 3 Tage" },
-      { label: MERKMAL_LABELS[1], status: "ja", detail: "je Startplatz und Tag" },
-      { label: MERKMAL_LABELS[2], status: "ja", detail: "je Startplatz" },
+      { label: MERKMAL_LABELS[0], status: "ja", detail: "Karte aller Schweizer Startplätze, 3 Tage" },
+      { label: MERKMAL_LABELS[1], status: "ja", detail: "Warnhinweise und Flugqualität 1 bis 5 getrennt" },
+      { label: MERKMAL_LABELS[2], status: "ja", detail: "Begründung je Startplatz" },
       { label: MERKMAL_LABELS[3], status: "ja", detail: "06:00, Regionen wählbar" },
       { label: MERKMAL_LABELS[4], status: "ja", detail: "Talstationen und Druck" },
       { label: MERKMAL_LABELS[5], status: "ja", detail: "Basis, Höhenwind" },
-      { label: MERKMAL_LABELS[6], status: "nein", detail: "" },
+      { label: MERKMAL_LABELS[6], status: "teils", detail: "Streckenflug-Rating je Startplatz" },
       { label: MERKMAL_LABELS[7], status: "nein", detail: "nicht in der Anzeige" },
       { label: MERKMAL_LABELS[8], status: "ja", detail: "Texte; ChatGPT und Claude" },
     ],
@@ -152,6 +152,7 @@ const APPS: App[] = [
 ];
 
 const WOFUER: Array<{ frage: string; apps: string[] }> = [
+  { frage: "Wo passt es heute in der Schweiz, auf einen Blick?", apps: ["Wingcast", "Paraglidable"] },
   { frage: "Wie ist die Lage heute in meinen Regionen?", apps: ["Wingcast"] },
   { frage: "Was macht der Wind am Start?", apps: ["Burnair"] },
   { frage: "Wie weit komme ich auf Strecke?", apps: ["Burnair", "XC Therm", "Meteo-Parapente", "Paraglidable"] },
