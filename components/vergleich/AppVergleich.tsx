@@ -33,10 +33,6 @@ const MERKMAL_LABELS = [
   "Lufträume",
   "Gesamturteil je Startplatz",
   "Morgenbriefing mit Erklärung",
-  "Eigenes Wettermodell",
-  "Wellenprognose",
-  "Archiv früherer Tage",
-  "Einstellbar nach Pilot und Gerät",
 ] as const;
 
 // Gruppen der Matrix (Indizes in MERKMAL_LABELS), in der Reihenfolge des Ablaufs:
@@ -47,7 +43,6 @@ const GRUPPEN: Array<{ titel: string; indizes: number[] }> = [
   { titel: "Voranalyse", indizes: [9, 10] },
   { titel: "Planung", indizes: [0, 1, 2, 3, 4, 5] },
   { titel: "Am Flugtag", indizes: [6, 7, 8] },
-  { titel: "Weitere Werkzeuge", indizes: [11, 12, 13, 14] },
 ];
 
 const APPS: App[] = [
@@ -70,10 +65,6 @@ const APPS: App[] = [
       { label: MERKMAL_LABELS[8], status: "ja", detail: "Lufträume mit NOTAM und DABS" },
       { label: MERKMAL_LABELS[9], status: "teils", detail: "Urteil aus mehreren Faktoren je Region, je Startplatz nur Wind" },
       { label: MERKMAL_LABELS[10], status: "nein", detail: "Alarme bei Schwellenwerten" },
-      { label: MERKMAL_LABELS[11], status: "nein", detail: "ICON und eigener Thermik-Algorithmus" },
-      { label: MERKMAL_LABELS[12], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[13], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[14], status: "unbelegt", detail: "" },
     ],
   },
   {
@@ -95,10 +86,6 @@ const APPS: App[] = [
       { label: MERKMAL_LABELS[8], status: "unbelegt", detail: "" },
       { label: MERKMAL_LABELS[9], status: "teils", detail: "Flugdistanz je Region, ohne Föhn und Regen" },
       { label: MERKMAL_LABELS[10], status: "nein", detail: "Textansicht je Region, keine Mail" },
-      { label: MERKMAL_LABELS[11], status: "nein", detail: "Regtherm auf ICON" },
-      { label: MERKMAL_LABELS[12], status: "ja", detail: "Alpen und UK, 2 Tage" },
-      { label: MERKMAL_LABELS[13], status: "ja", detail: "seit 2012" },
-      { label: MERKMAL_LABELS[14], status: "ja", detail: "Fluggerät und Pilotenniveau" },
     ],
   },
   {
@@ -120,10 +107,6 @@ const APPS: App[] = [
       { label: MERKMAL_LABELS[8], status: "unbelegt", detail: "" },
       { label: MERKMAL_LABELS[9], status: "teils", detail: "Thermikqualität, ohne Föhn und Regen" },
       { label: MERKMAL_LABELS[10], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[11], status: "ja", detail: "eigene WRF-Läufe, 2 km Alpen" },
-      { label: MERKMAL_LABELS[12], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[13], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[14], status: "unbelegt", detail: "" },
     ],
   },
   {
@@ -145,10 +128,6 @@ const APPS: App[] = [
       { label: MERKMAL_LABELS[8], status: "unbelegt", detail: "" },
       { label: MERKMAL_LABELS[9], status: "unbelegt", detail: "" },
       { label: MERKMAL_LABELS[10], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[11], status: "ja", detail: "HREM, 2,5 km" },
-      { label: MERKMAL_LABELS[12], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[13], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[14], status: "unbelegt", detail: "" },
     ],
   },
   {
@@ -170,10 +149,6 @@ const APPS: App[] = [
       { label: MERKMAL_LABELS[8], status: "unbelegt", detail: "" },
       { label: MERKMAL_LABELS[9], status: "teils", detail: "Flugwahrscheinlichkeit, Gefahren nicht dokumentiert" },
       { label: MERKMAL_LABELS[10], status: "nein", detail: "" },
-      { label: MERKMAL_LABELS[11], status: "nein", detail: "Schätzung auf fremden Modellen" },
-      { label: MERKMAL_LABELS[12], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[13], status: "ja", detail: "Rückblick auf vergangene Tage" },
-      { label: MERKMAL_LABELS[14], status: "unbelegt", detail: "" },
     ],
   },
   {
@@ -196,10 +171,6 @@ const APPS: App[] = [
       { label: MERKMAL_LABELS[8], status: "nein", detail: "" },
       { label: MERKMAL_LABELS[9], status: "ja", detail: "Flugqualität 1 bis 5 und Warnhinweise aus 8 Faktoren" },
       { label: MERKMAL_LABELS[10], status: "ja", detail: "06:00, Regionen wählbar" },
-      { label: MERKMAL_LABELS[11], status: "nein", detail: "Modelle von MeteoSchweiz und weitere" },
-      { label: MERKMAL_LABELS[12], status: "nein", detail: "" },
-      { label: MERKMAL_LABELS[13], status: "nein", detail: "" },
-      { label: MERKMAL_LABELS[14], status: "nein", detail: "" },
     ],
   },
 ];
@@ -245,10 +216,6 @@ const MERKMAL_TEXT = [
   "Lufträume und Sperrgebiete auf der Karte.",
   "Wind, Böen, Föhn, Gewitter, Regen und Thermik zusammen beurteilt: ein Urteil pro Startplatz, statt die einzelnen Werte selbst zusammenzusetzen.",
   "Jeden Morgen eine Mail, die die Lage in Worten erklärt.",
-  "Die App rechnet ein eigenes Wettermodell, statt nur fremde Modelle aufzubereiten.",
-  "Prognose für Leewellen und Vertikalwind.",
-  "Prognosen oder Bewertungen vergangener Tage zum Nachschauen.",
-  "Die Auswertung passt sich an Fluggerät oder Pilotenniveau an.",
 ];
 
 /** Karte je Merkmal: wer es hat (ja), wer teilweise, wer nicht oder unbelegt. */
