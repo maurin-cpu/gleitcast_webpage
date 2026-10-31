@@ -34,39 +34,39 @@ export function Navbar({
         </Link>
 
         <nav
-          className="hidden items-center gap-1 md:flex"
+          className="hidden items-center gap-1 lg:flex"
           aria-label={t("ariaNav")}
         >
           {/* Öffentliches Briefing, nur in den Sprachen, die es gibt (DE/EN). */}
           {isBriefingLocale(locale) && (
             <Link
               href="/flugwetter-schweiz"
-              className="focus-ring rounded-md px-4 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700"
+              className="focus-ring rounded-md px-3 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700 xl:px-4"
             >
               {STRINGS[locale].navLabel}
             </Link>
           )}
           <Link
             href="/#solution"
-            className="focus-ring rounded-md px-4 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700"
+            className="focus-ring rounded-md px-3 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700 xl:px-4"
           >
             {t("howItWorks")}
           </Link>
           <Link
             href="/#preview"
-            className="focus-ring rounded-md px-4 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700"
+            className="focus-ring rounded-md px-3 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700 xl:px-4"
           >
             {t("cast")}
           </Link>
           <Link
             href="/#faq"
-            className="focus-ring rounded-md px-4 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700"
+            className="focus-ring rounded-md px-3 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700 xl:px-4"
           >
             {t("faq")}
           </Link>
           <Link
             href="/wetterkunde"
-            className="focus-ring rounded-md px-4 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700"
+            className="focus-ring rounded-md px-3 py-2 text-base font-medium text-slate-700 transition-colors hover:text-sky-700 xl:px-4"
           >
             {t("wetterkunde")}
           </Link>

@@ -13,6 +13,8 @@ type App = {
   /** 1 = Schweiz, 2 = Alpen, 3 = Europa, 4 = weltweit */
   reichweite: 1 | 2 | 3 | 4;
   fokus: string;
+  plattform: string;
+  sprachen: string;
   eigene?: boolean;
   merkmale: Merkmal[];
 };
@@ -36,9 +38,11 @@ const APPS: App[] = [
     gebiet: "Schweiz",
     reichweite: 1,
     fokus: "Lage für die eigenen Regionen",
+    plattform: "Web, Mail",
+    sprachen: "DE, EN",
     eigene: true,
     merkmale: [
-      { label: MERKMAL_LABELS[0], status: "ja", detail: "alle Schweizer Startplätze" },
+      { label: MERKMAL_LABELS[0], status: "ja", detail: "Schweizer Startplätze" },
       { label: MERKMAL_LABELS[1], status: "ja", detail: "je Startplatz und Tag" },
       { label: MERKMAL_LABELS[2], status: "ja", detail: "je Startplatz" },
       { label: MERKMAL_LABELS[3], status: "ja", detail: "06:00, Regionen wählbar" },
@@ -53,6 +57,8 @@ const APPS: App[] = [
     gebiet: "Europa",
     reichweite: 3,
     fokus: "Wind am Startplatz, Live-Werte",
+    plattform: "Web, iOS, Android",
+    sprachen: "8 Sprachen",
     merkmale: [
       { label: MERKMAL_LABELS[0], status: "ja", detail: "4D-Startplatzprognose" },
       { label: MERKMAL_LABELS[1], status: "teils", detail: "nach Wind und Böen" },
@@ -69,6 +75,8 @@ const APPS: App[] = [
     gebiet: "Europa",
     reichweite: 3,
     fokus: "Strecke und Thermik",
+    plattform: "Web",
+    sprachen: "DE, EN, FR, IT",
     merkmale: [
       { label: MERKMAL_LABELS[0], status: "nein", detail: "Regionen und Raster" },
       { label: MERKMAL_LABELS[1], status: "ja", detail: "mögliche Flugdistanz" },
@@ -85,6 +93,8 @@ const APPS: App[] = [
     gebiet: "Alpen, weltweit",
     reichweite: 4,
     fokus: "Thermik und Sounding",
+    plattform: "Web",
+    sprachen: "8 Sprachen",
     merkmale: [
       { label: MERKMAL_LABELS[0], status: "nein", detail: "beliebiger Kartenpunkt" },
       { label: MERKMAL_LABELS[1], status: "ja", detail: "Thermikqualität 0 bis 100" },
@@ -101,6 +111,8 @@ const APPS: App[] = [
     gebiet: "Europa",
     reichweite: 3,
     fokus: "Modell und Höhenprofil",
+    plattform: "Web, iOS, Android",
+    sprachen: "6 Sprachen",
     merkmale: [
       { label: MERKMAL_LABELS[0], status: "teils", detail: "Orte wählbar" },
       { label: MERKMAL_LABELS[1], status: "unbelegt", detail: "" },
@@ -117,6 +129,8 @@ const APPS: App[] = [
     gebiet: "Europa",
     reichweite: 3,
     fokus: "Flugwahrscheinlichkeit",
+    plattform: "Web, Android",
+    sprachen: "EN",
     merkmale: [
       { label: MERKMAL_LABELS[0], status: "nein", detail: "Raster, eigene Punkte" },
       { label: MERKMAL_LABELS[1], status: "ja", detail: "Wahrscheinlichkeit" },
@@ -128,62 +142,15 @@ const APPS: App[] = [
       { label: MERKMAL_LABELS[7], status: "ja", detail: "neuronales Netz" },
     ],
   },
-  {
-    name: "Windy",
-    gebiet: "weltweit",
-    reichweite: 4,
-    fokus: "Weltkarte mit vielen Modellen",
-    merkmale: [
-      { label: MERKMAL_LABELS[0], status: "teils", detail: "Kartenpunkte" },
-      { label: MERKMAL_LABELS[1], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[2], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[3], status: "teils", detail: "Alarme für Favoriten" },
-      { label: MERKMAL_LABELS[4], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[5], status: "ja", detail: "Thermik- und Wolkenbasis" },
-      { label: MERKMAL_LABELS[6], status: "ja", detail: "Stationen, Webcams" },
-      { label: MERKMAL_LABELS[7], status: "teils", detail: "KI-Modell für 15 Tage" },
-    ],
-  },
-  {
-    name: "Meteoblue",
-    gebiet: "weltweit",
-    reichweite: 4,
-    fokus: "Modelle und Diagramme",
-    merkmale: [
-      { label: MERKMAL_LABELS[0], status: "teils", detail: "Ort oder Koordinate" },
-      { label: MERKMAL_LABELS[1], status: "teils", detail: "Soaring-Index" },
-      { label: MERKMAL_LABELS[2], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[3], status: "nein", detail: "nur allgemeine Warnungen" },
-      { label: MERKMAL_LABELS[4], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[5], status: "ja", detail: "Meteogramm, Stüve" },
-      { label: MERKMAL_LABELS[6], status: "ja", detail: "Stationen, Webcams" },
-      { label: MERKMAL_LABELS[7], status: "teils", detail: "mLM-Verfahren" },
-    ],
-  },
-  {
-    name: "MeteoSchweiz",
-    gebiet: "Schweiz",
-    reichweite: 1,
-    fokus: "Offizielle Modelle und Warnungen",
-    merkmale: [
-      { label: MERKMAL_LABELS[0], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[1], status: "unbelegt", detail: "" },
-      { label: MERKMAL_LABELS[2], status: "teils", detail: "nach Region" },
-      { label: MERKMAL_LABELS[3], status: "nein", detail: "Warnungen als Push" },
-      { label: MERKMAL_LABELS[4], status: "teils", detail: "Symbole im Flugwetter" },
-      { label: MERKMAL_LABELS[5], status: "teils", detail: "nur mit Pilotenlizenz" },
-      { label: MERKMAL_LABELS[6], status: "ja", detail: "Messwerte, Karte" },
-      { label: MERKMAL_LABELS[7], status: "unbelegt", detail: "" },
-    ],
-  },
 ];
 
 const WOFUER: Array<{ frage: string; apps: string[] }> = [
-  { frage: "Was zeigen die Modelle für meine Region?", apps: ["Wingcast", "MeteoSchweiz"] },
+  { frage: "Wie ist die Lage heute in meinen Regionen?", apps: ["Wingcast"] },
+  { frage: "Was macht der Wind am Start?", apps: ["Burnair"] },
   { frage: "Wie weit komme ich auf Strecke?", apps: ["XC Therm", "SoaringMeteo", "Paraglidable"] },
-  { frage: "Was macht der Wind jetzt am Start?", apps: ["Burnair", "Windy", "MeteoSchweiz"] },
-  { frage: "Wie sieht das Sounding aus?", apps: ["Meteoblue", "Meteo-Parapente", "SoaringMeteo"] },
-  { frage: "Wie ist das Wetter im Ausland?", apps: ["Windy", "Meteoblue", "Meteo-Parapente"] },
+  { frage: "Wie sieht das Höhenprofil aus?", apps: ["Meteo-Parapente", "SoaringMeteo"] },
+  { frage: "Wie ist es im Ausland?", apps: ["Burnair", "XC Therm", "Meteo-Parapente", "Paraglidable"] },
+  { frage: "Wie sieht es in zehn Tagen aus?", apps: ["Paraglidable"] },
 ];
 
 /** Punkt je Status: Form und Füllung, dazu das Wort daneben. */
@@ -243,6 +210,9 @@ function AppKachel({ app }: { app: App }) {
         <span className="text-xs font-medium text-slate-500">{app.gebiet}</span>
         <Reichweite stufe={app.reichweite} />
       </div>
+      <p className="mt-2 text-xs leading-snug text-slate-500">
+        {app.plattform} · {app.sprachen}
+      </p>
     </div>
   );
 }
