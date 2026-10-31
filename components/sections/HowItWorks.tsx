@@ -117,8 +117,9 @@ export function HowItWorks() {
     >
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[5fr_7fr] lg:gap-16">
-          {/* Left: editorial steps */}
-          <div>
+          {/* Left: editorial steps. min-w-0: sonst zieht die Vorschau rechts
+              die einzige Spalte auf dem Handy breiter als den Bildschirm. */}
+          <div className="min-w-0">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700">
               {t("kicker")}
             </p>
@@ -155,7 +156,7 @@ export function HowItWorks() {
           </div>
 
           {/* Right: Briefing-Vorschau — angelehnt an die App-Seite /briefing */}
-          <div id="preview" className="scroll-mt-24">
+          <div id="preview" className="min-w-0 scroll-mt-24">
             <figure className="overflow-hidden rounded-card border border-slate-200 bg-white">
               {/* App-Header-Leiste */}
               <header className="flex items-baseline justify-between gap-3 border-b border-slate-200 bg-slate-50 px-5 py-3">

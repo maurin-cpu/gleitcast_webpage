@@ -22,7 +22,7 @@ export function Navbar({
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white">
-      <div className="mx-auto flex h-16 max-w-content items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 max-w-content items-center justify-between gap-2 px-4 sm:gap-4 sm:px-6 lg:px-8">
         {/* Volle Pfade statt reiner #-Anker: die Navbar steht auch auf
             /wetterkunde-Seiten — dort liefen nackte Anker ins Leere. */}
         <Link
@@ -74,9 +74,18 @@ export function Navbar({
 
         <div className="flex items-center gap-2">
           <LocaleSwitcher available={availableLocales} />
-          <LinkButton href={APP_URL} target="_blank" rel="noopener" size="sm">
-            {t("toApp")}
-            <ArrowUpRight className="h-4 w-4" />
+          <LinkButton
+            href={APP_URL}
+            target="_blank"
+            rel="noopener"
+            size="sm"
+            aria-label={t("toApp")}
+          >
+            {/* Unter 640 px nur „App": mit Sprachwahl war die Kopfzeile bei
+                375 px 25 bis 31 px zu breit, die ganze Seite scrollte seitlich. */}
+            <span className="hidden sm:inline">{t("toApp")}</span>
+            <span className="sm:hidden">App</span>
+            <ArrowUpRight className="hidden h-4 w-4 sm:block" />
           </LinkButton>
         </div>
       </div>

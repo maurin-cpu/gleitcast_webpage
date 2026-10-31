@@ -44,7 +44,7 @@ export function LocaleSwitcher({
               key={locale}
               aria-disabled="true"
               title={`${t(locale)} — ${t("unavailable")}`}
-              className="cursor-not-allowed rounded px-2 py-1 text-xs font-semibold uppercase tracking-wide text-slate-300"
+              className="cursor-not-allowed rounded px-1.5 py-1 sm:px-2 text-xs font-semibold uppercase tracking-wide text-slate-300"
             >
               {locale}
             </span>
@@ -67,7 +67,7 @@ export function LocaleSwitcher({
             {...(locale === routing.defaultLocale && { rel: "nofollow" })}
             aria-current={isActive ? "true" : undefined}
             title={t(locale)}
-            className={`focus-ring rounded px-2 py-1 text-xs font-semibold uppercase tracking-wide transition-colors ${
+            className={`focus-ring rounded px-1.5 py-1 sm:px-2 text-xs font-semibold uppercase tracking-wide transition-colors ${
               isActive
                 ? "bg-sky-700 text-white"
                 : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"

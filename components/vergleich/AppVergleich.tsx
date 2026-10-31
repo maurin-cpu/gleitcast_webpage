@@ -199,7 +199,7 @@ function Punkt({ status }: { status: Status }) {
 
 const WORT: Record<Status, string> = {
   ja: "ja",
-  teils: "teils",
+  teils: "teilweise",
   nein: "nein",
   unbelegt: "nicht belegt",
 };
@@ -210,56 +210,80 @@ function Reichweite({ stufe }: { stufe: 1 | 2 | 3 | 4 }) {
       {[1, 2, 3, 4].map((i) => (
         <span
           key={i}
-          className={`h-2 w-6 rounded-full ${i <= stufe ? "bg-sky-500" : "bg-slate-200"}`}
+          className={`h-2 w-4 rounded-full sm:w-6 ${i <= stufe ? "bg-sky-500" : "bg-slate-200"}`}
         />
       ))}
     </div>
   );
 }
 
-function AppKarte({ app }: { app: App }) {
+// Kurze Erklärung je Merkmal, in derselben Reihenfolge wie MERKMAL_LABELS.
+const MERKMAL_TEXT = [
+  "Vorhersage für einen bestimmten Startplatz, nicht nur ein Kartenraster.",
+  "Die App sortiert oder färbt Tage oder Orte automatisch.",
+  "Ein Text, der beschreibt, was die Werte zeigen.",
+  "Die Lage kommt jeden Morgen von selbst, ohne dass du nachschaust.",
+  "Eigene Angaben zum Föhn.",
+  "Thermik, Wolkenbasis, Höhenwind oder Sounding.",
+  "Gemessene Werte von Stationen, nicht nur Prognose.",
+  "Ein KI-Modell in der Prognose oder eine Anbindung an Chat-Assistenten.",
+];
+
+/** Kompakte Kachel je App: Name, Schwerpunkt, Gebiet. */
+function AppKachel({ app }: { app: App }) {
   return (
-    <article
-      className={`flex flex-col rounded-2xl border bg-white p-5 shadow-sm ${
-        app.eigene ? "border-sky-500 ring-4 ring-sky-100" : "border-slate-200"
+    <div
+      className={`rounded-xl border p-4 ${
+        app.eigene ? "border-sky-500 bg-sky-50" : "border-slate-200 bg-white"
       }`}
     >
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <h3 className="text-lg font-bold text-slate-900">{app.name}</h3>
-          <p className="mt-0.5 text-sm text-slate-600">{app.fokus}</p>
-        </div>
-        {app.eigene && (
-          <span className="shrink-0 rounded-full bg-sky-600 px-2.5 py-1 text-xs font-semibold text-white">
-            Unser Produkt
-          </span>
-        )}
-      </div>
-
-      <div className="mt-4 flex items-center justify-between gap-3 rounded-xl bg-slate-50 px-3 py-2">
-        <span className="text-sm text-slate-700">Gebiet: {app.gebiet}</span>
+      <p className={`font-bold ${app.eigene ? "text-sky-800" : "text-slate-900"}`}>{app.name}</p>
+      <p className="mt-0.5 text-sm leading-snug text-slate-600">{app.fokus}</p>
+      <div className="mt-3 flex items-center justify-between gap-2">
+        <span className="text-xs font-medium text-slate-500">{app.gebiet}</span>
         <Reichweite stufe={app.reichweite} />
       </div>
+    </div>
+  );
+}
 
-      <ul className="mt-4 divide-y divide-slate-100">
-        {app.merkmale.map((m) => (
-          <li key={m.label} className="flex items-center gap-3 py-2">
-            <Punkt status={m.status} />
-            <div className="min-w-0 flex-1">
-              <p className="text-sm font-medium text-slate-800">{m.label}</p>
-              {m.detail && <p className="text-xs text-slate-500">{m.detail}</p>}
-            </div>
-            <span
-              className={`shrink-0 text-xs font-semibold ${
-                m.status === "ja" ? "text-sky-700" : m.status === "unbelegt" ? "text-slate-500" : "text-slate-600"
-              }`}
-            >
-              {WORT[m.status]}
+/** Karte je Merkmal: wer es hat (ja), wer teilweise, wer nicht oder unbelegt. */
+function MerkmalKarte({ index }: { index: number }) {
+  const label = MERKMAL_LABELS[index];
+  const mit = (st: Status) =>
+    APPS.map((a) => ({ app: a, m: a.merkmale[index] })).filter((x) => x.m.status === st);
+  const ja = mit("ja");
+  const teils = mit("teils");
+  const rest = [...mit("nein"), ...mit("unbelegt")].map((x) => x.app.name);
+
+  return (
+    <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-5">
+      <h4 className="text-base font-bold text-slate-900">{label}</h4>
+      <p className="mt-1 text-sm leading-snug text-slate-600">{MERKMAL_TEXT[index]}</p>
+      <ul className="mt-4 space-y-2">
+        {[...ja, ...teils].map(({ app, m }) => (
+          <li key={app.name} className="flex items-start gap-2.5">
+            <span className="mt-1"><Punkt status={m.status} /></span>
+            <span className="text-sm leading-snug">
+              <span className={`font-semibold ${app.eigene ? "text-sky-700" : "text-slate-900"}`}>
+                {app.name}
+              </span>
+              <span className="text-slate-500">
+                {" "}
+                {WORT[m.status]}
+                {m.detail ? `, ${m.detail}` : ""}
+              </span>
             </span>
           </li>
         ))}
       </ul>
-    </article>
+      {rest.length > 0 && (
+        <p className="mt-auto border-t border-slate-100 pt-3 text-xs leading-snug text-slate-500">
+          <span className="mr-1.5 inline-block align-middle"><Punkt status="unbelegt" /></span>
+          Nein oder nicht belegt: {rest.join(", ")}
+        </p>
+      )}
+    </div>
   );
 }
 
@@ -269,25 +293,29 @@ export function AppVergleich() {
       <h2 id="vergleich-headline" className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
         Die Apps auf einen Blick
       </h2>
-
-      <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-700">
-        <span className="inline-flex items-center gap-2"><Punkt status="ja" />ja</span>
-        <span className="inline-flex items-center gap-2"><Punkt status="teils" />teils</span>
-        <span className="inline-flex items-center gap-2"><Punkt status="nein" />nein</span>
-        <span className="inline-flex items-center gap-2"><Punkt status="unbelegt" />nicht belegt</span>
-        <span className="inline-flex items-center gap-2 text-slate-500">
-          Reichweite: {REICHWEITE.join(", ")}
-        </span>
-      </div>
-
-      <div className="mt-6 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+      <p className="mt-2 text-base text-slate-600">
+        Schwerpunkt und Gebiet. Der Balken zeigt die Reichweite: {REICHWEITE.join(", ")}.
+      </p>
+      <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
         {APPS.map((app) => (
-          <AppKarte key={app.name} app={app} />
+          <AppKachel key={app.name} app={app} />
         ))}
       </div>
 
-      <h3 className="mt-14 text-xl font-bold tracking-tight text-slate-900">Welche App wofür?</h3>
-      <div className="mt-5 grid gap-4 md:grid-cols-2">
+      <h3 className="mt-14 text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">Wer kann was?</h3>
+      <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-700">
+        <span className="inline-flex items-center gap-2"><Punkt status="ja" />ja</span>
+        <span className="inline-flex items-center gap-2"><Punkt status="teils" />teilweise</span>
+        <span className="inline-flex items-center gap-2"><Punkt status="unbelegt" />nein oder nicht belegt</span>
+      </div>
+      <div className="mt-5 grid gap-4 sm:grid-cols-2">
+        {MERKMAL_LABELS.map((_, i) => (
+          <MerkmalKarte key={i} index={i} />
+        ))}
+      </div>
+
+      <h3 className="mt-14 text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">Welche App wofür?</h3>
+      <div className="mt-5 grid gap-4 sm:grid-cols-2">
         {WOFUER.map((w) => (
           <div key={w.frage} className="rounded-2xl border border-slate-200 bg-white p-5">
             <p className="font-semibold text-slate-900">{w.frage}</p>
