@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { VI18N, type Lang } from "./i18n";
 
 // Grafischer Vergleich der Flugwetter-Apps (Artikel gleitschirm-wetter-apps).
 // Bewusst ohne Tabelle: Karten und Farbpunkte brechen auf dem Handy in eine
@@ -204,6 +205,27 @@ const WORT: Record<Status, string> = {
 
 
 // Kurze Erklärung je Merkmal, in derselben Reihenfolge wie MERKMAL_LABELS.
+// Deutsche Texte für die Oberfläche; FR, IT, EN kommen aus i18n.ts.
+const DE_UI = {
+  headline: "Der Vergleich auf einen Blick",
+  gebiet: "Gebiet",
+  tage: "Tage voraus",
+  fussnote: "Gebiet: CH = Schweiz, EU = Europa, Welt = weltweit. „Nicht belegt“ heisst: auf den offiziellen Seiten nicht zu finden.",
+  aufklappen: "Was genau steckt hinter jedem Punkt?",
+  caption: "Vergleich der Gleitschirm-Wetter-Apps nach Gebiet, Prognosetagen und Funktionen",
+  merkmal: "Merkmal",
+  wofuer: "Welche App wofür?",
+  nichtBelegt: "Nein oder nicht belegt:",
+};
+const ui = (lang: Lang) => (lang === "de" ? DE_UI : VI18N[lang].ui);
+const labelOf = (lang: Lang, i: number) => (lang === "de" ? MERKMAL_LABELS[i] : VI18N[lang].labels[i]);
+const textOf = (lang: Lang, i: number) => (lang === "de" ? MERKMAL_TEXT[i] : VI18N[lang].texts[i]);
+const wortOf = (lang: Lang, st: Status) => (lang === "de" ? WORT[st] : VI18N[lang].status[st]);
+const detailOf = (app: App, i: number, lang: Lang) =>
+  lang === "de" ? app.merkmale[i].detail : VI18N[lang].details[app.name]?.[i] ?? "";
+const groupOf = (lang: Lang, titel: string) => (lang === "de" ? titel : VI18N[lang].groups[titel]);
+const gebietOf = (lang: Lang, code: string) => (lang === "de" ? code : VI18N[lang].gebiet[code]);
+
 const MERKMAL_TEXT = [
   "Vorhersage für einen bestimmten Startplatz, nicht nur ein Kartenraster.",
   "Steigwerte, Wolkenbasis oder Thermikkarten.",
@@ -219,8 +241,8 @@ const MERKMAL_TEXT = [
 ];
 
 /** Karte je Merkmal: wer es hat (ja), wer teilweise, wer nicht oder unbelegt. */
-function MerkmalKarte({ index }: { index: number }) {
-  const label = MERKMAL_LABELS[index];
+function MerkmalKarte({ index, lang }: { index: number; lang: Lang }) {
+  const label = labelOf(lang, index);
   const mit = (st: Status) =>
     APPS.map((a) => ({ app: a, m: a.merkmale[index] })).filter((x) => x.m.status === st);
   const ja = mit("ja");
@@ -230,7 +252,7 @@ function MerkmalKarte({ index }: { index: number }) {
   return (
     <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-5">
       <h4 className="text-base font-bold text-slate-900">{label}</h4>
-      <p className="mt-1 text-sm leading-snug text-slate-600">{MERKMAL_TEXT[index]}</p>
+      <p className="mt-1 text-sm leading-snug text-slate-600">{textOf(lang, index)}</p>
       <ul className="mt-4 space-y-2">
         {[...ja, ...teils].map(({ app, m }) => (
           <li key={app.name} className="flex items-start gap-2.5">
@@ -241,8 +263,8 @@ function MerkmalKarte({ index }: { index: number }) {
               </span>
               <span className="text-slate-500">
                 {" "}
-                {WORT[m.status]}
-                {m.detail ? `, ${m.detail}` : ""}
+                {wortOf(lang, m.status)}
+                {detailOf(app, index, lang) ? `, ${detailOf(app, index, lang)}` : ""}
               </span>
             </span>
           </li>
@@ -251,7 +273,7 @@ function MerkmalKarte({ index }: { index: number }) {
       {rest.length > 0 && (
         <p className="mt-4 border-t border-slate-100 pt-3 text-xs leading-snug text-slate-500">
           <span className="mr-1.5 inline-block align-middle"><Punkt status="unbelegt" /></span>
-          Nein oder nicht belegt: {rest.join(", ")}
+          {ui(lang).nichtBelegt} {rest.join(", ")}
         </p>
       )}
     </div>
@@ -277,8 +299,8 @@ function Zelle({ app, children }: { app: App; children: React.ReactNode }) {
   );
 }
 
-function PunktZelle({ app, status, detail }: { app: App; status: Status; detail: string }) {
-  const text = `${app.name}: ${WORT[status]}${detail ? `, ${detail}` : ""}`;
+function PunktZelle({ app, status, detail, lang }: { app: App; status: Status; detail: string; lang: Lang }) {
+  const text = `${app.name}: ${wortOf(lang, status)}${detail ? `, ${detail}` : ""}`;
   return (
     <Zelle app={app}>
       <span title={text} className="inline-flex justify-center">
@@ -301,24 +323,22 @@ function ZeilenKopf({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function AppVergleich() {
+export function AppVergleich({ lang = "de" }: { lang?: Lang }) {
   return (
     <section aria-labelledby="vergleich-headline" className="my-12">
       <h2 id="vergleich-headline" className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-        Der Vergleich auf einen Blick
+        {ui(lang).headline}
       </h2>
       <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-700">
-        <span className="inline-flex items-center gap-2"><Punkt status="ja" />ja</span>
-        <span className="inline-flex items-center gap-2"><Punkt status="teils" />teilweise</span>
-        <span className="inline-flex items-center gap-2"><Punkt status="nein" />nein</span>
-        <span className="inline-flex items-center gap-2"><Punkt status="unbelegt" />nicht belegt</span>
+        <span className="inline-flex items-center gap-2"><Punkt status="ja" />{wortOf(lang, "ja")}</span>
+        <span className="inline-flex items-center gap-2"><Punkt status="teils" />{wortOf(lang, "teils")}</span>
+        <span className="inline-flex items-center gap-2"><Punkt status="nein" />{wortOf(lang, "nein")}</span>
+        <span className="inline-flex items-center gap-2"><Punkt status="unbelegt" />{wortOf(lang, "unbelegt")}</span>
       </div>
 
       <div className="mt-5 rounded-2xl border border-slate-200 bg-white px-3 pb-2 sm:px-5">
         <table className="w-full table-fixed border-separate border-spacing-0">
-          <caption className="sr-only">
-            Vergleich der Gleitschirm-Wetter-Apps nach Gebiet, Prognosetagen und Funktionen
-          </caption>
+          <caption className="sr-only">{ui(lang).caption}</caption>
           <colgroup>
             <col className="w-[38%] sm:w-[34%]" />
             {APPS.map((a) => (
@@ -327,7 +347,7 @@ export function AppVergleich() {
           </colgroup>
           <thead>
             <tr>
-              <th scope="col" className="sr-only">Merkmal</th>
+              <th scope="col" className="sr-only">{ui(lang).merkmal}</th>
               {APPS.map((a) => (
                 <th
                   key={a.name}
@@ -345,15 +365,15 @@ export function AppVergleich() {
           </thead>
           <tbody>
             <tr>
-              <ZeilenKopf>Gebiet</ZeilenKopf>
+              <ZeilenKopf>{ui(lang).gebiet}</ZeilenKopf>
               {APPS.map((a) => (
                 <Zelle key={a.name} app={a}>
-                  <span className="text-xs font-semibold text-slate-700">{KOPF[a.name].gebiet}</span>
+                  <span className="text-xs font-semibold text-slate-700">{gebietOf(lang, KOPF[a.name].gebiet)}</span>
                 </Zelle>
               ))}
             </tr>
             <tr>
-              <ZeilenKopf>Tage voraus</ZeilenKopf>
+              <ZeilenKopf>{ui(lang).tage}</ZeilenKopf>
               {APPS.map((a) => (
                 <Zelle key={a.name} app={a}>
                   <span className="text-xs font-semibold tabular-nums text-slate-700">{KOPF[a.name].tage}</span>
@@ -368,14 +388,14 @@ export function AppVergleich() {
                     scope="colgroup"
                     className="pb-1 pt-6 text-left text-xs font-semibold uppercase tracking-wider text-sky-700"
                   >
-                    {g.titel}
+                    {groupOf(lang, g.titel)}
                   </th>
                 </tr>
                 {g.indizes.map((i) => (
-                  <tr key={MERKMAL_LABELS[i]}>
-                    <ZeilenKopf>{MERKMAL_LABELS[i]}</ZeilenKopf>
+                  <tr key={labelOf(lang, i)}>
+                    <ZeilenKopf>{labelOf(lang, i)}</ZeilenKopf>
                     {APPS.map((a) => (
-                      <PunktZelle key={a.name} app={a} status={a.merkmale[i].status} detail={a.merkmale[i].detail} />
+                      <PunktZelle key={a.name} app={a} status={a.merkmale[i].status} detail={detailOf(a, i, lang)} lang={lang} />
                     ))}
                   </tr>
                 ))}
@@ -385,18 +405,17 @@ export function AppVergleich() {
         </table>
       </div>
       <p className="mt-2 text-xs text-slate-500">
-        Gebiet: CH = Schweiz, EU = Europa, Welt = weltweit. „Nicht belegt" heisst: auf den offiziellen Seiten
-        nicht zu finden.
+        {ui(lang).fussnote}
       </p>
 
       <details className="group mt-6 rounded-2xl border border-slate-200 bg-white">
         <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 font-semibold text-slate-900 [&::-webkit-details-marker]:hidden">
-          Was genau steckt hinter jedem Punkt?
+          {ui(lang).aufklappen}
           <span aria-hidden="true" className="text-sky-700 transition-transform group-open:rotate-45">+</span>
         </summary>
         <div className="grid items-start gap-4 border-t border-slate-100 p-4 sm:grid-cols-2 sm:p-5">
           {GRUPPEN.flatMap((g) => g.indizes).map((i) => (
-            <MerkmalKarte key={i} index={i} />
+            <MerkmalKarte key={i} index={i} lang={lang} />
           ))}
         </div>
       </details>
@@ -406,16 +425,16 @@ export function AppVergleich() {
 }
 
 /** „Welche App wofür?" als eigener Block, eingesetzt vor den häufigen Fragen. */
-export function AppWofuer() {
+export function AppWofuer({ lang = "de" }: { lang?: Lang }) {
   return (
     <section aria-labelledby="wofuer-headline" className="my-12">
       <h2 id="wofuer-headline" className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-        Welche App wofür?
+        {ui(lang).wofuer}
       </h2>
       <div className="mt-5 grid gap-4 sm:grid-cols-2">
-        {WOFUER.map((w) => (
+        {WOFUER.map((w, wi) => (
           <div key={w.frage} className="rounded-2xl border border-slate-200 bg-white p-5">
-            <p className="font-semibold text-slate-900">{w.frage}</p>
+            <p className="font-semibold text-slate-900">{lang === "de" ? w.frage : VI18N[lang].wofuer[wi]}</p>
             <ul className="mt-3 flex flex-wrap gap-2">
               {w.apps.map((x) => (
                 <li key={x} className="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">

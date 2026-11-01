@@ -23,8 +23,19 @@ import { AppVergleich, AppWofuer } from "@/components/vergleich/AppVergleich";
 
 // Artikel mit eigenen Grafiken: je Grafik die Überschrift, vor der sie eingesetzt wird.
 const VERGLEICH_SLUG = "gleitschirm-wetter-apps";
-const VERGLEICH_MARKER = "<h2>Was Wingcast anders macht: die Voranalyse</h2>";
-const WOFUER_MARKER = "<h2>Häufige Fragen</h2>";
+// Überschriften, vor denen die Grafiken stehen. Muss mit dem Artikel der Sprache übereinstimmen.
+const VERGLEICH_MARKER: Record<string, string> = {
+  de: "<h2>Was Wingcast anders macht: die Voranalyse</h2>",
+  fr: "<h2>Ce que Wingcast fait autrement : la pré-analyse</h2>",
+  it: "<h2>Cosa fa Wingcast in modo diverso: analisi preliminare</h2>",
+  en: "<h2>What Wingcast does differently: the pre-analysis</h2>",
+};
+const WOFUER_MARKER: Record<string, string> = {
+  de: "<h2>Häufige Fragen</h2>",
+  fr: "<h2>Questions fréquentes</h2>",
+  it: "<h2>Domande frequenti</h2>",
+  en: "<h2>Frequently asked questions</h2>",
+};
 
 // Default-Locale ohne Prefix, fr/it mit Prefix (localePrefix: "as-needed").
 function prefixed(locale: string, path: string): string {
@@ -160,18 +171,20 @@ export default async function WetterkundeArtikel({
 
           {/* Vergleich: Matrix vor der Voranalyse, „Welche App wofür?" vor den Fragen. */}
           {article.slug === VERGLEICH_SLUG &&
-          article.html.includes(VERGLEICH_MARKER) &&
-          article.html.includes(WOFUER_MARKER) ? (
+          article.html.includes(VERGLEICH_MARKER[locale]) &&
+          article.html.includes(WOFUER_MARKER[locale]) ? (
             (() => {
-              const [teil1, rest] = article.html.split(VERGLEICH_MARKER);
-              const [teil2, teil3] = rest.split(WOFUER_MARKER);
+              const vm = VERGLEICH_MARKER[locale];
+              const wm = WOFUER_MARKER[locale];
+              const [teil1, rest] = article.html.split(vm);
+              const [teil2, teil3] = rest.split(wm);
               return (
                 <>
                   <div className="prose-wingcast mt-10" dangerouslySetInnerHTML={{ __html: teil1 }} />
-                  <AppVergleich />
-                  <div className="prose-wingcast" dangerouslySetInnerHTML={{ __html: VERGLEICH_MARKER + teil2 }} />
-                  <AppWofuer />
-                  <div className="prose-wingcast" dangerouslySetInnerHTML={{ __html: WOFUER_MARKER + teil3 }} />
+                  <AppVergleich lang={locale as "de" | "fr" | "it" | "en"} />
+                  <div className="prose-wingcast" dangerouslySetInnerHTML={{ __html: vm + teil2 }} />
+                  <AppWofuer lang={locale as "de" | "fr" | "it" | "en"} />
+                  <div className="prose-wingcast" dangerouslySetInnerHTML={{ __html: wm + teil3 }} />
                 </>
               );
             })()
