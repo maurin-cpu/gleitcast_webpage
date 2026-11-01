@@ -214,7 +214,7 @@ const DE_UI = {
   aufklappen: "Was genau steckt hinter jedem Punkt?",
   caption: "Vergleich der Gleitschirm-Wetter-Apps nach Gebiet, Prognosetagen und Funktionen",
   merkmal: "Merkmal",
-  wofuer: "Welche App wofür?",
+  wofuer: "Welche App passt zu welcher Frage?",
   nichtBelegt: "Nein oder nicht belegt:",
 };
 const ui = (lang: Lang) => (lang === "de" ? DE_UI : VI18N[lang].ui);

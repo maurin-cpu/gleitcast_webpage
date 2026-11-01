@@ -24,7 +24,7 @@ schema:
 
 # Applis météo parapente comparées : ce que chacune sait faire
 
-> **TL;DR :** Il n'existe pas une meilleure application météo parapente, mais des outils pour des questions différentes. **Burnair** réunit sites de décollage, thermique, parcours, données en direct et foehn dans une seule application. **XC Therm** se spécialise dans la thermique et le cross, **SoaringMeteo** dans la thermique et le sondage en tout point, **Meteo-Parapente** dans le profil en altitude avec son propre modèle, **Paraglidable** dans une probabilité de vol sur dix jours. **Wingcast** est conçu pour la pré-analyse : pour chaque site de décollage suisse, il affiche un feu d'alerte à partir de huit critères et une qualité de vol de 1 à 5, et chaque matin un briefing explique la situation. Le tableau ci-dessous montre ce que chaque application documente.
+> **TL;DR :** Une application météo parapente fournit des prévisions pour les sites de décollage, la thermique et le vent. Il n'existe pas une meilleure application, mais des outils pour des questions différentes. **Burnair** réunit sites de décollage, thermique, parcours, données en direct et foehn dans une seule application. **XC Therm** se spécialise dans la thermique et le cross, **SoaringMeteo** dans la thermique et le sondage en tout point, **Meteo-Parapente** dans le profil en altitude avec son propre modèle, **Paraglidable** dans une probabilité de vol sur dix jours. **Wingcast** est conçu pour la pré-analyse : pour chaque site de décollage suisse, il affiche un feu d'alerte à partir de huit critères et une qualité de vol de 1 à 5, et chaque matin un briefing explique la situation. Le tableau ci-dessous montre ce que chaque application documente.
 
 ## Notre méthode
 
@@ -32,7 +32,7 @@ Nous avons examiné cinq services météo conçus pour les pilotes de parapente,
 
 Wingcast est notre propre produit, nous le disons ouvertement. Si vous trouvez une erreur, écrivez à info@wingcast.ch, nous la corrigerons.
 
-## Ce que Wingcast fait autrement : la pré-analyse
+## Que fait Wingcast autrement ?
 
 Wingcast est conçu pour **la pré-analyse**. La plupart des applis montrent le vent, la thermique et les dangers comme le foehn ou les orages dans des vues séparées, et c'est à vous de les combiner. Wingcast fait cette étape à votre place : pour chaque site de décollage suisse, il affiche un **feu d'alerte** qui tient compte de huit critères, comme le vent au sol, les rafales, le foehn, les orages et la pluie. Le critère le plus faible fait baisser le feu. Il donne aussi une **qualité de vol** de 1 à 5, une estimation allant du simple décrochage de vol à la journée de cross. Chaque matin, un briefing explique la situation en mots. Le feu d'alerte et la qualité de vol sont des estimations automatiques fondées sur des données de prévision, pas une autorisation de vol. Vous décidez sur place si et où vous volez.
 
@@ -40,51 +40,50 @@ Aucun des cinq autres services ne documente d'estimation par site de décollage 
 
 Pour tout ce qui vient après la pré-analyse, les autres applis sont les outils adaptés.
 
-## Les applis en détail
+## Quelle appli fait quoi
 
 ### Burnair
 
-Un service suisse autour des sites de décollage, de la thermique, des parcours et des données en direct. Burnair fournit des données météo pour plus de 5 000 sites de décollage et d'atterrissage en Europe, cinq jours à l'avance, et colore les sites selon la force du vent [[1]](https://www.burnair.ch/2022/09/13/smarte-4d-startplatzprognosen-fuer-alle-startplaetze/)[[2]](https://www.burnair.ch/2024/04/09/erweiterte-4d-startplatz-prognose-2/). Pour plus de 650 régions thermiques, il donne les vitesses de montée, la base des nuages et les inversions, et chaque région reçoit une couleur toutes les demi-heures selon la thermique, le vent, la base et la couverture nuageuse [[3]](https://help.burnair.cloud/hc/de/articles/360017954777). S'y ajoutent une distance de vol potentielle par région, que Burnair lui-même décrit comme souvent peu fiable, un planificateur de cross et une prévision de parcours [[4]](https://help.burnair.cloud/hc/de/articles/21153410206749). Un émagramme en tout point, le vent à de nombreuses altitudes, les différences de pression pour le foehn, le vent en direct de plus de 15 000 stations, les webcams, le suivi en direct, les espaces aériens avec NOTAM et DABS et un carnet de vol complètent l'offre [[5]](https://help.burnair.cloud/hc/de/articles/20347225002397)[[6]](https://www.burnair.ch/2019/12/13/ab-sofort-werden-auf-der-burnair-map-unter-der-ansicht-live-wetter-auch-die-aktuellen-druck-differenzen-angezeigt/)[[7]](https://www.burnair.ch/2024/05/30/wind-alarm/)[[20]](https://www.burnair.ch/portfolio-item/burnair-map/). Burnair cite comme modèles ICON-D2, ICON-EU et ICON-CH1/CH2 [[8]](https://help.burnair.cloud/hc/de/articles/30352127464221).
+Un service suisse autour du site de décollage, de la thermique, du parcours et des données en direct. Burnair fournit des données météo pour plus de 5 000 sites de décollage et d'atterrissage en Europe, cinq jours à l'avance, et affiche des flèches de vent par site [[1]](https://www.burnair.ch/2022/09/13/smarte-4d-startplatzprognosen-fuer-alle-startplaetze/)[[2]](https://www.burnair.ch/2024/04/09/erweiterte-4d-startplatz-prognose-2/). Pour plus de 650 régions thermiques, il donne les vitesses de montée et la base [[3]](https://help.burnair.cloud/hc/de/articles/360017954777). S'y ajoutent une distance de vol par région, un planificateur de cross, un émagramme, le vent en direct, les webcams, les espaces aériens et le suivi en direct [[4]](https://help.burnair.cloud/hc/de/articles/21153410206749)[[5]](https://help.burnair.cloud/hc/de/articles/20347225002397)[[6]](https://www.burnair.ch/2019/12/13/ab-sofort-werden-auf-der-burnair-map-unter-der-ansicht-live-wetter-auch-die-aktuellen-druck-differenzen-angezeigt/).
 
 - **Bon pour :** sites de décollage, thermique, parcours, données en direct, foehn et espaces aériens.
-- **Moins adapté pour :** une évaluation globale par site de décollage et un résumé quotidien. Burnair travaille avec des couleurs, des chiffres et des alertes qui se déclenchent lorsqu'une valeur dépasse un seuil [[7]](https://www.burnair.ch/2024/05/30/wind-alarm/).
+- **Moins adapté pour :** une évaluation globale par site et un résumé quotidien. Burnair travaille avec des couleurs, des chiffres et des alertes [[7]](https://www.burnair.ch/2024/05/30/wind-alarm/).
 
 ### XC Therm
 
-Un outil pour les pilotes de cross. XC Therm calcule la thermique pour 1 354 régions d'Europe avec la méthode Regtherm, qui tournait auparavant chez le service météo allemand, cinq jours à l'avance [[9]](https://xctherm.com/en/welcome)[[10]](https://xctherm.com/en/faq). Pour chaque région, il estime une distance de vol possible à partir de la hauteur de travail, de la montée et du vent. Des cartes de vent sont disponibles sur 14 niveaux, avec ICON-CH1 et ICON-CH2 pour les Alpes, et la prévision détaillée signale les orages et la pluie [[9]](https://xctherm.com/en/welcome)[[10]](https://xctherm.com/en/faq). L'évaluation peut être réglée selon le type d'aile et le niveau du pilote, une archive remonte à 2012, et depuis décembre 2025 une prévision d'onde existe pour les Alpes [[9]](https://xctherm.com/en/welcome)[[10]](https://xctherm.com/en/faq)[[21]](https://xctherm.com/en/wave-forecast).
+Un outil pour les pilotes de cross. XC Therm calcule la thermique pour 1 354 régions d'Europe, cinq jours à l'avance [[9]](https://xctherm.com/en/welcome)[[10]](https://xctherm.com/en/faq). Pour chaque région, il estime une distance de vol possible. S'y ajoutent des cartes de vent sur 14 niveaux, des indications sur les orages et la pluie, une prévision d'onde depuis décembre 2025 et une archive depuis 2012 [[9]](https://xctherm.com/en/welcome)[[10]](https://xctherm.com/en/faq)[[21]](https://xctherm.com/en/wave-forecast).
 
-- **Bon pour :** planification de parcours, montée et nuages par région, cartes de vent sur de nombreux niveaux, vol d'onde, retour sur les jours passés.
-- **Moins adapté pour :** les sites de décollage individuels et les avertissements de vent ou de foehn, que XC Therm, selon ses propres indications, ne publie pas. Le foehn, le vent de vallée et la pluie ne sont pas pris en compte dans la distance [[10]](https://xctherm.com/en/faq).
+- **Bon pour :** planification de parcours, montée et nuages par région, cartes de vent sur de nombreux niveaux, vol d'onde.
+- **Moins adapté pour :** les sites de décollage individuels et les avertissements de vent ou de foehn, que XC Therm ne publie pas selon ses propres indications. Le foehn, le vent de vallée et la pluie ne sont pas pris en compte dans la distance [[10]](https://xctherm.com/en/faq).
 
 ### SoaringMeteo
 
-Un projet à but non lucratif venu de Suisse, financé par des dons, avec ses propres calculs WRF à 2 km de résolution pour les Alpes et GFS pour le monde entier [[11]](https://soaringmeteo.org)[[12]](https://github.com/soaringmeteo/soaringmeteo). Pour chaque point de la carte, il y a un météogramme et un sondage, et sur la carte une qualité thermique de 0 à 100 %. Des supports d'apprentissage sont aussi disponibles, notamment pour l'examen théorique suisse [[11]](https://soaringmeteo.org).
+Un projet à but non lucratif venu de Suisse, avec ses propres calculs WRF à 2 km pour les Alpes [[11]](https://soaringmeteo.org)[[12]](https://github.com/soaringmeteo/soaringmeteo). Pour chaque point de la carte, il donne un météogramme, un sondage et une qualité thermique de 0 à 100 %. Des supports d'apprentissage sont aussi disponibles, notamment pour l'examen théorique suisse [[11]](https://soaringmeteo.org).
 
-- **Bon pour :** thermique et sondage pour n'importe quel point, apprentissage.
-- **Moins adapté pour :** les sites de décollage, le foehn et les données en direct, qui n'y sont pas documentés.
+- **Bon pour :** thermique et sondage pour chaque point, apprentissage.
+- **Moins adapté pour :** sites de décollage, foehn et données en direct, qui n'y sont pas documentés.
 
 ### Meteo-Parapente
 
-Un service européen doté de son propre modèle météo à 2,5 km de résolution, jusqu'à cinq jours à l'avance [[13]](https://portal.meteo-parapente.com/about/model/)[[14]](https://portal.meteo-parapente.com/about/data-sources/). Sa force est la vue en altitude : thermique et instabilité, vent par paliers de 250 mètres jusqu'à 10 000 m, un windgramme et un sondage pour chaque lieu choisi [[15]](https://portal.meteo-parapente.com/help/user-manual/). Les sites de décollage viennent de ParaglidingEarth [[14]](https://portal.meteo-parapente.com/about/data-sources/). Des cartes thermiques montrent les zones d'ascendance utiles pour les vols de distance [[15]](https://portal.meteo-parapente.com/help/user-manual/). Une carte de l'espace aérien vient d'openAIP [[14]](https://portal.meteo-parapente.com/about/data-sources/).
+Un service européen doté de son propre modèle à 2,5 km, jusqu'à cinq jours à l'avance [[13]](https://portal.meteo-parapente.com/about/model/)[[14]](https://portal.meteo-parapente.com/about/data-sources/). Sa force est la vue en altitude : thermique, instabilité et vent par paliers de 250 m jusqu'à 10 000 m, windgramme et sondage pour chaque lieu [[15]](https://portal.meteo-parapente.com/help/user-manual/). Les sites viennent de ParaglidingEarth, les cartes thermiques montrent les zones d'ascendance [[14]](https://portal.meteo-parapente.com/about/data-sources/)[[15]](https://portal.meteo-parapente.com/help/user-manual/).
 
-- **Bon pour :** le profil en altitude au-dessus d'un lieu, un second modèle indépendant, les cartes thermiques pour les vols de distance.
-- **Moins adapté pour :** une évaluation automatique des journées et la planification de parcours, qui n'y sont pas documentées.
+- **Bon pour :** profil en altitude au-dessus d'un lieu, second modèle indépendant, cartes thermiques pour les vols de distance.
+- **Moins adapté pour :** une évaluation automatique des journées et la planification de parcours, qui ne sont pas documentées.
 
 ### Paraglidable
 
-Un projet ouvert qui estime, à partir de modèles météo et de vols déclarés, la probabilité de voler en un lieu, y compris pour le cross, pour les cellules de la carte et pour les sites de décollage nommés [[17]](https://paraglidable.com)[[18]](https://github.com/AntoineMeler/Paraglidable). Selon ses propres indications, l'estimation repose sur des vols déclarés [[17]](https://paraglidable.com). La carte couvre dix jours et toute l'Europe.
+Un projet ouvert qui estime, à partir de modèles météo et de vols déclarés, la probabilité de voler [[17]](https://paraglidable.com)[[18]](https://github.com/AntoineMeler/Paraglidable). La carte couvre dix jours et toute l'Europe, pour les cellules de la carte et les sites nommés.
 
 - **Bon pour :** un aperçu rapide sur de nombreux jours et sur toute l'Europe.
-- **Moins adapté pour :** les valeurs détaillées de thermique ou de vent, qui n'y sont pas documentées. L'interface est en anglais.
+- **Moins adapté pour :** les valeurs détaillées de thermique ou de vent, non documentées. L'interface est en anglais.
 
 ### Wingcast
 
-Wingcast fait la **pré-analyse** : avant d'entrer dans les détails, Wingcast a évalué les sites de décollage suisses pour aujourd'hui, demain et après-demain. L'application affiche cela sur une carte. Chaque repère montre deux choses séparément : la **couleur** indique s'il y a des avertissements, résumés à partir de huit critères comme le vent au sol, les rafales, le vent en altitude, le foehn, la pluie et les orages. Le **chiffre** de 1 à 5 décrit la qualité de vol, du simple décrochage à la journée de cross. Un court texte explique l'évaluation. L'e-mail du matin vous apporte la pré-analyse à 6 h pour les régions et les jours de la semaine que vous avez choisis.
+Wingcast propose la pré-analyse : tous les sites de décollage suisses sont évalués pour aujourd'hui, demain et après-demain. Le feu d'alerte reflète huit critères, le critère le plus faible le fait baisser. Le chiffre de 1 à 5 décrit la qualité de vol. La base est constituée des modèles de MétéoSuisse [[19]](https://www.meteoswiss.admin.ch/weather/warning-and-forecasting-systems/icon-forecasting-systems.html) et d'autres modèles. Chaque matin à 6 h, un e-mail donne la situation pour les régions choisies. Vous décidez si et où vous volez.
 
-La base est constituée des modèles de MétéoSuisse (ICON-CH1 et ICON-CH2) et d'autres modèles. La base thermique, le vent en altitude, le foehn et la pluie sont calculés par le code. L'application indique ouvertement ses limites connues, par exemple le foehn dans les vallées alpines intérieures. Vous décidez si et où vous volez.
+- **Bon pour :** un premier aperçu chaque matin, avertissements et qualité de vol par site, foehn dans les vallées suisses.
+- **Moins adapté pour :** la planification détaillée ensuite : étranger, parcours, données en direct et sondages.
 
-- **Bon pour :** un premier aperçu chaque matin, les avertissements et la qualité de vol par site, le foehn dans les vallées suisses.
-- **Moins adapté pour :** la planification détaillée ensuite : l'étranger, les parcours, les données en direct et les sondages (voir ci-dessous).
 
 ## Où Wingcast ne suffit pas
 

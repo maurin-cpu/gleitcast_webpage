@@ -25,10 +25,10 @@ import { AppVergleich, AppWofuer } from "@/components/vergleich/AppVergleich";
 const VERGLEICH_SLUG = "gleitschirm-wetter-apps";
 // Überschriften, vor denen die Grafiken stehen. Muss mit dem Artikel der Sprache übereinstimmen.
 const VERGLEICH_MARKER: Record<string, string> = {
-  de: "<h2>Was Wingcast anders macht: die Voranalyse</h2>",
-  fr: "<h2>Ce que Wingcast fait autrement : la pré-analyse</h2>",
-  it: "<h2>Cosa fa Wingcast in modo diverso: analisi preliminare</h2>",
-  en: "<h2>What Wingcast does differently: the pre-analysis</h2>",
+  de: "<h2>Was macht Wingcast anders?</h2>",
+  fr: "<h2>Que fait Wingcast autrement ?</h2>",
+  it: "<h2>Cosa fa Wingcast di diverso?</h2>",
+  en: "<h2>What does Wingcast do differently?</h2>",
 };
 const WOFUER_MARKER: Record<string, string> = {
   de: "<h2>Häufige Fragen</h2>",
