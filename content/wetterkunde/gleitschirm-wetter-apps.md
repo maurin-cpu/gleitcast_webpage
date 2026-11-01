@@ -65,10 +65,10 @@ Ein gemeinnütziges Projekt aus der Schweiz, finanziert durch Spenden, mit eigen
 
 ### Meteo-Parapente
 
-Ein Europa-Dienst mit eigenem Wettermodell in 2,5 km Auflösung, bis fünf Tage voraus [[13]](https://portal.meteo-parapente.com/about/model/)[[14]](https://portal.meteo-parapente.com/about/data-sources/). Stark sind die Darstellungen in der Höhe: Thermikstärke, Grenzschicht und Wind in 250-Meter-Stufen, Windgramm und Sounding für jeden gewählten Ort [[15]](https://portal.meteo-parapente.com/help/user-manual/). Die Startplätze stammen von ParaglidingEarth [[14]](https://portal.meteo-parapente.com/about/data-sources/). Die App enthält zudem einen XC-Planer für Strecken [[16]](https://apps.apple.com/de/app/meteo-parapente/id1255974302).
+Ein Europa-Dienst mit eigenem Wettermodell in 2,5 km Auflösung, bis fünf Tage voraus [[13]](https://portal.meteo-parapente.com/about/model/)[[14]](https://portal.meteo-parapente.com/about/data-sources/). Stark sind die Darstellungen in der Höhe: Thermik und Instabilität, Wind in 250-Meter-Stufen bis 10 000 m, Windgramm und Sounding für jeden gewählten Ort [[15]](https://portal.meteo-parapente.com/help/user-manual/). Die Startplätze stammen von ParaglidingEarth [[14]](https://portal.meteo-parapente.com/about/data-sources/). Thermikkarten zeigen die Auftriebsgebiete, die für Streckenflüge wichtig sind [[15]](https://portal.meteo-parapente.com/help/user-manual/). Eine Luftraumkarte stammt von openAIP [[14]](https://portal.meteo-parapente.com/about/data-sources/).
 
-- **Gut für:** das Höhenprofil über einem Ort, ein zweites, unabhängiges Modell, Streckenplanung.
-- **Weniger geeignet für:** eine automatische Einordnung der Tage, die dort nicht dokumentiert ist.
+- **Gut für:** das Höhenprofil über einem Ort, ein zweites, unabhängiges Modell, Thermikkarten für Strecke.
+- **Weniger geeignet für:** eine automatische Einordnung der Tage und eine Routenplanung, die dort nicht dokumentiert sind.
 
 ### Paraglidable
 
@@ -90,7 +90,7 @@ Die Grundlage sind die Modelle von MeteoSchweiz (ICON-CH1 und ICON-CH2) und weit
 
 - **Nur die Schweiz.** Für Flüge im Ausland sind Burnair, XC Therm, Meteo-Parapente oder Paraglidable die Wahl.
 - **Drei Tage.** Burnair, XC Therm und Meteo-Parapente rechnen fünf Tage, Paraglidable zehn.
-- **Keine Streckenplanung.** Dafür sind Burnair, XC Therm und Meteo-Parapente gebaut.
+- **Keine Streckenplanung.** Dafür sind Burnair und XC Therm gebaut.
 - **Keine Soundings und keine Thermikkarten.** Dafür sind Burnair, SoaringMeteo, Meteo-Parapente und XC Therm da.
 - **Nichts für den Flugtag selbst.** Live-Wind, Webcams, Live-Tracking und Lufträume bietet Burnair, Wingcast nicht.
 - **Deutsch und Englisch.** Französisch und Italienisch gibt es in der App noch nicht.
