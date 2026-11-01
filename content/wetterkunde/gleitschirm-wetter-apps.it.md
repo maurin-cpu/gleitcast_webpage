@@ -10,7 +10,7 @@ neben_keywords:
 typ: vergleich
 hub: /it/wetterkunde
 sprache: it-CH
-status: draft
+status: published
 veroeffentlicht: 2026-10-31
 autor: "Wingcast"
 stand: 2026-10-31
