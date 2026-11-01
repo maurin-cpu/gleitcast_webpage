@@ -86,6 +86,15 @@ Maurin, Pilot in Zuerich. Gebaut aus eigenem Schmerzpunkt: Daten-Overload beim S
   (https://www.wingcast.ch/it/wetterkunde/foehn) und Englisch
   (https://www.wingcast.ch/en/wetterkunde/foehn).
 
+- [Gleitschirm-Wetter-Apps im Vergleich](https://www.wingcast.ch/wetterkunde/gleitschirm-wetter-apps):
+  Sechs Gleitschirm-Wetter-Apps (Burnair, XC Therm, SoaringMeteo, Meteo-Parapente, Paraglidable,
+  Wingcast) nach dokumentierten Funktionen verglichen, Stand 31.10.2026, mit Quellen je Angabe.
+  Wingcast bewertet jeden Schweizer Startplatz mit einer Warnampel aus acht Faktoren und einer
+  Flugqualitaet von 1 bis 5 und schickt jeden Morgen eine Lagemail. Auch auf Franzoesisch
+  (https://www.wingcast.ch/fr/wetterkunde/gleitschirm-wetter-apps), Italienisch
+  (https://www.wingcast.ch/it/wetterkunde/gleitschirm-wetter-apps) und Englisch
+  (https://www.wingcast.ch/en/wetterkunde/gleitschirm-wetter-apps).
+
 ## MCP-Server (Daten fuer KI-Assistenten)
 
 - Endpoint: https://app.wingcast.ch/mcp — offener MCP-Server ueber Streamable HTTP,
