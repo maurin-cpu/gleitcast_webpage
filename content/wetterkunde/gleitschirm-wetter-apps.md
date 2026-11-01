@@ -28,7 +28,7 @@ schema:
 
 ## Wie wir verglichen haben
 
-Wir haben fünf Wetter-Dienste geprüft, die speziell für Gleitschirmpiloten gebaut sind, auf ihren offiziellen Seiten, Hilfeseiten, Handbüchern und App-Store-Einträgen. Erstmals am 26. Oktober 2026, ein zweites Mal am 31. Oktober 2026. Ausgewählt haben wir sie nach den Google-Suchvorschlägen in der Schweiz. Allgemeine Wetter-Apps sind nicht dabei. Verglichen wird nur, was **dokumentiert** ist. „Nicht belegt" heisst: auf keiner offiziellen Quelle zu finden, nicht: die App kann es sicher nicht. Den Preis lassen wir weg, und wir bewerten nicht, welche Prognose genauer ist. Das lässt sich nur mit Messungen über viele Tage zeigen.
+Wir haben fünf Wetter-Dienste geprüft, die speziell für Gleitschirmpiloten gebaut sind, auf ihren offiziellen Seiten, Hilfeseiten, Handbüchern und App-Store-Einträgen. Ausgewählt haben wir sie nach den Google-Suchvorschlägen in der Schweiz. Allgemeine Wetter-Apps sind nicht dabei. Verglichen wird nur, was **dokumentiert** ist. „Nicht belegt" heisst: auf keiner offiziellen Quelle zu finden, nicht: die App kann es sicher nicht. Den Preis lassen wir weg, und wir bewerten nicht, welche Prognose genauer ist. Das lässt sich nur mit Messungen über viele Tage zeigen.
 
 Wingcast ist unser eigenes Produkt, das sagen wir offen. Findest du einen Fehler, schreib uns an info@wingcast.ch, wir korrigieren ihn.
 
